@@ -1,0 +1,166 @@
+---
+layout: page
+title: 2. 경제 구조의 변화와 경제생활
+---
+
+<style>
+    .nav-tabs .nav-link.active {
+        font-weight: bold;
+        background-color: #f8f9fa;
+        border-bottom-color: #dee2e6;
+    }
+    .hidden-box {
+        cursor: pointer;
+        border: 2px dashed #adb5bd;
+        background-color: #f8f9fa;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-weight: 700;
+        color: transparent;
+        transition: all 0.2s ease;
+        display: inline-block;
+        min-width: 100px;
+        text-align: center;
+        user-select: none;
+    }
+    .hidden-box:hover {
+        background-color: #e9ecef;
+        border-color: #495057;
+    }
+    .revealed-box {
+        background-color: #e0e7ff;
+        color: #4338ca;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-weight: 700;
+        animation: fadeIn 0.5s;
+        display: inline-block;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .quiz-option.correct { background-color: #d1e7dd; border-color: #198754; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation-box {
+        background-color: #f8f9fa;
+        border-left: 4px solid #6c757d;
+        padding: 0.75rem;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+    }
+</style>
+
+<header class="card shadow-sm sticky-top">
+    <div class="card-header d-flex justify-content-between align-items-center p-3">
+        <div>
+            <h1 class="h5 fw-bold mb-0">2. 경제 구조의 변화와 경제생활</h1>
+            <p class="small text-muted mb-0">비상 한국사 2</p>
+        </div>
+        <a href="javascript:history.back()" class="btn btn-light btn-sm">뒤로가기</a>
+    </div>
+    <nav class="card-header-tabs nav nav-tabs">
+        <a class="nav-link active" href="#section-0">1. 교과서 핵심 정리</a>
+        <a class="nav-link" href="#section-1">2. 스토리텔링 한국사</a>
+        <a class="nav-link" href="#section-2">3. 내용 확인 문제</a>
+    </nav>
+</header>
+
+<main class="mt-4">
+    <section id="section-0" class="mb-5 pt-5 mt-n5">
+        <h2 class="h3 fw-bold mb-4">1. 교과서 핵심 정리</h2>
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-primary">1910년대: 경제 기반 파괴와 자원 수탈</h3>
+                <ul class="list-unstyled">
+                    <li><strong class="text-primary">토지 조사 사업 (1910~1918):</strong> 기한 내 신고주의 방식으로 총독부의 세금 수입을 늘리고, 미신고 토지를 약탈하여 동양척식주식회사 등에 넘김. 다수 농민이 몰락.</li>
+                    <li><strong class="text-primary">산업 침탈:</strong> 회사령(허가제)으로 민족 자본 성장을 억제하고, 어업령, 삼림령 등으로 자원을 독점.</li>
+                </ul>
+                <hr class="my-4">
+                <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-success">1920년대: 산미 증식 계획과 일본 자본 침투</h3>
+                <ul class="list-unstyled">
+                    <li><strong class="text-success">산미 증식 계획 (1920~1934):</strong> 일본의 식량 부족 해결 목적. 증산량보다 수탈량이 더 많아 한국 내 식량 사정 악화, 농민 부담 가중.</li>
+                    <li><strong class="text-success">일본 자본 침투:</strong> 회사령 폐지(신고제 전환), 관세 폐지로 일본 대자본의 한국 진출이 본격화되어 한국 기업이 큰 타격을 입음.</li>
+                </ul>
+                <hr class="my-4">
+                 <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-danger">1930~40년대: 병참 기지화와 전시 수탈</h3>
+                <ul class="list-unstyled">
+                    <li><strong class="text-danger">병참 기지화 정책:</strong> 만주 침략 이후 한반도를 군수 물자 공급 기지로 삼음. 남면북양 정책 실시, 군수 산업 위주로 공업 구조 왜곡.</li>
+                    <li><strong class="text-danger">전시 수탈 강화:</strong> 미곡 공출제, 금속 공출 등으로 쌀과 물자를 강제로 빼앗고, 배급제를 실시하여 한국인의 생활을 극도로 피폐하게 만듦.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-1" class="d-none mb-5 pt-5 mt-n5">
+        <h2 class="h3 fw-bold mb-4">2. 스토리텔링 한국사</h2>
+        <div class="card shadow-sm">
+            <div class="card-body p-4 lh-lg">
+                 <p>1910년대, 일제는 <span class="hidden-box" data-text="토지 조사 사업" onclick="reveal(this)">&nbsp;</span>을 벌여 수많은 농민의 땅을 빼앗아 <span class="hidden-box" data-text="동양척식주식회사" onclick="reveal(this)">&nbsp;</span>에 넘겼고, <span class="hidden-box" data-text="회사령" onclick="reveal(this)">&nbsp;</span>을 만들어 한국인의 기업 설립을 억제했습니다.</p>
+                 <p>1920년대가 되자, 일본 본토의 식량 부족을 해결하기 위해 <span class="hidden-box" data-text="산미 증식 계획" onclick="reveal(this)">&nbsp;</span>을 강행했습니다. 쌀 생산은 늘었지만 늘어난 양보다 훨씬 많은 쌀을 수탈해 가 우리 농민들은 굶주려야 했습니다.</p>
+                 <p>1930년대 이후 한반도는 일본의 전쟁 수행을 위한 <span class="hidden-box" data-text="병참 기지" onclick="reveal(this)">&nbsp;</span>로 전락했습니다. 쌀을 강제로 빼앗는 <span class="hidden-box" data-text="미곡 공출" onclick="reveal(this)">&nbsp;</span>은 물론, 집안의 숟가락까지 빼앗아가는 <span class="hidden-box" data-text="금속 공출" onclick="reveal(this)">&nbsp;</span>까지 자행되었습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-2" class="d-none pt-5 mt-n5">
+        <h2 class="h3 fw-bold mb-4">3. 내용 확인 문제</h2>
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <div id="quiz-container" class="vstack gap-5">
+                    </div>
+                <div class="mt-4 text-center">
+                    <button id="submit-quiz-btn" class="btn btn-primary btn-lg">제출하기</button>
+                </div>
+                <div id="quiz-result" class="d-none mt-4 text-center h4 fw-bold"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    const tabLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('main section');
+
+    // 탭 클릭 시 해당 섹션으로 스크롤
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerOffset = document.querySelector('header').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
+        });
+    });
+
+    // 스크롤 위치에 따라 활성 탭 변경
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                tabLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            }
+        });
+    }, { rootMargin: "-100px 0px -50% 0px" });
+
+    sections.forEach(section => { observer.observe(section); });
+
+    // 스토리텔링 빈칸 채우기 기능
+    function reveal(element) {
+        const text = element.dataset.text;
+        const revealed = document.createElement('span');
+        revealed.className = 'revealed-box';
+        revealed.textContent = text;
+        element.replaceWith(revealed);
+    }
+
+    // 퀴즈 데이터 및 실행 로직
+    const quizData = [ { question: "1910년대 일제가 '근대적 토지 소유권 확립'을 명분으로 실시한 사업은?", options: ["산미 증식 계획", "토지 조사 사업", "회사령", "농촌 진흥 운동", "남면북양 정책"], answer: "토지 조사 사업", explanation: "토지 조사 사업은 1910년대에 식민지 지배의 경제적 기반을 마련하기 위해 실시되었습니다." }, { question: "토지 조사 사업의 결과로 나타난 현상이 아닌 것은?", options: ["총독부의 지세 수입 증가", "다수 농민의 소작농화", "동양척식주식회사의 토지 소유 확대", "농민의 경작권 인정", "해외 이주 농민 증가"], answer: "농민의 경작권 인정", explanation: "토지 조사 사업은 지주의 소유권만 인정하고 농민들이 관습적으로 가졌던 경작권(도지권)은 부정했습니다." }, { question: "1910년 제정되어 한국인의 회사 설립을 억제했던 법령은?", options: ["광업령", "삼림령", "회사령", "어업령", "은행령"], answer: "회사령", explanation: "회사령은 총독의 허가를 받아야만 회사를 설립할 수 있도록 하여 민족 자본의 성장을 막았습니다." }, { question: "1920년대 일본의 식량 부족 문제를 해결하기 위해 한국에서 실시한 정책은?", options: ["토지 조사 사업", "미곡 공출제", "국가 총동원법", "산미 증식 계획", "병참 기지화 정책"], answer: "산미 증식 계획", explanation: "산미 증식 계획은 일본 내 공업화로 인한 쌀 부족 문제를 한국에서의 증산을 통해 해결하려 한 정책입니다." }, { question: "산미 증식 계획의 결과로 옳지 않은 것은?", options: ["쌀 생산량 증가", "일본으로의 쌀 유출량 급증", "한국인의 1인당 쌀 소비량 증가", "농민의 수리 조합비 부담 증가", "만주산 잡곡 수입 증가"], answer: "한국인의 1인당 쌀 소비량 증가", explanation: "증산된 양보다 더 많은 쌀을 수탈해 갔기 때문에, 한국인의 쌀 소비량은 오히려 줄어들었습니다." }, { question: "1920년 회사령이 허가제에서 신고제로 바뀐 이유는?", options: ["한국 기업 육성을 위해", "3·1 운동의 영향으로", "일본 자본의 한국 진출을 쉽게 하기 위해", "농업 생산력 증대를 위해", "미국의 압력 때문에"], answer: "일본 자본의 한국 진출을 쉽게 하기 위해", explanation: "회사령을 폐지하여 일본의 대기업들이 더 쉽게 한국에 진출하여 이익을 얻도록 하기 위함이었습니다." }, { question: "1923년 한국과 일본 사이의 관세가 폐지되면서 나타난 결과는?", options: ["한국 기업의 경쟁력 강화", "일본 상품의 수입 감소", "한국 상품의 일본 수출 증가", "한국 토종 기업의 몰락 가속화", "미국 상품의 유입 증가"], answer: "한국 토종 기업의 몰락 가속화", explanation: "값싼 일본 상품이 대량으로 들어오면서 자본과 기술이 부족했던 한국 기업들은 큰 타격을 입었습니다." }, { question: "1930년대 일제가 한국을 대륙 침략을 위한 군수 물자 공급 기지로 삼은 정책은?", options: ["문화 통치", "민족 말살 통치", "병참 기지화 정책", "남면북양 정책", "농촌 진흥 운동"], answer: "병참 기지화 정책", explanation: "병참 기지화는 한반도를 전쟁 수행에 필요한 군수 공업 기지로 만드는 것을 목표로 했습니다." }, { question: "일본 방직 공업의 원료를 확보하기 위해 한반도 남부에는 면화, 북부에는 양 사육을 강요한 정책은?", options: ["산미 증식 계획", "조선 공업화 정책", "남면북양 정책", "농촌 진흥 운동", "회사령"], answer: "남면북양 정책", explanation: "남면북양 정책은 한반도의 농업 구조를 일본의 공업 필요에 맞게 재편하려는 의도였습니다." }, { question: "중일 전쟁 이후 전쟁 물자 확보를 위해 쌀을 강제로 수탈한 제도는?", options: ["배급제", "미곡 공출제", "징용", "토지 조사 사업", "국방 헌금"], answer: "미곡 공출제", explanation: "미곡 공출제는 농가별로 할당량을 정해 쌀을 강제로 빼앗아 군량미 등으로 사용한 제도입니다." }, { question: "일제 강점기 경제 수탈을 피해 많은 한국인이 이주한 지역이 아닌 곳은?", options: ["만주", "연해주", "일본", "미주", "대만"], answer: "대만", explanation: "만주, 연해주, 일본, 미주 등은 일제 강점기 한국인들의 주요 이주 지역이었습니다." }, { question: "1923년 관동 대지진 당시 일본에서 일어난 비극적인 사건은?", options: ["일본의 경제 호황", "한국인 노동자 대우 개선", "한국인 대량 학살", "독립운동 기지 건설", "한인회 조직"], answer: "한국인 대량 학살", explanation: "일본 정부는 지진으로 인한 사회 혼란을 한국인에게 돌리며 유언비어를 퍼뜨렸고, 이로 인해 수많은 한국인이 학살당했습니다." }, { question: "소련의 스탈린이 연해주에 거주하던 한국인들을 중앙아시아로 강제 이주시킨 사건의 배경은?", options: ["독립운동 지원", "경제적 지원", "일본과의 협력 우려", "문화 교류 증진", "농지 개간 필요"], answer: "일본과의 협력 우려", explanation: "1937년 중일 전쟁이 일어나자, 스탈린은 연해주 한인들이 일본의 첩자 역할을 할 수 있다고 의심하여 강제 이주를 단행했습니다." }, { question: "1930년대 대공황 이후 농촌 경제가 어려워지자, 일제가 농민을 회유하고 통제하기 위해 실시한 운동은?", options: ["새마을 운동", "농촌 진흥 운동", "물산 장려 운동", "브나로드 운동", "문자 보급 운동"], answer: "농촌 진흥 운동", explanation: "농촌 진흥 운동은 농민들의 불만을 잠재우고, 대륙 침략 과정에서 농민을 통제하기 위한 목적이 컸습니다." }, { question: "일제 말기, 전쟁 무기 제작을 명분으로 놋그릇, 숟가락, 심지어 절의 종까지 빼앗아간 수탈 정책은?", options: ["미곡 공출", "징용", "금속 공출", "배급제", "국방 헌금"], answer: "금속 공출", explanation: "금속 공출은 전쟁에 필요한 금속 자원을 확보하기 위해 한국인들의 생활용품까지 강제로 빼앗은 대표적인 물적 수탈입니다." }, { question: "1910년대 한국의 금융과 산업을 지배하기 위해 설립된 대표적인 금융 기관은?", options: ["한국은행", "조흥은행", "한성은행", "조선식산은행", "제일은행"], answer: "조선식산은행", explanation: "조선식산은행은 농공은행을 통합하여 설립되었으며, 산미 증식 계획 자금 공급 등 일제의 경제 침략에 앞장섰습니다." }, { question: "중앙아시아로 강제 이주된 한인 동포를 일컫는 말은 무엇인가요?", options: ["조선족", "재일 동포", "고려인(카레이스키)", "화교", "재미 교포"], answer: "고려인(카레이스키)", explanation: "1937년 연해주에서 중앙아시아로 강제 이주된 한인들과 그 후손들을 고려인 또는 카레이스키라고 부릅니다." }, { question: "1910년대 회사령의 내용으로 옳은 것은?", options: ["회사 설립을 장려했다.", "신고만 하면 회사를 설립할 수 있었다.", "조선 총독의 허가를 받아야 회사를 설립할 수 있었다.", "일본 자본의 진출을 막았다.", "소규모 회사만 설립이 가능했다."], answer: "조선 총독의 허가를 받아야 회사를 설립할 수 있었다.", explanation: "회사령은 허가제로 운영되어, 민족 기업의 성장을 억제하고 일본 기업에 유리한 환경을 조성했습니다." }, { question: "일제 강점기 경제 정책으로 인해 다수의 농민이 토지를 잃고 만주, 연해주 등 국외로 이주하게 된 직접적인 계기는?", options: ["산미 증식 계획", "회사령", "토지 조사 사업", "화폐 정리 사업", "국채 보상 운동"], answer: "토지 조사 사업", explanation: "토지 조사 사업 과정에서 신고 절차를 이행하지 못하거나 소유권을 증명하지 못한 많은 농민이 토지를 빼앗기고 생계 수단을 잃어 국외로 이주했습니다." }, { question: "다음 중 1930~40년대 전시 수탈 정책에 해당하지 않는 것은?", options: ["미곡 공출제", "금속 공출", "국가 총동원법", "배급제", "회사령 폐지"], answer: "회사령 폐지", explanation: "회사령 폐지는 1920년에 이루어진 조치로, 1930~40년대의 전시 수탈 정책과는 시기적으로 관련이 없습니다." } ];
+    const quizContainer = document.getElementById('quiz-container');
+    const submitBtn = document.getElementById('submit-quiz-btn');
+    const resultContainer = document.getElementById('quiz-result');
+    quizData.forEach((q, index) => { const questionDiv = document.createElement('div'); questionDiv.className = 'quiz-question'; questionDiv.dataset.answer = q.answer; const questionText = document.createElement('p'); questionText.className = 'h5 fw-bold mb-3'; questionText.textContent = (index + 1) + ". " + q.question; questionDiv.appendChild(questionText); const optionsDiv = document.createElement('div'); optionsDiv.className = 'vstack gap-2'; q.options.forEach(option => { const label = document.createElement('label'); label.className = 'quiz-option btn btn-outline-secondary text-start'; const radio = document.createElement('input'); radio.type = 'radio'; radio.name = 'question-' + index; radio.value = option; radio.className = 'form-check-input me-2'; radio.autocomplete = 'off'; label.appendChild(radio); label.appendChild(document.createTextNode(option)); optionsDiv.appendChild(label); }); questionDiv.appendChild(optionsDiv); const explanationDiv = document.createElement('div'); explanationDiv.className = 'explanation-box d-none'; questionDiv.appendChild(explanationDiv); quizContainer.appendChild(questionDiv); });
+    submitBtn.addEventListener('click', () => { let score = 0; const questions = document.querySelectorAll('.quiz-question'); questions.forEach((question, index) => { const correctAnswer = question.dataset.answer; const selectedOption = question.querySelector('input[name="question-' + index + '"]:checked'); const options = question.querySelectorAll('.quiz-option'); const explanationBox = question.querySelector('.explanation-box'); options.forEach(opt => { const radio = opt.querySelector('input'); radio.disabled = true; if (radio.value === correctAnswer) { opt.classList.add('correct', 'btn-outline-success'); opt.classList.remove('btn-outline-secondary'); } }); if (selectedOption) { if (selectedOption.value === correctAnswer) { score++; } else { selectedOption.parentElement.classList.add('incorrect', 'btn-outline-danger'); selectedOption.parentElement.classList.remove('btn-outline-secondary'); } } if (explanationBox) { explanationBox.innerHTML = '<strong>해설:</strong> ' + quizData[index].explanation; explanationBox.classList.remove('d-none'); } }); const totalQuestions = quizData.length; const finalScore = (score / totalQuestions) * 100; resultContainer.textContent = `총 ${totalQuestions}문제 중 ${score}문제를 맞혔습니다! (점수: ${finalScore.toFixed(0)}점)`; resultContainer.classList.remove('d-none'); submitBtn.disabled = true; submitBtn.textContent = '제출 완료'; submitBtn.classList.add('disabled'); });
+</script>
