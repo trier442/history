@@ -4,11 +4,6 @@ title: 2. 경제 구조의 변화와 경제생활
 ---
 
 <style>
-    .nav-tabs .nav-link.active {
-        font-weight: bold;
-        background-color: #f8f9fa;
-        border-bottom-color: #dee2e6;
-    }
     .hidden-box {
         cursor: pointer;
         border: 2px dashed #adb5bd;
@@ -16,7 +11,7 @@ title: 2. 경제 구조의 변화와 경제생활
         padding: 2px 8px;
         border-radius: 6px;
         font-weight: 700;
-        color: transparent;
+        color: transparent; /* 텍스트를 초기에 투명하게 만듭니다 */
         transition: all 0.2s ease;
         display: inline-block;
         min-width: 100px;
@@ -36,9 +31,20 @@ title: 2. 경제 구조의 변화와 경제생활
         animation: fadeIn 0.5s;
         display: inline-block;
     }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .quiz-option.correct { background-color: #d1e7dd; border-color: #198754; }
-    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .quiz-option.correct {
+        background-color: #d1e7dd !important;
+        border-color: #198754 !important;
+        color: #0a3622 !important;
+    }
+    .quiz-option.incorrect {
+        background-color: #f8d7da !important;
+        border-color: #dc3545 !important;
+        color: #58151c !important;
+    }
     .explanation-box {
         background-color: #f8f9fa;
         border-left: 4px solid #6c757d;
@@ -48,48 +54,49 @@ title: 2. 경제 구조의 변화와 경제생활
     }
 </style>
 
-<header class="card shadow-sm sticky-top">
-    <div class="card-header d-flex justify-content-between align-items-center p-3">
+<header class="card shadow-sm mb-4">
+    <div class="card-body d-flex justify-content-between align-items-center p-3">
         <div>
             <h1 class="h5 fw-bold mb-0">2. 경제 구조의 변화와 경제생활</h1>
             <p class="small text-muted mb-0">비상 한국사 2</p>
         </div>
         <a href="javascript:history.back()" class="btn btn-light btn-sm">뒤로가기</a>
     </div>
-    <nav class="card-header-tabs nav nav-tabs">
-        <a class="nav-link active" href="#section-0">1. 교과서 핵심 정리</a>
-        <a class="nav-link" href="#section-1">2. 스토리텔링 한국사</a>
-        <a class="nav-link" href="#section-2">3. 내용 확인 문제</a>
-    </nav>
 </header>
 
-<main class="mt-4">
-    <section id="section-0" class="mb-5 pt-5 mt-n5">
+<main>
+    <section id="section-0" class="mb-5">
         <h2 class="h3 fw-bold mb-4">1. 교과서 핵심 정리</h2>
         <div class="card shadow-sm">
             <div class="card-body p-4">
-                <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-primary">1910년대: 경제 기반 파괴와 자원 수탈</h3>
-                <ul class="list-unstyled">
-                    <li><strong class="text-primary">토지 조사 사업 (1910~1918):</strong> 기한 내 신고주의 방식으로 총독부의 세금 수입을 늘리고, 미신고 토지를 약탈하여 동양척식주식회사 등에 넘김. 다수 농민이 몰락.</li>
-                    <li><strong class="text-primary">산업 침탈:</strong> 회사령(허가제)으로 민족 자본 성장을 억제하고, 어업령, 삼림령 등으로 자원을 독점.</li>
-                </ul>
+                <div class="mb-4">
+                    <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-primary">1910년대: 경제 기반 파괴와 자원 수탈</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong class="text-primary">토지 조사 사업 (1910~1918):</strong> 기한 내 신고주의 방식으로 총독부의 세금 수입을 늘리고, 미신고 토지를 약탈하여 동양척식주식회사 등에 넘김. 다수 농민이 몰락.</li>
+                        <li><strong class="text-primary">산업 침탈:</strong> 회사령(허가제)으로 민족 자본 성장을 억제하고, 어업령, 삼림령 등으로 자원을 독점.</li>
+                    </ul>
+                </div>
                 <hr class="my-4">
-                <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-success">1920년대: 산미 증식 계획과 일본 자본 침투</h3>
-                <ul class="list-unstyled">
-                    <li><strong class="text-success">산미 증식 계획 (1920~1934):</strong> 일본의 식량 부족 해결 목적. 증산량보다 수탈량이 더 많아 한국 내 식량 사정 악화, 농민 부담 가중.</li>
-                    <li><strong class="text-success">일본 자본 침투:</strong> 회사령 폐지(신고제 전환), 관세 폐지로 일본 대자본의 한국 진출이 본격화되어 한국 기업이 큰 타격을 입음.</li>
-                </ul>
+                <div class="mb-4">
+                    <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-success">1920년대: 산미 증식 계획과 일본 자본 침투</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong class="text-success">산미 증식 계획 (1920~1934):</strong> 일본의 식량 부족 해결 목적. 증산량보다 수탈량이 더 많아 한국 내 식량 사정 악화, 농민 부담 가중.</li>
+                        <li><strong class="text-success">일본 자본 침투:</strong> 회사령 폐지(신고제 전환), 관세 폐지로 일본 대자본의 한국 진출이 본격화되어 한국 기업이 큰 타격을 입음.</li>
+                    </ul>
+                </div>
                 <hr class="my-4">
-                 <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-danger">1930~40년대: 병참 기지화와 전시 수탈</h3>
-                <ul class="list-unstyled">
-                    <li><strong class="text-danger">병참 기지화 정책:</strong> 만주 침략 이후 한반도를 군수 물자 공급 기지로 삼음. 남면북양 정책 실시, 군수 산업 위주로 공업 구조 왜곡.</li>
-                    <li><strong class="text-danger">전시 수탈 강화:</strong> 미곡 공출제, 금속 공출 등으로 쌀과 물자를 강제로 빼앗고, 배급제를 실시하여 한국인의 생활을 극도로 피폐하게 만듦.</li>
-                </ul>
+                <div>
+                     <h3 class="h4 fw-bold mb-3 pb-2 border-bottom border-danger">1930~40년대: 병참 기지화와 전시 수탈</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong class="text-danger">병참 기지화 정책:</strong> 만주 침략 이후 한반도를 군수 물자 공급 기지로 삼음. 남면북양 정책 실시, 군수 산업 위주로 공업 구조 왜곡.</li>
+                        <li><strong class="text-danger">전시 수탈 강화:</strong> 미곡 공출제, 금속 공출 등으로 쌀과 물자를 강제로 빼앗고, 배급제를 실시하여 한국인의 생활을 극도로 피폐하게 만듦.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="section-1" class="d-none mb-5 pt-5 mt-n5">
+    <section id="section-1" class="mb-5">
         <h2 class="h3 fw-bold mb-4">2. 스토리텔링 한국사</h2>
         <div class="card shadow-sm">
             <div class="card-body p-4 lh-lg">
@@ -100,7 +107,7 @@ title: 2. 경제 구조의 변화와 경제생활
         </div>
     </section>
 
-    <section id="section-2" class="d-none pt-5 mt-n5">
+    <section id="section-2">
         <h2 class="h3 fw-bold mb-4">3. 내용 확인 문제</h2>
         <div class="card shadow-sm">
             <div class="card-body p-4">
@@ -115,38 +122,12 @@ title: 2. 경제 구조의 변화와 경제생활
     </section>
 </main>
 
+<footer class="text-center text-muted mt-5 pt-3 border-top">
+    <p class="small">&copy; 2024 모두의 한국사. All Rights Reserved.</p>
+</footer>
+
+
 <script>
-    const tabLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('main section');
-
-    // 탭 클릭 시 해당 섹션으로 스크롤
-    tabLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerOffset = document.querySelector('header').offsetHeight;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-            }
-        });
-    });
-
-    // 스크롤 위치에 따라 활성 탭 변경
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                tabLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-                });
-            }
-        });
-    }, { rootMargin: "-100px 0px -50% 0px" });
-
-    sections.forEach(section => { observer.observe(section); });
-
     // 스토리텔링 빈칸 채우기 기능
     function reveal(element) {
         const text = element.dataset.text;
