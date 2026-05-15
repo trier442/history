@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. 산업화의 성과와 사회·환경 문제 - 모두의 한국사</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .tab-btn.active {
+            border-color: #4f46e5;
+            background-color: #4f46e5;
+            color: white;
+        }
+        .hidden-box {
+            cursor: pointer;
+            border: 2px dashed #9ca3af;
+            background-color: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: transparent; /* Make text transparent initially */
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+            user-select: none;
+        }
+        .hidden-box:hover {
+            background-color: #e5e7eb;
+            border-color: #6b7280;
+        }
+        .revealed-box {
+            background-color: #eef2ff;
+            color: #4338ca;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            animation: fadeIn 0.5s;
+            display: inline-block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation-box {
+            background-color: #f9fafb;
+            border-left: 4px solid #6b7280;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254"
+     crossorigin="anonymous"></script>
+
+<body class="bg-gray-50">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-black text-gray-900">4. 산업화의 성과와 사회·환경 문제</h1>
+                <p class="mt-1 text-sm text-gray-600">비상 한국사 2</p>
+            </div>
+            <a href="https://eduking1978.tistory.com/category/2022%20%EA%B0%9C%EC%A0%95%20%EA%B3%A0%EB%93%B1%20%ED%95%9C%EA%B5%AD%EC%82%AC/%EB%B9%84%EC%83%81%20%ED%95%9C%EA%B5%AD%EC%82%AC2" class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm sm:text-base">
+                뒤로가기
+            </a>
+        </div>
+        <!-- 탭 메뉴 -->
+        <div class="container mx-auto px-4 sm:px-6 bg-white">
+            <div class="flex border-b">
+                <a href="#section-0" class="tab-btn active py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">1. 교과서 핵심 정리</a>
+                <a href="#section-1" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">2. 스토리텔링 한국사</a>
+                <a href="#section-2" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">3. 내용 확인 문제</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 컨텐츠 영역 -->
+    <main class="container mx-auto px-4 sm:px-6 py-8">
+        <!-- 1. 교과서 핵심 정리 -->
+        <section id="section-0" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">1. 교과서 핵심 정리</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-indigo-500 inline-block">경제 성장과 산업화</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">정부 주도의 경제 개발:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">1, 2차 경제 개발 계획(1962~1971):</span> <span class="text-indigo-600 font-bold">경공업</span> 육성 및 수출 증대 주력. 경부 고속 국도 건설 등 사회 간접 자본 확충.</li>
+                                <li><span class="font-bold">3, 4차 경제 개발 계획(1972~1981):</span> <span class="text-indigo-600 font-bold">중화학 공업</span> 집중 육성. 포항 제철소, 울산·거제 조선소 등 건설. '한강의 기적'이라 불리는 고도성장 달성.</li>
+                                <li><span class="font-bold">1980년대 경제 변화:</span> 2차 석유 파동 극복 후 <span class="text-indigo-600 font-bold">3저 호황</span>(저유가, 저금리, 저달러) 속에서 자동차, 반도체 등 기술 집약적 산업 성장.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-semibold">경제 성장의 문제점:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">대외 의존도 심화:</span> 외국 자본과 기술에 대한 의존도가 높아져 국제 경제 상황에 취약.</li>
+                                <li><span class="font-bold">재벌 중심 성장:</span> 정부의 지원을 받은 소수 재벌 기업에 경제력 집중, 정경 유착 문제 발생.</li>
+                                <li><span class="font-bold">불균형 성장:</span> 수출·공업 위주 정책으로 농업 부문 소외, 도시와 농촌 간 격차 심화.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-green-500 inline-block">사회 변화와 대중 운동</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">농촌의 변화와 농민 운동:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">새마을 운동(1970~):</span> 농촌 환경 개선과 소득 증대에 기여했으나, 유신 체제 유지에 이용되기도 함.</li>
+                                <li><span class="font-bold">농민 운동:</span> 정부의 저곡가 정책과 농산물 수입 개방에 반대하는 운동 전개.</li>
+                            </ul>
+                        </li>
+                        <li>
+                           <span class="font-semibold">노동 문제와 노동 운동:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">노동 문제:</span> 경제 성장을 위해 저임금·장시간 노동 강요, 열악한 작업 환경, 노동자의 권리 억압.</li>
+                                <li><span class="font-bold">노동 운동:</span> <span class="text-green-600 font-bold">전태일 분신 사건(1970)</span>을 계기로 노동 문제에 대한 사회적 관심 증대. 1987년 6월 민주 항쟁 이후 노동자 대투쟁으로 노동 운동 활성화.</li>
+                            </ul>
+                        </li>
+                        <li>
+                           <span class="font-semibold">환경 문제 발생과 해결 노력:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">환경 문제:</span> 급속한 산업화·도시화로 대기 오염, 수질 오염 등 심각한 공해 문제 발생.</li>
+                                <li><span class="font-bold">해결 노력:</span> 시민 단체를 중심으로 공해 추방 운동 전개, 정부는 <span class="text-green-600 font-bold">환경청</span>(현 환경부)을 설립(1980)하고 환경 보전법 제정.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리텔링 한국사 -->
+        <section id="section-1" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">2. 스토리텔링 한국사</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-6 text-lg leading-relaxed">
+                 <p>
+                    6·25 전쟁으로 폐허가 되었던 대한민국은 1960년대부터 '한강의 기적'이라 불리는 놀라운 경제 성장을 시작했습니다. 박정희 정부는 <span class="hidden-box" data-text="경제 개발 5개년 계획" onclick="reveal(this)">&nbsp;</span>을 강력하게 추진했습니다. 처음에는 가발, 신발 등 <span class="hidden-box" data-text="경공업" onclick="reveal(this)">&nbsp;</span>을 중심으로 수출의 길을 열었고, 1970년대에는 포항 제철소 건설을 시작으로 <span class="hidden-box" data-text="중화학 공업" onclick="reveal(this)">&nbsp;</span>을 집중 육성했습니다.
+                </p>
+                <p>
+                    이 눈부신 성장의 뒤에는 노동자들의 피와 땀이 있었습니다. "우리는 기계가 아니다!"라고 외치며 자신을 불사른 청년 노동자 <span class="hidden-box" data-text="전태일" onclick="reveal(this)">&nbsp;</span>의 희생은 우리 사회에 큰 충격을 주었고, 열악한 노동 현실을 알리는 계기가 되었습니다. 농촌 역시 도시와의 격차가 커지는 아픔을 겪었습니다. 정부는 이를 해결하기 위해 <span class="hidden-box" data-text="새마을 운동" onclick="reveal(this)">&nbsp;</span>을 펼쳐 농촌 환경을 개선하려 노력했습니다.
+                </p>
+                <p>
+                    하지만 압축 성장의 그늘은 짙었습니다. 공장 굴뚝에서 뿜어져 나오는 연기와 강으로 흘러드는 폐수는 심각한 <span class="hidden-box" data-text="환경 문제" onclick="reveal(this)">&nbsp;</span>를 낳았습니다. 1980년대, 우리 경제는 두 차례의 <span class="hidden-box" data-text="석유 파동" onclick="reveal(this)">&nbsp;</span>이라는 위기를 넘고, 저유가, 저금리, 저달러의 <span class="hidden-box" data-text="3저 호황" onclick="reveal(this)">&nbsp;</span>을 맞아 자동차와 반도체 산업을 이끌며 한 단계 더 도약했습니다. 그러나 성장 위주의 정책은 재벌 중심의 경제 구조, 도시와 농촌의 불균형 같은 과제를 남겼습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 내용 확인 문제 -->
+        <section id="section-2" class="pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">3. 내용 확인 문제</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <div id="quiz-container" class="space-y-8">
+                    <!-- 문제가 여기에 동적으로 추가됩니다. -->
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="submit-quiz-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors text-lg">제출하기</button>
+                </div>
+                <div id="quiz-result" class="hidden mt-8 text-center text-2xl font-bold"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 탭 스크롤 및 활성화 로직
+        const tabLinks = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('main section');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                    });
+                }
+            });
+        });
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tabLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-100px 0px -50% 0px" }); 
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        function reveal(element) {
+            const text = element.dataset.text;
+            const revealed = document.createElement('span');
+            revealed.className = 'revealed-box';
+            revealed.textContent = text;
+            element.replaceWith(revealed);
+        }
+
+        const quizData = [
+            { question: "박정희 정부가 1960년대에 추진한 제1, 2차 경제 개발 계획의 중점 육성 산업은?", options: ["중화학 공업", "반도체 산업", "경공업", "방위 산업", "정보 통신 산업"], answer: "경공업", explanation: "1960년대에는 섬유, 가발, 신발 등 노동 집약적인 경공업을 중심으로 수출을 늘리는 데 주력했습니다." },
+            { question: "1970년대 제3, 4차 경제 개발 계획에서 정부가 집중적으로 육성한 산업 분야는?", options: ["농업", "서비스업", "경공업", "중화학 공업", "금융업"], answer: "중화학 공업", explanation: "1970년대에는 철강, 조선, 석유 화학 등 중화학 공업을 집중 육성하여 산업 구조를 고도화하고자 했습니다." },
+            { question: "1980년대 중반 한국 경제가 고도성장을 이루는 데 유리하게 작용한 국제 경제 환경은?", options: ["고유가, 고금리, 고환율", "3저 호황", "석유 파동", "세계 대공황", "외환 위기"], answer: "3저 호황", explanation: "저유가, 저금리, 저달러 현상인 3저 호황은 수출 기업의 채산성을 높이고 물가를 안정시켜 경제 성장에 크게 기여했습니다." },
+            { question: '1970년 "근로 기준법을 준수하라"고 외치며 분신하여 노동 문제에 대한 사회적 관심을 불러일으킨 인물은?', options: ["박종철", "이한열", "김주열", "장준하", "전태일"], answer: "전태일", explanation: "평화 시장 재단사였던 전태일의 희생은 한국 노동 운동의 중요한 전환점이 되었습니다." },
+            { question: "1970년대 도시와 농촌의 격차를 줄이고 농촌 근대화를 목표로 추진된 범국민적 운동은?", options: ["농촌 진흥 운동", "새마을 운동", "브나로드 운동", "농민 조합 운동", "물산 장려 운동"], answer: "새마을 운동", explanation: "'근면, 자조, 협동'을 기본 정신으로 내세운 새마을 운동은 농촌의 생활 환경 개선에 큰 영향을 미쳤습니다." },
+            { question: "경제 성장 과정에서 정부가 수출 기업을 지원하고 특정 산업을 육성하면서 나타난 문제점은?", options: ["완전 고용 달성", "소득 분배의 완전한 평등", "정경 유착과 재벌 중심의 경제 구조", "농업의 급격한 성장", "환경 문제의 완전한 해결"], answer: "정경 유착과 재벌 중심의 경제 구조", explanation: "정부의 지원을 받은 소수의 재벌 기업에 경제력이 집중되면서 정경 유착과 같은 부작용이 나타났습니다." },
+            { question: "1970년대 두 차례에 걸쳐 세계 경제와 한국 경제에 큰 충격을 준 사건은?", options: ["대공황", "외환 위기", "금융 위기", "석유 파동", "3저 호황"], answer: "석유 파동", explanation: "중동 전쟁 등으로 국제 유가가 급등한 석유 파동(오일 쇼크)은 원유 수입 의존도가 높은 한국 경제에 큰 위기를 가져왔습니다." },
+            { question: "급속한 산업화와 도시화로 인해 발생한 문제점으로 가장 적절하지 않은 것은?", options: ["대기 오염", "수질 오염", "농촌 인구 증가", "소음 공해", "주택난"], answer: "농촌 인구 증가", explanation: "산업화 과정에서 일자리를 찾아 많은 사람이 농촌을 떠나 도시로 이동하면서 이촌향도 현상이 나타났고, 농촌 인구는 급격히 감소했습니다." },
+            { question: "1987년 6월 민주 항쟁 이후 노동자들의 권익 향상을 위한 대규모 투쟁은?", options: ["원산 총파업", "YH 무역 사건", "노동자 대투쟁", "전태일 분신", "구로 동맹 파업"], answer: "노동자 대투쟁", explanation: "1987년 7~9월에 걸쳐 일어난 노동자 대투쟁을 통해 노동조합이 급증하고 노동자의 권리가 크게 신장되었습니다." },
+            { question: "정부가 환경 문제의 심각성을 인식하고 1980년에 설립한 중앙 행정 기관은?", options: ["보건사회부", "내무부", "건설부", "환경청", "산림청"], answer: "환경청", explanation: "환경청은 이후 환경처를 거쳐 현재의 환경부로 발전하며 환경 정책을 총괄하게 되었습니다." },
+            { question: "1960~70년대 정부가 수출 상품의 가격 경쟁력을 위해 유지했던 정책은?", options: ["고임금·고곡가 정책", "저임금·저곡가 정책", "최저 임금제 도입", "전면적 시장 개방", "노동 조합 활동 보장"], answer: "저임금·저곡가 정책", explanation: "정부는 노동자의 임금과 쌀값을 낮게 유지하여 기업의 생산 비용을 줄이고 수출품의 가격을 낮추는 정책을 폈습니다." },
+            { question: "1970년대 정부의 저곡가 정책과 농협의 비리에 맞서 농민들이 벌인 대표적인 권익 수호 운동은?", options: ["암태도 소작 쟁의", "새마을 운동", "함평 고구마 피해 보상 운동", "전국 농민회 총연맹 결성", "농산물 수입 반대 운동"], answer: "함평 고구마 피해 보상 운동", explanation: "함평 고구마 피해 보상 운동은 농민들이 단결하여 정부와 농협을 상대로 승리한 대표적인 농민 운동 사례입니다." },
+            { question: "경제 성장 과정에서 나타난 '성장의 그늘'에 해당하지 않는 것은?", options: ["지역 간 불균형", "빈부 격차 심화", "노동자의 인권 문제", "환경 오염", "사회 간접 자본 확충"], answer: "사회 간접 자본 확충", explanation: "경부 고속 국도 건설 등 사회 간접 자본 확충은 경제 성장의 성과이자 기반이었으며, '그늘'보다는 '빛'에 해당합니다." },
+            { question: "1980년대 한국 경제가 기술 집약적 산업으로 전환되면서 크게 성장한 분야는?", options: ["섬유, 가발", "신발, 의류", "철강, 조선", "자동차, 반도체", "농업, 임업"], answer: "자동차, 반도체", explanation: "3저 호황을 바탕으로 자동차와 반도체 산업이 새로운 수출 주력 산업으로 떠오르며 한국 경제의 체질을 바꾸었습니다." },
+            { question: "다음 중 산업화 시기 도시의 모습으로 적절하지 않은 것은?", options: ["교통난 심화", "주택 부족 문제", "도시 빈민층의 판자촌 형성", "쾌적한 생활 환경", "상하수도 시설 부족"], answer: "쾌적한 생활 환경", explanation: "급격한 도시화는 인구 과밀, 주택난, 교통난, 환경 오염 등 다양한 도시 문제를 야기했습니다." },
+            { question: "박정희 정부가 경공업 중심의 경제 구조를 중화학 공업으로 전환하게 된 배경으로 옳지 않은 것은?", options: ["경공업의 한계 인식", "방위 산업 육성의 필요성", "미국의 적극적인 기술 이전", "자립 경제 건설 목표", "주한 미군 일부 철수"], answer: "미국의 적극적인 기술 이전", explanation: "중화학 공업 육성은 자주국방의 필요성과 경제 구조 고도화를 위한 자체적인 판단이었으며, 미국의 적극적인 기술 이전보다는 차관 도입에 의존했습니다." },
+            { question: "1970년대 중동 건설 사업 진출이 한국 경제에 미친 긍정적인 영향은?", options: ["국내 실업률 증가", "제1차 석유 파동 극복에 기여", "환경 문제 해결", "농가 소득 증대", "노사 갈등 완화"], answer: "제1차 석유 파동 극복에 기여", explanation: "중동 건설 붐으로 벌어들인 외화(오일 달러)는 제1차 석유 파동으로 인한 경제 위기를 극복하는 데 큰 도움이 되었습니다." },
+            { question: "정부가 특정 기업이나 산업에 금융, 세제 등 각종 혜택을 제공하면서 발생한 가장 큰 문제점은?", options: ["기업의 도덕적 해이", "정경 유착", "기술 개발 지연", "과도한 경쟁", "시장 실패"], answer: "정경 유착", explanation: "정부의 지원을 받기 위해 기업이 정치권과 결탁하는 정경 유착은 한국 경제의 고질적인 문제로 지적되었습니다." },
+            { question: "산업화 과정에서 농촌 인구가 도시로 대거 이동한 현상을 무엇이라고 하는가?", options: ["귀농 현상", "역도시화", "이촌향도", "도시 재개발", "인구 공동화"], answer: "이촌향도", explanation: "이촌향도(離村向都)는 '농촌을 떠나 도시로 향한다'는 뜻으로, 1960~70년대 한국의 급격한 사회 변화를 상징하는 용어입니다." },
+            { question: "1980년대 우루과이 라운드 협상 이후 한국 사회가 직면하게 된 가장 큰 도전은?", options: ["군사적 긴장 완화", "민주화 요구 증대", "농산물 시장 개방 압력", "문화적 고립", "급격한 인구 감소"], answer: "농산물 시장 개방 압력", explanation: "우루과이 라운드는 농산물을 포함한 전면적인 시장 개방을 요구하여, 당시 경쟁력이 약했던 한국 농업에 큰 위협이 되었습니다." }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const submitBtn = document.getElementById('submit-quiz-btn');
+        const resultContainer = document.getElementById('quiz-result');
+
+        // 퀴즈 문제 생성
+        quizData.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'quiz-question';
+            questionDiv.dataset.answer = q.answer;
+
+            const questionText = document.createElement('p');
+            questionText.className = 'text-lg font-semibold mb-4';
+            questionText.textContent = (index + 1) + ". " + q.question;
+            questionDiv.appendChild(questionText);
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'space-y-3';
+            
+            q.options.forEach(option => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option block border border-gray-300 rounded-lg p-3 cursor-pointer hover:bg-gray-100 transition-colors';
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'question-' + index;
+                radio.value = option;
+                radio.className = 'mr-3';
+
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(option));
+                optionsDiv.appendChild(label);
+            });
+
+            questionDiv.appendChild(optionsDiv);
+
+            const explanationDiv = document.createElement('div');
+            explanationDiv.className = 'explanation-box hidden';
+            questionDiv.appendChild(explanationDiv);
+
+            quizContainer.appendChild(questionDiv);
+        });
+
+        // 퀴즈 제출 로직
+        submitBtn.addEventListener('click', () => {
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question, index) => {
+                const correctAnswer = question.dataset.answer;
+                const selectedOption = question.querySelector('input[name="question-' + index + '"]:checked');
+                const options = question.querySelectorAll('.quiz-option');
+                const explanationBox = question.querySelector('.explanation-box');
+
+                options.forEach(opt => {
+                    const radio = opt.querySelector('input');
+                    radio.disabled = true;
+                    if (radio.value === correctAnswer) {
+                        opt.classList.add('correct');
+                    }
+                });
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                    } else {
+                        selectedOption.parentElement.classList.add('incorrect');
+                    }
+                }
+                
+                if (explanationBox) {
+                    explanationBox.innerHTML = '<strong>해설:</strong> ' + quizData[index].explanation;
+                    explanationBox.classList.remove('hidden');
+                }
+            });
+
+            const totalQuestions = quizData.length;
+            const finalScore = (score / totalQuestions) * 100;
+            resultContainer.textContent = '총 ' + totalQuestions + '문제 중 ' + score + '문제를 맞혔습니다! (점수: ' + finalScore.toFixed(0) + '점)';
+            resultContainer.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '제출 완료';
+            submitBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+            submitBtn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+        });
+    </script>
+
+</body>
+</html>

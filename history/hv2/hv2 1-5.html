@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. 독립 국가 건설 노력 - 모두의 한국사</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .tab-btn.active {
+            border-color: #4f46e5;
+            background-color: #4f46e5;
+            color: white;
+        }
+        .hidden-box {
+            cursor: pointer;
+            border: 2px dashed #9ca3af;
+            background-color: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: transparent; /* Make text transparent initially */
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+            user-select: none;
+        }
+        .hidden-box:hover {
+            background-color: #e5e7eb;
+            border-color: #6b7280;
+        }
+        .revealed-box {
+            background-color: #eef2ff;
+            color: #4338ca;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            animation: fadeIn 0.5s;
+            display: inline-block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation-box {
+            background-color: #f9fafb;
+            border-left: 4px solid #6b7280;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254"
+     crossorigin="anonymous"></script>
+
+<body class="bg-gray-50">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-black text-gray-900">5. 독립 국가 건설 노력</h1>
+                <p class="mt-1 text-sm text-gray-600">비상 한국사 2</p>
+            </div>
+            <a href="https://eduking1978.tistory.com/category/2022%20%EA%B0%9C%EC%A0%95%20%EA%B3%A0%EB%93%B1%20%ED%95%9C%EA%B5%AD%EC%82%AC/%EB%B9%84%EC%83%81%20%ED%95%9C%EA%B5%AD%EC%82%AC2" class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm sm:text-base">
+                뒤로가기
+            </a>
+        </div>
+        <!-- 탭 메뉴 -->
+        <div class="container mx-auto px-4 sm:px-6 bg-white">
+            <div class="flex border-b">
+                <a href="#section-0" class="tab-btn active py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">1. 교과서 핵심 정리</a>
+                <a href="#section-1" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">2. 스토리텔링 한국사</a>
+                <a href="#section-2" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">3. 내용 확인 문제</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 컨텐츠 영역 -->
+    <main class="container mx-auto px-4 sm:px-6 py-8">
+        <!-- 1. 교과서 핵심 정리 -->
+        <section id="section-0" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">1. 교과서 핵심 정리</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-indigo-500 inline-block">1930년대 전반: 만주에서의 한중 연합 작전</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">배경:</span> <span class="text-indigo-600 font-bold">만주 사변(1931)</span> 이후 중국 내 항일 감정 고조 → 한국 독립군과 중국군의 연합 전선 형성.
+                        </li>
+                        <li>
+                            <span class="font-semibold">북만주:</span> <span class="text-indigo-600 font-bold">한국독립군</span>(총사령관 지청천) + 중국 호로군 연합 → 쌍성보, 사도하자, 대전자령 전투 등에서 승리.
+                        </li>
+                        <li>
+                            <span class="font-semibold">남만주:</span> <span class="text-indigo-600 font-bold">조선혁명군</span>(총사령관 양세봉) + 중국 의용군 연합 → 영릉가, 흥경성 전투 등에서 승리.
+                        </li>
+                         <li>
+                            <span class="font-semibold">항일 유격 투쟁:</span> 사회주의 계열이 중국 공산당과 연합하여 <span class="text-indigo-600 font-bold">동북항일연군</span> 조직. 국내 진공 작전(보천보 전투) 전개.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-green-500 inline-block">1930년대 후반: 중국 관내에서의 독립운동</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">대한민국 임시 정부의 활로 모색:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">한인 애국단(1931) 조직:</span> 김구가 침체된 임시 정부에 활력을 불어넣기 위해 조직.</li>
+                                <li><span class="font-bold">의거 활동:</span> <span class="text-green-600 font-bold">이봉창</span>(일왕 마차에 폭탄 투척), <span class="text-green-600 font-bold">윤봉길</span>(상하이 훙커우 공원 의거).</li>
+                                <li><span class="font-bold">영향:</span> 윤봉길 의거를 계기로 중국 국민당 정부가 임시 정부를 적극 지원하게 됨.</li>
+                            </ul>
+                        </li>
+                        <li>
+                           <span class="font-semibold">민족 연합 전선 운동:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">민족혁명당(1935) 결성:</span> 의열단 중심의 좌우 합작 정당. 김구 등 일부 민족주의 세력 불참.</li>
+                                <li><span class="font-bold">조선의용대(1938) 창설:</span> 중국 관내 최초의 한인 무장 부대. 중국 국민당의 지원을 받음.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-red-500 inline-block">1940년대: 건국 준비 활동</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">대한민국 임시 정부 (충칭 시기):</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">한국광복군(1940) 창설:</span> 임시 정부의 정규군. 총사령관 지청천. 조선의용대 일부 병력 흡수.</li>
+                                <li><span class="font-bold">대일 선전 포고(1941):</span> 태평양 전쟁 발발 후 연합군의 일원으로 참전.</li>
+                                <li><span class="font-bold">건국 강령 발표(1941):</span> <span class="text-red-600 font-bold">조소앙의 삼균주의</span>에 기초하여 정치·경제·교육의 균등을 바탕으로 한 민주 공화국 건설 목표 제시.</li>
+                                <li><span class="font-bold">국내 진공 작전 계획:</span> 미국 전략 정보국(OSS)과 연합하여 국내 진공 작전을 준비했으나 일제의 항복으로 실행되지 못함.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-semibold">화북 지역의 독립운동:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">조선독립동맹(1942) 결성:</span> 김두봉을 중심으로 사회주의 계열이 결성.</li>
+                                <li><span class="font-bold">조선의용군:</span> 조선의용대 화북 지대를 개편하여 산하 부대로 둠. 중국 공산당군과 연합하여 항일 투쟁.</li>
+                            </ul>
+                        </li>
+                         <li>
+                            <span class="font-semibold">국내의 건국 준비:</span> <span class="text-red-600 font-bold">여운형</span>을 중심으로 <span class="text-red-600 font-bold">조선건국동맹(1944)</span>이 비밀리에 결성되어 광복에 대비.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리텔링 한국사 -->
+        <section id="section-1" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">2. 스토리텔링 한국사</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-6 text-lg leading-relaxed">
+                 <p>
+                    1931년 일제가 <span class="hidden-box" data-text="만주 사변" onclick="reveal(this)">&nbsp;</span>을 일으키자, 만주에 있던 우리 독립군들은 중국군과 손을 잡았습니다. 북만주에서는 지청천 장군의 <span class="hidden-box" data-text="한국독립군" onclick="reveal(this)">&nbsp;</span>이, 남만주에서는 양세봉 장군의 <span class="hidden-box" data-text="조선혁명군" onclick="reveal(this)">&nbsp;</span>이 중국군과 연합하여 일본군을 상대로 빛나는 승리를 거두었습니다.
+                </p>
+                <p>
+                    한편, 침체에 빠졌던 <span class="hidden-box" data-text="대한민국 임시 정부" onclick="reveal(this)">&nbsp;</span>에 새로운 바람이 불었습니다. 김구 선생은 <span class="hidden-box" data-text="한인 애국단" onclick="reveal(this)">&nbsp;</span>을 조직하여 의열 투쟁을 이끌었습니다. <span class="hidden-box" data-text="이봉창" onclick="reveal(this)">&nbsp;</span> 의사와 <span class="hidden-box" data-text="윤봉길" onclick="reveal(this)">&nbsp;</span> 의사의 거사는 전 세계에 우리의 독립 의지를 알렸고, 특히 중국 국민당 정부가 임시 정부를 지원하는 결정적인 계기가 되었습니다.
+                </p>
+                <p>
+                    1940년대, 광복의 그날이 다가오고 있었습니다. 충칭에 정착한 임시 정부는 정규군인 <span class="hidden-box" data-text="한국광복군" onclick="reveal(this)">&nbsp;</span>을 창설하고 연합군의 일원으로 참전했습니다. 그리고 조소앙의 <span class="hidden-box" data-text="삼균주의" onclick="reveal(this)">&nbsp;</span>를 바탕으로 광복 후 세울 나라의 청사진인 건국 강령을 발표했습니다. 화북 지역에서는 김두봉을 중심으로 <span class="hidden-box" data-text="조선독립동맹" onclick="reveal(this)">&nbsp;</span>이 결성되었고, 국내에서는 여운형이 비밀리에 <span class="hidden-box" data-text="조선건국동맹" onclick="reveal(this)">&nbsp;</span>을 조직하여 다가올 해방의 날을 준비하고 있었습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 내용 확인 문제 -->
+        <section id="section-2" class="pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">3. 내용 확인 문제</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <div id="quiz-container" class="space-y-8">
+                    <!-- 문제가 여기에 동적으로 추가됩니다. -->
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="submit-quiz-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors text-lg">제출하기</button>
+                </div>
+                <div id="quiz-result" class="hidden mt-8 text-center text-2xl font-bold"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 탭 스크롤 및 활성화 로직
+        const tabLinks = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('main section');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                    });
+                }
+            });
+        });
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tabLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-100px 0px -50% 0px" }); 
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        function reveal(element) {
+            const text = element.dataset.text;
+            const revealed = document.createElement('span');
+            revealed.className = 'revealed-box';
+            revealed.textContent = text;
+            element.replaceWith(revealed);
+        }
+
+        const quizData = [
+            { question: "1931년 일제가 만주를 침략한 사건 이후, 한국 독립군이 중국군과 연합 작전을 펼치게 된 계기는?", options: ["중일 전쟁", "태평양 전쟁", "만주 사변", "상하이 사변", "보천보 전투"], answer: "만주 사변", explanation: "1931년 만주 사변으로 일본이라는 공동의 적이 생기자, 한국 독립군과 중국군은 연합하여 항일 투쟁을 전개했습니다." },
+            { question: "1930년대 초 북만주에서 지청천의 지휘 아래 중국 호로군과 연합하여 쌍성보, 대전자령 전투에서 활약한 부대는?", options: ["조선혁명군", "조선의용대", "한국광복군", "동북항일연군", "한국독립군"], answer: "한국독립군", explanation: "한국독립군은 북만주에서 활동하며 한중 연합 작전을 통해 큰 전과를 올렸습니다." },
+            { question: "침체된 대한민국 임시 정부에 활력을 불어넣기 위해 김구가 조직한 의열 단체는?", options: ["의열단", "대한 광복회", "한인 애국단", "조선혁명당", "신간회"], answer: "한인 애국단", explanation: "한인 애국단은 1931년 김구가 조직하여 이봉창, 윤봉길 의사의 의거를 이끌었습니다." },
+            { question: "윤봉길 의사의 훙커우 공원 의거가 끼친 가장 중요한 영향은?", options: ["일본 천황의 항복", "대한민국 임시 정부의 해체", "중국 국민당 정부의 임시 정부 지원", "만주국의 성립", "조선 독립 동맹 결성"], answer: "중국 국민당 정부의 임시 정부 지원", explanation: "장제스가 '중국의 백만 대군도 못 한 일을 해냈다'고 격찬하며, 중국 국민당 정부가 임시 정부를 전폭적으로 지원하는 계기가 되었습니다." },
+            { question: "중국 관내에서 결성된 최초의 한인 무장 부대는?", options: ["한국광복군", "조선혁명군", "한국독립군", "조선의용대", "동북항일연군"], answer: "조선의용대", explanation: "조선의용대는 1938년 민족혁명당의 군사 조직으로 창설되어 중국 국민당과 함께 항일 전선에서 활동했습니다." },
+            { question: "1940년 대한민국 임시 정부가 충칭에서 창설한 정규 군대의 이름은?", options: ["조선의용군", "한국독립군", "조선혁명군", "대한독립군", "한국광복군"], answer: "한국광복군", explanation: "한국광복군은 대한민국 임시 정부의 정규군으로, 연합군과 함께 공동 작전을 펼쳤습니다." },
+            { question: "대한민국 임시 정부의 건국 강령의 기초가 된 조소앙의 이념은?", options: ["민족 자결주의", "삼균주의", "사회 진화론", "아나키즘", "공화주의"], answer: "삼균주의", explanation: "삼균주의는 개인, 민족, 국가 간의 균등과 정치, 경제, 교육의 균등을 주장하는 이념입니다." },
+            { question: "1940년대 화북 지역에서 김두봉을 중심으로 사회주의 계열이 결성한 독립운동 단체는?", options: ["조선건국동맹", "민족혁명당", "조선독립동맹", "한국독립당", "조선 공산당"], answer: "조선독립동맹", explanation: "조선독립동맹은 옌안을 거점으로 활동하며 산하에 조선의용군을 두었습니다." },
+            { question: "광복 직전 국내에서 여운형이 비밀리에 조직하여 건국을 준비했던 단체는?", options: ["조선독립동맹", "한국독립당", "조선건국동맹", "신간회", "대한 광복회"], answer: "조선건국동맹", explanation: "조선건국동맹은 1944년 좌우 세력을 아우르며 조직되었고, 광복 직후 건국 준비 위원회로 개편되었습니다." },
+            { question: "한국광복군이 제2차 세계 대전 중 미국과 연합하여 준비했던 작전은?", options: ["인천 상륙 작전", "서울 수복 작전", "국내 진공 작전", "만주 수복 작전", "평양 탈환 작전"], answer: "국내 진공 작전", explanation: "한국광복군은 미국 전략 정보국(OSS)의 훈련을 받으며 국내로 침투하여 일본군을 교란할 작전을 준비했습니다." },
+            { question: "1930년대 남만주에서 양세봉이 이끌었던 독립군 부대는?", options: ["한국독립군", "조선혁명군", "북로군정서", "대한독립군", "서로군정서"], answer: "조선혁명군", explanation: "조선혁명군은 남만주에서 중국 의용군과 연합하여 영릉가, 흥경성 등에서 일본군에 맞서 싸웠습니다." },
+            { question: "이봉창 의사가 1932년 일본 도쿄에서 폭탄을 투척한 대상은?", options: ["조선 총독", "일본 총리", "일본 천황(일왕)", "육군 대장", "경시총감"], answer: "일본 천황(일왕)", explanation: "이봉창 의사는 일본 천황 히로히토가 탄 마차를 향해 수류탄을 던졌으나, 안타깝게도 암살에는 실패했습니다." },
+            { question: "조선의용대의 주력 부대가 중국 공산당과 연합 투쟁을 위해 이동한 지역은?", options: ["상하이", "충칭", "난징", "만주", "화북(옌안)"], answer: "화북(옌안)", explanation: "소극적인 국민당의 항일 투쟁에 한계를 느낀 조선의용대 다수는 공산당이 있는 화북(옌안)으로 이동하여 조선의용군으로 개편되었습니다." },
+            { question: "대한민국 임시 정부가 태평양 전쟁 발발 직후 취한 조치는?", options: ["미국과 동맹 체결", "국민 대표 회의 소집", "대일 선전 포고", "광복군 해산", "건국 강령 폐기"], answer: "대일 선전 포고", explanation: "임시 정부는 1941년 12월, 일본이 진주만을 기습하자 즉시 대일 선전 포고를 하고 연합국의 일원으로 참전했음을 선언했습니다." },
+            { question: "1930년대 만주에서 활동한 사회주의 계열의 항일 유격대가 국내로 들어와 벌인 전투는?", options: ["청산리 전투", "봉오동 전투", "보천보 전투", "대전자령 전투", "쌍성보 전투"], answer: "보천보 전투", explanation: "김일성이 이끈 동북항일연군 부대가 1937년 함경남도 보천보를 습격하여 일본 경찰 주재소를 파괴한 사건입니다." },
+            { question: "1935년 중국 관내의 여러 독립운동 단체들이 통합하여 결성한 좌우 합작 정당은?", options: ["한국독립당", "조선혁명당", "민족혁명당", "신간회", "조선독립동맹"], answer: "민족혁명당", explanation: "민족혁명당은 의열단을 중심으로 결성되었으나, 김구 등 임정 세력의 불참으로 완전한 통일 전선을 이루지는 못했습니다." },
+            { question: "한국광복군이 영국군의 요청으로 파견되어 활동한 전선은?", options: ["중국-베트남 전선", "만주-러시아 전선", "태평양 전선", "미얀마-인도 전선", "유럽 전선"], answer: "미얀마-인도 전선", explanation: "한국광복군 부대원들은 미얀마-인도 전선에 파견되어 포로 심문, 선전 활동 등 연합군 작전을 지원했습니다." },
+            { question: "조선독립동맹의 산하 군사 조직으로, 중국 팔로군과 함께 항일 투쟁을 벌인 부대는?", options: ["한국광복군", "조선의용대", "조선의용군", "조선혁명군", "한국독립군"], answer: "조선의용군", explanation: "조선의용군은 조선의용대 화북 지대가 개편된 부대로, 화북 지역에서 활발한 무장 투쟁을 전개했습니다." },
+            { question: "1943년 카이로 회담에서 연합국 정상들이 한국의 독립을 최초로 약속한 내용은?", options: ["즉시 독립", "신탁 통치 후 독립", "적절한 시기(in due course)에 독립", "분단 후 독립", "독립 불가"], answer: "적절한 시기(in due course)에 독립", explanation: "카이로 선언에서는 '적절한 시기에(in due course)' 한국을 자유롭고 독립된 국가로 만들 것을 결의하여, 최초로 한국의 독립을 국제적으로 약속했습니다." },
+            { question: "다음 중 1930년대 이후의 독립운동과 관련이 없는 인물은?", options: ["김구", "지청천", "여운형", "김원봉", "안중근"], answer: "안중근", explanation: "안중근 의사는 1909년 하얼빈에서 이토 히로부미를 저격하고 1910년에 순국하셨으므로, 1930년대 활동과는 시기적으로 관련이 없습니다." }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const submitBtn = document.getElementById('submit-quiz-btn');
+        const resultContainer = document.getElementById('quiz-result');
+
+        // 퀴즈 문제 생성
+        quizData.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'quiz-question';
+            questionDiv.dataset.answer = q.answer;
+
+            const questionText = document.createElement('p');
+            questionText.className = 'text-lg font-semibold mb-4';
+            questionText.textContent = (index + 1) + ". " + q.question;
+            questionDiv.appendChild(questionText);
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'space-y-3';
+            
+            q.options.forEach(option => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option block border border-gray-300 rounded-lg p-3 cursor-pointer hover:bg-gray-100 transition-colors';
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'question-' + index;
+                radio.value = option;
+                radio.className = 'mr-3';
+
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(option));
+                optionsDiv.appendChild(label);
+            });
+
+            questionDiv.appendChild(optionsDiv);
+
+            const explanationDiv = document.createElement('div');
+            explanationDiv.className = 'explanation-box hidden';
+            questionDiv.appendChild(explanationDiv);
+
+            quizContainer.appendChild(questionDiv);
+        });
+
+        // 퀴즈 제출 로직
+        submitBtn.addEventListener('click', () => {
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question, index) => {
+                const correctAnswer = question.dataset.answer;
+                const selectedOption = question.querySelector('input[name="question-' + index + '"]:checked');
+                const options = question.querySelectorAll('.quiz-option');
+                const explanationBox = question.querySelector('.explanation-box');
+
+                options.forEach(opt => {
+                    const radio = opt.querySelector('input');
+                    radio.disabled = true;
+                    if (radio.value === correctAnswer) {
+                        opt.classList.add('correct');
+                    }
+                });
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                    } else {
+                        selectedOption.parentElement.classList.add('incorrect');
+                    }
+                }
+                
+                if (explanationBox) {
+                    explanationBox.innerHTML = '<strong>해설:</strong> ' + quizData[index].explanation;
+                    explanationBox.classList.remove('hidden');
+                }
+            });
+
+            const totalQuestions = quizData.length;
+            const finalScore = (score / totalQuestions) * 100;
+            resultContainer.textContent = '총 ' + totalQuestions + '문제 중 ' + score + '문제를 맞혔습니다! (점수: ' + finalScore.toFixed(0) + '점)';
+            resultContainer.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '제출 완료';
+            submitBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+            submitBtn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+        });
+    </script>
+
+</body>
+</html>

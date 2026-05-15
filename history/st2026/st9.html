@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9단원: 1910~1920년대 일제의 식민지 정책과 3·1운동, 대한민국 임시 정부</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .concept-box {
+            background-color: #f0f9ff;
+            border: 1px solid #e0f2fe;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            min-width: 80px;
+            text-align: center;
+        }
+        .concept-box .hidden-text {
+            visibility: hidden;
+            font-weight: 700;
+            color: #0369a1;
+        }
+        .concept-box.revealed {
+            background-color: #e0f2fe;
+        }
+        .concept-box.revealed .placeholder-text {
+            display: none;
+        }
+        .concept-box.revealed .hidden-text {
+            visibility: visible;
+        }
+        .quiz-option {
+            cursor: pointer;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: background-color 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #f3f4f6;
+        }
+        .quiz-option.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">수능특강 한국사 9단원 완벽 분석</h1>
+            <p class="text-xl text-gray-600">1910~1920년대 일제의 식민지 정책과 3·1운동, 대한민국 임시 정부</p>
+        </header>
+
+        <!-- 1. 핵심 개념 다시보기 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">1. 핵심 개념 다시보기</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- 1910년대 무단 통치와 경제 수탈 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">1910년대 무단 통치와 경제 수탈</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">통치 방식:</strong> 헌병 경찰 제도 (즉결 심판권), 조선 태형령 (조선인에게만 적용)</li>
+                        <li><strong class="font-semibold">기본권 억압:</strong> 언론·출판·집회·결사의 자유 박탈, 교원 제복 및 칼 착용</li>
+                        <li><strong class="font-semibold">경제 수탈 (1):</strong> 토지 조사 사업 (기한부 신고제, 미신고 토지 총독부 귀속) → 농민 소작농 전락</li>
+                        <li><strong class="font-semibold">경제 수탈 (2):</strong> 회사령 (총독의 허가를 받아야 회사 설립 가능) → 민족 자본 성장 억제</li>
+                        <li><strong class="font-semibold">국내 독립운동:</strong> 독립 의군부(복벽주의), 대한 광복회(공화주의) 등 비밀 결사 활동</li>
+                    </ul>
+                </div>
+                <!-- 3·1 운동과 대한민국 임시 정부 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">3·1 운동과 대한민국 임시 정부</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">3·1 운동 배경:</strong> 윌슨의 민족 자결주의, 2·8 독립 선언, 고종의 서거</li>
+                        <li><strong class="font-semibold">전개:</strong> 비폭력 만세 시위로 시작 → 전국적, 전 계층으로 확산 (학생, 농민, 노동자 등)</li>
+                        <li><strong class="font-semibold">의의와 영향:</strong> 최대 규모의 항일 운동, 대한민국 임시 정부 수립의 계기, 일제 통치 방식 변화 초래</li>
+                        <li><strong class="font-semibold">임시 정부 수립(1919):</strong> 상하이에 수립, 삼권 분립에 입각한 민주 공화제</li>
+                        <li><strong class="font-semibold">임시 정부 활동:</strong> 연통제·교통국(비밀 행정/통신), 독립 공채 발행, 구미 위원부(외교)</li>
+                    </ul>
+                </div>
+                <!-- 1920년대 문화 통치와 경제 수탈 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">1920년대 문화 통치와 경제 수탈</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">통치 방식:</strong> 이른바 '문화 통치' (기만적, 민족 분열 목적)</li>
+                        <li><strong class="font-semibold">실상:</strong> 보통 경찰제로 전환했으나 경찰 인력·장비는 대폭 증강, 치안 유지법(1925) 제정</li>
+                        <li><strong class="font-semibold">언론 정책:</strong> 한글 신문(조선일보, 동아일보) 발행 허용, 하지만 검열과 통제 강화</li>
+                        <li><strong class="font-semibold">경제 수탈:</strong> 산미 증식 계획 (일본의 식량 부족 해결 목적) → 쌀 생산량은 늘었으나 증산량 이상으로 수탈 → 국내 식량 사정 악화</li>
+                        <li><strong class="font-semibold">산업 침탈:</strong> 회사령 폐지(신고제 전환) → 일본 자본의 국내 침투 용이</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리로 따라가는 역사 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">2. 스토리로 따라가는 역사 (개념 클릭!)</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md space-y-4 text-lg leading-relaxed">
+                <p>1910년, 나라는 완전히 빼앗겼고, 공포의 시대가 시작되었어요. 일제는 경찰 업무를 군인인 헌병에게 맡기는 <span class="concept-box" data-answer="헌병 경찰 제도"><span class="placeholder-text">이 제도는?</span><span class="hidden-text">헌병 경찰 제도</span></span>를 실시하고, 조선인에게만 적용되는 태형을 부활시켜 우리 민족을 억압했죠. 경제적으로는 <span class="concept-box" data-answer="토지 조사 사업"><span class="placeholder-text">이 사업은?</span><span class="hidden-text">토지 조사 사업</span></span>을 통해 신고되지 않은 땅을 빼앗아 동양척식주식회사에 넘겼고, <span class="concept-box" data-answer="회사령"><span class="placeholder-text">이 법령은?</span><span class="hidden-text">회사령</span></span>으로 우리 민족 기업의 성장을 가로막았습니다. 숨 막히는 탄압 속에서도 독립 의군부, 대한 광복회 같은 비밀 결사 조직들은 독립의 불씨를 지폈습니다.</p>
+                <p>1919년, 억눌렸던 민족의 함성이 마침내 폭발했습니다. 미국 대통령 윌슨이 제창한 <span class="concept-box" data-answer="민족 자결주의"><span class="placeholder-text">이 원칙은?</span><span class="hidden-text">민족 자결주의</span></span>에 희망을 얻고, 고종 황제의 갑작스러운 죽음에 분노한 우리 민족은 3월 1일, "대한 독립 만세!"를 외쳤습니다. 바로 <span class="concept-box" data-answer="3·1 운동"><span class="placeholder-text">이 운동은?</span><span class="hidden-text">3·1 운동</span></span>입니다. 서울에서 시작된 비폭력 만세 시위는 순식간에 전국 모든 계층이 참여하는 거족적인 운동으로 번져나갔습니다. 이 위대한 저항은 일제의 통치 방식을 바꾸게 했고, 무엇보다 체계적인 독립운동의 필요성을 절감하게 하여 <span class="concept-box" data-answer="대한민국 임시 정부"><span class="placeholder-text">이 정부는?</span><span class="hidden-text">대한민국 임시 정부</span></span> 수립의 결정적인 계기가 되었습니다.</p>
+                <p>3·1 운동에 깜짝 놀란 일제는 통치 방식을 바꿉니다. 이른바 <span class="concept-box" data-answer="문화 통치"><span class="placeholder-text">이 통치는?</span><span class="hidden-text">문화 통치</span></span>를 내세워 한글 신문 발행을 허용하는 등 유화적인 제스처를 취했지만, 실상은 경찰력을 더 늘리고 <span class="concept-box" data-answer="치안 유지법"><span class="placeholder-text">이 법은?</span><span class="hidden-text">치안 유지법</span></span>을 만들어 독립운동가와 사회주의자를 탄압하는 기만적인 통치였죠. 경제적으로는 일본의 식량 문제를 해결하기 위해 <span class="concept-box" data-answer="산미 증식 계획"><span class="placeholder-text">이 계획은?</span><span class="hidden-text">산미 증식 계획</span></span>을 실시하여, 쌀 생산량을 늘리고는 그보다 더 많은 양을 빼앗아가는 교활한 수탈을 자행했습니다.</p>
+            </div>
+        </section>
+
+        <!-- 3. 문제로 본 핵심 포인트 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-purple-500">3. 문제로 본 핵심 포인트</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">자료 탐구 & 대표 기출 분석</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>1910년대 통치 방식:</strong> '헌병 경찰', '제복 입은 교사', '조선 태형령', '회사령' 등의 키워드는 1910년대 무단 통치 시기를 특정하는 중요한 단서입니다.</li>
+                        <li><strong>토지 조사 사업의 목적과 결과:</strong> '기한부 신고제'라는 방식을 통해 총독부의 재정 수입을 늘리고, 많은 농민이 경작권을 잃고 소작농으로 전락하거나 국외로 이주하게 된 결과를 이해해야 합니다.</li>
+                        <li><strong>3·1 운동의 의의:</strong> 일제 강점기 최대 규모의 민족 운동이며, '대한민국 임시 정부 수립'의 직접적인 계기가 되었고, 일제의 통치 방식이 '문화 통치'로 바뀌는 데 영향을 주었다는 점이 핵심입니다.</li>
+                        <li><strong>대한민국 임시 정부의 정체성:</strong> 상하이에 수립된 '삼권 분립'에 입각한 '민주 공화제' 정부라는 점, 그리고 '연통제', '교통국', '독립 공채' 등 주요 활동을 파악하는 것이 중요합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 최종 점검 문제 -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-red-500">4. 수능 100점 목표! 최종 점검 문제</h2>
+            <div id="quiz-result" class="hidden bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded-lg relative mb-6" role="alert">
+                <strong class="font-bold">채점 결과: </strong>
+                <span id="score"></span>점
+                <p id="result-message"></p>
+            </div>
+            <div id="quiz-container" class="bg-white p-8 rounded-lg shadow-md">
+                <!-- 문제들이 여기에 동적으로 추가됩니다. -->
+            </div>
+            <div class="text-center mt-8">
+                <button id="submit-quiz" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-xl transition-transform transform hover:scale-105">채점하기</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 2. 스토리텔링 개념 클릭 이벤트
+            const conceptBoxes = document.querySelectorAll('.concept-box');
+            conceptBoxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    box.classList.toggle('revealed');
+                });
+            });
+
+            // 4. 퀴즈 생성 및 채점 로직
+            const quizData = [
+                {
+                    question: "1. 1910년대 일제가 실시한 무단 통치의 내용으로 옳지 않은 것은?",
+                    options: ["헌병 경찰 제도 시행", "조선 태형령 제정", "회사령 공포", "한글 신문 발행 허용", "언론·집회·결사의 자유 억압"],
+                    answer: "한글 신문 발행 허용",
+                    explanation: "한글 신문(조선일보, 동아일보) 발행 허용은 3·1 운동 이후인 1920년대 이른바 '문화 통치' 시기의 정책입니다. 1910년대에는 모든 한글 신문을 폐간시켰습니다."
+                },
+                {
+                    question: "2. 일제가 식민 통치의 재정 기반을 확보하기 위해 1910년대에 실시한 경제 수탈 정책은?",
+                    options: ["산미 증식 계획", "남면북양 정책", "국가 총동원법", "토지 조사 사업", "금융 실명제"],
+                    answer: "토지 조사 사업",
+                    explanation: "토지 조사 사업(1910~1918)은 근대적 토지 소유권 확립을 명분으로 내세웠으나, 실제 목적은 미신고 토지나 소유권이 불분명한 토지를 총독부 소유로 만들어 식민 통치의 재정을 확보하는 것이었습니다."
+                },
+                {
+                    question: "3. 1910년대 국내에서 조직된 비밀 결사 중, 복벽주의를 내세우며 국권 반환 요구서 제출을 추진했던 단체는?",
+                    options: ["신민회", "대한 광복회", "독립 의군부", "보안회", "헌정 연구회"],
+                    answer: "독립 의군부",
+                    explanation: "임병찬이 고종의 밀명을 받아 조직한 독립 의군부는 고종을 다시 왕으로 세우는 복벽주의를 이념으로 삼았습니다."
+                },
+                {
+                    question: "4. 3·1 운동이 일어나는 데 영향을 준 국제적 배경으로 가장 적절한 것은?",
+                    options: ["러일 전쟁 발발", "윌슨의 민족 자결주의 제창", "만주 사변 발생", "중일 전쟁 발발", "파리 강화 회의"],
+                    answer: "윌슨의 민족 자결주의 제창",
+                    explanation: "제1차 세계 대전 이후 미국 대통령 윌슨이 제창한 민족 자결주의는 패전국 식민지 민족에게 독립의 희망을 주었고, 이는 3·1 운동의 중요한 배경이 되었습니다."
+                },
+                {
+                    question: "5. 3·1 운동의 결과로 나타난 변화로 볼 수 없는 것은?",
+                    options: ["대한민국 임시 정부 수립", "일제의 통치 방식 변화", "중국의 5·4 운동에 영향", "무장 독립 투쟁의 활성화", "일제의 즉각적인 식민 통치 포기"],
+                    answer: "일제의 즉각적인 식민 통치 포기",
+                    explanation: "3·1 운동은 일제에 큰 충격을 주어 통치 방식을 무단 통치에서 문화 통치로 바꾸게 했지만, 일제는 식민 통치를 포기하지 않고 오히려 더 교묘한 방식으로 지배를 강화했습니다."
+                },
+                {
+                    question: "6. 대한민국 임시 정부가 수립된 장소와 채택한 정치 체제는?",
+                    options: ["서울 - 입헌 군주제", "연해주 - 사회주의 공화제", "만주 - 복벽주의", "상하이 - 민주 공화제", "베이징 - 대통령 중심제"],
+                    answer: "상하이 - 민주 공화제",
+                    explanation: "국내외 여러 임시 정부를 통합하여 1919년 중국 상하이에 수립된 대한민국 임시 정부는 입법(임시 의정원), 행정(국무원), 사법(법원)의 삼권 분립에 기초한 민주 공화제를 채택했습니다."
+                },
+                {
+                    question: "7. 대한민국 임시 정부가 국내와의 연락 및 군자금 모금을 위해 조직한 비밀 행정 조직망은?",
+                    options: ["구미 위원부", "교통국", "연통제", "독립 공채", "한인 애국단"],
+                    answer: "연통제",
+                    explanation: "연통제는 국내의 각 도·군·면에 책임자를 두어 임시 정부의 문서를 전달하고 군자금을 모금하는 등 오늘날의 행정 조직과 같은 역할을 한 비밀 연락망이었습니다."
+                },
+                {
+                    question: "8. 1920년대 일제가 실시한 이른바 '문화 통치'의 본질적인 목적으로 가장 옳은 것은?",
+                    options: ["한국 문화의 발전 장려", "한국인의 교육 기회 확대", "친일 세력을 양성하여 민족 분열 도모", "완전한 자치 허용 준비", "언론의 자유 보장"],
+                    answer: "친일 세력을 양성하여 민족 분열 도모",
+                    explanation: "문화 통치는 3·1 운동으로 드러난 한국인의 저항 의지를 무마하고, 일부에게 제한된 자유를 허용하여 친일파를 길러냄으로써 민족 내부를 분열시키려는 고도의 기만적인 통치 방식이었습니다."
+                },
+                {
+                    question: "9. 1920년대 일제가 일본 내 식량 부족 문제를 해결하기 위해 조선에서 실시한 정책은?",
+                    options: ["토지 조사 사업", "회사령 폐지", "산미 증식 계획", "남면북양 정책", "미곡 공출 제도"],
+                    answer: "산미 증식 계획",
+                    explanation: "산미 증식 계획(1920~1934)은 수리 시설 확충, 품종 개량 등을 통해 쌀 생산을 늘려 일본으로 가져가기 위한 정책이었습니다. 증산량보다 수탈량이 더 많아 한국의 식량 사정은 오히려 악화되었습니다."
+                },
+                {
+                    question: "10. 1925년에 제정되어 사회주의 운동과 독립운동을 탄압하는 도구로 악용된 법률은?",
+                    options: ["조선 태형령", "회사령", "국가보안법", "국가 총동원법", "치안 유지법"],
+                    answer: "치안 유지법",
+                    explanation: "치안 유지법은 '국체(천황제)를 변혁하거나 사유 재산 제도를 부인하는 자'를 처벌한다는 명목으로 제정되어, 사회주의자와 독립운동가들을 탄압하는 핵심적인 법적 근거가 되었습니다."
+                },
+                {
+                    question: "11. 1910년대 무단 통치 시기, 회사를 설립하려면 조선 총독의 허가를 받도록 규정한 법령은?",
+                    options: ["회사령", "은행령", "광업령", "삼림령", "어업령"],
+                    answer: "회사령",
+                    explanation: "1910년에 공포된 회사령은 허가제를 통해 한국인의 기업 설립을 억제하고 민족 자본의 성장을 막기 위한 대표적인 경제 수탈 정책이었습니다."
+                },
+                {
+                    question: "12. 3·1 운동 직전, 일본 도쿄에서 유학생들이 발표하여 3·1 운동의 도화선이 된 선언은?",
+                    options: ["독립 선언서", "대한 독립 선언서", "2·8 독립 선언", "무오 독립 선언", "대동단결 선언"],
+                    answer: "2·8 독립 선언",
+                    explanation: "1919년 2월 8일, 일본 도쿄의 유학생들이 조선 청년 독립단을 조직하고 독립 선언을 발표한 사건으로, 국내의 3·1 운동 계획에 직접적인 영향을 주었습니다."
+                },
+                {
+                    question: "13. 대한민국 임시 정부의 활동이 침체되자, 새로운 독립운동 방향을 모색하기 위해 1923년에 개최된 회의는?",
+                    options: ["만국 평화 회의", "파리 강화 회의", "국민 대표 회의", "남북 협상", "좌우 합작 회의"],
+                    answer: "국민 대표 회의",
+                    explanation: "국민 대표 회의는 임시 정부의 활동 노선을 둘러싸고 창조파와 개조파 등이 대립하였으나 결국 결렬되었고, 많은 독립운동가들이 임시 정부를 이탈하는 결과를 낳았습니다."
+                },
+                {
+                    question: "14. 다음 중 1910년대 국외 독립운동 기지 건설 활동과 가장 관련이 깊은 지역은?",
+                    options: ["상하이", "베이징", "도쿄", "서간도(남만주)", "하와이"],
+                    answer: "서간도(남만주)",
+                    explanation: "신민회 회원들은 국권 피탈 이후 서간도 삼원보 지역으로 집단 이주하여 경학사, 신흥 강습소(이후 신흥 무관 학교) 등을 세우며 독립군 양성을 위한 기지를 건설했습니다."
+                },
+                {
+                    question: "15. 일제가 3·1 운동 당시 시위대를 잔혹하게 탄압한 대표적인 학살 사건은?",
+                    options: ["간도 참변", "제암리 학살 사건", "관동 대지진 학살", "보도연맹 사건", "거창 양민 학살 사건"],
+                    answer: "제암리 학살 사건",
+                    explanation: "제암리 학살 사건은 1919년 4월, 일본군이 경기도 화성 제암리의 주민들을 교회에 가두고 불을 질러 학살한 사건으로, 3·1 운동에 대한 일제의 잔혹한 탄압을 상징합니다."
+                },
+                {
+                    question: "16. 대한민국 임시 정부가 외교 활동을 위해 미국 워싱턴에 설치한 기구의 명칭은?",
+                    options: ["연통제", "교통국", "구미 위원부", "한인 애국단", "독립 공채 발행처"],
+                    answer: "구미 위원부",
+                    explanation: "구미 위원부는 이승만을 중심으로 미국과 유럽을 대상으로 대한민국의 독립을 승인받기 위한 외교 활동을 펼쳤던 임시 정부의 공식 외교 기관이었습니다."
+                },
+                {
+                    question: "17. 1920년대 산미 증식 계획의 결과로 나타난 현상으로 옳은 것은?",
+                    options: ["조선 내 쌀 소비량 증가", "소작농의 자작농 전환", "지주의 경제적 몰락", "만주에서 잡곡 수입 증가", "쌀값의 안정"],
+                    answer: "만주에서 잡곡 수입 증가",
+                    explanation: "산미 증식 계획으로 생산된 쌀이 대부분 일본으로 유출되면서, 국내에서는 쌀이 부족해졌습니다. 부족한 식량을 채우기 위해 가격이 싼 만주산 조, 콩 등의 잡곡을 수입해 연명하는 경우가 많았습니다."
+                },
+                {
+                    question: "18. 1910년대 무단 통치 시기, 국내에서 공화주의를 목표로 군자금 모집 등의 활동을 전개한 비밀 결사는?",
+                    options: ["독립 의군부", "대한 광복회", "신간회", "보안회", "자정회"],
+                    answer: "대한 광복회",
+                    explanation: "박상진, 김좌진 등이 조직한 대한 광복회는 독립 의군부와 달리 군주제를 부정하고 공화정 수립을 목표로 했으며, 친일 부호를 처단하고 군자금을 모아 무장 투쟁을 준비했습니다."
+                },
+                {
+                    question: "19. 3·1 운동 이후 수립된 대한민국 임시 정부의 초대 대통령은?",
+                    options: ["김구", "안창호", "이동휘", "박은식", "이승만"],
+                    answer: "이승만",
+                    explanation: "연해주의 대한 국민 의회, 상하이 임시 정부, 국내의 한성 정부 등이 통합될 때, 한성 정부의 정통성을 계승하여 이승만을 초대 대통령으로, 이동휘를 국무총리로 선출했습니다."
+                },
+                {
+                    question: "20. 1920년대 일제가 이른바 '문화 통치'를 실시하게 된 가장 직접적인 계기는?",
+                    options: ["제1차 세계 대전 종결", "러시아 혁명", "3·1 운동", "만주 사변", "중일 전쟁"],
+                    answer: "3·1 운동",
+                    explanation: "전 민족적인 3·1 운동의 거센 저항에 직면한 일제는 기존의 무력에만 의존하는 통치 방식(무단 통치)으로는 조선을 효과적으로 지배할 수 없다고 판단하고, 회유와 기만을 동반한 '문화 통치'로 전환했습니다."
+                }
+            ];
+
+            const quizContainer = document.getElementById('quiz-container');
+            let userAnswers = new Array(quizData.length).fill(null);
+
+            quizData.forEach((item, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('mb-8');
+                
+                const questionText = document.createElement('p');
+                questionText.classList.add('text-lg', 'font-semibold', 'mb-4');
+                questionText.innerHTML = item.question;
+                questionDiv.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.id = `q${index}`;
+                item.options.forEach(option => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.classList.add('quiz-option');
+                    optionDiv.textContent = option;
+                    optionDiv.addEventListener('click', () => {
+                        document.querySelectorAll(`#q${index} .quiz-option`).forEach(opt => opt.classList.remove('selected'));
+                        optionDiv.classList.add('selected');
+                        userAnswers[index] = option;
+                    });
+                    optionsDiv.appendChild(optionDiv);
+                });
+                questionDiv.appendChild(optionsDiv);
+
+                const explanationDiv = document.createElement('div');
+                explanationDiv.classList.add('explanation');
+                explanationDiv.innerHTML = `<p><strong class="font-bold">정답:</strong> ${item.answer}</p><p><strong class="font-bold">해설:</strong> ${item.explanation}</p>`;
+                questionDiv.appendChild(explanationDiv);
+
+                quizContainer.appendChild(questionDiv);
+            });
+
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                quizData.forEach((item, index) => {
+                    const questionOptions = document.querySelectorAll(`#q${index} .quiz-option`);
+                    questionOptions.forEach(option => {
+                        if (option.textContent === item.answer) {
+                            option.classList.add('correct');
+                        }
+                        if (option.classList.contains('selected') && option.textContent !== item.answer) {
+                            option.classList.add('incorrect');
+                        }
+                    });
+
+                    if (userAnswers[index] === item.answer) {
+                        score++;
+                    }
+                    const explanation = quizContainer.children[index].querySelector('.explanation');
+                    explanation.style.display = 'block';
+                });
+
+                const finalScore = (score / quizData.length) * 100;
+                const scoreElement = document.getElementById('score');
+                const resultMessageElement = document.getElementById('result-message');
+                const quizResultDiv = document.getElementById('quiz-result');
+
+                scoreElement.textContent = `${finalScore}`;
+                
+                if (finalScore >= 80) {
+                    resultMessageElement.textContent = "훌륭합니다! 일제 강점기 초기 역사의 흐름을 완벽하게 이해하고 있습니다.";
+                } else if (finalScore >= 50) {
+                    resultMessageElement.textContent = "좋아요! 1910년대와 1920년대 통치 방식의 차이점을 다시 한번 복습해 보세요.";
+                } else {
+                    resultMessageElement.textContent = "조금 더 힘내세요! 이 시기는 우리 역사에서 매우 중요하니, 핵심 개념부터 차근차근 다시 살펴보는 것이 좋습니다.";
+                }
+
+                quizResultDiv.classList.remove('hidden');
+                submitButton.disabled = true;
+                submitButton.textContent = "채점 완료";
+                submitButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+                submitButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+                window.scrollTo(0, document.getElementById('quiz-result').offsetTop - 20);
+            });
+        });
+    </script>
+</body>
+</html>

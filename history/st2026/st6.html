@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6단원: 근대 국가 수립을 위한 노력</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .concept-box {
+            background-color: #f0f9ff;
+            border: 1px solid #e0f2fe;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            min-width: 80px;
+            text-align: center;
+        }
+        .concept-box .hidden-text {
+            visibility: hidden;
+            font-weight: 700;
+            color: #0369a1;
+        }
+        .concept-box.revealed {
+            background-color: #e0f2fe;
+        }
+        .concept-box.revealed .placeholder-text {
+            display: none;
+        }
+        .concept-box.revealed .hidden-text {
+            visibility: visible;
+        }
+        .quiz-option {
+            cursor: pointer;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: background-color 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #f3f4f6;
+        }
+        .quiz-option.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">수능특강 한국사 6단원 완벽 분석</h1>
+            <p class="text-xl text-gray-600">근대 국가 수립을 위한 노력</p>
+        </header>
+
+        <!-- 1. 핵심 개념 다시보기 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">1. 핵심 개념 다시보기</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- 동학 농민 운동 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">동학 농민 운동 (1894)</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">배경:</strong> 고부 군수 조병갑의 탐학, 교조 신원 운동</li>
+                        <li><strong class="font-semibold">1차 봉기:</strong> 전봉준 주도, 황토현·황룡촌 전투 승리 → 전주성 점령</li>
+                        <li><strong class="font-semibold">전주 화약:</strong> 정부와 화약 체결, 집강소 설치하여 폐정 개혁안 실천</li>
+                        <li><strong class="font-semibold">2차 봉기:</strong> 일본의 경복궁 점령과 내정 간섭에 맞서 재봉기 (반외세)</li>
+                        <li><strong class="font-semibold">결과:</strong> 우금치 전투에서 관군·일본군에게 패배, 갑오개혁에 일부 요구 반영</li>
+                    </ul>
+                </div>
+                <!-- 갑오·을미개혁 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">갑오·을미개혁</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">1차 갑오개혁(1894):</strong> 군국기무처 주도, 신분제·과거제 폐지, 재정 일원화(탁지아문)</li>
+                        <li><strong class="font-semibold">2차 갑오개혁(1894~5):</strong> 김홍집·박영효 내각, 홍범 14조 반포, 8도를 23부로 개편, 재판소 설치</li>
+                        <li><strong class="font-semibold">을미개혁(1895):</strong> 을미사변 이후 추진, 단발령, 태양력 사용, '건양' 연호</li>
+                        <li><strong class="font-semibold">결과:</strong> 아관파천으로 개혁 중단, 을미의병 발생</li>
+                    </ul>
+                </div>
+                <!-- 독립 협회 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">독립 협회 (1896~1898)</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">창립:</strong> 서재필 주도, 독립신문 창간</li>
+                        <li><strong class="font-semibold">활동:</strong> 만민 공동회 개최 (자주 국권, 자유 민권 운동)</li>
+                        <li><strong class="font-semibold">주요 성과:</strong> 러시아의 이권 요구 저지, 의회 설립 운동 전개</li>
+                        <li><strong class="font-semibold">헌의 6조:</strong> 관민 공동회에서 결의, 국민 참정권 요구</li>
+                        <li><strong class="font-semibold">해산:</strong> 보수 세력의 모함과 황국 협회의 공격으로 강제 해산</li>
+                    </ul>
+                </div>
+                <!-- 대한 제국과 광무개혁 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">대한 제국과 광무개혁 (1897~1904)</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">수립:</strong> 고종의 환궁 후, 환구단에서 황제 즉위, 대한 제국 선포(1897)</li>
+                        <li><strong class="font-semibold">기본 방향:</strong> 구본신참 (옛 제도를 근본으로 새것을 참고)</li>
+                        <li><strong class="font-semibold">정치:</strong> 대한국 국제 반포 (황제권 강화)</li>
+                        <li><strong class="font-semibold">군사:</strong> 원수부 설치 (황제의 군 통수권 장악)</li>
+                        <li><strong class="font-semibold">경제:</strong> 양전 사업 실시, 근대적 토지 소유 문서인 지계 발급, 식산흥업 정책</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리로 따라가는 역사 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">2. 스토리로 따라가는 역사 (개념 클릭!)</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md space-y-4 text-lg leading-relaxed">
+                <p>1894년, 탐관오리의 수탈에 분노한 농민들이 전봉준을 중심으로 들고일어났어요. 이것이 바로 <span class="concept-box" data-answer="동학 농민 운동"><span class="placeholder-text">이 운동은?</span><span class="hidden-text">동학 농민 운동</span></span>입니다. 농민군은 황토현 전투에서 관군을 무찌르고 전주성까지 점령했죠. 놀란 정부는 농민군과 화해의 약속, 즉 <span class="concept-box" data-answer="전주 화약"><span class="placeholder-text">이 약속은?</span><span class="hidden-text">전주 화약</span></span>을 맺고, 농민들은 스스로 개혁을 실천하기 위해 자치 기구인 <span class="concept-box" data-answer="집강소"><span class="placeholder-text">이 기구는?</span><span class="hidden-text">집강소</span></span>를 설치했어요. 하지만 정부가 청나라에 도움을 요청하자, 일본군까지 조선에 들어와 경복궁을 점령해버렸죠. 이에 농민군은 일본군을 몰아내기 위해 다시 일어섰지만, 안타깝게도 우금치 전투에서 패배하고 말았답니다.</p>
+                <p>일본의 간섭 아래, 정부는 근대적 개혁을 추진했어요. 바로 <span class="concept-box" data-answer="갑오개혁"><span class="placeholder-text">이 개혁은?</span><span class="hidden-text">갑오개혁</span></span>입니다. 이 개혁으로 수백 년간 이어져 온 신분 제도가 법적으로 폐지되었고, 과거제도 사라졌죠. 하지만 일본은 조선에 대한 영향력을 강화하기 위해 명성 황후를 시해하는 끔찍한 만행(<span class="concept-box" data-answer="을미사변"><span class="placeholder-text">이 사건은?</span><span class="hidden-text">을미사변</span></span>)을 저질렀고, 이후 '머리카락을 자르라'는 <span class="concept-box" data-answer="단발령"><span class="placeholder-text">이 명령은?</span><span class="hidden-text">단발령</span></span>을 내리자 전국에서 의병이 일어났어요. 신변의 위협을 느낀 고종은 러시아 공사관으로 피신하는 <span class="concept-box" data-answer="아관파천"><span class="placeholder-text">이 사건은?</span><span class="hidden-text">아관파천</span></span>을 단행했습니다.</p>
+                <p>고종이 러시아 공사관에 머무는 동안 나라의 이권은 외국에 마구 넘어갔어요. 이에 위기감을 느낀 지식인들이 나섰습니다. 서재필이 중심이 되어 만든 <span class="concept-box" data-answer="독립 협회"><span class="placeholder-text">이 단체는?</span><span class="hidden-text">독립 협회</span></span>는 토론회와 연설회를 열고, 특히 <span class="concept-box" data-answer="만민 공동회"><span class="placeholder-text">이 집회는?</span><span class="hidden-text">만민 공동회</span></span>라는 대중 집회를 통해 러시아의 이권 침탈을 막아내는 등 자주 국권 운동을 펼쳤습니다. 마침내 고종은 백성들의 요구에 따라 궁궐로 돌아와, 나라 이름을 '대한 제국'으로 바꾸고 황제의 자리에 올랐죠. 이후 '옛 제도를 근본으로 새것을 참고한다'는 <span class="concept-box" data-answer="구본신참"><span class="placeholder-text">이 원칙은?</span><span class="hidden-text">구본신참</span></span>의 원칙 아래 근대적 개혁인 광무개혁을 추진하며, 토지 소유권을 법적으로 인정하는 문서인 <span class="concept-box" data-answer="지계"><span class="placeholder-text">이 문서는?</span><span class="hidden-text">지계</span></span>를 발급하기도 했습니다.</p>
+            </div>
+        </section>
+
+        <!-- 3. 문제로 본 핵심 포인트 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-purple-500">3. 문제로 본 핵심 포인트</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">자료 탐구 & 대표 기출 분석</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>동학 농민 운동의 전개 과정:</strong> 1차 봉기(반봉건)와 2차 봉기(반외세)의 성격 차이를 이해하는 것이 중요합니다. '집강소'와 '폐정 개혁안'은 1차 봉기 이후의 상황임을 알아야 합니다.</li>
+                        <li><strong>갑오·을미개혁의 핵심 내용:</strong> 1차 갑오개혁의 '신분제 폐지', 2차 갑오개혁의 '홍범 14조', 을미개혁의 '단발령'과 '태양력'을 구분하는 문제가 자주 출제됩니다.</li>
+                        <li><strong>독립 협회의 활동:</strong> '만민 공동회'를 통해 러시아의 이권 요구(절영도 조차)를 저지한 자주 국권 운동과, '헌의 6조'를 통해 의회 설립을 추진한 자유 민권 운동을 파악하는 것이 핵심입니다.</li>
+                        <li><strong>대한 제국과 광무개혁:</strong> '구본신참'이라는 개혁 원칙 아래 황제권을 강화('대한국 국제', '원수부')하고 근대적 토지 소유권을 확립('양전 사업', '지계 발급')하려 했음을 이해해야 합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 최종 점검 문제 -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-red-500">4. 수능 100점 목표! 최종 점검 문제</h2>
+            <div id="quiz-result" class="hidden bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded-lg relative mb-6" role="alert">
+                <strong class="font-bold">채점 결과: </strong>
+                <span id="score"></span>점
+                <p id="result-message"></p>
+            </div>
+            <div id="quiz-container" class="bg-white p-8 rounded-lg shadow-md">
+                <!-- 문제들이 여기에 동적으로 추가됩니다. -->
+            </div>
+            <div class="text-center mt-8">
+                <button id="submit-quiz" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-xl transition-transform transform hover:scale-105">채점하기</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 2. 스토리텔링 개념 클릭 이벤트
+            const conceptBoxes = document.querySelectorAll('.concept-box');
+            conceptBoxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    box.classList.toggle('revealed');
+                });
+            });
+
+            // 4. 퀴즈 생성 및 채점 로직
+            const quizData = [
+                {
+                    question: "1. 동학 농민군이 1차 봉기 후 정부와 전주 화약을 맺고, 전라도 일대에 설치한 자치적 개혁 기구는?",
+                    options: ["교정청", "군국기무처", "집강소", "통리기무아문", "유향소"],
+                    answer: "집강소",
+                    explanation: "집강소는 전주 화약 이후 동학 농민군이 폐정 개혁안을 실천하기 위해 설치한 자치 기구로, 행정과 치안을 담당했습니다."
+                },
+                {
+                    question: "2. 일본군이 경복궁을 점령한 후 군국기무처의 주도로 추진된 제1차 갑오개혁의 내용으로 옳은 것은?",
+                    options: ["단발령 실시", "신분제 폐지", "지계 발급", "대한국 국제 반포", "통감부 설치"],
+                    answer: "신분제 폐지",
+                    explanation: "제1차 갑오개혁(1894)에서는 공사 노비법을 혁파하고 인신 매매를 금지하는 등 법적으로 신분 제도를 폐지하여 평등 사회의 기틀을 마련했습니다."
+                },
+                {
+                    question: "3. 제2차 갑오개혁 시기, 고종이 국정 개혁의 기본 방향을 담아 발표한 것은?",
+                    options: ["교육입국 조서", "헌의 6조", "대한국 국제", "홍범 14조", "독립 서고문"],
+                    answer: "홍범 14조",
+                    explanation: "홍범 14조는 김홍집·박영효 연립 내각이 추진한 제2차 갑오개혁의 기본 강령으로, 청과의 사대 관계 청산, 왕실과 정부 사무의 분리, 조세 법률주의 등의 내용을 담고 있습니다."
+                },
+                {
+                    question: "4. 을미사변과 단발령을 계기로 유생층이 중심이 되어 일으킨 항일 운동은?",
+                    options: ["위정척사 운동", "을미의병", "동학 농민 운동", "애국 계몽 운동", "6·10 만세 운동"],
+                    answer: "을미의병",
+                    explanation: "을미의병(1895)은 국모 시해(을미사변)와 상투를 자르라는 단발령에 격분한 유인석, 이소응 등 위정척사 사상을 가진 유생들이 주도하여 일으킨 최초의 항일 의병 운동입니다."
+                },
+                {
+                    question: "5. 서재필이 정부의 지원을 받아 창간하였으며, 순한글판과 영문판으로 발행된 신문은?",
+                    options: ["한성순보", "황성신문", "대한매일신보", "제국신문", "독립신문"],
+                    answer: "독립신문",
+                    explanation: "독립신문(1896)은 최초의 민간 신문이자 순한글 신문으로, 민중 계몽과 독립 협회의 활동을 알리는 데 중요한 역할을 했습니다."
+                },
+                {
+                    question: "6. 독립 협회가 러시아의 절영도 조차 요구를 저지하는 등 열강의 이권 침탈에 맞서 전개한 운동은?",
+                    options: ["자유 민권 운동", "자주 국권 운동", "자강 개혁 운동", "물산 장려 운동", "국채 보상 운동"],
+                    answer: "자주 국권 운동",
+                    explanation: "독립 협회는 만민 공동회를 통해 러시아의 군사 교관 및 재정 고문 철수, 한러 은행 폐쇄, 절영도 조차 요구 저지 등 국가의 이권을 지키기 위한 자주 국권 운동을 성공적으로 이끌었습니다."
+                },
+                {
+                    question: "7. 고종이 러시아 공사관에서 경운궁으로 환궁한 후, 황제국임을 선포하며 연호를 '광무'로 정하고 수립한 국가의 이름은?",
+                    options: ["조선", "고려", "대한민국", "대한 제국", "한성 정부"],
+                    answer: "대한 제국",
+                    explanation: "고종은 1897년 환구단에서 황제 즉위식을 거행하고 국호를 대한 제국으로 바꾸어 자주독립 국가임을 국내외에 선포했습니다."
+                },
+                {
+                    question: "8. 대한 제국이 '구본신참'의 원칙 아래 추진한 광무개혁의 내용으로 옳은 것은?",
+                    options: ["급진적인 서양식 의회 제도 도입", "토지 소유권을 증명하는 지계 발급", "전면적인 토지 무상 분배 실시", "일본의 메이지 유신을 모델로 한 개혁", "백성의 참정권을 최우선으로 보장"],
+                    answer: "토지 소유권을 증명하는 지계 발급",
+                    explanation: "광무개혁은 점진적인 개혁을 추구했으며, 경제적으로는 양전 사업을 실시하여 근대적 토지 소유권 확립을 위한 지계를 발급하고 식산흥업 정책을 통해 상공업을 진흥시키려 했습니다."
+                },
+                {
+                    question: "9. 동학 농민 운동 당시 농민군이 내세운 구호로 가장 적절한 것은?",
+                    options: ["위정척사", "문명개화", "보국안민", "입헌군주제 수립", "광무개혁"],
+                    answer: "보국안민",
+                    explanation: "'나라를 돕고 백성을 편안하게 한다'는 뜻의 보국안민과 '폭정을 제거하고 백성을 구한다'는 제폭구민은 동학 농민 운동의 핵심 구호였습니다."
+                },
+                {
+                    question: "10. 독립 협회가 관민 공동회에서 결의하여 고종에게 건의한 국정 개혁안은?",
+                    options: ["홍범 14조", "폐정 개혁안 12개조", "헌의 6조", "좌우 합작 7원칙", "14개조 개혁 정강"],
+                    answer: "헌의 6조",
+                    explanation: "헌의 6조는 외국에 의존하지 말고 관민이 힘을 합쳐 전제 황권을 공고히 할 것, 국가 재정은 탁지부에서 전관할 것, 중대 범죄는 공판에 부칠 것, 중추원을 의회식으로 개편할 것 등의 내용을 담고 있습니다."
+                },
+                {
+                    question: "11. 갑오개혁을 주도했던 핵심 기구는?",
+                    options: ["통리기무아문", "비변사", "군국기무처", "집강소", "궁내부"],
+                    answer: "군국기무처",
+                    explanation: "군국기무처는 일본의 압력 하에 설치되어 제1차 갑오개혁 기간 동안 정치, 경제, 사회 전반의 개혁을 결정하고 추진했던 초법적 기구였습니다."
+                },
+                {
+                    question: "12. 다음 중 을미개혁(제3차 갑오개혁)의 내용에 해당하는 것을 모두 고른 것은?<br> (가) 태양력 사용 (나) 신분제 폐지 (다) '건양' 연호 제정 (라) 단발령 실시",
+                    options: ["(가), (나)", "(나), (다)", "(가), (다), (라)", "(가), (나), (다)", "(나), (라)"],
+                    answer: "(가), (다), (라)",
+                    explanation: "신분제 폐지는 제1차 갑오개혁의 내용입니다. 을미사변 이후 단행된 을미개혁에서는 태양력 사용, '건양'이라는 연호 제정, 단발령 실시, 종두법 시행 등이 이루어졌습니다."
+                },
+                {
+                    question: "13. 고종이 신변의 위협을 느껴 러시아 공사관으로 거처를 옮긴 사건은?",
+                    options: ["임오군란", "갑신정변", "을미사변", "아관파천", "거문도 사건"],
+                    answer: "아관파천",
+                    explanation: "아관파천(1896)은 을미사변으로 신변에 위협을 느낀 고종과 세자가 비밀리에 궁궐을 빠져나와 러시아 공사관으로 피신한 사건입니다."
+                },
+                {
+                    question: "14. 대한 제국이 황제의 군 통수권을 강화하기 위해 설치한 기구는?",
+                    options: ["장용영", "별기군", "원수부", "삼군부", "훈련도감"],
+                    answer: "원수부",
+                    explanation: "대한 제국은 황제권을 강화하는 광무개혁의 일환으로, 황제가 육해군을 직접 통솔하기 위해 최고 군 통수 기관인 원수부를 설치했습니다."
+                },
+                {
+                    question: "15. 독립 협회를 강제로 해산시키는 데 동원된 보부상 단체는?",
+                    options: ["활빈당", "황국 중앙 총상회", "황국 협회", "신민회", "보안회"],
+                    answer: "황국 협회",
+                    explanation: "황국 협회는 보수 관료들이 독립 협회의 활동에 위기감을 느끼고 조직한 어용 단체로, 보부상들을 동원하여 만민 공동회를 습격하는 등 독립 협회 해산에 앞장섰습니다."
+                },
+                {
+                    question: "16. 동학 농민 운동, 갑오개혁, 독립 협회 활동의 공통적인 지향점으로 가장 적절한 것은?",
+                    options: ["왕정 복고", "급진적 사회주의 혁명", "외세에 대한 전적인 의존", "근대 국가 수립을 위한 노력", "엄격한 신분 질서의 재확립"],
+                    answer: "근대 국가 수립을 위한 노력",
+                    explanation: "세 사건은 주체와 방식은 달랐지만, 봉건적 질서를 개혁하고 외세의 침략에 맞서 자주적인 근대 국가를 세우려 했다는 공통적인 목표를 가지고 있었습니다."
+                },
+                {
+                    question: "17. 제1차 갑오개혁 때 재정을 여러 기관에서 나누어 관리하던 것을 하나로 통합시킨 관청은?",
+                    options: ["호조", "탁지아문", "선혜청", "군국기무처", "내장원"],
+                    answer: "탁지아문",
+                    explanation: "제1차 갑오개혁에서는 국가 재정을 일원화하여 효율적으로 관리하기 위해 기존의 호조를 탁지아문으로 개편하고 모든 재정 업무를 이곳에서 관할하도록 했습니다."
+                },
+                {
+                    question: "18. 다음 중 광무개혁의 성격인 '구본신참'의 의미를 가장 잘 설명한 것은?",
+                    options: ["옛것과 새것을 모두 버리고 완전히 새로운 체제를 만든다.", "새로운 서양 문물을 근본으로 삼고 옛 제도는 참고만 한다.", "옛 황제 중심의 제도를 근본으로 하되 서양의 기술은 참고하여 받아들인다.", "오직 옛 제도만을 고수하고 서양 문물은 철저히 배격한다.", "서양의 민주주의 제도를 근본으로 삼아 황제권을 제한한다."],
+                    answer: "옛 황제 중심의 제도를 근본으로 하되 서양의 기술은 참고하여 받아들인다.",
+                    explanation: "'구본신참'은 대한 제국의 전제 군주제를 근본(舊本)으로 유지하면서, 서양의 근대적인 기술과 제도를 참고(新參)하여 점진적인 개혁을 추진한다는 광무개혁의 기본 이념입니다."
+                },
+                {
+                    question: "19. 동학 농민군이 우금치 전투에서 맞서 싸운 상대는?",
+                    options: ["청군", "일본군과 관군", "러시아군", "미군", "프랑스군"],
+                    answer: "일본군과 관군",
+                    explanation: "일본의 내정 간섭에 맞서 2차 봉기를 한 동학 농민군은 서울로 북상하던 중 공주 우금치에서 일본군과 정부군(관군)의 연합 부대와 치열한 전투를 벌였으나, 우세한 화력에 밀려 크게 패배했습니다."
+                },
+                {
+                    question: "20. 독립 협회가 추진한 의회 설립 운동의 결과로 발표된 것은?",
+                    options: ["신(新) 중추원 관제", "홍범 14조", "대한국 국제", "교육입국 조서", "헌의 6조"],
+                    answer: "신(新) 중추원 관제",
+                    explanation: "독립 협회는 관민 공동회에서 헌의 6조를 결의하여 의회 설립을 요구했고, 고종은 이를 받아들여 중추원을 의회식으로 개편하는 새로운 중추원 관제를 반포했습니다. 하지만 보수 세력의 반발로 실제 의회는 열리지 못했습니다."
+                }
+            ];
+
+            const quizContainer = document.getElementById('quiz-container');
+            let userAnswers = new Array(quizData.length).fill(null);
+
+            quizData.forEach((item, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('mb-8');
+                
+                const questionText = document.createElement('p');
+                questionText.classList.add('text-lg', 'font-semibold', 'mb-4');
+                questionText.innerHTML = item.question;
+                questionDiv.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.id = `q${index}`;
+                item.options.forEach(option => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.classList.add('quiz-option');
+                    optionDiv.textContent = option;
+                    optionDiv.addEventListener('click', () => {
+                        document.querySelectorAll(`#q${index} .quiz-option`).forEach(opt => opt.classList.remove('selected'));
+                        optionDiv.classList.add('selected');
+                        userAnswers[index] = option;
+                    });
+                    optionsDiv.appendChild(optionDiv);
+                });
+                questionDiv.appendChild(optionsDiv);
+
+                const explanationDiv = document.createElement('div');
+                explanationDiv.classList.add('explanation');
+                explanationDiv.innerHTML = `<p><strong class="font-bold">정답:</strong> ${item.answer}</p><p><strong class="font-bold">해설:</strong> ${item.explanation}</p>`;
+                questionDiv.appendChild(explanationDiv);
+
+                quizContainer.appendChild(questionDiv);
+            });
+
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                quizData.forEach((item, index) => {
+                    const questionOptions = document.querySelectorAll(`#q${index} .quiz-option`);
+                    questionOptions.forEach(option => {
+                        if (option.textContent === item.answer) {
+                            option.classList.add('correct');
+                        }
+                        if (option.classList.contains('selected') && option.textContent !== item.answer) {
+                            option.classList.add('incorrect');
+                        }
+                    });
+
+                    if (userAnswers[index] === item.answer) {
+                        score++;
+                    }
+                    const explanation = quizContainer.children[index].querySelector('.explanation');
+                    explanation.style.display = 'block';
+                });
+
+                const finalScore = (score / quizData.length) * 100;
+                const scoreElement = document.getElementById('score');
+                const resultMessageElement = document.getElementById('result-message');
+                const quizResultDiv = document.getElementById('quiz-result');
+
+                scoreElement.textContent = `${finalScore}`;
+                
+                if (finalScore >= 80) {
+                    resultMessageElement.textContent = "완벽합니다! 격동의 근대사를 정확히 꿰뚫고 있군요!";
+                } else if (finalScore >= 50) {
+                    resultMessageElement.textContent = "잘하셨어요! 사건의 순서와 인과 관계를 조금 더 복습하면 좋겠습니다.";
+                } else {
+                    resultMessageElement.textContent = "개념이 헷갈릴 수 있어요. 핵심 개념과 스토리텔링 부분을 다시 읽어보세요!";
+                }
+
+                quizResultDiv.classList.remove('hidden');
+                submitButton.disabled = true;
+                submitButton.textContent = "채점 완료";
+                submitButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+                submitButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+                window.scrollTo(0, document.getElementById('quiz-result').offsetTop - 20);
+            });
+        });
+    </script>
+</body>
+</html>

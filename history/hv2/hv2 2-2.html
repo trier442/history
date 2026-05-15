@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 경제 구조의 변화와 경제생활 - 모두의 한국사</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .tab-btn.active {
+            border-color: #4f46e5;
+            background-color: #4f46e5;
+            color: white;
+        }
+        .hidden-box {
+            cursor: pointer;
+            border: 2px dashed #9ca3af;
+            background-color: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: transparent; /* Make text transparent initially */
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+            user-select: none;
+        }
+        .hidden-box:hover {
+            background-color: #e5e7eb;
+            border-color: #6b7280;
+        }
+        .revealed-box {
+            background-color: #eef2ff;
+            color: #4338ca;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            animation: fadeIn 0.5s;
+            display: inline-block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation-box {
+            background-color: #f9fafb;
+            border-left: 4px solid #6b7280;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254"
+     crossorigin="anonymous"></script>
+
+<body class="bg-gray-50">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-black text-gray-900">2. 경제 구조의 변화와 경제생활</h1>
+                <p class="mt-1 text-sm text-gray-600">비상 한국사 2</p>
+            </div>
+            <a href="https://eduking1978.tistory.com/category/2022%20%EA%B0%9C%EC%A0%95%20%EA%B3%A0%EB%93%B1%20%ED%95%9C%EA%B5%AD%EC%82%AC/%EB%B9%84%EC%83%81%20%ED%95%9C%EA%B5%AD%EC%82%AC2" class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm sm:text-base">
+                뒤로가기
+            </a>
+        </div>
+        <!-- 탭 메뉴 -->
+        <div class="container mx-auto px-4 sm:px-6 bg-white">
+            <div class="flex border-b">
+                <a href="#section-0" class="tab-btn active py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">1. 교과서 핵심 정리</a>
+                <a href="#section-1" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">2. 스토리텔링 한국사</a>
+                <a href="#section-2" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">3. 내용 확인 문제</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 컨텐츠 영역 -->
+    <main class="container mx-auto px-4 sm:px-6 py-8">
+        <!-- 1. 교과서 핵심 정리 -->
+        <section id="section-0" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">1. 교과서 핵심 정리</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-indigo-500 inline-block">1910년대: 경제 기반 파괴와 자원 수탈</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">토지 조사 사업 (1910~1918):</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">목적:</span> 안정적 세금 확보, 일본인의 토지 투자 용이.</li>
+                                <li><span class="font-bold">방식:</span> 기한 내 신고주의. 복잡한 절차와 짧은 기간으로 미신고 토지 발생.</li>
+                                <li><span class="font-bold">결과:</span> 총독부의 지세 수입 증가, 미신고 토지 및 공유지 약탈. <span class="text-indigo-600 font-bold">동양척식주식회사</span> 등에 헐값으로 넘김. 다수 농민이 소작농이나 화전민으로 전락, 만주·연해주로 이주.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-semibold">산업 침탈:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">회사령(1910):</span> 총독의 허가를 받아야 회사 설립 가능. 민족 자본의 성장을 억제하고 일본 기업의 시장 독점을 도움.</li>
+                                <li><span class="font-bold">각종 법령:</span> 어업령, 삼림령, 광업령 등을 공포하여 한반도의 모든 자원을 일본이 독점.</li>
+                                <li><span class="font-bold">금융 장악:</span> 조선은행, 조선식산은행 등을 설립하여 금융과 산업 지배 강화.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-green-500 inline-block">1920년대: 산미 증식 계획과 일본 자본 침투</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">산미 증식 계획 (1920~1934):</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">배경:</span> 제1차 세계 대전 이후 일본 내 공업화로 인한 식량 부족 문제 발생.</li>
+                                <li><span class="font-bold">내용:</span> 품종 개량, 수리 시설 확충 등을 통해 쌀 생산량 증대 시도.</li>
+                                <li><span class="font-bold">결과:</span> 증산량보다 <span class="text-green-600 font-bold">수탈량</span>이 더 많아 한국 내 식량 사정 악화. 농민들은 수리 조합비, 비료 대금 등 비용 부담 증가로 몰락 가속화.</li>
+                            </ul>
+                        </li>
+                        <li>
+                           <span class="font-semibold">일본 자본의 침투 심화:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">회사령 폐지(1920):</span> 허가제에서 신고제로 변경. 일본 대자본의 한국 진출 본격화.</li>
+                                <li><span class="font-bold">관세 폐지(1923):</span> 일본 상품이 값싸게 들어와 한국 기업은 큰 타격을 입음.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-red-500 inline-block">1930~40년대: 병참 기지화와 전시 수탈</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">병참 기지화 정책:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">배경:</span> 만주 침략 이후 한국을 대륙 침략을 위한 군수 물자 공급 기지로 삼으려 함.</li>
+                                <li><span class="font-bold">남면북양 정책:</span> 남쪽에는 면화, 북쪽에는 양 사육을 강요하여 일본 방직 공업 원료 공급.</li>
+                                <li><span class="font-bold">공업 구조 왜곡:</span> 군수 산업 위주로 재편, 특히 자원이 풍부한 북부 지역에 중화학 공업 집중.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-semibold">전시 수탈 강화:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">농촌 수탈:</span> 농촌 진흥 운동으로 농민을 회유·통제하고, <span class="text-red-600 font-bold">미곡 공출제</span>를 통해 쌀을 강제로 빼앗아감.</li>
+                                <li><span class="font-bold">물자 수탈:</span> 무기 제작을 명분으로 놋그릇, 수저 등 <span class="text-red-600 font-bold">금속 공출</span> 실시.</li>
+                                <li><span class="font-bold">배급제 실시:</span> 식량 및 생필품을 통제하고 배급하여 한국인의 생활을 극도로 피폐하게 만듦.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리텔링 한국사 -->
+        <section id="section-1" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">2. 스토리텔링 한국사</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-6 text-lg leading-relaxed">
+                 <p>
+                    1910년대, 일제는 식민 통치의 경제적 기반을 다지기 위해 <span class="hidden-box" data-text="토지 조사 사업" onclick="reveal(this)">&nbsp;</span>을 벌였습니다. 근대적 토지 소유권을 확립한다는 명분을 내세웠지만, 실제 목적은 세금을 더 많이 걷고 우리 땅을 빼앗는 것이었죠. 복잡한 신고 절차 때문에 수많은 농민이 조상 대대로 경작해 온 땅을 하루아침에 잃었고, 이 땅은 <span class="hidden-box" data-text="동양척식주식회사" onclick="reveal(this)">&nbsp;</span>와 같은 기관을 통해 일본인들에게 헐값에 넘어갔습니다. 또한 <span class="hidden-box" data-text="회사령" onclick="reveal(this)">&nbsp;</span>을 만들어 한국인의 기업 설립을 억제했습니다.
+                </p>
+                <p>
+                    1920년대가 되자, 일본 본토의 식량 부족 문제를 해결하기 위해 한국에서 <span class="hidden-box" data-text="산미 증식 계획" onclick="reveal(this)">&nbsp;</span>을 강행했습니다. 쌀 생산량은 조금 늘었지만, 늘어난 양보다 훨씬 많은 쌀을 일본으로 가져가는 바람에 정작 우리 농민들은 굶주림에 시달려야 했습니다. 오히려 비료 값, 수리 조합비 부담만 늘어났죠. 이 시기 <span class="hidden-box" data-text="회사령" onclick="reveal(this)">&nbsp;</span>이 폐지되고 <span class="hidden-box" data-text="관세" onclick="reveal(this)">&nbsp;</span>가 철폐되면서 일본의 거대 자본이 한국 시장을 빠르게 장악해 나갔습니다.
+                </p>
+                <p>
+                    1930년대 이후 일제가 대륙 침략 전쟁을 본격화하면서, 한반도는 일본의 전쟁 수행을 위한 <span class="hidden-box" data-text="병참 기지" onclick="reveal(this)">&nbsp;</span>로 전락했습니다. 일본 방직 공업의 원료를 대기 위해 남쪽에서는 면화를, 북쪽에서는 양을 키우게 하는 <span class="hidden-box" data-text="남면북양 정책" onclick="reveal(this)">&nbsp;</span>이 실시되었습니다. 전쟁이 막바지로 치달으면서 수탈은 극에 달했습니다. 쌀을 강제로 빼앗는 <span class="hidden-box" data-text="미곡 공출" onclick="reveal(this)">&nbsp;</span>은 물론, 집안의 숟가락과 놋그릇까지 빼앗아가는 <span class="hidden-box" data-text="금속 공출" onclick="reveal(this)">&nbsp;</span>까지 자행되었습니다. 결국 우리 민족은 식량 <span class="hidden-box" data-text="배급제" onclick="reveal(this)">&nbsp;</span>에 의존하며 힘겨운 삶을 살아야 했습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 내용 확인 문제 -->
+        <section id="section-2" class="pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">3. 내용 확인 문제</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <div id="quiz-container" class="space-y-8">
+                    <!-- 문제가 여기에 동적으로 추가됩니다. -->
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="submit-quiz-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors text-lg">제출하기</button>
+                </div>
+                <div id="quiz-result" class="hidden mt-8 text-center text-2xl font-bold"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 탭 스크롤 및 활성화 로직
+        const tabLinks = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('main section');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                    });
+                }
+            });
+        });
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tabLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-100px 0px -50% 0px" }); 
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        function reveal(element) {
+            const text = element.dataset.text;
+            const revealed = document.createElement('span');
+            revealed.className = 'revealed-box';
+            revealed.textContent = text;
+            element.replaceWith(revealed);
+        }
+
+        const quizData = [
+            { question: "1910년대 일제가 '근대적 토지 소유권 확립'을 명분으로 실시한 사업은?", options: ["산미 증식 계획", "토지 조사 사업", "회사령", "농촌 진흥 운동", "남면북양 정책"], answer: "토지 조사 사업", explanation: "토지 조사 사업은 1910년대에 식민지 지배의 경제적 기반을 마련하기 위해 실시되었습니다." },
+            { question: "토지 조사 사업의 결과로 나타난 현상이 아닌 것은?", options: ["총독부의 지세 수입 증가", "다수 농민의 소작농화", "동양척식주식회사의 토지 소유 확대", "농민의 경작권 인정", "해외 이주 농민 증가"], answer: "농민의 경작권 인정", explanation: "토지 조사 사업은 지주의 소유권만 인정하고 농민들이 관습적으로 가졌던 경작권(도지권)은 부정했습니다." },
+            { question: "1910년 제정되어 한국인의 회사 설립을 억제했던 법령은?", options: ["광업령", "삼림령", "회사령", "어업령", "은행령"], answer: "회사령", explanation: "회사령은 총독의 허가를 받아야만 회사를 설립할 수 있도록 하여 민족 자본의 성장을 막았습니다." },
+            { question: "1920년대 일본의 식량 부족 문제를 해결하기 위해 한국에서 실시한 정책은?", options: ["토지 조사 사업", "미곡 공출제", "국가 총동원법", "산미 증식 계획", "병참 기지화 정책"], answer: "산미 증식 계획", explanation: "산미 증식 계획은 일본 내 공업화로 인한 쌀 부족 문제를 한국에서의 증산을 통해 해결하려 한 정책입니다." },
+            { question: "산미 증식 계획의 결과로 옳지 않은 것은?", options: ["쌀 생산량 증가", "일본으로의 쌀 유출량 급증", "한국인의 1인당 쌀 소비량 증가", "농민의 수리 조합비 부담 증가", "만주산 잡곡 수입 증가"], answer: "한국인의 1인당 쌀 소비량 증가", explanation: "증산된 양보다 더 많은 쌀을 수탈해 갔기 때문에, 한국인의 쌀 소비량은 오히려 줄어들었습니다." },
+            { question: "1920년 회사령이 허가제에서 신고제로 바뀐 이유는?", options: ["한국 기업 육성을 위해", "3·1 운동의 영향으로", "일본 자본의 한국 진출을 쉽게 하기 위해", "농업 생산력 증대를 위해", "미국의 압력 때문에"], answer: "일본 자본의 한국 진출을 쉽게 하기 위해", explanation: "회사령을 폐지하여 일본의 대기업들이 더 쉽게 한국에 진출하여 이익을 얻도록 하기 위함이었습니다." },
+            { question: "1923년 한국과 일본 사이의 관세가 폐지되면서 나타난 결과는?", options: ["한국 기업의 경쟁력 강화", "일본 상품의 수입 감소", "한국 상품의 일본 수출 증가", "한국 토종 기업의 몰락 가속화", "미국 상품의 유입 증가"], answer: "한국 토종 기업의 몰락 가속화", explanation: "값싼 일본 상품이 대량으로 들어오면서 자본과 기술이 부족했던 한국 기업들은 큰 타격을 입었습니다." },
+            { question: "1930년대 일제가 한국을 대륙 침략을 위한 군수 물자 공급 기지로 삼은 정책은?", options: ["문화 통치", "민족 말살 통치", "병참 기지화 정책", "남면북양 정책", "농촌 진흥 운동"], answer: "병참 기지화 정책", explanation: "병참 기지화는 한반도를 전쟁 수행에 필요한 군수 공업 기지로 만드는 것을 목표로 했습니다." },
+            { question: "일본 방직 공업의 원료를 확보하기 위해 한반도 남부에는 면화, 북부에는 양 사육을 강요한 정책은?", options: ["산미 증식 계획", "조선 공업화 정책", "남면북양 정책", "농촌 진흥 운동", "회사령"], answer: "남면북양 정책", explanation: "남면북양 정책은 한반도의 농업 구조를 일본의 공업 필요에 맞게 재편하려는 의도였습니다." },
+            { question: "중일 전쟁 이후 전쟁 물자 확보를 위해 쌀을 강제로 수탈한 제도는?", options: ["배급제", "미곡 공출제", "징용", "토지 조사 사업", "국방 헌금"], answer: "미곡 공출제", explanation: "미곡 공출제는 농가별로 할당량을 정해 쌀을 강제로 빼앗아 군량미 등으로 사용한 제도입니다." },
+            { question: "일제 강점기 경제 수탈을 피해 많은 한국인이 이주한 지역이 아닌 곳은?", options: ["만주", "연해주", "일본", "미주", "대만"], answer: "대만", explanation: "만주, 연해주, 일본, 미주 등은 일제 강점기 한국인들의 주요 이주 지역이었습니다." },
+            { question: "1923년 관동 대지진 당시 일본에서 일어난 비극적인 사건은?", options: ["일본의 경제 호황", "한국인 노동자 대우 개선", "한국인 대량 학살", "독립운동 기지 건설", "한인회 조직"], answer: "한국인 대량 학살", explanation: "일본 정부는 지진으로 인한 사회 혼란을 한국인에게 돌리며 유언비어를 퍼뜨렸고, 이로 인해 수많은 한국인이 학살당했습니다." },
+            { question: "소련의 스탈린이 연해주에 거주하던 한국인들을 중앙아시아로 강제 이주시킨 사건의 배경은?", options: ["독립운동 지원", "경제적 지원", "일본과의 협력 우려", "문화 교류 증진", "농지 개간 필요"], answer: "일본과의 협력 우려", explanation: "1937년 중일 전쟁이 일어나자, 스탈린은 연해주 한인들이 일본의 첩자 역할을 할 수 있다고 의심하여 강제 이주를 단행했습니다." },
+            { question: "1930년대 대공황 이후 농촌 경제가 어려워지자, 일제가 농민을 회유하고 통제하기 위해 실시한 운동은?", options: ["새마을 운동", "농촌 진흥 운동", "물산 장려 운동", "브나로드 운동", "문자 보급 운동"], answer: "농촌 진흥 운동", explanation: "농촌 진흥 운동은 농민들의 불만을 잠재우고, 대륙 침략 과정에서 농민을 통제하기 위한 목적이 컸습니다." },
+            { question: "일제 말기, 전쟁 무기 제작을 명분으로 놋그릇, 숟가락, 심지어 절의 종까지 빼앗아간 수탈 정책은?", options: ["미곡 공출", "징용", "금속 공출", "배급제", "국방 헌금"], answer: "금속 공출", explanation: "금속 공출은 전쟁에 필요한 금속 자원을 확보하기 위해 한국인들의 생활용품까지 강제로 빼앗은 대표적인 물적 수탈입니다." },
+            { question: "1910년대 한국의 금융과 산업을 지배하기 위해 설립된 대표적인 금융 기관은?", options: ["한국은행", "조흥은행", "한성은행", "조선식산은행", "제일은행"], answer: "조선식산은행", explanation: "조선식산은행은 농공은행을 통합하여 설립되었으며, 산미 증식 계획 자금 공급 등 일제의 경제 침략에 앞장섰습니다." },
+            { question: "중앙아시아로 강제 이주된 한인 동포를 일컫는 말은 무엇인가요?", options: ["조선족", "재일 동포", "고려인(카레이스키)", "화교", "재미 교포"], answer: "고려인(카레이스키)", explanation: "1937년 연해주에서 중앙아시아로 강제 이주된 한인들과 그 후손들을 고려인 또는 카레이스키라고 부릅니다." },
+            { question: "1910년대 회사령의 내용으로 옳은 것은?", options: ["회사 설립을 장려했다.", "신고만 하면 회사를 설립할 수 있었다.", "조선 총독의 허가를 받아야 회사를 설립할 수 있었다.", "일본 자본의 진출을 막았다.", "소규모 회사만 설립이 가능했다."], answer: "조선 총독의 허가를 받아야 회사를 설립할 수 있었다.", explanation: "회사령은 허가제로 운영되어, 민족 기업의 성장을 억제하고 일본 기업에 유리한 환경을 조성했습니다." },
+            { question: "일제 강점기 경제 정책으로 인해 다수의 농민이 토지를 잃고 만주, 연해주 등 국외로 이주하게 된 직접적인 계기는?", options: ["산미 증식 계획", "회사령", "토지 조사 사업", "화폐 정리 사업", "국채 보상 운동"], answer: "토지 조사 사업", explanation: "토지 조사 사업 과정에서 신고 절차를 이행하지 못하거나 소유권을 증명하지 못한 많은 농민이 토지를 빼앗기고 생계 수단을 잃어 국외로 이주했습니다." },
+            { question: "다음 중 1930~40년대 전시 수탈 정책에 해당하지 않는 것은?", options: ["미곡 공출제", "금속 공출", "국가 총동원법", "배급제", "회사령 폐지"], answer: "회사령 폐지", explanation: "회사령 폐지는 1920년에 이루어진 조치로, 1930~40년대의 전시 수탈 정책과는 시기적으로 관련이 없습니다." }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const submitBtn = document.getElementById('submit-quiz-btn');
+        const resultContainer = document.getElementById('quiz-result');
+
+        // 퀴즈 문제 생성
+        quizData.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'quiz-question';
+            questionDiv.dataset.answer = q.answer;
+
+            const questionText = document.createElement('p');
+            questionText.className = 'text-lg font-semibold mb-4';
+            questionText.textContent = (index + 1) + ". " + q.question;
+            questionDiv.appendChild(questionText);
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'space-y-3';
+            
+            q.options.forEach(option => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option block border border-gray-300 rounded-lg p-3 cursor-pointer hover:bg-gray-100 transition-colors';
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'question-' + index;
+                radio.value = option;
+                radio.className = 'mr-3';
+
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(option));
+                optionsDiv.appendChild(label);
+            });
+
+            questionDiv.appendChild(optionsDiv);
+
+            const explanationDiv = document.createElement('div');
+            explanationDiv.className = 'explanation-box hidden';
+            questionDiv.appendChild(explanationDiv);
+
+            quizContainer.appendChild(questionDiv);
+        });
+
+        // 퀴즈 제출 로직
+        submitBtn.addEventListener('click', () => {
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question, index) => {
+                const correctAnswer = question.dataset.answer;
+                const selectedOption = question.querySelector('input[name="question-' + index + '"]:checked');
+                const options = question.querySelectorAll('.quiz-option');
+                const explanationBox = question.querySelector('.explanation-box');
+
+                options.forEach(opt => {
+                    const radio = opt.querySelector('input');
+                    radio.disabled = true;
+                    if (radio.value === correctAnswer) {
+                        opt.classList.add('correct');
+                    }
+                });
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                    } else {
+                        selectedOption.parentElement.classList.add('incorrect');
+                    }
+                }
+                
+                if (explanationBox) {
+                    explanationBox.innerHTML = '<strong>해설:</strong> ' + quizData[index].explanation;
+                    explanationBox.classList.remove('hidden');
+                }
+            });
+
+            const totalQuestions = quizData.length;
+            const finalScore = (score / totalQuestions) * 100;
+            resultContainer.textContent = '총 ' + totalQuestions + '문제 중 ' + score + '문제를 맞혔습니다! (점수: ' + finalScore.toFixed(0) + '점)';
+            resultContainer.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '제출 완료';
+            submitBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+            submitBtn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+        });
+    </script>
+
+</body>
+</html>

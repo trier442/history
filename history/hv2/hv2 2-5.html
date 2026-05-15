@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. 문화 변동과 일상생활 - 모두의 한국사</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .tab-btn.active {
+            border-color: #4f46e5;
+            background-color: #4f46e5;
+            color: white;
+        }
+        .hidden-box {
+            cursor: pointer;
+            border: 2px dashed #9ca3af;
+            background-color: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: transparent; /* Make text transparent initially */
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+            user-select: none;
+        }
+        .hidden-box:hover {
+            background-color: #e5e7eb;
+            border-color: #6b7280;
+        }
+        .revealed-box {
+            background-color: #eef2ff;
+            color: #4338ca;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            animation: fadeIn 0.5s;
+            display: inline-block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation-box {
+            background-color: #f9fafb;
+            border-left: 4px solid #6b7280;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254"
+     crossorigin="anonymous"></script>
+
+<body class="bg-gray-50">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-black text-gray-900">5. 문화 변동과 일상생활</h1>
+                <p class="mt-1 text-sm text-gray-600">비상 한국사 2</p>
+            </div>
+            <a href="https://eduking1978.tistory.com/category/2022%20%EA%B0%9C%EC%A0%95%20%EA%B3%A0%EB%93%B1%20%ED%95%9C%EA%B5%AD%EC%82%AC/%EB%B9%84%EC%83%81%20%ED%95%9C%EA%B5%AD%EC%82%AC2" class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors text-sm sm:text-base">
+                뒤로가기
+            </a>
+        </div>
+        <!-- 탭 메뉴 -->
+        <div class="container mx-auto px-4 sm:px-6 bg-white">
+            <div class="flex border-b">
+                <a href="#section-0" class="tab-btn active py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">1. 교과서 핵심 정리</a>
+                <a href="#section-1" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">2. 스토리텔링 한국사</a>
+                <a href="#section-2" class="tab-btn py-2 px-4 font-semibold text-gray-600 border-b-2 border-transparent hover:border-gray-400">3. 내용 확인 문제</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 컨텐츠 영역 -->
+    <main class="container mx-auto px-4 sm:px-6 py-8">
+        <!-- 1. 교과서 핵심 정리 -->
+        <section id="section-0" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">1. 교과서 핵심 정리</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-indigo-500 inline-block">산업화와 일상생활의 변화</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">도시화의 진전:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">이촌향도 현상:</span> 산업화로 일자리를 찾아 농촌 인구가 도시로 대거 이동.</li>
+                                <li><span class="font-bold">도시 문제:</span> 주택난, 교통난, 환경 오염 심화. 도시 빈민층이 형성한 <span class="text-indigo-600 font-bold">판자촌</span> 문제 발생 (예: <span class="text-indigo-600 font-bold">광주 대단지 사건</span>).</li>
+                                <li><span class="font-bold">정부 대책:</span> 대중교통 확장, 아파트 단지 및 신도시 건설.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-semibold">의식주 생활의 변화:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">주생활:</span> <span class="text-indigo-600 font-bold">아파트</span>, 연립 주택 등 공동 주택 보급 확대.</li>
+                                <li><span class="font-bold">식생활:</span> 쌀 부족 문제 해결을 위한 <span class="text-indigo-600 font-bold">혼·분식 장려 운동</span>, 다수확 품종인 <span class="text-indigo-600 font-bold">통일벼</span> 보급으로 1970년대 중반 쌀 자급 달성.</li>
+                                <li><span class="font-bold">가전제품 보급:</span> 텔레비전, 냉장고, 세탁기 등이 보급되며 가사 노동의 부담 감소.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="font-semibold">교육의 변화:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">국가주의 교육 강화:</span> 박정희 정부 시기 <span class="text-indigo-600 font-bold">국민 교육 헌장</span> 암기, 반공·국사 교육 강조.</li>
+                                <li><span class="font-bold">입시 제도 개편:</span> 과도한 입시 경쟁 완화를 위해 <span class="text-indigo-600 font-bold">중학교 무시험 진학 제도</span>(1969), 고교 평준화 정책(1974~) 도입.</li>
+                                <li><span class="font-bold">교육 기회 확대:</span> 중·고등학교 수 증가, 취학률 상승. 전두환 정부 시기 중학교 의무 교육 시작.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 pb-2 border-b-2 border-green-500 inline-block">언론과 대중문화의 성장</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li>
+                            <span class="font-semibold">언론의 시련과 성장:</span>
+                             <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">정권의 통제:</span> 이승만 정부(<span class="text-green-600 font-bold">경향신문</span> 폐간), 박정희 정부(언론인 해직, <span class="text-green-600 font-bold">자유 언론 실천 선언</span> 탄압), 전두환 정부(<span class="text-green-600 font-bold">언론 통폐합, 보도 지침</span>).</li>
+                                <li><span class="font-bold">언론 자유 확대:</span> 4·19 혁명, 6월 민주 항쟁을 계기로 언론 자유가 신장됨.</li>
+                            </ul>
+                        </li>
+                        <li>
+                           <span class="font-semibold">대중 매체와 대중문화:</span>
+                            <ul class="list-['–'] list-inside ml-6 mt-1 space-y-1">
+                                <li><span class="font-bold">대중 매체 보급:</span> 라디오에 이어 1960년대부터 <span class="text-green-600 font-bold">텔레비전</span>이 급속히 보급 (1980년 컬러 방송 시작).</li>
+                                <li><span class="font-bold">1970년대 문화:</span> TV 드라마(여로, 아씨 등) 인기, 정부의 검열과 통제 속에서 장발, 청바지, 통기타로 대표되는 <span class="text-green-600 font-bold">청년 문화</span> 유행.</li>
+                                <li><span class="font-bold">1980년대 문화:</span> <span class="text-green-600 font-bold">프로 스포츠</span>(프로 야구) 출범, 대중가요 인기. 6월 민주 항쟁 이후 문화 통제 완화.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리텔링 한국사 -->
+        <section id="section-1" class="mb-12 pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">2. 스토리텔링 한국사</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-6 text-lg leading-relaxed">
+                 <p>
+                    산업화의 바람을 타고 수많은 사람이 농촌을 떠나 도시로 향했습니다. 하지만 도시의 삶은 낭만적이지만은 않았습니다. 갑자기 불어난 인구로 도시는 몸살을 앓았고, 많은 이들이 변두리 <span class="hidden-box" data-text="판자촌" onclick="reveal(this)">&nbsp;</span>에 고단한 삶의 터전을 마련해야 했습니다. 정부가 서울의 빈민들을 강제로 이주시킨 <span class="hidden-box" data-text="광주 대단지 사건" onclick="reveal(this)">&nbsp;</span>은 당시 도시 문제의 심각성을 보여주는 비극이었죠.
+                </p>
+                <p>
+                    한편, 우리네 밥상과 집안 풍경도 크게 바뀌었습니다. 정부는 쌀 부족을 해결하기 위해 <span class="hidden-box" data-text="혼·분식" onclick="reveal(this)">&nbsp;</span>을 장려했고, 생산량이 많은 <span class="hidden-box" data-text="통일벼" onclick="reveal(this)">&nbsp;</span>를 보급했습니다. 안방극장 시대를 연 <span class="hidden-box" data-text="텔레비전" onclick="reveal(this)">&nbsp;</span>의 등장은 온 가족을 하나로 모으는 새로운 문화였습니다. 교육열은 하늘을 찔렀고, '뺑뺑이'로 불린 <span class="hidden-box" data-text="중학교 무시험 추첨" onclick="reveal(this)">&nbsp;</span> 제도는 입시 지옥에 시달리던 학생들에게 새로운 경험을 안겨주었습니다.
+                </p>
+                <p>
+                    하지만 자유로운 문화의 성장은 쉽지 않았습니다. 독재 정권은 언론을 통제하기 위해 신문을 폐간하고 <span class="hidden-box" data-text="보도 지침" onclick="reveal(this)">&nbsp;</span>을 내렸습니다. 1970년대에는 장발과 미니스커트가 퇴폐 풍조라며 단속했고, 수많은 노래가 <span class="hidden-box" data-text="금지곡" onclick="reveal(this)">&nbsp;</span>으로 묶였습니다. 그럼에도 불구하고 통기타와 청바지로 대표되는 <span class="hidden-box" data-text="청년 문화" onclick="reveal(this)">&nbsp;</span>는 억압된 시대의 저항 정신을 담아냈고, 1980년대 <span class="hidden-box" data-text="프로 야구" onclick="reveal(this)">&nbsp;</span>의 출범은 대중들에게 새로운 즐거움을 선사했습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 내용 확인 문제 -->
+        <section id="section-2" class="pt-20 -mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">3. 내용 확인 문제</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <div id="quiz-container" class="space-y-8">
+                    <!-- 문제가 여기에 동적으로 추가됩니다. -->
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="submit-quiz-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors text-lg">제출하기</button>
+                </div>
+                <div id="quiz-result" class="hidden mt-8 text-center text-2xl font-bold"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 탭 스크롤 및 활성화 로직
+        const tabLinks = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('main section');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                    });
+                }
+            });
+        });
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tabLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-100px 0px -50% 0px" }); 
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        function reveal(element) {
+            const text = element.dataset.text;
+            const revealed = document.createElement('span');
+            revealed.className = 'revealed-box';
+            revealed.textContent = text;
+            element.replaceWith(revealed);
+        }
+
+        const quizData = [
+            { question: "산업화 시기 농촌 인구가 도시로 대거 이동하는 현상을 무엇이라고 하나요?", options: ["도시화", "이촌향도", "산업화", "공업화", "녹색 혁명"], answer: "이촌향도", explanation: "이촌향도는 '농촌을 떠나 도시로 향한다'는 뜻으로, 1960~70년대의 급격한 인구 이동을 나타내는 용어입니다." },
+            { question: "1971년 서울시의 무계획적인 철거민 이주 정책에 주민들이 집단으로 반발한 사건은?", options: ["광주 대단지 사건", "서울역 시위", "부마 민주 항쟁", "YH 무역 사건", "판자촌 정비 사업"], answer: "광주 대단지 사건", explanation: "광주 대단지 사건(현 성남시)은 기반 시설도 갖추지 않은 곳으로 주민들을 강제 이주시켜 발생한 대표적인 도시 문제였습니다." },
+            { question: "박정희 정부가 쌀 자급을 위해 보급한 다수확 벼 품종은?", options: ["자포니카", "인디카", "새마을벼", "통일벼", "추청벼"], answer: "통일벼", explanation: "통일벼는 생산성이 높아 1970년대 중반 쌀 자급을 달성하는 데 크게 기여했지만, 밥맛이 없다는 단점도 있었습니다." },
+            { question: "1969년부터 과도한 입시 경쟁을 완화하기 위해 시행된 제도는?", options: ["고교 평준화", "대학 졸업 정원제", "중학교 무시험 진학 제도", "수능 시험 도입", "본고사 폐지"], answer: "중학교 무시험 진학 제도", explanation: "소위 '뺑뺑이'로 불린 중학교 무시험 진학 제도는 추첨을 통해 중학교를 배정하는 방식이었습니다." },
+            { question: "박정희 정부가 국민 교육의 지표로 삼아 학생들에게 암송을 강요했던 것은?", options: ["국기에 대한 맹세", "애국가", "나의 조국", "새마을 노래", "국민 교육 헌장"], answer: "국민 교육 헌장", explanation: "국민 교육 헌장은 국가주의와 민족 중흥을 강조하며 유신 체제를 뒷받침하는 이념 교육의 도구로 활용되었습니다." },
+            { question: "전두환 정부가 언론을 통제하기 위해 각 언론사에 내렸던 구체적인 보도 지침은?", options: ["긴급 조치", "계엄령", "보도 지침", "언론 기본법", "사전 검열"], answer: "보도 지침", explanation: "보도 지침은 기사의 내용과 방향, 심지어 크기까지 통제하여 언론의 자유를 심각하게 침해했습니다." },
+            { question: "1970년대 유신 독재에 저항하는 상징으로 여겨졌던 문화 현상은?", options: ["트로트 유행", "고고 댄스", "청년 문화", "반공 드라마", "새마을 노래 부르기"], answer: "청년 문화", explanation: "장발, 청바지, 통기타, 생맥주로 대표되는 청년 문화는 획일적인 사회 분위기에 대한 저항의 의미를 담고 있었습니다." },
+            { question: "1980년대 3S 정책의 일환으로 출범하여 대중적 인기를 끈 것은?", options: ["프로 축구", "프로 농구", "프로 야구", "민속 씨름", "대학 가요제"], answer: "프로 야구", explanation: "전두환 정부는 국민의 정치적 불만을 다른 곳으로 돌리기 위해 스포츠(Sports), 스크린(Screen), 섹스(Sex)를 장려하는 3S 정책을 폈고, 프로 야구는 그 대표적인 사례입니다." },
+            { question: "1960년대 이후 한국 사회의 주된 주거 형태로 자리 잡게 된 것은?", options: ["한옥", "초가집", "단독 주택", "연립 주택", "아파트"], answer: "아파트", explanation: "급격한 도시화로 인한 주택난을 해결하기 위해 대규모 아파트 단지가 건설되기 시작하면서 아파트는 현대 한국의 보편적인 주거 형태가 되었습니다." },
+            { question: "다음 중 산업화 시기 일상생활의 변화로 보기 어려운 것은?", options: ["가전제품 보급", "식생활 개선", "대가족의 증가", "교통수단 발달", "교육 기회 확대"], answer: "대가족의 증가", explanation: "산업화와 도시화는 전통적인 농업 사회의 기반이었던 대가족 제도를 해체시키고 핵가족화를 촉진했습니다." },
+            { question: "이승만 정부의 대표적인 언론 탄압 사례로, 1959년에 폐간된 신문은?", options: ["동아일보", "조선일보", "한겨레신문", "경향신문", "서울신문"], answer: "경향신문", explanation: "이승만 정부는 정부에 비판적인 논조를 보인 경향신문을 강제로 폐간시켜 언론의 자유를 억압했습니다." },
+            { question: "1974년 박정희 정부의 언론 탄압에 맞서 동아일보 기자들이 발표한 선언은?", options: ["6·29 민주화 선언", "3·1 민주 구국 선언", "자유 언론 실천 선언", "보도 지침 거부 선언", "민주 수호 국민 선언"], answer: "자유 언론 실천 선언", explanation: "자유 언론 실천 선언은 유신 체제의 언론 탄압에 저항한 대표적인 언론 민주화 운동이었습니다." },
+            { question: "1960년대 이후 대중문화 확산에 가장 결정적인 역할을 한 대중 매체는?", options: ["신문", "잡지", "라디오", "영화", "텔레비전"], answer: "텔레비전", explanation: "텔레비전은 시각과 청각을 동시에 만족시키는 강력한 매체로서, 대중의 생각과 생활 양식에 큰 영향을 미쳤습니다." },
+            { question: "1980년 전두환 신군부가 언론을 장악하기 위해 단행한 조치는?", options: ["언론인 해직", "신문사 창간 허용", "보도 지침 폐지", "언론 통폐합", "방송 광고 금지"], answer: "언론 통폐합", explanation: "신군부는 수많은 신문, 방송, 통신사를 강제로 합치거나 없애는 언론 통폐합을 통해 비판적인 목소리를 차단했습니다." },
+            { question: "박정희 정부 시기 쌀 부족 문제를 해결하기 위해 실시한 정책이 아닌 것은?", options: ["혼식 장려", "분식 장려", "통일벼 보급", "쌀 수입 개방", "무미일(無米日) 운영"], answer: "쌀 수입 개방", explanation: "당시 정부는 쌀의 자급자족을 목표로 했기 때문에, 쌀 수입 개방은 정책 방향과 맞지 않았습니다." },
+            { question: "전두환 정부가 과외를 전면 금지하고 대학 졸업 정원제를 실시한 이유는?", options: ["교육의 질 향상", "사교육비 부담 완화 및 입시 과열 해소", "대학 서열화 해소", "학생 인권 신장", "교사의 권위 강화"], answer: "사교육비 부담 완화 및 입시 과열 해소", explanation: "이는 당시 심각한 사회 문제였던 과외 열풍과 재수생 누적 문제를 해결하기 위한 조치였습니다." },
+            { question: "1970년대 텔레비전에서 큰 인기를 끌었던 드라마 '아씨', '여로' 등이 공통적으로 보여주는 당시의 사회상은?", options: ["남녀평등 사회", "개방적인 성문화", "개인주의 확산", "가부장적 사회 모습", "서구식 가족 관계"], answer: "가부장적 사회 모습", explanation: "이들 드라마는 참고 견디는 순종적인 여인상을 주인공으로 내세워 당시의 가부장적인 사회 분위기를 반영했습니다." },
+            { question: "6월 민주 항쟁 이후 언론계에 나타난 가장 큰 변화는?", options: ["정부의 언론 통제 강화", "언론사 수 감소", "언론의 자유 대폭 확대", "상업 광고의 금지", "국영 방송 체제 강화"], answer: "언론의 자유 대폭 확대", explanation: "민주화가 진전되면서 보도 지침이 폐지되고 언론의 자유가 크게 신장되어 한겨레신문 등이 창간되었습니다." },
+            { question: "산업화 시기, 도시로 인구가 집중되면서 발생한 문제가 아닌 것은?", options: ["주택 부족", "교통 체증", "환경 오염", "범죄 증가", "농촌 노동력 부족"], answer: "농촌 노동력 부족", explanation: "도시화는 도시의 문제를 낳았지만, 동시에 젊은 인구가 빠져나간 농촌의 노동력 부족과 고령화라는 심각한 문제를 야기했습니다." },
+            { question: "다음 중 1970년대 정부의 문화 통제 정책에 해당하는 것은?", options: ["영화 등급제 폐지", "해외 대중문화 수입 자유화", "금지곡 지정 및 건전 가요 보급", "공연장소 허가제 폐지", "청년 문화 장려"], answer: "금지곡 지정 및 건전 가요 보급", explanation: "유신 정부는 사회 비판적이거나 퇴폐적이라는 이유로 수많은 대중가요를 금지곡으로 지정하고, 대신 정부 정책을 홍보하는 건전 가요를 보급했습니다." }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const submitBtn = document.getElementById('submit-quiz-btn');
+        const resultContainer = document.getElementById('quiz-result');
+
+        // 퀴즈 문제 생성
+        quizData.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'quiz-question';
+            questionDiv.dataset.answer = q.answer;
+
+            const questionText = document.createElement('p');
+            questionText.className = 'text-lg font-semibold mb-4';
+            questionText.textContent = (index + 1) + ". " + q.question;
+            questionDiv.appendChild(questionText);
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'space-y-3';
+            
+            q.options.forEach(option => {
+                const label = document.createElement('label');
+                label.className = 'quiz-option block border border-gray-300 rounded-lg p-3 cursor-pointer hover:bg-gray-100 transition-colors';
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'question-' + index;
+                radio.value = option;
+                radio.className = 'mr-3';
+
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(option));
+                optionsDiv.appendChild(label);
+            });
+
+            questionDiv.appendChild(optionsDiv);
+
+            const explanationDiv = document.createElement('div');
+            explanationDiv.className = 'explanation-box hidden';
+            questionDiv.appendChild(explanationDiv);
+
+            quizContainer.appendChild(questionDiv);
+        });
+
+        // 퀴즈 제출 로직
+        submitBtn.addEventListener('click', () => {
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question, index) => {
+                const correctAnswer = question.dataset.answer;
+                const selectedOption = question.querySelector('input[name="question-' + index + '"]:checked');
+                const options = question.querySelectorAll('.quiz-option');
+                const explanationBox = question.querySelector('.explanation-box');
+
+                options.forEach(opt => {
+                    const radio = opt.querySelector('input');
+                    radio.disabled = true;
+                    if (radio.value === correctAnswer) {
+                        opt.classList.add('correct');
+                    }
+                });
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                    } else {
+                        selectedOption.parentElement.classList.add('incorrect');
+                    }
+                }
+                
+                if (explanationBox) {
+                    explanationBox.innerHTML = '<strong>해설:</strong> ' + quizData[index].explanation;
+                    explanationBox.classList.remove('hidden');
+                }
+            });
+
+            const totalQuestions = quizData.length;
+            const finalScore = (score / totalQuestions) * 100;
+            resultContainer.textContent = '총 ' + totalQuestions + '문제 중 ' + score + '문제를 맞혔습니다! (점수: ' + finalScore.toFixed(0) + '점)';
+            resultContainer.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '제출 완료';
+            submitBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+            submitBtn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+        });
+    </script>
+
+</body>
+</html>
