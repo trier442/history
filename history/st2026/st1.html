@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254"
+     crossorigin="anonymous"></script>
+<title>1단원: 고대 국가의 정치·사회와 문화</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .concept-box {
+            background-color: #f0f9ff;
+            border: 1px solid #e0f2fe;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            min-width: 80px;
+            text-align: center;
+        }
+        .concept-box .hidden-text {
+            visibility: hidden;
+            font-weight: 700;
+            color: #0369a1;
+        }
+        .concept-box.revealed {
+            background-color: #e0f2fe;
+        }
+        .concept-box.revealed .placeholder-text {
+            display: none;
+        }
+        .concept-box.revealed .hidden-text {
+            visibility: visible;
+        }
+        .quiz-option {
+            cursor: pointer;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: background-color 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #f3f4f6;
+        }
+        .quiz-option.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">수능특강 한국사 1단원 완벽 분석</h1>
+            <p class="text-xl text-gray-600">고대 국가의 정치·사회와 문화</p>
+        </header>
+
+        <!-- 1. 핵심 개념 다시보기 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">1. 핵심 개념 다시보기</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 선사 문화와 국가의 성립 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">선사 문화와 국가의 성립</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">구석기:</strong> 뗀석기(주먹도끼), 이동 생활(동굴, 막집)</li>
+                        <li><strong class="font-semibold">신석기:</strong> 간석기(갈돌, 갈판), 빗살무늬 토기, 농경과 목축 시작, 정착 생활(움집)</li>
+                        <li><strong class="font-semibold">청동기:</strong> 비파형 동검, 고인돌, 계급 발생, 군장 출현</li>
+                        <li><strong class="font-semibold">고조선:</strong> 우리 역사 최초 국가, 단군왕검(제정일치), 8조법, 위만 집권 후 철기 문화 수용</li>
+                    </ul>
+                </div>
+                <!-- 여러 나라의 성장 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">여러 나라의 성장</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">부여:</strong> 5부 연맹체, 왕 아래 마가·우가·저가·구가, 사출도, 12월 영고(제천행사)</li>
+                        <li><strong class="font-semibold">고구려:</strong> 5부 연맹체, 왕 아래 상가·고추가, 제가 회의, 10월 동맹(제천행사)</li>
+                        <li><strong class="font-semibold">옥저·동예:</strong> 왕 없음, 읍군·삼로 지배, 옥저(민며느리제), 동예(책화, 10월 무천)</li>
+                        <li><strong class="font-semibold">삼한:</strong> 마한·진한·변한, 소국 연합, 신지·읍차 지배, 천군과 소도(제정분리)</li>
+                    </ul>
+                </div>
+                <!-- 삼국의 발전 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">삼국의 발전 (중앙 집권 국가)</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">공통:</strong> 왕권 강화, 율령 반포, 불교 수용, 정복 활동</li>
+                        <li><strong class="font-semibold">고구려:</strong> 소수림왕(체제 정비), 광개토대왕-장수왕(전성기, 남진 정책)</li>
+                        <li><strong class="font-semibold">백제:</strong> 고이왕(체제 정비), 근초고왕(전성기, 마한 정복), 성왕(사비 천도, 중흥 노력)</li>
+                        <li><strong class="font-semibold">신라:</strong> 법흥왕(체제 정비), 진흥왕(전성기, 한강 유역 차지, 순수비)</li>
+                        <li><strong class="font-semibold">가야:</strong> 전기(금관가야), 후기(대가야) 연맹, 철기 문화 발달</li>
+                    </ul>
+                </div>
+                <!-- 통일 신라와 발해 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">통일 신라와 발해 (남북국 시대)</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">신라의 통일:</strong> 나당 연합 → 백제·고구려 멸망 → 나당 전쟁 승리 (676)</li>
+                        <li><strong class="font-semibold">통일 신라:</strong> 신문왕(왕권 강화, 9주 5소경, 국학, 녹읍 폐지), 골품제 사회, 말기 호족 성장</li>
+                        <li><strong class="font-semibold">발해:</strong> 대조영 건국(고구려 계승), 무왕-문왕-선왕(전성기, 해동성국), 3성 6부, 5경 15부 62주</li>
+                    </ul>
+                </div>
+                <!-- 고대의 사상과 종교 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700">고대의 사상과 종교</h3>
+                    <ul class="space-y-3">
+                        <li><strong class="font-semibold">불교:</strong> 왕실 주도 수용(왕권 강화, 호국 불교), 통일 신라(원효-아미타 신앙, 의상-화엄 사상), 신라 말(선종 유행)</li>
+                        <li><strong class="font-semibold">유학:</strong> 인재 양성 목적, 고구려(태학), 신라(국학), 발해(주자감), 원성왕(독서삼품과)</li>
+                        <li><strong class="font-semibold">도교/풍수지리:</strong> 고구려 고분 벽화(사신도), 백제 산수무늬 벽돌 등, 신라 말(도선, 풍수지리설 유행)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 스토리로 따라가는 역사 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">2. 스토리로 따라가는 역사 (개념 클릭!)</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md space-y-4 text-lg leading-relaxed">
+                <p>아주 먼 옛날, 우리 조상들은 추위를 피해 동굴에 살며 돌을 깨뜨려 만든 <span class="concept-box" data-answer="주먹도끼"><span class="placeholder-text">이것은?</span><span class="hidden-text">주먹도끼</span></span>로 사냥을 했어요. 시간이 흘러 날씨가 따뜻해지자, 사람들은 돌을 갈아 만든 간석기를 쓰고, 흙으로 그릇을 빚어 음식을 조리했죠. 특히 표면에 빗금 무늬를 새긴 <span class="concept-box" data-answer="빗살무늬 토기"><span class="placeholder-text">이것은?</span><span class="hidden-text">빗살무늬 토기</span></span>는 신석기 시대를 대표하는 유물이에요. 이때부터 농사를 짓기 시작하며 한곳에 정착하게 되었답니다.</p>
+                <p>더 발전하여 청동으로 칼과 거울을 만들던 시대, 강력한 힘을 가진 지배자인 군장이 등장했어요. 이들의 무덤으로 추정되는 <span class="concept-box" data-answer="고인돌"><span class="placeholder-text">이것은?</span><span class="hidden-text">고인돌</span></span>은 당시 지배층의 권력을 보여주죠. 바로 이 시기, 우리 역사 최초의 국가인 고조선이 세워졌어요. 하늘의 자손이라 불린 <span class="concept-box" data-answer="단군왕검"><span class="placeholder-text">이것은?</span><span class="hidden-text">단군왕검</span></span>이 나라를 다스렸는데, 제사장과 정치 지도자를 겸하는 제정일치 사회였답니다. 고조선은 '사람을 죽인 자는 사형에 처한다'와 같은 <span class="concept-box" data-answer="8조법"><span class="placeholder-text">이것은?</span><span class="hidden-text">8조법</span></span>으로 사회 질서를 유지했죠.</p>
+                <p>이후 만주와 한반도에는 부여, 고구려, 옥저, 동예, 삼한 등 여러 나라가 등장했어요. 그중에서도 고구려, 백제, 신라는 치열한 경쟁을 시작했죠. 고구려는 4세기 말 <span class="concept-box" data-answer="광개토대왕"><span class="placeholder-text">이것은?</span><span class="hidden-text">광개토대왕</span></span> 때 엄청난 영토를 차지했고, 그의 아들 장수왕은 남쪽으로 수도를 옮겨 백제와 신라를 압박했어요. 백제는 4세기 <span class="concept-box" data-answer="근초고왕"><span class="placeholder-text">이것은?</span><span class="hidden-text">근초고왕</span></span> 때 전성기를 누렸지만, 고구려의 공격으로 위기를 맞기도 했죠. 가장 늦게 발전한 신라는 6세기 <span class="concept-box" data-answer="진흥왕"><span class="placeholder-text">이것은?</span><span class="hidden-text">진흥왕</span></span> 때 한강 유역을 차지하며 삼국 통일의 기반을 닦았어요. 신라에는 뼈의 등급에 따라 신분이 결정되는 엄격한 신분제인 <span class="concept-box" data-answer="골품제"><span class="placeholder-text">이것은?</span><span class="hidden-text">골품제</span></span>가 있었답니다.</p>
+                <p>결국 신라는 당나라와 손을 잡고 백제와 고구려를 차례로 멸망시킨 뒤, 당나라 군대마저 몰아내고 삼국을 통일했어요. 통일 이후 신문왕은 강력한 왕권을 바탕으로 전국을 <span class="concept-box" data-answer="9주 5소경"><span class="placeholder-text">이것은?</span><span class="hidden-text">9주 5소경</span></span>으로 나누어 다스렸죠. 한편, 북쪽에서는 고구려 유민들이 발해를 세워 '바다 동쪽의 융성한 나라'라는 뜻의 <span class="concept-box" data-answer="해동성국"><span class="placeholder-text">이것은?</span><span class="hidden-text">해동성국</span></span>이라 불리며 남쪽의 신라와 함께 남북국 시대를 열었답니다.</p>
+            </div>
+        </section>
+
+        <!-- 3. 문제로 본 핵심 포인트 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-purple-500">3. 문제로 본 핵심 포인트</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">자료 탐구 & 대표 기출 분석</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>선사 시대 구분:</strong> 각 시대(구석기, 신석기, 청동기)를 대표하는 유물(주먹도끼, 빗살무늬 토기, 고인돌)과 생활 모습(이동/정착, 농경 시작)을 연결하는 문제가 자주 출제됩니다.</li>
+                        <li><strong>후삼국 시대의 형성:</strong> 신라 말 혼란기에 견훤이 완산주에 세운 '후백제'와 궁예가 송악에 세운 '후고구려'의 위치와 건국자를 파악하는 것이 중요합니다.</li>
+                        <li><strong>통일 신라 불교의 특징:</strong> 원효(아미타 신앙, 불교 대중화)와 의상(화엄 사상, 부석사 건립)의 활동을 구분하는 문제가 핵심입니다. 두 인물의 사상과 업적을 정확히 알아두어야 합니다.</li>
+                        <li><strong>발해의 정체성:</strong> 대조영이 건국한 점, 3성 6부와 5경 15부 62주 등 통치 체제를 갖춘 점을 통해 발해가 고구려를 계승한 자주적인 국가임을 묻는 문제가 출제됩니다.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">수능 유형 익히기 분석</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>초기 국가의 특징:</strong> 부여(사출도), 고구려(제가 회의), 삼한(소도) 등 각 나라의 고유한 정치·사회 제도를 구분하는 능력을 요구합니다.</li>
+                        <li><strong>삼국 전성기 왕의 업적:</strong> 각 나라의 전성기를 이끈 왕(고구려 광개토대왕, 백제 근초고왕, 신라 진흥왕)의 핵심 업적(영토 확장, 기념비 건립 등)을 정확히 암기해야 합니다.</li>
+                        <li><strong>삼국 통일의 과정과 평가:</strong> 나당 연합 결성부터 나당 전쟁까지의 순서와, 외세를 끌어들였다는 한계 및 자주성을 지켜냈다는 의의를 함께 이해해야 합니다.</li>
+                        <li><strong>통일 신라와 발해의 통치 체제:</strong> 통일 신라의 9주 5소경, 발해의 5경 15부 62주 등 지방 행정 제도를 파악하고, 신라 촌락 문서(민정 문서)의 작성 목적(조세, 노동력 징발)을 이해하는 것이 중요합니다.</li>
+                        <li><strong>고대의 사상과 문화:</strong> 불교(왕즉불 사상, 호국 불교), 유학(국학, 독서삼품과), 도교(백제 금동 대향로) 사상이 반영된 문화유산을 연결하는 문제가 출제됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 최종 점검 문제 -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-red-500">4. 수능 100점 목표! 최종 점검 문제</h2>
+            <div id="quiz-result" class="hidden bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded-lg relative mb-6" role="alert">
+                <strong class="font-bold">채점 결과: </strong>
+                <span id="score"></span>점
+                <p id="result-message"></p>
+            </div>
+            <div id="quiz-container" class="bg-white p-8 rounded-lg shadow-md">
+                <!-- 문제들이 여기에 동적으로 추가됩니다. -->
+            </div>
+            <div class="text-center mt-8">
+                <button id="submit-quiz" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-xl transition-transform transform hover:scale-105">채점하기</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 2. 스토리텔링 개념 클릭 이벤트
+            const conceptBoxes = document.querySelectorAll('.concept-box');
+            conceptBoxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    box.classList.toggle('revealed');
+                });
+            });
+
+            // 4. 퀴즈 생성 및 채점 로직
+            const quizData = [
+                {
+                    question: "1. 농경과 목축이 시작되고 정착 생활이 이루어진 시대를 대표하는 유물로 옳은 것은?",
+                    options: ["주먹도끼", "비파형 동검", "빗살무늬 토기", "철제 갑옷", "상평통보"],
+                    answer: "빗살무늬 토기",
+                    explanation: "빗살무늬 토기는 신석기 시대를 대표하는 유물입니다. 신석기 시대에 농경과 목축이 시작되면서 정착 생활이 이루어졌습니다."
+                },
+                {
+                    question: "2. 우리 역사상 최초의 국가인 고조선에 대한 설명으로 옳지 않은 것은?",
+                    options: ["단군왕검이 건국하였다.", "8조법으로 사회 질서를 유지했다.", "위만 집권 이후 철기 문화를 본격 수용했다.", "왕 아래에 읍군, 삼로 등의 군장이 있었다.", "청동기 문화를 배경으로 성립되었다."],
+                    answer: "왕 아래에 읍군, 삼로 등의 군장이 있었다.",
+                    explanation: "읍군, 삼로는 옥저와 동예의 지배자 명칭입니다. 고조선은 단군왕검이 다스리는 제정일치 사회였습니다."
+                },
+                {
+                    question: "3. 여러 나라의 성장 과정에서 제사장인 천군과 신성 지역인 소도가 존재하여 제정 분리의 모습을 보여준 나라는?",
+                    options: ["부여", "고구려", "옥저", "동예", "삼한"],
+                    answer: "삼한",
+                    explanation: "삼한(마한, 진한, 변한)은 정치적 지배자인 신지, 읍차 외에 제사장인 천군과 신성 구역인 소도가 존재하여 제정 분리의 특징을 보였습니다."
+                },
+                {
+                    question: "4. 고구려가 중앙 집권 국가의 기틀을 마련하는 과정에서 소수림왕이 시행한 정책이 아닌 것은?",
+                    options: ["불교 수용", "태학 설립", "율령 반포", "평양 천도", "관등제 정비"],
+                    answer: "평양 천도",
+                    explanation: "평양 천도는 소수림왕의 아들인 광개토대왕의 뒤를 이은 장수왕이 남진 정책을 추진하며 단행한 것입니다."
+                },
+                {
+                    question: "5. 백제의 전성기를 이끌며 마한의 남은 세력을 정복하고, 고구려의 평양성을 공격한 왕은?",
+                    options: ["고이왕", "근초고왕", "침류왕", "무령왕", "성왕"],
+                    answer: "근초고왕",
+                    explanation: "4세기 근초고왕은 백제의 최대 전성기를 이끈 왕으로, 남쪽으로 마한을 정복하고 북쪽으로 고구려 평양성을 공격했으며, 활발한 대외 교류를 펼쳤습니다."
+                },
+                {
+                    question: "6. 다음 중 신라 진흥왕의 업적에 해당하는 것을 모두 고른 것은?<br> (가) 불교 공인 (나) 한강 유역 차지 (다) 대가야 정복 (라) 화랑도 개편",
+                    options: ["(가), (나)", "(가), (다)", "(나), (다), (라)", "(가), (나), (다)", "(나), (라)"],
+                    answer: "(나), (다), (라)",
+                    explanation: "불교 공인은 법흥왕의 업적입니다. 진흥왕은 한강 유역을 차지하고 대가야를 정복하여 영토를 크게 확장했으며, 화랑도를 국가적인 조직으로 개편하고 순수비를 건립했습니다."
+                },
+                {
+                    question: "7. 신라의 삼국 통일 과정에 대한 설명으로 옳은 것은?",
+                    options: ["고구려와 동맹을 맺고 백제를 공격했다.", "백제 부흥 운동 세력과 연합하여 당에 맞섰다.", "매소성, 기벌포 전투에서 승리하여 당을 몰아냈다.", "통일 직후 수도를 금성에서 사비로 옮겼다.", "발해와 연합하여 당을 견제하였다."],
+                    answer: "매소성, 기벌포 전투에서 승리하여 당을 몰아냈다.",
+                    explanation: "신라는 당과 연합하여 백제와 고구려를 멸망시킨 후, 한반도 전체를 지배하려는 당의 야욕에 맞서 나당 전쟁을 벌였고, 매소성과 기벌포에서 승리하여 삼국 통일을 완성했습니다."
+                },
+                {
+                    question: "8. 통일 신라 신문왕의 정책으로 옳지 않은 것은?",
+                    options: ["녹읍을 폐지하고 관료전을 지급했다.", "전국을 9주 5소경으로 정비했다.", "유학 교육 기관으로 국학을 설립했다.", "귀족 세력을 대표하는 화백 회의 기능을 강화했다.", "김흠돌의 난을 진압하여 진골 귀족을 숙청했다."],
+                    answer: "귀족 세력을 대표하는 화백 회의 기능을 강화했다.",
+                    explanation: "신문왕은 김흠돌의 난을 계기로 진골 귀족 세력을 숙청하고 녹읍을 폐지하는 등 왕권을 강화하는 정책을 펼쳤습니다. 화백 회의 기능 강화는 왕권 약화와 관련이 있습니다."
+                },
+                {
+                    question: "9. 고구려를 계승하였으며, 9세기 선왕 때 최대 영토를 확보하여 '해동성국'이라 불린 나라는?",
+                    options: ["고조선", "부여", "발해", "후고구려", "고려"],
+                    answer: "발해",
+                    explanation: "발해는 대조영이 고구려 유민을 이끌고 건국한 나라로, 고구려 계승 의식을 분명히 했습니다. 9세기 선왕 때 전성기를 맞아 '해동성국'이라 불렸습니다."
+                },
+                {
+                    question: "10. 통일 신라 시대 불교 대중화에 기여한 인물과 그의 사상을 바르게 연결한 것은?",
+                    options: ["원효 - 화엄 사상", "의상 - 아미타 신앙", "원효 - 일심 사상", "도선 - 선종", "혜초 - 법상종"],
+                    answer: "원효 - 일심 사상",
+                    explanation: "원효는 모든 것이 한마음에서 나온다는 '일심 사상'과 종파 간의 다툼을 화합하려는 '화쟁 사상'을 주장했으며, '나무아미타불'만 외워도 극락에 갈 수 있다는 아미타 신앙을 전파하여 불교 대중화에 크게 기여했습니다."
+                },
+                {
+                    question: "11. 신라 말, 지방에서 독자적인 세력으로 성장하여 스스로 성주나 장군이라 칭했던 세력은?",
+                    options: ["진골 귀족", "6두품", "화랑", "호족", "촌주"],
+                    answer: "호족",
+                    explanation: "신라 말 중앙 정부의 통제력이 약화되자, 지방에서 군사력과 경제력을 바탕으로 성장한 세력을 호족이라고 합니다. 이들은 후삼국 시대의 주역이 되었습니다."
+                },
+                {
+                    question: "12. 다음 중 발해의 통치 제도에 대한 설명으로 옳은 것은?",
+                    options: ["중앙 관제로 2성 6부를 두었다.", "지방을 5도 양계로 나누었다.", "최고 교육 기관으로 국학을 두었다.", "중앙 관제의 명칭과 운영에서 독자성을 보였다.", "귀족 회의로 정사암 회의를 운영했다."],
+                    answer: "중앙 관제의 명칭과 운영에서 독자성을 보였다.",
+                    explanation: "발해는 당의 3성 6부제를 받아들였으나, 정당성을 중심으로 좌사정과 우사정이 3부씩 나누어 관할하고, 6부의 명칭을 유교식으로 바꾸는 등 독자적으로 운영했습니다."
+                },
+                {
+                    question: "13. 신라 원성왕 때 유교 경전의 이해 수준을 시험하여 관리를 등용하고자 마련한 제도는?",
+                    options: ["과거제", "음서제", "독서삼품과", "현량과", "정방"],
+                    answer: "독서삼품과",
+                    explanation: "독서삼품과는 통일 신라 원성왕 때 국학 졸업생을 대상으로 유교 경전 이해 능력을 시험하여 세 등급으로 나누어 관리를 채용하려던 제도입니다."
+                },
+                {
+                    question: "14. 다음 문화유산 중 도교 사상이 반영된 것으로 보기 어려운 것은?",
+                    options: ["고구려 강서대묘의 사신도", "백제 산수무늬 벽돌", "백제 금동 대향로", "경주 황룡사 9층 목탑", "무령왕릉 지석"],
+                    answer: "경주 황룡사 9층 목탑",
+                    explanation: "황룡사 9층 목탑은 부처의 힘으로 주변 아홉 오랑캐의 침입을 막겠다는 호국 불교의 성격을 띤 건축물입니다. 사신도, 산수무늬 벽돌, 금동 대향로 등에는 신선 사상과 같은 도교적 요소가 반영되어 있습니다."
+                },
+                {
+                    question: "15. 전기 가야 연맹을 주도했으며, 풍부한 철 생산과 해상 교역으로 번성했던 나라는?",
+                    options: ["대가야", "성산가야", "아라가야", "고령가야", "금관가야"],
+                    answer: "금관가야",
+                    explanation: "김해 지역의 금관가야는 풍부한 철 생산과 낙동강 하류의 지리적 이점을 활용한 중계 무역을 통해 3~4세기경 전기 가야 연맹의 맹주로 번성했습니다."
+                },
+                 {
+                    question: "16. 고구려, 백제, 신라가 중앙 집권 국가로 발전하는 과정에서 공통적으로 나타난 특징이 아닌 것은?",
+                    options: ["율령 반포", "불교 공인", "왕위의 부자 상속 확립", "정복 활동을 통한 영토 확장", "6두품 세력의 정계 장악"],
+                    answer: "6두품 세력의 정계 장악",
+                    explanation: "6두품은 신라의 골품제에 속한 신분으로, 이들이 정계를 장악한 것은 삼국 공통의 특징이 아닙니다. 율령 반포, 불교 공인, 왕위 부자 상속, 영토 확장은 삼국이 중앙 집권 국가로 발전하며 나타난 공통적인 특징입니다."
+                },
+                {
+                    question: "17. 신라의 삼국 통일이 갖는 의의로 가장 적절한 것은?",
+                    options: ["당의 도움 없이 순수한 우리 힘으로 이룩했다.", "만주 지역까지 포함하는 완전한 통일을 이루었다.", "고구려 중심의 민족 문화 전통을 확립했다.", "최초로 한민족의 독자적인 통일 국가를 수립했다.", "발해와 연합하여 강력한 해상 제국을 건설했다."],
+                    answer: "최초로 한민족의 독자적인 통일 국가를 수립했다.",
+                    explanation: "신라의 삼국 통일은 당이라는 외세를 끌어들였고 대동강 이남 지역에 한정되었다는 한계가 있지만, 고구려, 백제, 신라의 문화를 융합하여 우리 민족 문화의 기틀을 마련한 최초의 통일이라는 점에서 큰 의의가 있습니다."
+                },
+                {
+                    question: "18. 신라 말 사회 혼란의 모습으로 적절하지 않은 것은?",
+                    options: ["진골 귀족 간의 치열한 왕위 쟁탈전", "지방에 대한 중앙 정부의 통제력 약화", "원종과 애노의 난 등 농민 봉기 발생", "최치원 등 6두품 세력의 개혁안 제시", "왕권이 강화되고 골품제가 더욱 공고해짐"],
+                    answer: "왕권이 강화되고 골품제가 더욱 공고해짐",
+                    explanation: "신라 말에는 왕권이 약화되고 골품제 사회의 모순이 심화되면서 사회가 크게 혼란스러워졌습니다. 이 틈을 타 지방에서 호족 세력이 성장하게 됩니다."
+                },
+                {
+                    question: "19. 다음 중 고구려를 계승했음을 내세운 나라가 아닌 것은?",
+                    options: ["발해", "후고구려", "고려", "백제", "조선"],
+                    answer: "백제",
+                    explanation: "발해, 후고구려, 고려는 모두 고구려 계승을 표방했습니다. 조선은 고조선을 계승한다는 의미를 담고 있습니다. 백제는 부여 계통의 유이민이 건국한 나라입니다."
+                },
+                {
+                    question: "20. 통일 신라의 '신라 촌락 문서(민정 문서)'를 통해 알 수 있는 사실로 가장 적절한 것은?",
+                    options: ["귀족들의 사치스러운 생활 모습", "활발했던 국제 무역 활동", "국가의 체계적인 조세 및 노동력 수취", "불교 예술의 뛰어난 수준", "화랑도의 구체적인 수련 내용"],
+                    answer: "국가의 체계적인 조세 및 노동력 수취",
+                    explanation: "신라 촌락 문서는 서원경 부근 4개 촌락의 인구, 토지 종류와 면적, 뽕나무, 잣나무, 호두나무 수, 가축 수 등을 3년마다 상세히 기록한 문서입니다. 이를 통해 국가가 세금과 노동력을 효율적으로 걷기 위해 촌락의 경제 상황을 정밀하게 파악했음을 알 수 있습니다."
+                }
+            ];
+
+            const quizContainer = document.getElementById('quiz-container');
+            let userAnswers = new Array(quizData.length).fill(null);
+
+            quizData.forEach((item, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('mb-8');
+                
+                const questionText = document.createElement('p');
+                questionText.classList.add('text-lg', 'font-semibold', 'mb-4');
+                questionText.innerHTML = item.question;
+                questionDiv.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.id = `q${index}`;
+                item.options.forEach(option => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.classList.add('quiz-option');
+                    optionDiv.textContent = option;
+                    optionDiv.addEventListener('click', () => {
+                        // 같은 질문의 다른 선택지에서 'selected' 클래스 제거
+                        document.querySelectorAll(`#q${index} .quiz-option`).forEach(opt => opt.classList.remove('selected'));
+                        // 현재 선택지에 'selected' 클래스 추가
+                        optionDiv.classList.add('selected');
+                        userAnswers[index] = option;
+                    });
+                    optionsDiv.appendChild(optionDiv);
+                });
+                questionDiv.appendChild(optionsDiv);
+
+                const explanationDiv = document.createElement('div');
+                explanationDiv.classList.add('explanation');
+                explanationDiv.innerHTML = `<p><strong class="font-bold">정답:</strong> ${item.answer}</p><p><strong class="font-bold">해설:</strong> ${item.explanation}</p>`;
+                questionDiv.appendChild(explanationDiv);
+
+                quizContainer.appendChild(questionDiv);
+            });
+
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.addEventListener('click', () => {
+                let score = 0;
+                quizData.forEach((item, index) => {
+                    const questionOptions = document.querySelectorAll(`#q${index} .quiz-option`);
+                    questionOptions.forEach(option => {
+                        // 정답 표시
+                        if (option.textContent === item.answer) {
+                            option.classList.add('correct');
+                        }
+                        // 사용자가 선택한 오답 표시
+                        if (option.classList.contains('selected') && option.textContent !== item.answer) {
+                            option.classList.add('incorrect');
+                        }
+                    });
+
+                    if (userAnswers[index] === item.answer) {
+                        score++;
+                    }
+                    // 해설 보이기
+                    const explanation = quizContainer.children[index].querySelector('.explanation');
+                    explanation.style.display = 'block';
+                });
+
+                const finalScore = (score / quizData.length) * 100;
+                const scoreElement = document.getElementById('score');
+                const resultMessageElement = document.getElementById('result-message');
+                const quizResultDiv = document.getElementById('quiz-result');
+
+                scoreElement.textContent = `${finalScore}`;
+                
+                if (finalScore >= 80) {
+                    resultMessageElement.textContent = "훌륭해요! 고대사 박사님이시네요!";
+                } else if (finalScore >= 50) {
+                    resultMessageElement.textContent = "좋아요! 조금만 더 복습하면 완벽하겠어요.";
+                } else {
+                    resultMessageElement.textContent = "아쉬워요. 핵심 개념을 다시 한번 꼼꼼히 살펴보세요!";
+                }
+
+                quizResultDiv.classList.remove('hidden');
+                submitButton.disabled = true;
+                submitButton.textContent = "채점 완료";
+                submitButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+                submitButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+                window.scrollTo(0, document.getElementById('quiz-result').offsetTop - 20);
+            });
+        });
+    </script>
+</body>
+</html>
