@@ -13,53 +13,57 @@
   <style>
     body { font-family: 'Noto Sans KR', sans-serif; }
     .card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 35px rgba(15, 23, 42, .08); }
-    .pill { white-space: nowrap; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 22px 45px rgba(15, 23, 42, .10); }
+    .soft-bg { background:
+      radial-gradient(circle at 12% 8%, rgba(79, 70, 229, .16), transparent 28%),
+      radial-gradient(circle at 88% 12%, rgba(14, 165, 233, .12), transparent 30%),
+      linear-gradient(180deg, #f8fafc 0%, #ffffff 48%, #f8fafc 100%); }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+<body class="soft-bg text-slate-900 min-h-screen">
+  <header class="sticky top-0 z-30 bg-white/85 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
       <a href="/" class="inline-flex items-center gap-3">
-        <span class="inline-flex w-10 h-10 rounded-2xl bg-indigo-600 text-white items-center justify-center font-black text-lg">공</span>
+        <span class="inline-flex w-11 h-11 rounded-2xl bg-slate-950 text-white items-center justify-center font-black text-lg">공</span>
         <span>
           <span class="block text-2xl font-black tracking-tight">모두의 공부</span>
           <span class="block text-xs md:text-sm font-bold text-slate-500">중·고등 사회탐구 자료실</span>
         </span>
       </a>
       <nav class="flex flex-wrap gap-2 text-sm font-bold">
-        <a href="#high-history" class="pill px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700">고등 한국사</a>
-        <a href="#high-social" class="pill px-3 py-2 rounded-full bg-slate-100 hover:bg-rose-100 hover:text-rose-700">고등 통합사회</a>
-        <a href="#middle-social" class="pill px-3 py-2 rounded-full bg-slate-100 hover:bg-blue-100 hover:text-blue-700">중등 사회</a>
-        <a href="#planned" class="pill px-3 py-2 rounded-full bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700">확장 예정</a>
+        <a href="#high-history" class="px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700">고등 한국사</a>
+        <a href="#high-social" class="px-3 py-2 rounded-full bg-slate-100 hover:bg-rose-100 hover:text-rose-700">고등 통합사회</a>
+        <a href="#middle-social" class="px-3 py-2 rounded-full bg-slate-100 hover:bg-blue-100 hover:text-blue-700">중등 사회</a>
+        <a href="#planned" class="px-3 py-2 rounded-full bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700">확장 예정</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-8 md:py-10">
-    <section class="mb-8">
-      <div class="bg-white border border-slate-200 rounded-3xl shadow-sm p-5 md:p-6">
-        <div class="flex flex-col lg:flex-row lg:items-center gap-4">
-          <div class="flex-1">
-            <h1 class="text-3xl md:text-4xl font-black tracking-tight">중·고등 사탐 자료 바로가기</h1>
+  <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+    <section class="mb-10">
+      <div class="relative overflow-hidden rounded-[2rem] bg-slate-950 text-white p-7 md:p-10 shadow-2xl">
+        <div class="absolute inset-0 opacity-80" style="background:radial-gradient(circle at 10% 15%,rgba(79,70,229,.55),transparent 28%),radial-gradient(circle at 90% 10%,rgba(14,165,233,.35),transparent 26%);"></div>
+        <div class="relative grid lg:grid-cols-[1fr_340px] gap-8 items-end">
+          <div>
+            <p class="inline-flex px-3 py-1.5 rounded-full bg-white/10 ring-1 ring-white/15 text-sm font-black text-blue-100">사회탐구 학습 자료실</p>
+            <h1 class="mt-5 text-4xl md:text-6xl font-black tracking-tight leading-tight">중·고등 사탐 자료<br class="hidden md:block"> 바로가기</h1>
+            <p class="mt-4 text-base md:text-lg font-semibold text-slate-300">한국사, 통합사회, 중등 사회 자료를 과목별로 정리했습니다.</p>
           </div>
-          <div class="w-full lg:w-80">
-            <label for="searchInput" class="sr-only">자료 검색</label>
-            <input id="searchInput" type="search" placeholder="자료명 검색" class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 font-semibold outline-none focus:border-indigo-500 focus:bg-white" />
+          <div class="bg-white/10 ring-1 ring-white/15 rounded-3xl p-4 backdrop-blur">
+            <label for="searchInput" class="block text-sm font-black text-slate-200 mb-2">자료 검색</label>
+            <input id="searchInput" type="search" placeholder="자료명 검색" class="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 font-bold text-slate-900 outline-none focus:ring-4 focus:ring-blue-300/30" />
           </div>
         </div>
       </div>
     </section>
 
-    <section id="high-history" class="mb-10">
-      <div class="flex items-end justify-between gap-4 mb-4">
-        <div>
-          <p class="text-sm font-black text-indigo-600">HIGH SCHOOL HISTORY</p>
-          <h2 class="text-2xl md:text-3xl font-black">고등 한국사</h2>
-        </div>
+    <section id="high-history" class="mb-12">
+      <div class="mb-4">
+        <p class="text-sm font-black text-indigo-600">고등 한국사</p>
+        <h2 class="text-2xl md:text-3xl font-black">고등 한국사 자료</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-4 resource-grid">
-        <a href="/history/st2026/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="고등 한국사 수능특강 2026 st2026 수특">
+        <a href="/history/st2026/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="고등 한국사 수능특강 2026 수특">
           <div class="flex items-start justify-between gap-4">
             <div>
               <span class="inline-flex px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-black">수능 대비</span>
@@ -69,7 +73,7 @@
             <span class="text-2xl">→</span>
           </div>
         </a>
-        <a href="/history/hv2/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="고등 한국사 비상교육 한국사2 hv2 내신">
+        <a href="/history/hv2/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="고등 한국사 비상교육 한국사2 내신">
           <div class="flex items-start justify-between gap-4">
             <div>
               <span class="inline-flex px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-black">내신 대비</span>
@@ -82,15 +86,13 @@
       </div>
     </section>
 
-    <section id="high-social" class="mb-10">
-      <div class="flex items-end justify-between gap-4 mb-4">
-        <div>
-          <p class="text-sm font-black text-rose-600">HIGH SCHOOL SOCIAL STUDIES</p>
-          <h2 class="text-2xl md:text-3xl font-black">고등 통합사회</h2>
-        </div>
+    <section id="high-social" class="mb-12">
+      <div class="mb-4">
+        <p class="text-sm font-black text-rose-600">고등 통합사회</p>
+        <h2 class="text-2xl md:text-3xl font-black">고등 통합사회 자료</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-4 resource-grid">
-        <a href="/social/mts1/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="고등 통합사회 미래엔 통합사회1 mts1 내신">
+        <a href="/social/mts1/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="고등 통합사회 미래엔 통합사회1 내신">
           <div class="flex items-start justify-between gap-4">
             <div>
               <span class="inline-flex px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-black">미래엔</span>
@@ -103,15 +105,13 @@
       </div>
     </section>
 
-    <section id="middle-social" class="mb-10">
-      <div class="flex items-end justify-between gap-4 mb-4">
-        <div>
-          <p class="text-sm font-black text-blue-600">MIDDLE SCHOOL SOCIAL STUDIES</p>
-          <h2 class="text-2xl md:text-3xl font-black">중등 사회</h2>
-        </div>
+    <section id="middle-social" class="mb-12">
+      <div class="mb-4">
+        <p class="text-sm font-black text-blue-600">중등 사회</p>
+        <h2 class="text-2xl md:text-3xl font-black">중등 사회 자료</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-4 resource-grid">
-        <a href="/social/ms1/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="중등 사회 사회1 미래엔 ms1 중학교 내신">
+        <a href="/social/ms1/" class="resource card block bg-white rounded-3xl border border-slate-200 p-6" data-keywords="중등 사회 사회1 미래엔 중학교 내신">
           <div class="flex items-start justify-between gap-4">
             <div>
               <span class="inline-flex px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-black">중등 사회</span>
@@ -124,26 +124,26 @@
       </div>
     </section>
 
-    <section id="planned" class="mb-4">
+    <section id="planned">
       <div class="mb-4">
-        <p class="text-sm font-black text-emerald-600">PLANNED</p>
-        <h2 class="text-2xl md:text-3xl font-black">확장 예정 자료</h2>
+        <p class="text-sm font-black text-emerald-600">확장 예정</p>
+        <h2 class="text-2xl md:text-3xl font-black">추가 예정 자료</h2>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="고등 사회탐구 한국지리 준비중"><p class="font-black">한국지리</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
-        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="고등 사회탐구 세계지리 준비중"><p class="font-black">세계지리</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
-        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="고등 사회탐구 동아시아사 준비중"><p class="font-black">동아시아사</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
-        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="고등 사회탐구 세계사 준비중"><p class="font-black">세계사</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
-        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="고등 사회탐구 정치와 법 준비중"><p class="font-black">정치와 법</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
-        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="고등 사회탐구 사회문화 경제 생활과 윤리 윤리와 사상 준비중"><p class="font-black">경제 · 사회문화 · 윤리</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
+        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="한국지리 준비중"><p class="font-black">한국지리</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
+        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="세계지리 준비중"><p class="font-black">세계지리</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
+        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="동아시아사 준비중"><p class="font-black">동아시아사</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
+        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="세계사 준비중"><p class="font-black">세계사</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
+        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="정치와 법 준비중"><p class="font-black">정치와 법</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
+        <div class="resource bg-white border border-dashed border-slate-300 rounded-2xl p-4" data-keywords="경제 사회문화 생활과 윤리 윤리와 사상 준비중"><p class="font-black">경제 · 사회문화 · 윤리</p><p class="text-sm text-slate-500 mt-1">준비 중</p></div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 bg-white">
+  <footer class="border-t border-slate-200 bg-white mt-12">
     <div class="max-w-6xl mx-auto px-4 py-7 text-sm text-slate-500 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-      <p class="font-bold">© 모두의 공부</p>
-      <p>moduhistory.com</p>
+      <p class="font-bold">모두의 공부</p>
+      <a href="/" class="font-bold hover:text-slate-900">처음 홈페이지로 이동</a>
     </div>
   </footer>
 
