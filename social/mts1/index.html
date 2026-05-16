@@ -1,81 +1,207 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>미래엔 통합사회1 웹 학습지 목차</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>중등 사회1 전체 단원 웹 학습지 | 모두의 공부</title>
+  <meta name="description" content="모두의 공부 중등 사회1 전체 단원 웹 학습지 목차입니다." />
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    body{font-family:'Noto Sans KR',sans-serif;}
-    .card{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
-    .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(15,23,42,.09);border-color:#c7d2fe;}
-    .hero{background:radial-gradient(circle at 10% 10%,rgba(99,102,241,.18),transparent 26%),radial-gradient(circle at 92% 12%,rgba(20,184,166,.16),transparent 26%),linear-gradient(135deg,#f8fafc,#eef2ff 52%,#ecfeff);}
+    body { font-family: 'Noto Sans KR', sans-serif; }
+    .unit-card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .unit-card:hover { transform: translateY(-5px); box-shadow: 0 24px 45px rgba(15, 23, 42, .10); border-color: #60a5fa; }
+    .soft-bg { background: radial-gradient(circle at 10% 10%, rgba(59,130,246,.18), transparent 30%), radial-gradient(circle at 85% 15%, rgba(14,165,233,.16), transparent 28%), linear-gradient(135deg, #f8fafc 0%, #eef6ff 52%, #f8fafc 100%); }
+    .chip { display: inline-flex; align-items: center; border-radius: 999px; padding: .38rem .75rem; font-size: .78rem; font-weight: 900; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="hero border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-8 md:py-10">
-      <nav class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-10">
-        <a href="https://moduhistory.com/" class="inline-flex items-center gap-3">
-          <span class="inline-flex w-10 h-10 rounded-2xl bg-slate-950 text-white items-center justify-center font-black">공</span>
-          <span class="font-black text-xl">모두의 공부</span>
-        </a>
-        <div class="flex flex-wrap gap-2 text-sm font-bold">
-          <a href="https://moduhistory.com/" class="px-4 py-2 rounded-full bg-slate-950 text-white hover:bg-slate-800">처음 홈페이지</a>
-          <a href="https://moduhistory.com/social/" class="px-4 py-2 rounded-full bg-white border border-slate-200 hover:bg-slate-50">사회 자료실</a>
-          <a href="javascript:history.back()" class="px-4 py-2 rounded-full bg-white border border-slate-200 hover:bg-slate-50">뒤로가기</a>
-        </div>
+<body class="soft-bg min-h-screen text-slate-900">
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <a href="https://moduhistory.com/" class="inline-flex items-center gap-3 group">
+        <span class="grid place-items-center w-11 h-11 rounded-2xl bg-blue-600 text-white font-black text-lg group-hover:bg-slate-900 transition">공</span>
+        <span>
+          <span class="block text-2xl font-black tracking-tight">모두의 공부</span>
+          <span class="block text-sm font-bold text-slate-500">중·고등 사회탐구 자료실</span>
+        </span>
+      </a>
+      <nav class="flex flex-wrap gap-2 text-sm font-black">
+        <a href="https://moduhistory.com/" class="px-4 py-2.5 rounded-full bg-slate-900 text-white hover:bg-blue-700 transition">처음 홈페이지</a>
+        <a href="https://moduhistory.com/#middle-social" class="px-4 py-2.5 rounded-full bg-blue-50 text-blue-700 ring-1 ring-blue-100 hover:bg-blue-100 transition">중등 사회 자료실</a>
       </nav>
-      <div class="grid lg:grid-cols-[1fr_320px] gap-6 items-end">
-        <div>
-          <p class="inline-flex px-3 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-sm font-black">고등 통합사회</p>
-          <h1 class="mt-4 text-4xl md:text-5xl font-black tracking-tight">미래엔 통합사회1</h1>
-          <p class="mt-3 text-lg font-semibold text-slate-600">단원별 웹 학습지 목차</p>
-        </div>
-        <label class="block">
-          <span class="block text-sm font-black text-slate-600 mb-2">자료 검색</span>
-          <input id="unitSearch" type="search" placeholder="단원명 검색" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 font-bold outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-200/60">
-        </label>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-10">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <a href="unit01_topic01_perspectives.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="인간 사회 환경 다양한 관점 시간적 공간적 사회적 윤리적"><div class="text-sm font-black text-indigo-600">Ⅰ단원 · 1주제</div><h3 class="text-xl font-black mt-2">인간, 사회, 환경을 바라보는 다양한 관점</h3><p class="text-slate-600 mt-2">시간적·공간적·사회적·윤리적 관점</p></a>
-      <a href="unit01_topic02_integrated_perspective.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="통합적 관점 필요성 적용"><div class="text-sm font-black text-indigo-600">Ⅰ단원 · 2주제</div><h3 class="text-xl font-black mt-2">통합적 관점의 필요성과 적용</h3><p class="text-slate-600 mt-2">복잡한 사회 현상을 종합적으로 탐구하기</p></a>
-      <a href="unit02_topic01_happiness_meaning.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="행복 기준 의미"><div class="text-sm font-black text-emerald-600">Ⅱ단원 · 1주제</div><h3 class="text-xl font-black mt-2">행복의 기준과 의미</h3><p class="text-slate-600 mt-2">삶의 목적으로서의 행복과 시대·지역별 기준</p></a>
-      <a href="unit02_topic02_conditions_happiness.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="행복한 삶 조건 정주 환경 경제 안정 민주주의 도덕 실천"><div class="text-sm font-black text-emerald-600">Ⅱ단원 · 2주제</div><h3 class="text-xl font-black mt-2">행복한 삶을 실현하기 위한 조건</h3><p class="text-slate-600 mt-2">정주 환경·경제적 안정·민주주의·도덕적 실천</p></a>
-      <a href="unit03_topic01_natural_environment_life.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="자연환경 인간 생활 기후 지형"><div class="text-sm font-black text-amber-600">Ⅲ단원 · 1주제</div><h3 class="text-xl font-black mt-2">자연환경과 인간 생활</h3><p class="text-slate-600 mt-2">기후와 지형이 생활양식에 미치는 영향</p></a>
-      <a href="unit03_topic02_right_to_environment.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="자연환경 변화 안전 쾌적 권리 자연재해 기후변화 환경권"><div class="text-sm font-black text-amber-600">Ⅲ단원 · 2주제</div><h3 class="text-xl font-black mt-2">자연환경의 변화 속에서 안전하고 쾌적하게 살아갈 권리</h3><p class="text-slate-600 mt-2">자연재해·기후변화·환경권</p></a>
-      <a href="unit03_topic03_human_nature_relationship.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="자연과 인간 관계 인간 중심주의 생태 중심주의"><div class="text-sm font-black text-amber-600">Ⅲ단원 · 3주제</div><h3 class="text-xl font-black mt-2">자연과 인간의 관계</h3><p class="text-slate-600 mt-2">인간 중심주의와 생태 중심주의</p></a>
-      <a href="unit03_topic04_environmental_problems.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="환경 문제 발생 해결 노력 정부 기업 시민 사회 생태시민"><div class="text-sm font-black text-amber-600">Ⅲ단원 · 4주제</div><h3 class="text-xl font-black mt-2">환경 문제의 발생과 해결을 위한 노력</h3><p class="text-slate-600 mt-2">정부·기업·시민 사회와 생태시민</p></a>
-      <a href="unit04_topic01_cultural_regions.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="문화권 특징 삶의 방식"><div class="text-sm font-black text-teal-600">Ⅳ단원 · 1주제</div><h3 class="text-xl font-black mt-2">다양한 문화권의 특징과 삶의 방식</h3><p class="text-slate-600 mt-2">문화권과 세계 여러 문화권</p></a>
-      <a href="unit04_topic02_cultural_change.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="문화 변동 양상 발명 발견 문화 전파 접변"><div class="text-sm font-black text-teal-600">Ⅳ단원 · 2주제</div><h3 class="text-xl font-black mt-2">문화 변동의 양상</h3><p class="text-slate-600 mt-2">발명·발견·문화 전파와 문화 접변</p></a>
-      <a href="unit04_topic03_traditional_culture.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="전통문화 의의 창조적 계승"><div class="text-sm font-black text-teal-600">Ⅳ단원 · 3주제</div><h3 class="text-xl font-black mt-2">전통문화의 의의와 창조적 계승 방안</h3><p class="text-slate-600 mt-2">전통문화의 가치와 현대적 재해석</p></a>
-      <a href="unit04_topic04_cultural_relativism.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="문화 상대주의 보편 윤리"><div class="text-sm font-black text-teal-600">Ⅳ단원 · 4주제</div><h3 class="text-xl font-black mt-2">문화 상대주의와 보편 윤리</h3><p class="text-slate-600 mt-2">다른 문화를 이해하는 태도와 한계</p></a>
-      <a href="unit04_topic05_multicultural_society.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="문화적 다양성 다문화 사회"><div class="text-sm font-black text-teal-600">Ⅳ단원 · 5주제</div><h3 class="text-xl font-black mt-2">문화적 다양성을 존중하는 다문화 사회</h3><p class="text-slate-600 mt-2">다문화 사회의 의미와 공존 노력</p></a>
-      <a href="unit05_topic01_industrialization_urbanization.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="산업화 도시화 생활 변화"><div class="text-sm font-black text-rose-600">Ⅴ단원 · 1주제</div><h3 class="text-xl font-black mt-2">산업화와 도시화에 따른 우리 생활의 변화</h3><p class="text-slate-600 mt-2">생활공간과 생활양식의 변화</p></a>
-      <a href="unit05_topic02_urban_problems_solutions.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="산업화 도시화 문제점 해결 방안 도시 문제 노동 문제 촌락 쇠퇴"><div class="text-sm font-black text-rose-600">Ⅴ단원 · 2주제</div><h3 class="text-xl font-black mt-2">산업화와 도시화에 따른 문제점과 해결 방안</h3><p class="text-slate-600 mt-2">도시 문제·노동 문제·촌락 쇠퇴와 대응</p></a>
-      <a href="unit05_topic03_transport_tech_changes.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="교통 통신 과학기술 발달 변화"><div class="text-sm font-black text-rose-600">Ⅴ단원 · 3주제</div><h3 class="text-xl font-black mt-2">교통·통신 및 과학기술의 발달에 따른 변화</h3><p class="text-slate-600 mt-2">생활공간·경제활동·여가·인간관계의 확대</p></a>
-      <a href="unit05_topic04_transport_tech_problems.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="교통 통신 과학기술 문제점 해결 방안 접근성 격차 감염병 정보 문제 디지털 격차"><div class="text-sm font-black text-rose-600">Ⅴ단원 · 4주제</div><h3 class="text-xl font-black mt-2">교통·통신 및 과학기술의 발달에 따른 문제점과 해결 방안</h3><p class="text-slate-600 mt-2">접근성 격차·감염병·정보 문제·디지털 격차</p></a>
-      <a href="unit05_topic05_local_spatial_change.html" class="unit-card card block bg-white rounded-2xl shadow-sm border border-slate-200 p-5" data-search="우리 지역 공간 변화 지역 조사 지속가능한 지역사회"><div class="text-sm font-black text-rose-600">Ⅴ단원 · 5주제</div><h3 class="text-xl font-black mt-2">우리 지역의 공간 변화</h3><p class="text-slate-600 mt-2">지역 조사와 지속가능한 지역사회 만들기</p></a>
+  <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+    <section class="mb-8">
+      <div class="relative overflow-hidden rounded-[2rem] bg-slate-950 text-white p-6 md:p-10 shadow-2xl">
+        <div class="absolute inset-0 opacity-80" style="background:radial-gradient(circle at 18% 20%,rgba(37,99,235,.55),transparent 30%),radial-gradient(circle at 80% 0%,rgba(14,165,233,.36),transparent 30%);"></div>
+        <div class="relative grid lg:grid-cols-[1fr_320px] gap-8 items-end">
+          <div>
+            <div class="chip bg-white/10 text-blue-100 ring-1 ring-white/15 mb-5">중등 사회1</div>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">사회1 전체 단원<br class="hidden md:block" />웹 학습지</h1>
+            <p class="mt-4 text-lg md:text-xl font-semibold text-slate-300">단원별 핵심 정리 · 개념 클릭 · 즉시 피드백 최종 점검 문제</p>
+          </div>
+          <div class="rounded-3xl bg-white/10 ring-1 ring-white/15 p-5 backdrop-blur">
+            <div class="grid grid-cols-2 gap-3 text-center">
+              <div class="rounded-2xl bg-white p-4 text-slate-900">
+                <div class="text-3xl font-black">12</div>
+                <div class="mt-1 text-xs font-bold text-slate-500">전체 단원</div>
+              </div>
+              <div class="rounded-2xl bg-white p-4 text-slate-900">
+                <div class="text-3xl font-black">즉시</div>
+                <div class="mt-1 text-xs font-bold text-slate-500">정답 확인</div>
+              </div>
+            </div>
+            <div class="mt-4 rounded-2xl bg-slate-950/70 p-4 ring-1 ring-white/10">
+              <div class="text-xs font-black text-blue-200">현재 위치</div>
+              <div class="mt-1 text-sm font-bold text-white">moduhistory.com/social/ms1/</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-7 rounded-3xl bg-white/85 backdrop-blur border border-white shadow-xl p-4 md:p-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div class="flex flex-wrap gap-2">
+          <a href="#world" class="chip bg-blue-50 text-blue-700 ring-1 ring-blue-100 hover:bg-blue-100">세계 지역 학습</a>
+          <a href="#society" class="chip bg-violet-50 text-violet-700 ring-1 ring-violet-100 hover:bg-violet-100">사회생활과 문화</a>
+          <a href="#politics" class="chip bg-emerald-50 text-emerald-700 ring-1 ring-emerald-100 hover:bg-emerald-100">정치·법·인권</a>
+        </div>
+        <label class="relative block md:w-80">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">⌕</span>
+          <input id="unitSearch" type="search" placeholder="단원명 검색" class="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-10 pr-4 text-sm font-bold text-slate-800 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100" />
+        </label>
+      </div>
+    </section>
+
+    <div class="space-y-8">
+      <section id="world" class="rounded-3xl bg-white/90 border border-slate-200 shadow-sm p-5 md:p-7 section-block">
+        <div class="flex items-end justify-between gap-4 mb-5">
+          <div>
+            <span class="chip bg-blue-100 text-blue-700">Ⅰ~Ⅵ단원</span>
+            <h2 class="mt-3 text-2xl md:text-3xl font-black">세계 지역 학습</h2>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit01_geography_power.html" data-search="세계화 시대 지리의 힘 다양한 세계 서로 연결된 세계 하나 된 세계 서로 다른 지역">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅰ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">세계화 시대, 지리의 힘</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">다양한 세계 · 서로 연결된 세계 · 하나 된 세계, 서로 다른 지역</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit02_asia.html" data-search="아시아 종교 인구 산업">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅱ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">아시아</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">아시아 속으로 · 다양한 종교 · 인구 · 산업</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit03_europe.html" data-search="유럽 도시 지역 통합 분리 움직임">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅲ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">유럽</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">유럽 속으로 · 다양한 도시 · 지역 통합과 분리 움직임</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit04_africa.html" data-search="아프리카 문화 지역 잠재력 지속가능한 발전">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅳ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">아프리카</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">아프리카 속으로 · 다양한 문화와 지역 잠재력 · 지속가능한 발전</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit05_america.html" data-search="아메리카 민족 문화 초국적 기업">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅴ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">아메리카</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">아메리카 속으로 · 다양한 민족과 문화 · 초국적 기업</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit06_oceania_polar.html" data-search="오세아니아 극지방 태평양 환경 문제 극지방 중요성">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅵ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">오세아니아와 극지방</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">오세아니아 속으로 · 태평양 환경 문제 · 극지방의 중요성</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="society" class="rounded-3xl bg-white/90 border border-slate-200 shadow-sm p-5 md:p-7 section-block">
+        <div class="flex items-end justify-between gap-4 mb-5">
+          <div>
+            <span class="chip bg-violet-100 text-violet-700">Ⅶ~Ⅷ단원</span>
+            <h2 class="mt-3 text-2xl md:text-3xl font-black">사회생활과 문화</h2>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit07_human_social_life.html" data-search="인간 사회생활 사회화 자아 정체성 사회적 지위 역할 갈등 차별">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅶ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">인간과 사회생활</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">사회화와 자아 정체성 · 사회적 지위와 역할 · 갈등과 차별</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit08_culture.html" data-search="다양한 문화의 이해 문화 의미 특징 미디어 문화 이해 태도">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅷ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">다양한 문화의 이해</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">문화의 의미와 특징 · 미디어와 문화 · 문화 이해 태도</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="politics" class="rounded-3xl bg-white/90 border border-slate-200 shadow-sm p-5 md:p-7 section-block">
+        <div class="flex items-end justify-between gap-4 mb-5">
+          <div>
+            <span class="chip bg-emerald-100 text-emerald-700">Ⅸ~Ⅻ단원</span>
+            <h2 class="mt-3 text-2xl md:text-3xl font-black">정치·법·인권</h2>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit09_democracy_citizen.html" data-search="민주주의 시민 정치 민주주의 이념 기본 원리 발전 방안">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅸ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">민주주의와 시민</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">정치와 민주주의 · 이념과 기본 원리 · 발전 방안</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit10_political_process.html" data-search="정치과정 시민 참여 선거 선거 과정 정치 주체 지방 자치">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅹ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">정치과정과 시민 참여</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">선거와 선거 과정 · 정치 주체 · 지방 자치</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit11_law.html" data-search="일상생활 법 의미 목적 다양한 법 공정한 재판">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅺ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">일상생활과 법</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">법의 의미와 목적 · 다양한 법 · 공정한 재판</p>
+          </a>
+          <a class="unit-card block rounded-2xl border border-slate-200 bg-white p-5" href="social1_unit12_rights.html" data-search="인권 기본권 인권 보장 기본권 제한 구제 근로자 권리">
+            <span class="chip bg-slate-100 text-slate-700">사회1 Ⅻ단원</span>
+            <h3 class="mt-4 text-xl font-black leading-snug">인권과 기본권</h3>
+            <p class="mt-2 text-sm font-semibold text-slate-500">인권 보장과 기본권 · 기본권 제한과 구제 · 근로자의 권리</p>
+          </a>
+        </div>
+      </section>
     </div>
   </main>
+
+  <footer class="border-t border-slate-200 bg-white/90">
+    <div class="max-w-6xl mx-auto px-4 py-7 text-sm text-slate-500 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+      <p class="font-bold">© 모두의 공부</p>
+      <p>moduhistory.com</p>
+    </div>
+  </footer>
+
   <script>
     const input = document.getElementById('unitSearch');
     const cards = Array.from(document.querySelectorAll('.unit-card'));
-    input.addEventListener('input', () => {
-      const q = input.value.trim().toLowerCase();
-      cards.forEach(card => {
-        const text = (card.innerText + ' ' + (card.dataset.search || '')).toLowerCase();
-        card.style.display = text.includes(q) ? '' : 'none';
+    const sections = Array.from(document.querySelectorAll('.section-block'));
+
+    if (input) {
+      input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        cards.forEach(card => {
+          const text = (card.innerText + ' ' + (card.dataset.search || '')).toLowerCase();
+          card.style.display = text.includes(q) ? '' : 'none';
+        });
+        sections.forEach(section => {
+          const visible = Array.from(section.querySelectorAll('.unit-card')).some(card => card.style.display !== 'none');
+          section.style.display = visible ? '' : 'none';
+        });
       });
-    });
+    }
   </script>
 </body>
 </html>
