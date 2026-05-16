@@ -1,39 +1,130 @@
 <!DOCTYPE html>
-<html lang='ko'>
+<html lang="ko">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>모두의 공부 | 중·고등 사회탐구 자료실</title>
-  <meta name='description' content='고등 한국사, 고등 통합사회, 고등 생활과 윤리, 중등 사회 자료실'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비상교육 한국사 2 | 모두의 공부</title>
+  <meta name="description" content="비상교육 고등 한국사 2 단원별 웹 학습지 목차">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-  <script src='https://cdn.tailwindcss.com'></script>
-  <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
-  <style>body{font-family:'Noto Sans KR',sans-serif}.card{transition:.18s}.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(15,23,42,.08)}.pill{white-space:nowrap}</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{font-family:'Noto Sans KR',system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
+    .glass{background:rgba(255,255,255,.82);backdrop-filter:blur(18px)}
+    .unit-card{position:relative;overflow:hidden;background:#fff;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+    .unit-card:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(15,23,42,.10);border-color:#93c5fd}
+    .unit-card::after{content:"";position:absolute;right:-42px;bottom:-48px;width:130px;height:130px;border-radius:999px;background:linear-gradient(135deg,rgba(37,99,235,.13),rgba(124,58,237,.10))}
+    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:.38rem .78rem;font-size:.78rem;font-weight:900;white-space:nowrap}
+    .nav-chip{transition:all .15s ease}.nav-chip:hover{transform:translateY(-1px)}
+    .searchbox:focus{outline:none;box-shadow:0 0 0 4px rgba(37,99,235,.14);border-color:#60a5fa;background:#fff}
+  </style>
 </head>
-<body class='bg-slate-50 text-slate-900'>
-  <header class='sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200'>
-    <div class='max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3'>
-      <a href='/' class='inline-flex items-center gap-3'><span class='inline-flex w-10 h-10 rounded-2xl bg-indigo-600 text-white items-center justify-center font-black text-lg'>공</span><span><span class='block text-2xl font-black tracking-tight'>모두의 공부</span><span class='block text-xs md:text-sm font-bold text-slate-500'>중·고등 사회탐구 자료실</span></span></a>
-      <nav class='flex flex-wrap gap-2 text-sm font-bold'>
-        <a href='#high-history' class='pill px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700'>고등 한국사</a>
-        <a href='#high-social' class='pill px-3 py-2 rounded-full bg-slate-100 hover:bg-rose-100 hover:text-rose-700'>고등 사회탐구</a>
-        <a href='#middle-social' class='pill px-3 py-2 rounded-full bg-slate-100 hover:bg-blue-100 hover:text-blue-700'>중등 사회</a>
+<body class="bg-slate-50 text-slate-900">
+  <header class="relative overflow-hidden bg-slate-950 text-white">
+    <div class="absolute inset-0 opacity-80" style="background:radial-gradient(circle at 15% 20%,rgba(37,99,235,.55),transparent 30%),radial-gradient(circle at 80% 12%,rgba(124,58,237,.48),transparent 28%),linear-gradient(135deg,#020617,#0f172a 58%,#111827);"></div>
+    <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-50 to-transparent"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-8 pt-8 pb-16">
+      <nav class="flex flex-wrap items-center justify-between gap-3 mb-12">
+        <a href="https://moduhistory.com/" class="inline-flex items-center gap-3 text-white hover:text-blue-100">
+          <span class="grid place-items-center w-10 h-10 rounded-2xl bg-white/12 ring-1 ring-white/15 font-black">공</span>
+          <span><span class="block text-xl font-black tracking-tight">모두의 공부</span><span class="block text-xs font-bold text-slate-300">중·고등 사회탐구 자료실</span></span>
+        </a>
+        <div class="flex flex-wrap gap-2">
+          <a href="https://moduhistory.com/" class="nav-chip px-4 py-2 rounded-full bg-white/10 ring-1 ring-white/15 text-sm font-bold text-white/90 hover:bg-white hover:text-slate-900">처음 홈페이지</a>
+          <a href="https://moduhistory.com/history/" class="nav-chip px-4 py-2 rounded-full bg-white/10 ring-1 ring-white/15 text-sm font-bold text-white/90 hover:bg-white hover:text-slate-900">고등 한국사 자료실</a>
+        </div>
       </nav>
+      <div class="grid lg:grid-cols-[1fr_360px] gap-8 items-end">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-400/15 ring-1 ring-blue-200/20 text-blue-100 text-xs font-black mb-5">고등 한국사 · 비상교육</div>
+          <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">비상교육 한국사 2</h1>
+          <p class="mt-4 text-lg md:text-xl font-semibold text-slate-300">단원별 웹 학습지 목차</p>
+        </div>
+        <div class="glass rounded-3xl p-5 ring-1 ring-white/20 shadow-2xl">
+          <div class="grid grid-cols-3 gap-3 text-center">
+            <div class="rounded-2xl bg-white p-4 text-slate-900"><div class="text-3xl font-black">3</div><div class="mt-1 text-xs font-bold text-slate-500">대단원</div></div>
+            <div class="rounded-2xl bg-white p-4 text-slate-900"><div class="text-3xl font-black">13</div><div class="mt-1 text-xs font-bold text-slate-500">학습지</div></div>
+            <div class="rounded-2xl bg-white p-4 text-slate-900"><div class="text-3xl font-black">3</div><div class="mt-1 text-xs font-bold text-slate-500">구성 탭</div></div>
+          </div>
+          <div class="mt-4 rounded-2xl bg-slate-950/85 p-4 ring-1 ring-white/10">
+            <div class="text-xs font-black text-blue-200">업로드 위치</div>
+            <div class="mt-1 text-sm font-bold text-white">moduhistory.com/history/hv2/</div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
-  <main class='max-w-6xl mx-auto px-4 py-8 md:py-10'>
-    <section class='mb-8'><div class='bg-white border border-slate-200 rounded-3xl shadow-sm p-5 md:p-6 flex flex-col lg:flex-row lg:items-center gap-4'><h1 class='flex-1 text-3xl md:text-4xl font-black tracking-tight'>중·고등 사탐 자료 바로가기</h1><input id='searchInput' type='search' placeholder='자료명 검색' class='w-full lg:w-80 rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 font-semibold outline-none focus:border-indigo-500 focus:bg-white'></div></section>
-    <section id='high-history' class='mb-10'><p class='text-sm font-black text-indigo-600'>고등 한국사</p><h2 class='text-2xl md:text-3xl font-black mb-4'>고등 한국사</h2><div class='grid md:grid-cols-2 gap-4'>
-      <a href='/history/st2026/' class='resource card block bg-white rounded-3xl border border-slate-200 p-6' data-keywords='고등 한국사 수능특강 2026'><span class='inline-flex px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-black'>수능 대비</span><h3 class='mt-4 text-xl font-black'>2026 수능특강 한국사</h3><p class='mt-2 text-sm font-semibold text-slate-500'>15개 단원 목차 및 단원별 학습지</p></a>
-      <a href='/history/hv2/' class='resource card block bg-white rounded-3xl border border-slate-200 p-6' data-keywords='비상교육 한국사2'><span class='inline-flex px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-black'>내신 대비</span><h3 class='mt-4 text-xl font-black'>비상교육 한국사 2</h3><p class='mt-2 text-sm font-semibold text-slate-500'>단원별 한국사2 내신 학습 자료</p></a>
-    </div></section>
-    <section id='high-social' class='mb-10'><p class='text-sm font-black text-rose-600'>고등 사회탐구</p><h2 class='text-2xl md:text-3xl font-black mb-4'>고등 사회탐구</h2><div class='grid md:grid-cols-2 gap-4'>
-      <a href='/social/mts1/' class='resource card block bg-white rounded-3xl border border-slate-200 p-6' data-keywords='미래엔 통합사회1'><span class='inline-flex px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-black'>통합사회</span><h3 class='mt-4 text-xl font-black'>미래엔 통합사회 1</h3><p class='mt-2 text-sm font-semibold text-slate-500'>1~5단원 웹 학습지 목차</p></a>
-      <a href='/social/mle/' class='resource card block bg-white rounded-3xl border border-slate-200 p-6' data-keywords='미래엔 생활과 윤리 생윤'><span class='inline-flex px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-black'>생활과 윤리</span><h3 class='mt-4 text-xl font-black'>미래엔 생활과 윤리</h3><p class='mt-2 text-sm font-semibold text-slate-500'>6개 대단원 18개 웹 학습지</p></a>
-    </div></section>
-    <section id='middle-social' class='mb-10'><p class='text-sm font-black text-blue-600'>중등 사회</p><h2 class='text-2xl md:text-3xl font-black mb-4'>중등 사회</h2><div class='grid md:grid-cols-2 gap-4'>
-      <a href='/social/ms1/' class='resource card block bg-white rounded-3xl border border-slate-200 p-6' data-keywords='중등 사회1 미래엔'><span class='inline-flex px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-black'>중등 사회</span><h3 class='mt-4 text-xl font-black'>미래엔 사회 1</h3><p class='mt-2 text-sm font-semibold text-slate-500'>사회1 전체 단원 웹 학습지</p></a>
-    </div></section>
+
+  <main class="max-w-6xl mx-auto px-5 md:px-8 -mt-9 pb-16">
+    <section class="glass rounded-3xl border border-white shadow-xl p-4 md:p-5 mb-7">
+      <div class="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+        <div class="flex flex-wrap gap-2">
+          <a href="#part1" class="nav-chip pill bg-rose-50 text-rose-700 ring-1 ring-rose-100">Ⅰ. 일제 식민 통치와 민족 운동</a>
+          <a href="#part2" class="nav-chip pill bg-blue-50 text-blue-700 ring-1 ring-blue-100">Ⅱ. 대한민국의 발전</a>
+          <a href="#part3" class="nav-chip pill bg-emerald-50 text-emerald-700 ring-1 ring-emerald-100">Ⅲ. 오늘날의 대한민국</a>
+        </div>
+        <label class="relative block md:w-80">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">⌕</span>
+          <input id="unitSearch" class="searchbox w-full rounded-2xl border border-slate-200 bg-white/85 py-3 pl-10 pr-4 text-sm font-bold text-slate-800 placeholder:text-slate-400" type="search" placeholder="단원명 검색">
+        </label>
+      </div>
+    </section>
+
+    <div class="space-y-8">
+      <section id="part1" class="rounded-3xl shadow-sm p-5 md:p-7 border border-slate-200 bg-white">
+        <div class="flex items-center justify-between gap-3 mb-5">
+          <div><span class="pill bg-rose-100 text-rose-700">Ⅰ</span><h2 class="mt-3 text-2xl md:text-3xl font-black tracking-tight">일제 식민 통치와 민족 운동</h2></div>
+          <span class="hidden md:inline-flex w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 items-center justify-center font-black">Ⅰ</span>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%201-1.html" data-search="제국주의 질서 일제 식민 통치 정책 무단 통치 문화 통치 민족 말살"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">1-1</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">제국주의 질서와 일제의 식민 통치 정책</h3><p class="mt-2 text-sm font-semibold text-slate-500">무단 통치 · 문화 통치 · 민족 말살 통치</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%201-2.html" data-search="경제 구조 변화 경제생활 토지 조사 사업 산미 증식 계획 병참 기지화"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">1-2</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">경제 구조의 변화와 경제생활</h3><p class="mt-2 text-sm font-semibold text-slate-500">토지 조사 사업 · 산미 증식 계획 · 전시 수탈</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%201-3.html" data-search="민족 운동 전개 분화 3·1 운동 임시정부 신간회 무장 투쟁"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">1-3</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">민족 운동의 전개와 분화</h3><p class="mt-2 text-sm font-semibold text-slate-500">3·1 운동 · 대한민국 임시 정부 · 신간회</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%201-4.html" data-search="사회 문화 변화 대중운동 농민 노동 학생 여성 형평 조선어 학회"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">1-4</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">사회·문화의 변화와 대중운동</h3><p class="mt-2 text-sm font-semibold text-slate-500">농민·노동 운동 · 형평 운동 · 민족 문화 수호</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%201-5.html" data-search="독립 국가 건설 노력 한인 애국단 한국광복군 조선의용대 건국 강령"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">1-5</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">독립 국가 건설 노력</h3><p class="mt-2 text-sm font-semibold text-slate-500">한인 애국단 · 한국광복군 · 건국 강령</p></a>
+        </div>
+      </section>
+
+      <section id="part2" class="rounded-3xl shadow-sm p-5 md:p-7 border border-slate-200 bg-white">
+        <div class="flex items-center justify-between gap-3 mb-5">
+          <div><span class="pill bg-blue-100 text-blue-700">Ⅱ</span><h2 class="mt-3 text-2xl md:text-3xl font-black tracking-tight">대한민국의 발전</h2></div>
+          <span class="hidden md:inline-flex w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 items-center justify-center font-black">Ⅱ</span>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%202-1.html" data-search="냉전 체제 대한민국 정부 수립 광복 미군정 신탁 통치"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">2-1</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">냉전 체제와 대한민국 정부 수립</h3><p class="mt-2 text-sm font-semibold text-slate-500">광복 · 미군정 · 신탁 통치 · 정부 수립</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%202-2.html" data-search="6·25 전쟁 남북 분단 고착화 전후 복구"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">2-2</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">6·25 전쟁과 남북 분단의 고착화</h3><p class="mt-2 text-sm font-semibold text-slate-500">6·25 전쟁 · 정전 협정 · 전후 복구</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%202-3.html" data-search="민주화를 위한 노력 4·19 혁명 5·18 민주화 운동 6월 민주 항쟁"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">2-3</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">민주화를 위한 노력</h3><p class="mt-2 text-sm font-semibold text-slate-500">4·19 혁명 · 5·18 민주화 운동 · 민주화 운동</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%202-4.html" data-search="산업화 성과 사회 환경 문제 경제 개발 새마을 운동 노동 운동"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">2-4</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">산업화의 성과와 사회·환경 문제</h3><p class="mt-2 text-sm font-semibold text-slate-500">경제 개발 · 노동 문제 · 환경 문제</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%202-5.html" data-search="문화 변동 일상생활 도시화 교육 언론 대중문화"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">2-5</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">문화 변동과 일상생활</h3><p class="mt-2 text-sm font-semibold text-slate-500">도시화 · 의식주 변화 · 대중문화</p></a>
+        </div>
+      </section>
+
+      <section id="part3" class="rounded-3xl shadow-sm p-5 md:p-7 border border-slate-200 bg-white">
+        <div class="flex items-center justify-between gap-3 mb-5">
+          <div><span class="pill bg-emerald-100 text-emerald-700">Ⅲ</span><h2 class="mt-3 text-2xl md:text-3xl font-black tracking-tight">오늘날의 대한민국</h2></div>
+          <span class="hidden md:inline-flex w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 items-center justify-center font-black">Ⅲ</span>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%203-1.html" data-search="6월 민주 항쟁 이후 민주화 과정 평화적 정권 교체 시민 사회"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">3-1</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">6월 민주 항쟁 이후 민주화 과정</h3><p class="mt-2 text-sm font-semibold text-slate-500">평화적 정권 교체 · 시민 사회 성장</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%203-2.html" data-search="외환 위기 극복 사회 문화 변동 세계화 IMF 한류 다문화"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">3-2</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">외환 위기의 극복과 사회·문화 변동</h3><p class="mt-2 text-sm font-semibold text-slate-500">외환 위기 · 정보화 · 한류 · 다문화</p></a>
+          <a class="unit-card group rounded-2xl border border-slate-200 p-5" href="./hv2%203-3.html" data-search="한반도 분단 극복 동아시아 평화 남북 관계 통일 독도 동북공정"><div class="flex items-start justify-between"><span class="pill bg-slate-100 text-slate-700">3-3</span><span class="text-slate-300 group-hover:text-blue-500">→</span></div><h3 class="mt-4 text-lg font-black leading-snug">한반도 분단 극복과 동아시아의 평화를 위한 노력</h3><p class="mt-2 text-sm font-semibold text-slate-500">남북 관계 · 통일 노력 · 동아시아 갈등과 협력</p></a>
+        </div>
+      </section>
+    </div>
   </main>
-<script>const searchInput=document.getElementById('searchInput');const resources=Array.from(document.querySelectorAll('.resource'));searchInput.addEventListener('input',()=>{const q=searchInput.value.trim().toLowerCase();resources.forEach(el=>{const text=(el.textContent+' '+(el.dataset.keywords||'')).toLowerCase();el.style.display=text.includes(q)?'':'none';});});</script>
-</body></html>
+
+  <script>
+    const searchInput=document.getElementById('unitSearch');
+    const cards=Array.from(document.querySelectorAll('.unit-card'));
+    searchInput.addEventListener('input',()=>{
+      const q=searchInput.value.trim().toLowerCase();
+      cards.forEach(card=>{
+        const text=(card.textContent+' '+(card.dataset.search||'')).toLowerCase();
+        card.style.display=text.includes(q)?'':'none';
+      });
+    });
+  </script>
+</body>
+</html>
