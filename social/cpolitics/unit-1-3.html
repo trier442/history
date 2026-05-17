@@ -5,44 +5,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>민주 정치의 발전 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 민주 정치의 발전 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
-<script src='https://cdn.tailwindcss.com'>
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -72,18 +36,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
-
-.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
-.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
-.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
-.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
-.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
-.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
-.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
-.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
-.mcq-result.show{display:block}
-.deep-summary-note b{color:#3730a3}
-
 </style>
 </head>
 <body>
@@ -101,168 +53,46 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">아테네 민주 정치</span><span class="keyword">직접 민주 정치</span><span class="keyword">민회</span><span class="keyword">도편 추방제</span><span class="keyword">근대 시민혁명</span><span class="keyword">명예혁명</span><span class="keyword">미국 독립 혁명</span><span class="keyword">프랑스 혁명</span><span class="keyword">보통 선거</span><span class="keyword">차티스트 운동</span><span class="keyword">여성 참정권 운동</span><span class="keyword">사회계약설</span><span class="keyword">홉스</span><span class="keyword">로크</span><span class="keyword">루소</span><span class="keyword">자유주의</span></div>
 </section>
 
-<section class="card mt-8 p-6 md:p-8" id="summary">
-<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
-<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
-<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
-<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>아테네 직접 민주주의에서 민주 정치의 원형을 확인한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>근대 시민혁명은 천부 인권, 사회계약설, 계몽사상을 바탕으로 국민 주권과 입헌주의를 발전시켰다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>현대 민주 정치는 노동자·여성·소수 인종의 참정권 확대를 통해 보통 선거로 나아갔다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>사회계약설은 국가가 개인의 권리를 보장하기 위한 계약의 산물이라는 생각을 제공했다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>자유주의와 공동체주의는 개인과 국가, 자유와 공동체의 관계를 서로 다르게 설명한다.</span></li></ol>
-</div>
-<div class="grid lg:grid-cols-2 gap-4 mb-6">
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">아테네 민주 정치의 의미와 한계</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>아테네는 시민이 직접 민회에 참여하여 중요한 일을 결정한 직접 민주 정치의 대표 사례이다.</li><li>추첨으로 공직을 맡기는 방식은 시민 간 평등과 참여를 강조했다.</li><li>그러나 시민 자격이 성인 남성으로 제한되어 여성, 노예, 외국인은 배제되었으므로 현대적 의미의 보편적 민주주의는 아니었다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">근대 시민혁명의 의의</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>영국 명예혁명은 의회의 우위와 입헌주의를 강화했다.</li><li>미국 독립 혁명은 부당한 통치에 저항하고 새로운 정부를 구성할 권리를 보여 주었다.</li><li>프랑스 혁명은 신분 질서를 무너뜨리고 자유와 평등을 보편적 권리로 선언했다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">참정권 확대와 현대 민주 정치</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>초기 근대 민주 정치는 재산 있는 남성 중심으로 운영되어 노동자, 농민, 여성 등이 배제되었다.</li><li>차티스트 운동은 노동자 선거권 확대 요구를 대중 정치 운동으로 발전시켰다.</li><li>여성 참정권 운동과 흑인 민권 운동은 민주 정치가 “누가 시민인가”의 범위를 넓혀 온 역사임을 보여 준다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">민주 정치의 사상적 배경</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>사회계약설은 국가는 개인의 자연권을 보장하기 위해 만들어졌다는 생각이다.</li><li>홉스는 강력한 권력에 의한 안전 보장을 강조했고, 로크는 권리 보호와 저항권을 강조했으며, 루소는 일반 의지와 직접 참여를 강조했다.</li><li>자유주의는 개인의 자유와 제한된 국가를 중시하고, 공동체주의는 개인이 공동체 속에서 정체성과 자유를 형성한다고 본다.</li></ul>
-</article></div>
-<div class="overflow-x-auto mt-5">
-<h3 class="text-xl font-black text-slate-900 mb-3">사회계약설 사상가 비교</h3>
-<table class="w-full border-collapse text-sm md:text-base"><thead><tr><th class="border border-slate-200 bg-slate-100 p-3 text-left">구분</th><th class="border border-slate-200 bg-slate-100 p-3 text-left">홉스</th><th class="border border-slate-200 bg-slate-100 p-3 text-left">로크</th><th class="border border-slate-200 bg-slate-100 p-3 text-left">루소</th></tr></thead><tbody><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">자연 상태 이해</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">불안과 투쟁의 상태</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">권리는 있지만 분쟁 해결이 불편한 상태</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">자유롭고 평등하지만 문명 속에서 타락할 수 있는 상태</td></tr><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">국가의 목적</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">안전과 질서 보장</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">생명·자유·재산 보호</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">일반 의지 실현</td></tr><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">주권·저항권</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">강한 주권에 복종 강조</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">계약 위반 정부에 대한 저항권 인정</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">주권은 양도·대표될 수 없고 시민 참여가 중요</td></tr></tbody></table>
-</div>
-<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>아테네 민주정은 직접 참여와 제한된 시민권을 함께 써야 정확하다.</li><li>근대 시민혁명은 각각 의회주의, 저항권, 자유·평등의 보편성으로 정리한다.</li><li>참정권 확대는 현대 민주 정치 발전의 핵심 축이다.</li><li>자유주의와 공동체주의는 개인 우선/공동체 우선의 대비로 정리한다.</li></ul>
-</div>
-
-    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
-      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
-      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>1-3. 민주 정치의 발전</b>의 핵심 질문인 “민주 정치는 어떤 사상적 배경을 통해 오늘날까지 발전해 왔을까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
-      <div class='grid md:grid-cols-2 gap-3 mt-4'>
-    
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>아테네 민주 정치</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.</p>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>아테네 직접 민주주의에서 민주 정치의 원형을 확인한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>근대 시민혁명은 천부 인권, 사회계약설, 계몽사상을 바탕으로 국민 주권과 입헌주의를 발전시켰다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>현대 민주 정치는 노동자·여성·소수 인종의 참정권 확대를 통해 보통 선거로 나아갔다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>사회계약설은 국가가 개인의 권리를 보장하기 위한 계약의 산물이라는 생각을 제공했다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>자유주의와 공동체주의는 개인과 국가, 자유와 공동체의 관계를 서로 다르게 설명한다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>아테네 민주 정치의 의미와 한계</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>아테네는 시민이 직접 민회에 참여하여 중요한 일을 결정한 직접 민주 정치의 대표 사례이다.</li><li>추첨으로 공직을 맡기는 방식은 시민 간 평등과 참여를 강조했다.</li><li>그러나 시민 자격이 성인 남성으로 제한되어 여성, 노예, 외국인은 배제되었으므로 현대적 의미의 보편적 민주주의는 아니었다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>근대 시민혁명의 의의</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>영국 명예혁명은 의회의 우위와 입헌주의를 강화했다.</li><li>미국 독립 혁명은 부당한 통치에 저항하고 새로운 정부를 구성할 권리를 보여 주었다.</li><li>프랑스 혁명은 신분 질서를 무너뜨리고 자유와 평등을 보편적 권리로 선언했다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>참정권 확대와 현대 민주 정치</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>초기 근대 민주 정치는 재산 있는 남성 중심으로 운영되어 노동자, 농민, 여성 등이 배제되었다.</li><li>차티스트 운동은 노동자 선거권 확대 요구를 대중 정치 운동으로 발전시켰다.</li><li>여성 참정권 운동과 흑인 민권 운동은 민주 정치가 “누가 시민인가”의 범위를 넓혀 온 역사임을 보여 준다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>민주 정치의 사상적 배경</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>사회계약설은 국가는 개인의 자연권을 보장하기 위해 만들어졌다는 생각이다.</li><li>홉스는 강력한 권력에 의한 안전 보장을 강조했고, 로크는 권리 보호와 저항권을 강조했으며, 루소는 일반 의지와 직접 참여를 강조했다.</li><li>자유주의는 개인의 자유와 제한된 국가를 중시하고, 공동체주의는 개인이 공동체 속에서 정체성과 자유를 형성한다고 본다.</li></ul>
+        </article></div>
+  
+        <div class='overflow-x-auto mt-5'>
+          <h3 class='text-xl font-black text-slate-900 mb-3'>사회계약설 사상가 비교</h3>
+          <table class='w-full border-collapse text-sm md:text-base'><thead><tr><th class='border border-slate-200 bg-slate-100 p-3 text-left'>구분</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>홉스</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>로크</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>루소</th></tr></thead><tbody><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>자연 상태 이해</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>불안과 투쟁의 상태</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>권리는 있지만 분쟁 해결이 불편한 상태</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>자유롭고 평등하지만 문명 속에서 타락할 수 있는 상태</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>국가의 목적</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>안전과 질서 보장</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>생명·자유·재산 보호</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>일반 의지 실현</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>주권·저항권</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>강한 주권에 복종 강조</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>계약 위반 정부에 대한 저항권 인정</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>주권은 양도·대표될 수 없고 시민 참여가 중요</td></tr></tbody></table>
         </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>직접 민주 정치</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>시민이 대표자를 거치지 않고 직접 의사 결정에 참여하는 민주 정치 방식이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>민회</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>도편 추방제</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>근대 시민혁명</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>명예혁명</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>미국 독립 혁명</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>프랑스 혁명</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>보통 선거</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>차티스트 운동</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>영국 노동자들이 선거권 확대를 요구하며 전개한 대중 운동이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>여성 참정권 운동</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>여성이 선거와 공직 참여의 권리를 얻기 위해 전개한 운동이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 12</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>사회계약설</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가가 개인의 자연권을 보장하기 위한 사회 구성원의 계약으로 형성되었다는 이론이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 13</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>홉스</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>자연 상태의 불안을 극복하기 위해 강력한 주권에 복종해야 한다고 본 사상가이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 14</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>로크</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가가 생명·자유·재산을 보호하지 못하면 시민은 저항할 수 있다고 본 사상가이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 15</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>루소</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>일반 의지와 직접 참여를 통해 주권이 시민에게 있어야 한다고 본 사상가이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 16</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>자유주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>개인의 자유와 권리를 우선하고 국가의 역할을 제한하려는 정치 사상이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 17</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>공동체주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>개인은 공동체 속에서 형성되므로 공동체의 가치와 책임도 중요하다고 보는 사상이다.</p>
-        </div>
-        </div></div>
-        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 아테네 직접 민주주의에서 민주 정치의 원형을 확인한다.</li><li><b>2단계</b> — 2 근대 시민혁명은 천부 인권, 사회계약설, 계몽사상을 바탕으로 국민 주권과 입헌주의를 발전시켰다.</li><li><b>3단계</b> — 3 현대 민주 정치는 노동자·여성·소수 인종의 참정권 확대를 통해 보통 선거로 나아갔다.</li><li><b>4단계</b> — 4 사회계약설은 국가가 개인의 권리를 보장하기 위한 계약의 산물이라는 생각을 제공했다.</li><li><b>5단계</b> — 5 자유주의와 공동체주의는 개인과 국가, 자유와 공동체의 관계를 서로 다르게 설명한다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
-        </div>
-        
-        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>아테네 민주정은 직접 참여와 제한된 시민권을 함께 써야 정확하다.</li><li>근대 시민혁명은 각각 의회주의, 저항권, 자유·평등의 보편성으로 정리한다.</li><li>참정권 확대는 현대 민주 정치 발전의 핵심 축이다.</li><li>자유주의와 공동체주의는 개인 우선/공동체 우선의 대비로 정리한다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
-        </div>
-        </section>
+  
+    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
+      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
+      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>아테네 민주정은 직접 참여와 제한된 시민권을 함께 써야 정확하다.</li><li>근대 시민혁명은 각각 의회주의, 저항권, 자유·평등의 보편성으로 정리한다.</li><li>참정권 확대는 현대 민주 정치 발전의 핵심 축이다.</li><li>자유주의와 공동체주의는 개인 우선/공동체 우선의 대비로 정리한다.</li></ul>
+    </div>
+</section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    
-    <p>1-3. 민주 정치의 발전 단원은 “민주 정치는 어떤 사상적 배경을 통해 오늘날까지 발전해 왔을까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
-    <p>1번째 흐름은 1 아테네 직접 민주주의에서 민주 정치의 원형을 확인한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 근대 시민혁명은 천부 인권, 사회계약설, 계몽사상을 바탕으로 국민 주권과 입헌주의를 발전시켰다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 현대 민주 정치는 노동자·여성·소수 인종의 참정권 확대를 통해 보통 선거로 나아갔다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 사회계약설은 국가가 개인의 권리를 보장하기 위한 계약의 산물이라는 생각을 제공했다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 자유주의와 공동체주의는 개인과 국가, 자유와 공동체의 관계를 서로 다르게 설명한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="아테네 민주 정치" onclick="reveal(this)">&nbsp;</span>은/는 고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="직접 민주 정치" onclick="reveal(this)">&nbsp;</span>은/는 시민이 대표자를 거치지 않고 직접 의사 결정에 참여하는 민주 정치 방식이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="민회" onclick="reveal(this)">&nbsp;</span>은/는 아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="도편 추방제" onclick="reveal(this)">&nbsp;</span>은/는 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="근대 시민혁명" onclick="reveal(this)">&nbsp;</span>은/는 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="명예혁명" onclick="reveal(this)">&nbsp;</span>은/는 영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="미국 독립 혁명" onclick="reveal(this)">&nbsp;</span>은/는 식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="프랑스 혁명" onclick="reveal(this)">&nbsp;</span>은/는 봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="보통 선거" onclick="reveal(this)">&nbsp;</span>은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="차티스트 운동" onclick="reveal(this)">&nbsp;</span>은/는 영국 노동자들이 선거권 확대를 요구하며 전개한 대중 운동이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="여성 참정권 운동" onclick="reveal(this)">&nbsp;</span>은/는 여성이 선거와 공직 참여의 권리를 얻기 위해 전개한 운동이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="사회계약설" onclick="reveal(this)">&nbsp;</span>은/는 국가가 개인의 자연권을 보장하기 위한 사회 구성원의 계약으로 형성되었다는 이론이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="홉스" onclick="reveal(this)">&nbsp;</span>은/는 자연 상태의 불안을 극복하기 위해 강력한 주권에 복종해야 한다고 본 사상가이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="로크" onclick="reveal(this)">&nbsp;</span>은/는 국가가 생명·자유·재산을 보호하지 못하면 시민은 저항할 수 있다고 본 사상가이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="루소" onclick="reveal(this)">&nbsp;</span>은/는 일반 의지와 직접 참여를 통해 주권이 시민에게 있어야 한다고 본 사상가이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="자유주의" onclick="reveal(this)">&nbsp;</span>은/는 개인의 자유와 권리를 우선하고 국가의 역할을 제한하려는 정치 사상이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="공동체주의" onclick="reveal(this)">&nbsp;</span>은/는 개인은 공동체 속에서 형성되므로 공동체의 가치와 책임도 중요하다고 보는 사상이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
-    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 1-3. 민주 정치의 발전의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
-    
+    <p>민주주의의 출발점은 <span class="hidden-box" data-text="아테네 민주 정치" onclick="reveal(this)">&nbsp;</span>에서 찾을 수 있다. 시민이 <span class="hidden-box" data-text="민회" onclick="reveal(this)">&nbsp;</span>에 모여 직접 결정했기 때문에 <span class="hidden-box" data-text="직접 민주 정치" onclick="reveal(this)">&nbsp;</span>의 원형이 되었지만, 참여 자격이 제한되었다는 한계도 있었다.</p><p>아테네는 독재를 막기 위해 <span class="hidden-box" data-text="도편 추방제" onclick="reveal(this)">&nbsp;</span>를 두었으나, 이 제도 역시 정치적 경쟁자를 제거하는 수단으로 악용될 수 있었다. 민주주의는 처음부터 완성된 제도가 아니라 계속 보완되어 온 제도였다.</p><p>근대에 들어 <span class="hidden-box" data-text="근대 시민혁명" onclick="reveal(this)">&nbsp;</span>은 왕권과 신분 질서에 맞서 시민의 권리를 정치의 중심에 놓았다. <span class="hidden-box" data-text="명예혁명" onclick="reveal(this)">&nbsp;</span>은 의회주의를, <span class="hidden-box" data-text="미국 독립 혁명" onclick="reveal(this)">&nbsp;</span>은 저항권을, <span class="hidden-box" data-text="프랑스 혁명" onclick="reveal(this)">&nbsp;</span>은 자유와 평등의 보편성을 강화했다.</p><p>그러나 근대 혁명 이후에도 모든 사람이 곧바로 시민이 된 것은 아니었다. <span class="hidden-box" data-text="차티스트 운동" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="여성 참정권 운동" onclick="reveal(this)">&nbsp;</span>, 흑인 민권 운동을 거치며 <span class="hidden-box" data-text="보통 선거" onclick="reveal(this)">&nbsp;</span>가 확대되었고, 민주주의의 주체도 넓어졌다.</p><p>이 변화의 사상적 토대가 <span class="hidden-box" data-text="사회계약설" onclick="reveal(this)">&nbsp;</span>이다. <span class="hidden-box" data-text="홉스" onclick="reveal(this)">&nbsp;</span>는 안전을 위한 강한 국가를, <span class="hidden-box" data-text="로크" onclick="reveal(this)">&nbsp;</span>는 권리 보장과 저항권을, <span class="hidden-box" data-text="루소" onclick="reveal(this)">&nbsp;</span>는 일반 의지와 직접 참여를 강조했다. 이후 <span class="hidden-box" data-text="자유주의" onclick="reveal(this)">&nbsp;</span>와 <span class="hidden-box" data-text="공동체주의" onclick="reveal(this)">&nbsp;</span>는 개인과 공동체의 관계를 서로 다른 방식으로 설명했다.</p>
   </div>
 </section>
 
@@ -272,153 +102,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
+  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
   
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>사회계약설</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>여성 참정권 운동</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>도편 추방제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>직접 민주 정치</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>아테네 민주 정치</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 아테네 민주 정치' data-explanation='정답은 아테네 민주 정치이다. 아테네 민주 정치은/는 고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “시민이 대표자를 거치지 않고 직접 의사 결정에 참여하는 민주 정치 방식이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>보통 선거</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>직접 민주 정치</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>사회계약설</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>공동체주의</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>도편 추방제</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 직접 민주 정치' data-explanation='정답은 직접 민주 정치이다. 직접 민주 정치은/는 시민이 대표자를 거치지 않고 직접 의사 결정에 참여하는 민주 정치 방식이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>민회</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>홉스</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여성 참정권 운동</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>도편 추방제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>명예혁명</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 민회' data-explanation='정답은 민회이다. 민회은/는 아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>프랑스 혁명</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>차티스트 운동</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>도편 추방제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>아테네 민주 정치</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>루소</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 도편 추방제' data-explanation='정답은 도편 추방제이다. 도편 추방제은/는 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>민회</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>홉스</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여성 참정권 운동</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>사회계약설</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>근대 시민혁명</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 근대 시민혁명' data-explanation='정답은 근대 시민혁명이다. 근대 시민혁명은/는 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>보통 선거</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>직접 민주 정치</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>공동체주의</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>명예혁명</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미국 독립 혁명</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 명예혁명' data-explanation='정답은 명예혁명이다. 명예혁명은/는 영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여성 참정권 운동</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>차티스트 운동</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>보통 선거</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>근대 시민혁명</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미국 독립 혁명</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 미국 독립 혁명' data-explanation='정답은 미국 독립 혁명이다. 미국 독립 혁명은/는 식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>직접 민주 정치</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>명예혁명</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>차티스트 운동</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>프랑스 혁명</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미국 독립 혁명</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 프랑스 혁명' data-explanation='정답은 프랑스 혁명이다. 프랑스 혁명은/는 봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>도편 추방제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>미국 독립 혁명</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>프랑스 혁명</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>사회계약설</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>보통 선거</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 보통 선거' data-explanation='정답은 보통 선거이다. 보통 선거은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “영국 노동자들이 선거권 확대를 요구하며 전개한 대중 운동이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>미국 독립 혁명</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>직접 민주 정치</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>명예혁명</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>차티스트 운동</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민회</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 차티스트 운동' data-explanation='정답은 차티스트 운동이다. 차티스트 운동은/는 영국 노동자들이 선거권 확대를 요구하며 전개한 대중 운동이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 1-3. 민주 정치의 발전 단원의 핵심어 “아테네 민주 정치”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>아테네 민주 정치은/는 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>아테네 민주 정치은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>아테네 민주 정치은/는 고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>아테네 민주 정치은/는 국가가 개인의 자연권을 보장하기 위한 사회 구성원의 계약으로 형성되었다는 이론이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>아테네 민주 정치은/는 아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 아테네 민주 정치은/는 고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.' data-explanation='아테네 민주 정치의 정확한 뜻은 “고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.”이다. 오답은 다른 핵심어의 설명을 아테네 민주 정치에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 1-3. 민주 정치의 발전 단원의 핵심어 “민회”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>민회은/는 영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>민회은/는 아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>민회은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>민회은/는 자연 상태의 불안을 극복하기 위해 강력한 주권에 복종해야 한다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민회은/는 영국 노동자들이 선거권 확대를 요구하며 전개한 대중 운동이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 민회은/는 아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.' data-explanation='민회의 정확한 뜻은 “아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.”이다. 오답은 다른 핵심어의 설명을 민회에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 1-3. 민주 정치의 발전 단원의 핵심어 “근대 시민혁명”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>근대 시민혁명은/는 시민이 대표자를 거치지 않고 직접 의사 결정에 참여하는 민주 정치 방식이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>근대 시민혁명은/는 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>근대 시민혁명은/는 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>근대 시민혁명은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>근대 시민혁명은/는 봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 근대 시민혁명은/는 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.' data-explanation='근대 시민혁명의 정확한 뜻은 “국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.”이다. 오답은 다른 핵심어의 설명을 근대 시민혁명에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 1-3. 민주 정치의 발전 단원의 핵심어 “미국 독립 혁명”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>미국 독립 혁명은/는 국가가 생명·자유·재산을 보호하지 못하면 시민은 저항할 수 있다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>미국 독립 혁명은/는 여성이 선거와 공직 참여의 권리를 얻기 위해 전개한 운동이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>미국 독립 혁명은/는 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>미국 독립 혁명은/는 식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미국 독립 혁명은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 미국 독립 혁명은/는 식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다.' data-explanation='미국 독립 혁명의 정확한 뜻은 “식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다.”이다. 오답은 다른 핵심어의 설명을 미국 독립 혁명에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 1-3. 민주 정치의 발전 단원의 핵심어 “보통 선거”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>보통 선거은/는 아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>보통 선거은/는 시민이 대표자를 거치지 않고 직접 의사 결정에 참여하는 민주 정치 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>보통 선거은/는 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>보통 선거은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>보통 선거은/는 국가가 생명·자유·재산을 보호하지 못하면 시민은 저항할 수 있다고 본 사상가이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 보통 선거은/는 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.' data-explanation='보통 선거의 정확한 뜻은 “일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.”이다. 오답은 다른 핵심어의 설명을 보통 선거에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>루소 - 일반 의지와 직접 참여를 통해 주권이 시민에게 있어야 한다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>로크 - 국가가 생명·자유·재산을 보호하지 못하면 시민은 저항할 수 있다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>근대 시민혁명 - 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>공동체주의 - 개인은 공동체 속에서 형성되므로 공동체의 가치와 책임도 중요하다고 보는 사상이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>자유주의 - 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 자유주의 - 일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.' data-explanation='옳지 않은 연결은 자유주의이다. 자유주의은/는 “개인의 자유와 권리를 우선하고 국가의 역할을 제한하려는 정치 사상이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>프랑스 혁명 - 봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>민회 - 국가가 개인의 자연권을 보장하기 위한 사회 구성원의 계약으로 형성되었다는 이론이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>루소 - 일반 의지와 직접 참여를 통해 주권이 시민에게 있어야 한다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>홉스 - 자연 상태의 불안을 극복하기 위해 강력한 주권에 복종해야 한다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>도편 추방제 - 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 민회 - 국가가 개인의 자연권을 보장하기 위한 사회 구성원의 계약으로 형성되었다는 이론이다.' data-explanation='옳지 않은 연결은 민회이다. 민회은/는 “아테네 시민이 참여하여 공동체의 주요 사안을 토의하고 결정한 최고 의결 기관이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>아테네 민주 정치 - 고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>미국 독립 혁명 - 식민 지배에 저항하여 독립과 저항권의 원리를 보여 준 혁명이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>공동체주의 - 개인은 공동체 속에서 형성되므로 공동체의 가치와 책임도 중요하다고 보는 사상이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>프랑스 혁명 - 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>루소 - 일반 의지와 직접 참여를 통해 주권이 시민에게 있어야 한다고 본 사상가이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 프랑스 혁명 - 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.' data-explanation='옳지 않은 연결은 프랑스 혁명이다. 프랑스 혁명은/는 “봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>공동체주의 - 개인은 공동체 속에서 형성되므로 공동체의 가치와 책임도 중요하다고 보는 사상이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>보통 선거 - 영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>프랑스 혁명 - 봉건적 신분 질서를 무너뜨리고 자유와 평등의 보편적 권리를 선언한 혁명이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>자유주의 - 개인의 자유와 권리를 우선하고 국가의 역할을 제한하려는 정치 사상이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>아테네 민주 정치 - 고대 아테네에서 시민이 민회 등에 직접 참여하여 공동체의 일을 결정한 정치 형태이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 보통 선거 - 영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다.' data-explanation='옳지 않은 연결은 보통 선거이다. 보통 선거은/는 “일정 연령 이상의 국민에게 성별·재산·신분 등에 관계없이 선거권을 부여하는 제도이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>루소 - 일반 의지와 직접 참여를 통해 주권이 시민에게 있어야 한다고 본 사상가이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>차티스트 운동 - 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>명예혁명 - 영국에서 의회가 왕권을 제한하고 입헌주의와 의회주의를 강화한 사건이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>도편 추방제 - 독재 위험이 있는 인물을 시민 투표로 추방하던 아테네의 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>공동체주의 - 개인은 공동체 속에서 형성되므로 공동체의 가치와 책임도 중요하다고 보는 사상이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 차티스트 운동 - 국민 주권, 자유와 평등, 입헌주의를 발전시킨 영국·미국·프랑스 등의 혁명이다.' data-explanation='옳지 않은 연결은 차티스트 운동이다. 차티스트 운동은/는 “영국 노동자들이 선거권 확대를 요구하며 전개한 대중 운동이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
+<div class='quiz-card'><p><b>1.</b> 아테네 민주 정치가 직접 민주 정치인 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>시민이 민회 등에 직접 참여하여 공동체의 중요한 일을 토의하고 결정했기 때문이다.</div></div>
+<div class='quiz-card'><p><b>2.</b> 아테네 민주 정치의 한계를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>여성, 노예, 외국인이 배제되고 시민 자격이 성인 남성으로 제한되었다.</div></div>
+<div class='quiz-card'><p><b>3.</b> 영국 명예혁명의 정치적 의의를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>의회가 왕권을 제한하고 의회주의와 입헌주의를 확립하는 데 기여했다.</div></div>
+<div class='quiz-card'><p><b>4.</b> 미국 독립 혁명에서 확인할 수 있는 권리를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정부가 시민의 권리를 침해할 때 새로운 정부를 구성할 수 있는 저항권이다.</div></div>
+<div class='quiz-card'><p><b>5.</b> 프랑스 혁명이 민주주의 발전에 기여한 점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>봉건적 신분 질서를 무너뜨리고 자유와 평등을 보편적 권리로 선언했다.</div></div>
+<div class='quiz-card'><p><b>6.</b> 차티스트 운동의 핵심 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>노동자 계층이 선거권 확대를 요구한 대중 정치 운동이다.</div></div>
+<div class='quiz-card'><p><b>7.</b> 보통 선거의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>성별, 재산, 신분 등에 관계없이 일정 연령 이상의 국민에게 선거권을 부여하는 제도이다.</div></div>
+<div class='quiz-card'><p><b>8.</b> 홉스, 로크, 루소의 사회계약설 차이를 한 문장씩 정리하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>홉스는 안전을 위한 강한 주권, 로크는 권리 보호와 저항권, 루소는 일반 의지와 직접 참여를 강조했다.</div></div>
+<div class='quiz-card'><p><b>9.</b> 자유주의가 국가 역할을 제한하려는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가를 개인의 자유를 침해할 수 있는 가장 큰 힘으로 보기 때문이다.</div></div>
+<div class='quiz-card'><p><b>10.</b> 공동체주의가 개인과 공동체의 관계를 설명하는 방식을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>개인은 공동체와 분리된 존재가 아니라 공동체 속에서 정체성과 자유를 형성한다고 본다.</div></div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
-
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
 </script>
 </body>
 </html>

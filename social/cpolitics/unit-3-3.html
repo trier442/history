@@ -5,44 +5,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>국가 기관의 구성과 역할 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 국가 기관의 구성과 역할 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
-<script src='https://cdn.tailwindcss.com'>
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -72,18 +36,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
-
-.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
-.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
-.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
-.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
-.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
-.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
-.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
-.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
-.mcq-result.show{display:block}
-.deep-summary-note b{color:#3730a3}
-
 </style>
 </head>
 <body>
@@ -101,158 +53,42 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">국회</span><span class="keyword">입법부</span><span class="keyword">국회 의원</span><span class="keyword">교섭 단체</span><span class="keyword">위원회</span><span class="keyword">입법권</span><span class="keyword">국정 감사</span><span class="keyword">국정 조사</span><span class="keyword">행정부</span><span class="keyword">대통령</span><span class="keyword">국무총리</span><span class="keyword">행정 각부</span><span class="keyword">법원</span><span class="keyword">대법원</span><span class="keyword">헌법재판소</span><span class="keyword">위헌 법률 심판</span></div>
 </section>
 
-<section class="card mt-8 p-6 md:p-8" id="summary">
-<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
-<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
-<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
-<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>국회는 국민 대표 기관이자 입법 기관이며 행정부 견제 기관이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>행정부는 법률을 집행하고 공익 실현을 위한 정책을 수립·실행한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>대통령은 행정부 수반이자 국가 원수로서 중요한 헌법상 권한을 가진다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>법원은 재판을 통해 법을 적용하고 국민의 권리를 구제한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>헌법재판소는 헌법 질서를 수호하고 기본권 보장을 위한 헌법 재판을 담당한다.</span></li></ol>
-</div>
-<div class="grid lg:grid-cols-2 gap-4 mb-6">
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">입법부: 국회</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>국회는 국민이 선출한 국회 의원으로 구성되는 대표 기관이다.</li><li>국회의 핵심 권한은 법률 제·개정, 예산 심의·확정, 국정 감사와 국정 조사, 주요 공직자 임명 동의와 탄핵 소추이다.</li><li>위원회 제도는 전문적인 심사를 통해 본회의 결정을 준비한다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">행정부와 대통령</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>행정부는 법률을 집행하는 기관이지만 현대 복지 국가에서는 정책 수립과 적극적 공익 실현 기능이 커졌다.</li><li>대통령은 행정부 수반으로 행정부를 지휘·감독하고, 국가 원수로 외교와 국가 대표 기능을 수행한다.</li><li>국무총리, 국무회의, 행정 각부, 감사원 등은 행정부 운영을 구성하는 주요 기관이다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">사법부: 법원</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>법원은 구체적 분쟁에 법을 적용하여 재판함으로써 국민의 권리와 법질서를 보호한다.</li><li>사법권의 독립은 공정한 재판의 조건이며, 법관은 헌법과 법률 및 양심에 따라 독립하여 심판해야 한다.</li><li>심급 제도는 재판의 오류를 줄이기 위해 여러 단계의 판단을 가능하게 한다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">헌법재판소</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>헌법재판소는 법률이나 국가 작용이 헌법에 위반되는지 판단한다.</li><li>위헌 법률 심판, 헌법 소원 심판, 탄핵 심판, 정당 해산 심판, 권한 쟁의 심판 등을 담당한다.</li><li>헌법재판은 다수결 정치가 기본권을 침해하지 않도록 하는 헌법적 안전장치이다.</li></ul>
-</article></div>
-<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>국회는 입법뿐 아니라 재정·감시·인사·탄핵 권한을 가진다.</li><li>행정부 기능 강화는 행정 국가화와 연결된다.</li><li>법원과 헌법재판소의 기능 차이를 구분해야 한다.</li></ul>
-</div>
-
-    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
-      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
-      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>3-3. 국가 기관의 구성과 역할</b>의 핵심 질문인 “입법부·행정부·사법부는 민주 국가에서 어떤 역할을 할까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
-      <div class='grid md:grid-cols-2 gap-3 mt-4'>
-    
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국회</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>입법부</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>법률을 만들고 행정부를 견제하는 국가 권력 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국회 의원</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>교섭 단체</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>위원회</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>입법권</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>법률을 제정하고 개정할 수 있는 권한이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국정 감사</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국회가 정기적으로 국정 전반을 감사하는 권한이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국정 조사</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국회가 특정 사안에 대해 조사하는 권한이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>행정부</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>법률을 집행하고 정책을 수립·실행하는 국가 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>대통령</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국무총리</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>대통령을 보좌하고 행정 각부를 통할하는 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 12</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>행정 각부</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>구체적인 행정 업무를 담당하는 중앙 행정 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 13</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>법원</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>재판을 통해 법을 적용하고 분쟁을 해결하는 사법 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 14</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>대법원</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>법원의 최고 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 15</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>헌법재판소</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>헌법 재판을 통해 헌법 질서와 기본권을 보장하는 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 16</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>위헌 법률 심판</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>재판의 전제가 된 법률이 헌법에 위반되는지 판단하는 헌법 재판이다.</p>
-        </div>
-        </div></div>
-        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 국회는 국민 대표 기관이자 입법 기관이며 행정부 견제 기관이다.</li><li><b>2단계</b> — 2 행정부는 법률을 집행하고 공익 실현을 위한 정책을 수립·실행한다.</li><li><b>3단계</b> — 3 대통령은 행정부 수반이자 국가 원수로서 중요한 헌법상 권한을 가진다.</li><li><b>4단계</b> — 4 법원은 재판을 통해 법을 적용하고 국민의 권리를 구제한다.</li><li><b>5단계</b> — 5 헌법재판소는 헌법 질서를 수호하고 기본권 보장을 위한 헌법 재판을 담당한다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
-        </div>
-        
-        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>국회는 입법뿐 아니라 재정·감시·인사·탄핵 권한을 가진다.</li><li>행정부 기능 강화는 행정 국가화와 연결된다.</li><li>법원과 헌법재판소의 기능 차이를 구분해야 한다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
-        </div>
-        </section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>국회는 국민 대표 기관이자 입법 기관이며 행정부 견제 기관이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>행정부는 법률을 집행하고 공익 실현을 위한 정책을 수립·실행한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>대통령은 행정부 수반이자 국가 원수로서 중요한 헌법상 권한을 가진다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>법원은 재판을 통해 법을 적용하고 국민의 권리를 구제한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>헌법재판소는 헌법 질서를 수호하고 기본권 보장을 위한 헌법 재판을 담당한다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>입법부: 국회</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>국회는 국민이 선출한 국회 의원으로 구성되는 대표 기관이다.</li><li>국회의 핵심 권한은 법률 제·개정, 예산 심의·확정, 국정 감사와 국정 조사, 주요 공직자 임명 동의와 탄핵 소추이다.</li><li>위원회 제도는 전문적인 심사를 통해 본회의 결정을 준비한다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>행정부와 대통령</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>행정부는 법률을 집행하는 기관이지만 현대 복지 국가에서는 정책 수립과 적극적 공익 실현 기능이 커졌다.</li><li>대통령은 행정부 수반으로 행정부를 지휘·감독하고, 국가 원수로 외교와 국가 대표 기능을 수행한다.</li><li>국무총리, 국무회의, 행정 각부, 감사원 등은 행정부 운영을 구성하는 주요 기관이다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>사법부: 법원</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>법원은 구체적 분쟁에 법을 적용하여 재판함으로써 국민의 권리와 법질서를 보호한다.</li><li>사법권의 독립은 공정한 재판의 조건이며, 법관은 헌법과 법률 및 양심에 따라 독립하여 심판해야 한다.</li><li>심급 제도는 재판의 오류를 줄이기 위해 여러 단계의 판단을 가능하게 한다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>헌법재판소</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>헌법재판소는 법률이나 국가 작용이 헌법에 위반되는지 판단한다.</li><li>위헌 법률 심판, 헌법 소원 심판, 탄핵 심판, 정당 해산 심판, 권한 쟁의 심판 등을 담당한다.</li><li>헌법재판은 다수결 정치가 기본권을 침해하지 않도록 하는 헌법적 안전장치이다.</li></ul>
+        </article></div>
+  
+  
+    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
+      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
+      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>국회는 입법뿐 아니라 재정·감시·인사·탄핵 권한을 가진다.</li><li>행정부 기능 강화는 행정 국가화와 연결된다.</li><li>법원과 헌법재판소의 기능 차이를 구분해야 한다.</li></ul>
+    </div>
+</section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    
-    <p>3-3. 국가 기관의 구성과 역할 단원은 “입법부·행정부·사법부는 민주 국가에서 어떤 역할을 할까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
-    <p>1번째 흐름은 1 국회는 국민 대표 기관이자 입법 기관이며 행정부 견제 기관이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 행정부는 법률을 집행하고 공익 실현을 위한 정책을 수립·실행한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 대통령은 행정부 수반이자 국가 원수로서 중요한 헌법상 권한을 가진다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 법원은 재판을 통해 법을 적용하고 국민의 권리를 구제한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 헌법재판소는 헌법 질서를 수호하고 기본권 보장을 위한 헌법 재판을 담당한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="국회" onclick="reveal(this)">&nbsp;</span>은/는 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="입법부" onclick="reveal(this)">&nbsp;</span>은/는 법률을 만들고 행정부를 견제하는 국가 권력 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="국회 의원" onclick="reveal(this)">&nbsp;</span>은/는 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="교섭 단체" onclick="reveal(this)">&nbsp;</span>은/는 국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="위원회" onclick="reveal(this)">&nbsp;</span>은/는 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="입법권" onclick="reveal(this)">&nbsp;</span>은/는 법률을 제정하고 개정할 수 있는 권한이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="국정 감사" onclick="reveal(this)">&nbsp;</span>은/는 국회가 정기적으로 국정 전반을 감사하는 권한이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="국정 조사" onclick="reveal(this)">&nbsp;</span>은/는 국회가 특정 사안에 대해 조사하는 권한이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="행정부" onclick="reveal(this)">&nbsp;</span>은/는 법률을 집행하고 정책을 수립·실행하는 국가 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="대통령" onclick="reveal(this)">&nbsp;</span>은/는 국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="국무총리" onclick="reveal(this)">&nbsp;</span>은/는 대통령을 보좌하고 행정 각부를 통할하는 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="행정 각부" onclick="reveal(this)">&nbsp;</span>은/는 구체적인 행정 업무를 담당하는 중앙 행정 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="법원" onclick="reveal(this)">&nbsp;</span>은/는 재판을 통해 법을 적용하고 분쟁을 해결하는 사법 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="대법원" onclick="reveal(this)">&nbsp;</span>은/는 법원의 최고 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="헌법재판소" onclick="reveal(this)">&nbsp;</span>은/는 헌법 재판을 통해 헌법 질서와 기본권을 보장하는 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="위헌 법률 심판" onclick="reveal(this)">&nbsp;</span>은/는 재판의 전제가 된 법률이 헌법에 위반되는지 판단하는 헌법 재판이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
-    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 3-3. 국가 기관의 구성과 역할의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
-    
+    <p>민주 국가의 권력은 나뉘어 작동한다. 먼저 <span class="hidden-box" data-text="국회" onclick="reveal(this)">&nbsp;</span>는 국민의 대표 기관이자 <span class="hidden-box" data-text="입법부" onclick="reveal(this)">&nbsp;</span>로서 법을 만들고 정부를 감시한다. 그 구성원인 <span class="hidden-box" data-text="국회 의원" onclick="reveal(this)">&nbsp;</span>은 <span class="hidden-box" data-text="교섭 단체" onclick="reveal(this)">&nbsp;</span>와 <span class="hidden-box" data-text="위원회" onclick="reveal(this)">&nbsp;</span> 활동을 통해 안건을 심사한다.</p><p>국회의 핵심은 <span class="hidden-box" data-text="입법권" onclick="reveal(this)">&nbsp;</span>이지만 여기서 끝나지 않는다. 정부를 살피는 <span class="hidden-box" data-text="국정 감사" onclick="reveal(this)">&nbsp;</span>, 특정 사안을 파헤치는 <span class="hidden-box" data-text="국정 조사" onclick="reveal(this)">&nbsp;</span>도 중요한 견제 장치이다.</p><p><span class="hidden-box" data-text="행정부" onclick="reveal(this)">&nbsp;</span>는 법률을 실제 정책으로 집행한다. <span class="hidden-box" data-text="대통령" onclick="reveal(this)">&nbsp;</span>은 행정부 수반이고, <span class="hidden-box" data-text="국무총리" onclick="reveal(this)">&nbsp;</span>와 <span class="hidden-box" data-text="행정 각부" onclick="reveal(this)">&nbsp;</span>는 대통령을 보좌하며 구체적 행정을 수행한다.</p><p>분쟁이 생기면 <span class="hidden-box" data-text="법원" onclick="reveal(this)">&nbsp;</span>이 법을 적용해 판단하고, 최종심의 중심에는 <span class="hidden-box" data-text="대법원" onclick="reveal(this)">&nbsp;</span>이 있다. 법률이나 국가 작용이 헌법에 어긋나는지는 <span class="hidden-box" data-text="헌법재판소" onclick="reveal(this)">&nbsp;</span>가 판단하며, 대표적 절차가 <span class="hidden-box" data-text="위헌 법률 심판" onclick="reveal(this)">&nbsp;</span>이다.</p>
   </div>
 </section>
 
@@ -262,153 +98,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
+  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
   
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국정 감사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>입법부</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국회</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>교섭 단체</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대통령</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국회' data-explanation='정답은 국회이다. 국회은/는 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “법률을 만들고 행정부를 견제하는 국가 권력 기관이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국회</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>헌법재판소</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대통령</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>법원</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>입법부</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 입법부' data-explanation='정답은 입법부이다. 입법부은/는 법률을 만들고 행정부를 견제하는 국가 권력 기관이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>행정부</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>입법권</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국회 의원</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국무총리</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국회</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국회 의원' data-explanation='정답은 국회 의원이다. 국회 의원은/는 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>위원회</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국정 감사</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>법원</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>교섭 단체</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 교섭 단체' data-explanation='정답은 교섭 단체이다. 교섭 단체은/는 국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국무총리</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>행정부</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>입법권</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>대법원</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>위원회</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 위원회' data-explanation='정답은 위원회이다. 위원회은/는 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “법률을 제정하고 개정할 수 있는 권한이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>법원</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국정 감사</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>입법부</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>입법권</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대법원</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 입법권' data-explanation='정답은 입법권이다. 입법권은/는 법률을 제정하고 개정할 수 있는 권한이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국회가 정기적으로 국정 전반을 감사하는 권한이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국정 감사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국정 조사</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>위헌 법률 심판</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국회</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정 각부</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 국정 감사' data-explanation='정답은 국정 감사이다. 국정 감사은/는 국회가 정기적으로 국정 전반을 감사하는 권한이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국회가 특정 사안에 대해 조사하는 권한이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국정 조사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>헌법재판소</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>위원회</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국회 의원</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정 각부</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 국정 조사' data-explanation='정답은 국정 조사이다. 국정 조사은/는 국회가 특정 사안에 대해 조사하는 권한이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “법률을 집행하고 정책을 수립·실행하는 국가 기관이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국정 조사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국무총리</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>위원회</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>교섭 단체</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정부</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 행정부' data-explanation='정답은 행정부이다. 행정부은/는 법률을 집행하고 정책을 수립·실행하는 국가 기관이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>헌법재판소</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>행정부</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국회 의원</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국무총리</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 대통령' data-explanation='정답은 대통령이다. 대통령은/는 국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 3-3. 국가 기관의 구성과 역할 단원의 핵심어 “국회”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국회은/는 법률을 만들고 행정부를 견제하는 국가 권력 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국회은/는 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국회은/는 국회가 특정 사안에 대해 조사하는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국회은/는 법률을 제정하고 개정할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국회은/는 헌법 재판을 통해 헌법 질서와 기본권을 보장하는 기관이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 국회은/는 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.' data-explanation='국회의 정확한 뜻은 “국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.”이다. 오답은 다른 핵심어의 설명을 국회에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 3-3. 국가 기관의 구성과 역할 단원의 핵심어 “국회 의원”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국회 의원은/는 국회가 정기적으로 국정 전반을 감사하는 권한이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국회 의원은/는 국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국회 의원은/는 법률을 집행하고 정책을 수립·실행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국회 의원은/는 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국회 의원은/는 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 국회 의원은/는 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.' data-explanation='국회 의원의 정확한 뜻은 “국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.”이다. 오답은 다른 핵심어의 설명을 국회 의원에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 3-3. 국가 기관의 구성과 역할 단원의 핵심어 “위원회”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>위원회은/는 법률을 만들고 행정부를 견제하는 국가 권력 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>위원회은/는 법률을 집행하고 정책을 수립·실행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>위원회은/는 국회가 정기적으로 국정 전반을 감사하는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>위원회은/는 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>위원회은/는 국회가 특정 사안에 대해 조사하는 권한이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 위원회은/는 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.' data-explanation='위원회의 정확한 뜻은 “안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.”이다. 오답은 다른 핵심어의 설명을 위원회에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 3-3. 국가 기관의 구성과 역할 단원의 핵심어 “국정 감사”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국정 감사은/는 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국정 감사은/는 구체적인 행정 업무를 담당하는 중앙 행정 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국정 감사은/는 국회가 정기적으로 국정 전반을 감사하는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국정 감사은/는 재판의 전제가 된 법률이 헌법에 위반되는지 판단하는 헌법 재판이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국정 감사은/는 국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국정 감사은/는 국회가 정기적으로 국정 전반을 감사하는 권한이다.' data-explanation='국정 감사의 정확한 뜻은 “국회가 정기적으로 국정 전반을 감사하는 권한이다.”이다. 오답은 다른 핵심어의 설명을 국정 감사에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 3-3. 국가 기관의 구성과 역할 단원의 핵심어 “행정부”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>행정부은/는 법률을 만들고 행정부를 견제하는 국가 권력 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>행정부은/는 국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>행정부은/는 법률을 집행하고 정책을 수립·실행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>행정부은/는 법률을 제정하고 개정할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정부은/는 국회가 특정 사안에 대해 조사하는 권한이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 행정부은/는 법률을 집행하고 정책을 수립·실행하는 국가 기관이다.' data-explanation='행정부의 정확한 뜻은 “법률을 집행하고 정책을 수립·실행하는 국가 기관이다.”이다. 오답은 다른 핵심어의 설명을 행정부에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>행정 각부 - 구체적인 행정 업무를 담당하는 중앙 행정 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국정 감사 - 국회가 정기적으로 국정 전반을 감사하는 권한이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국무총리 - 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>법원 - 재판을 통해 법을 적용하고 분쟁을 해결하는 사법 기관이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국회 - 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국무총리 - 안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.' data-explanation='옳지 않은 연결은 국무총리이다. 국무총리은/는 “대통령을 보좌하고 행정 각부를 통할하는 기관이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국회 - 국민의 대표로 구성되어 입법과 국정 감시 기능을 수행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령 - 국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>행정부 - 법률을 제정하고 개정할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>위헌 법률 심판 - 재판의 전제가 된 법률이 헌법에 위반되는지 판단하는 헌법 재판이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국회 의원 - 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 행정부 - 법률을 제정하고 개정할 수 있는 권한이다.' data-explanation='옳지 않은 연결은 행정부이다. 행정부은/는 “법률을 집행하고 정책을 수립·실행하는 국가 기관이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>행정부 - 법률을 집행하고 정책을 수립·실행하는 국가 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>헌법재판소 - 헌법 재판을 통해 헌법 질서와 기본권을 보장하는 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>입법권 - 법률을 제정하고 개정할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국무총리 - 대통령을 보좌하고 행정 각부를 통할하는 기관이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>위원회 - 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 위원회 - 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.' data-explanation='옳지 않은 연결은 위원회이다. 위원회은/는 “안건을 전문적으로 심사하기 위해 국회 안에 설치되는 회의체이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국회 의원 - 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령 - 국가 원수이자 행정부 수반으로서 행정부를 지휘하고 국가를 대표한다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>법원 - 법률을 만들고 행정부를 견제하는 국가 권력 기관이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>대법원 - 법원의 최고 기관이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국정 조사 - 국회가 특정 사안에 대해 조사하는 권한이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 법원 - 법률을 만들고 행정부를 견제하는 국가 권력 기관이다.' data-explanation='옳지 않은 연결은 법원이다. 법원은/는 “재판을 통해 법을 적용하고 분쟁을 해결하는 사법 기관이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>헌법재판소 - 헌법 재판을 통해 헌법 질서와 기본권을 보장하는 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>입법부 - 법률을 만들고 행정부를 견제하는 국가 권력 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>입법권 - 국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국무총리 - 대통령을 보좌하고 행정 각부를 통할하는 기관이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국회 의원 - 국민의 선거로 선출되어 국회에서 입법과 국정 심의에 참여하는 대표자이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 입법권 - 국회 운영과 의사 진행을 위해 일정 수 이상의 의원으로 구성되는 단체이다.' data-explanation='옳지 않은 연결은 입법권이다. 입법권은/는 “법률을 제정하고 개정할 수 있는 권한이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
+<div class='quiz-card'><p><b>1.</b> 국회의 지위를 두 가지 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국민의 대표 기관이자 입법 기관이다.</div></div>
+<div class='quiz-card'><p><b>2.</b> 국회의 권한 세 가지를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>법률 제·개정, 예산 심의·확정, 국정 감사·조사, 탄핵 소추, 임명 동의 등.</div></div>
+<div class='quiz-card'><p><b>3.</b> 위원회 제도가 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>전문적인 안건 심사를 통해 본회의 결정을 효율적으로 준비하기 위해서이다.</div></div>
+<div class='quiz-card'><p><b>4.</b> 국정 감사와 국정 조사의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국정 감사는 정기적으로 국정 전반을 감사하고, 국정 조사는 특정 사안을 조사한다.</div></div>
+<div class='quiz-card'><p><b>5.</b> 행정부의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>입법부가 만든 법률을 집행하고 정책을 수립·실행하는 국가 기관이다.</div></div>
+<div class='quiz-card'><p><b>6.</b> 현대 사회에서 행정부 기능이 강화된 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>사회가 복잡해지고 복지 국가 역할이 확대되면서 전문적 정책 수행이 필요해졌기 때문이다.</div></div>
+<div class='quiz-card'><p><b>7.</b> 대통령의 두 지위를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가 원수와 행정부 수반이다.</div></div>
+<div class='quiz-card'><p><b>8.</b> 사법권 독립이 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>재판이 정치권력이나 외부 압력에서 벗어나 공정하게 이루어져야 하기 때문이다.</div></div>
+<div class='quiz-card'><p><b>9.</b> 헌법재판소의 역할을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>헌법 질서를 수호하고 국민의 기본권을 보장하기 위해 헌법 재판을 담당한다.</div></div>
+<div class='quiz-card'><p><b>10.</b> 위헌 법률 심판의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>재판의 전제가 된 법률이 헌법에 위반되는지 판단하는 절차이다.</div></div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
-
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
 </script>
 </body>
 </html>

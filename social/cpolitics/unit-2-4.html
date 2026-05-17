@@ -5,44 +5,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>미디어와 시민 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 미디어와 시민 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
-<script src='https://cdn.tailwindcss.com'>
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -72,18 +36,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
-
-.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
-.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
-.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
-.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
-.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
-.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
-.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
-.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
-.mcq-result.show{display:block}
-.deep-summary-note b{color:#3730a3}
-
 </style>
 </head>
 <body>
@@ -101,128 +53,42 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">미디어</span><span class="keyword">전통적 미디어</span><span class="keyword">소셜 미디어</span><span class="keyword">정치 참여</span><span class="keyword">여론 형성</span><span class="keyword">가짜뉴스</span><span class="keyword">정치적 양극화</span><span class="keyword">필터 버블</span><span class="keyword">확증 편향</span><span class="keyword">미디어 리터러시</span><span class="keyword">비판적 활용</span></div>
 </section>
 
-<section class="card mt-8 p-6 md:p-8" id="summary">
-<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
-<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
-<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
-<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>미디어는 정치 정보를 전달하고 시민 참여의 장을 제공한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>전통적 미디어는 정보 전달력이 크지만 일방향성이 강하고, 소셜 미디어는 참여를 넓히지만 왜곡 위험도 크다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>정치 참여에서 언론의 자유는 권력 감시와 여론 형성의 조건이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>가짜뉴스, 필터 버블, 확증 편향은 시민 판단을 왜곡하고 정치적 양극화를 강화한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>현대 시민에게는 정보를 비판적으로 해석하고 책임 있게 생산·공유하는 미디어 리터러시가 필요하다.</span></li></ol>
-</div>
-<div class="grid lg:grid-cols-2 gap-4 mb-6">
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">미디어와 정치 참여</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>미디어는 정치 정보를 시민에게 전달하고 시민이 의견을 표현할 수 있는 통로를 제공한다.</li><li>선거에서 후보자와 유권자는 미디어를 통해 공약, 토론, 평가 정보를 주고받는다.</li><li>대의 민주주의에서 미디어는 정치 엘리트와 일반 시민을 연결하는 매개 장치이다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">미디어 참여의 확대와 문제</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>소셜 미디어는 시민이 직접 정치적 견해를 표현하고 확산할 수 있게 만들었다.</li><li>그러나 알고리즘과 빠른 공유 구조는 허위 정보와 감정적 대립을 확산시키기도 한다.</li><li>전통적 미디어와 1인 미디어 모두 정보 선택과 구성 과정에서 특정 관점이 강조될 수 있다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">가짜뉴스와 양극화</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>가짜뉴스는 사실이 아닌 정보를 정치적 목적을 위해 사실처럼 유통하는 문제이다.</li><li>가짜뉴스는 대표자 선택과 정책 판단을 왜곡하고 정치적 양극화를 심화한다.</li><li>필터 버블과 확증 편향은 자신이 선호하는 정보만 반복적으로 접하게 하여 반대 의견을 이해하기 어렵게 만든다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">미디어 리터러시</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>미디어 리터러시는 정보를 접근·이해·비판·활용·생산하는 능력이다.</li><li>출처, 근거, 통계, 이미지 조작 가능성, 제목과 본문의 차이를 점검해야 한다.</li><li>비판적 활용은 미디어를 무조건 불신하는 것이 아니라, 근거를 확인하고 다양한 관점을 비교하는 태도이다.</li></ul>
-</article></div>
-<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>미디어는 정치 참여 확대와 정보 왜곡 가능성을 함께 가진다.</li><li>가짜뉴스-필터 버블-확증 편향-양극화를 하나의 흐름으로 이해한다.</li><li>미디어 리터러시는 단순 읽기가 아니라 비판·활용·생산 능력까지 포함한다.</li></ul>
-</div>
-
-    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
-      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
-      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>2-4. 미디어와 시민</b>의 핵심 질문인 “현대의 시민에게 미디어를 비판적으로 활용하는 능력이 중요한 이유는 무엇일까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
-      <div class='grid md:grid-cols-2 gap-3 mt-4'>
-    
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>미디어</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>전통적 미디어</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>소셜 미디어</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>정치 참여</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>여론 형성</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>가짜뉴스</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>사실이 아니거나 왜곡된 정보를 뉴스 형식으로 유통하는 정보이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>정치적 양극화</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>필터 버블</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>확증 편향</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>미디어 리터러시</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>비판적 활용</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>정보의 출처와 근거를 따져 보고 다양한 관점과 비교하며 미디어를 사용하는 태도이다.</p>
-        </div>
-        </div></div>
-        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 미디어는 정치 정보를 전달하고 시민 참여의 장을 제공한다.</li><li><b>2단계</b> — 2 전통적 미디어는 정보 전달력이 크지만 일방향성이 강하고, 소셜 미디어는 참여를 넓히지만 왜곡 위험도 크다.</li><li><b>3단계</b> — 3 정치 참여에서 언론의 자유는 권력 감시와 여론 형성의 조건이다.</li><li><b>4단계</b> — 4 가짜뉴스, 필터 버블, 확증 편향은 시민 판단을 왜곡하고 정치적 양극화를 강화한다.</li><li><b>5단계</b> — 5 현대 시민에게는 정보를 비판적으로 해석하고 책임 있게 생산·공유하는 미디어 리터러시가 필요하다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
-        </div>
-        
-        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>미디어는 정치 참여 확대와 정보 왜곡 가능성을 함께 가진다.</li><li>가짜뉴스-필터 버블-확증 편향-양극화를 하나의 흐름으로 이해한다.</li><li>미디어 리터러시는 단순 읽기가 아니라 비판·활용·생산 능력까지 포함한다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
-        </div>
-        </section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>미디어는 정치 정보를 전달하고 시민 참여의 장을 제공한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>전통적 미디어는 정보 전달력이 크지만 일방향성이 강하고, 소셜 미디어는 참여를 넓히지만 왜곡 위험도 크다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>정치 참여에서 언론의 자유는 권력 감시와 여론 형성의 조건이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>가짜뉴스, 필터 버블, 확증 편향은 시민 판단을 왜곡하고 정치적 양극화를 강화한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>현대 시민에게는 정보를 비판적으로 해석하고 책임 있게 생산·공유하는 미디어 리터러시가 필요하다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>미디어와 정치 참여</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>미디어는 정치 정보를 시민에게 전달하고 시민이 의견을 표현할 수 있는 통로를 제공한다.</li><li>선거에서 후보자와 유권자는 미디어를 통해 공약, 토론, 평가 정보를 주고받는다.</li><li>대의 민주주의에서 미디어는 정치 엘리트와 일반 시민을 연결하는 매개 장치이다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>미디어 참여의 확대와 문제</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>소셜 미디어는 시민이 직접 정치적 견해를 표현하고 확산할 수 있게 만들었다.</li><li>그러나 알고리즘과 빠른 공유 구조는 허위 정보와 감정적 대립을 확산시키기도 한다.</li><li>전통적 미디어와 1인 미디어 모두 정보 선택과 구성 과정에서 특정 관점이 강조될 수 있다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>가짜뉴스와 양극화</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>가짜뉴스는 사실이 아닌 정보를 정치적 목적을 위해 사실처럼 유통하는 문제이다.</li><li>가짜뉴스는 대표자 선택과 정책 판단을 왜곡하고 정치적 양극화를 심화한다.</li><li>필터 버블과 확증 편향은 자신이 선호하는 정보만 반복적으로 접하게 하여 반대 의견을 이해하기 어렵게 만든다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>미디어 리터러시</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>미디어 리터러시는 정보를 접근·이해·비판·활용·생산하는 능력이다.</li><li>출처, 근거, 통계, 이미지 조작 가능성, 제목과 본문의 차이를 점검해야 한다.</li><li>비판적 활용은 미디어를 무조건 불신하는 것이 아니라, 근거를 확인하고 다양한 관점을 비교하는 태도이다.</li></ul>
+        </article></div>
+  
+  
+    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
+      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
+      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>미디어는 정치 참여 확대와 정보 왜곡 가능성을 함께 가진다.</li><li>가짜뉴스-필터 버블-확증 편향-양극화를 하나의 흐름으로 이해한다.</li><li>미디어 리터러시는 단순 읽기가 아니라 비판·활용·생산 능력까지 포함한다.</li></ul>
+    </div>
+</section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    
-    <p>2-4. 미디어와 시민 단원은 “현대의 시민에게 미디어를 비판적으로 활용하는 능력이 중요한 이유는 무엇일까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
-    <p>1번째 흐름은 1 미디어는 정치 정보를 전달하고 시민 참여의 장을 제공한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 전통적 미디어는 정보 전달력이 크지만 일방향성이 강하고, 소셜 미디어는 참여를 넓히지만 왜곡 위험도 크다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 정치 참여에서 언론의 자유는 권력 감시와 여론 형성의 조건이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 가짜뉴스, 필터 버블, 확증 편향은 시민 판단을 왜곡하고 정치적 양극화를 강화한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 현대 시민에게는 정보를 비판적으로 해석하고 책임 있게 생산·공유하는 미디어 리터러시가 필요하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="미디어" onclick="reveal(this)">&nbsp;</span>은/는 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="전통적 미디어" onclick="reveal(this)">&nbsp;</span>은/는 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="소셜 미디어" onclick="reveal(this)">&nbsp;</span>은/는 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="정치 참여" onclick="reveal(this)">&nbsp;</span>은/는 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="여론 형성" onclick="reveal(this)">&nbsp;</span>은/는 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="가짜뉴스" onclick="reveal(this)">&nbsp;</span>은/는 사실이 아니거나 왜곡된 정보를 뉴스 형식으로 유통하는 정보이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="정치적 양극화" onclick="reveal(this)">&nbsp;</span>은/는 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="필터 버블" onclick="reveal(this)">&nbsp;</span>은/는 알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="확증 편향" onclick="reveal(this)">&nbsp;</span>은/는 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="미디어 리터러시" onclick="reveal(this)">&nbsp;</span>은/는 미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="비판적 활용" onclick="reveal(this)">&nbsp;</span>은/는 정보의 출처와 근거를 따져 보고 다양한 관점과 비교하며 미디어를 사용하는 태도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
-    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 2-4. 미디어와 시민의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
-    
+    <p>현대 시민은 정치 정보를 대부분 <span class="hidden-box" data-text="미디어" onclick="reveal(this)">&nbsp;</span>를 통해 접한다. 신문과 텔레비전 같은 <span class="hidden-box" data-text="전통적 미디어" onclick="reveal(this)">&nbsp;</span>는 넓은 전달력을 갖고, <span class="hidden-box" data-text="소셜 미디어" onclick="reveal(this)">&nbsp;</span>는 시민이 직접 말하고 공유하는 참여 공간을 만든다.</p><p>그래서 미디어는 <span class="hidden-box" data-text="정치 참여" onclick="reveal(this)">&nbsp;</span>와 <span class="hidden-box" data-text="여론 형성" onclick="reveal(this)">&nbsp;</span>에 큰 영향을 준다. 하지만 정보가 빠르게 퍼진다고 해서 항상 정확한 것은 아니다.</p><p>정치적 목적을 위해 왜곡된 정보가 뉴스처럼 퍼지면 <span class="hidden-box" data-text="가짜뉴스" onclick="reveal(this)">&nbsp;</span>가 되고, 이는 <span class="hidden-box" data-text="정치적 양극화" onclick="reveal(this)">&nbsp;</span>를 심화시킬 수 있다.</p><p>알고리즘이 좋아할 만한 정보만 계속 보여 주는 <span class="hidden-box" data-text="필터 버블" onclick="reveal(this)">&nbsp;</span>과, 자기 생각에 맞는 정보만 믿는 <span class="hidden-box" data-text="확증 편향" onclick="reveal(this)">&nbsp;</span>도 시민 판단을 좁게 만든다.</p><p>따라서 시민에게는 정보를 읽고 따지고 활용하는 <span class="hidden-box" data-text="미디어 리터러시" onclick="reveal(this)">&nbsp;</span>가 필요하다. 민주 시민의 <span class="hidden-box" data-text="비판적 활용" onclick="reveal(this)">&nbsp;</span>은 무조건 믿지도, 무조건 불신하지도 않고 근거를 확인하는 태도이다.</p>
   </div>
 </section>
 
@@ -232,153 +98,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
+  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
   
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 형성</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>비판적 활용</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>미디어 리터러시</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정치 참여</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미디어</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 미디어' data-explanation='정답은 미디어이다. 미디어은/는 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>전통적 미디어</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>필터 버블</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소셜 미디어</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 형성</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>확증 편향</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 전통적 미디어' data-explanation='정답은 전통적 미디어이다. 전통적 미디어은/는 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비판적 활용</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>여론 형성</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>전통적 미디어</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>가짜뉴스</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>소셜 미디어</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 소셜 미디어' data-explanation='정답은 소셜 미디어이다. 소셜 미디어은/는 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>소셜 미디어</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>확증 편향</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정치 참여</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>필터 버블</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정치적 양극화</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 정치 참여' data-explanation='정답은 정치 참여이다. 정치 참여은/는 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>필터 버블</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정치 참여</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소셜 미디어</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 형성</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정치적 양극화</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 여론 형성' data-explanation='정답은 여론 형성이다. 여론 형성은/는 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “사실이 아니거나 왜곡된 정보를 뉴스 형식으로 유통하는 정보이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>필터 버블</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>여론 형성</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>가짜뉴스</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>미디어</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>전통적 미디어</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 가짜뉴스' data-explanation='정답은 가짜뉴스이다. 가짜뉴스은/는 사실이 아니거나 왜곡된 정보를 뉴스 형식으로 유통하는 정보이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정치적 양극화</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>소셜 미디어</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>비판적 활용</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정치 참여</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>전통적 미디어</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 정치적 양극화' data-explanation='정답은 정치적 양극화이다. 정치적 양극화은/는 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정치 참여</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>필터 버블</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여론 형성</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>전통적 미디어</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>소셜 미디어</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 필터 버블' data-explanation='정답은 필터 버블이다. 필터 버블은/는 알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>가짜뉴스</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>확증 편향</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>미디어 리터러시</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>필터 버블</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>전통적 미디어</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 확증 편향' data-explanation='정답은 확증 편향이다. 확증 편향은/는 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비판적 활용</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>미디어 리터러시</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>가짜뉴스</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>소셜 미디어</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>여론 형성</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 미디어 리터러시' data-explanation='정답은 미디어 리터러시이다. 미디어 리터러시은/는 미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 2-4. 미디어와 시민 단원의 핵심어 “미디어”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>미디어은/는 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>미디어은/는 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>미디어은/는 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>미디어은/는 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미디어은/는 알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 미디어은/는 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.' data-explanation='미디어의 정확한 뜻은 “메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.”이다. 오답은 다른 핵심어의 설명을 미디어에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 2-4. 미디어와 시민 단원의 핵심어 “소셜 미디어”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>소셜 미디어은/는 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>소셜 미디어은/는 정보의 출처와 근거를 따져 보고 다양한 관점과 비교하며 미디어를 사용하는 태도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소셜 미디어은/는 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>소셜 미디어은/는 미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>소셜 미디어은/는 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 소셜 미디어은/는 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.' data-explanation='소셜 미디어의 정확한 뜻은 “이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.”이다. 오답은 다른 핵심어의 설명을 소셜 미디어에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 2-4. 미디어와 시민 단원의 핵심어 “여론 형성”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 형성은/는 정보의 출처와 근거를 따져 보고 다양한 관점과 비교하며 미디어를 사용하는 태도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>여론 형성은/는 미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여론 형성은/는 사실이 아니거나 왜곡된 정보를 뉴스 형식으로 유통하는 정보이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 형성은/는 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>여론 형성은/는 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 여론 형성은/는 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.' data-explanation='여론 형성의 정확한 뜻은 “사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.”이다. 오답은 다른 핵심어의 설명을 여론 형성에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 2-4. 미디어와 시민 단원의 핵심어 “정치적 양극화”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정치적 양극화은/는 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정치적 양극화은/는 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정치적 양극화은/는 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정치적 양극화은/는 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정치적 양극화은/는 미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 정치적 양극화은/는 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.' data-explanation='정치적 양극화의 정확한 뜻은 “정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.”이다. 오답은 다른 핵심어의 설명을 정치적 양극화에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 2-4. 미디어와 시민 단원의 핵심어 “확증 편향”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>확증 편향은/는 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>확증 편향은/는 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>확증 편향은/는 알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>확증 편향은/는 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>확증 편향은/는 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 확증 편향은/는 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.' data-explanation='확증 편향의 정확한 뜻은 “자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.”이다. 오답은 다른 핵심어의 설명을 확증 편향에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>전통적 미디어 - 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>소셜 미디어 - 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정치 참여 - 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 형성 - 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미디어 - 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 전통적 미디어 - 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.' data-explanation='옳지 않은 연결은 전통적 미디어이다. 전통적 미디어은/는 “신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>전통적 미디어 - 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>소셜 미디어 - 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>비판적 활용 - 정보의 출처와 근거를 따져 보고 다양한 관점과 비교하며 미디어를 사용하는 태도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정치적 양극화 - 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>여론 형성 - 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 여론 형성 - 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.' data-explanation='옳지 않은 연결은 여론 형성이다. 여론 형성은/는 “사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>확증 편향 - 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정치 참여 - 시민이 정치과정에 의견을 내고 정책 결정에 영향을 미치는 활동이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소셜 미디어 - 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 형성 - 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>전통적 미디어 - 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 여론 형성 - 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.' data-explanation='옳지 않은 연결은 여론 형성이다. 여론 형성은/는 “사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 형성 - 사회 구성원의 의견이 모이고 확산되어 공적인 분위기나 판단으로 만들어지는 과정이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>확증 편향 - 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>미디어 - 메시지와 정보를 전달하는 통로이며 정치 정보를 교환하고 의견을 표현하는 장이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>전통적 미디어 - 신문, 텔레비전, 라디오처럼 주로 일방향으로 정보를 전달하는 매체이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>필터 버블 - 알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 세계가 좁아지는 현상이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 확증 편향 - 정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.' data-explanation='옳지 않은 연결은 확증 편향이다. 확증 편향은/는 “자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>소셜 미디어 - 이용자가 정보를 생산·공유·확산할 수 있는 온라인 기반의 상호작용 매체이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>확증 편향 - 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정치적 양극화 - 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>비판적 활용 - 정보의 출처와 근거를 따져 보고 다양한 관점과 비교하며 미디어를 사용하는 태도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>미디어 리터러시 - 미디어 정보를 접근, 분석, 평가, 활용, 생산할 수 있는 능력이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 정치적 양극화 - 자신의 기존 생각에 맞는 정보만 믿고 반대 정보는 무시하는 경향이다.' data-explanation='옳지 않은 연결은 정치적 양극화이다. 정치적 양극화은/는 “정치적 입장이 극단으로 갈라지고 상대 진영을 적대적으로 보는 현상이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
+<div class='quiz-card'><p><b>1.</b> 미디어가 정치 참여에 미치는 긍정적 역할을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정치 정보를 전달하고 시민이 의견을 표현하며 여론을 형성하는 장을 제공한다.</div></div>
+<div class='quiz-card'><p><b>2.</b> 전통적 미디어와 소셜 미디어의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>전통적 미디어는 주로 일방향 전달, 소셜 미디어는 이용자의 생산과 상호작용이 특징이다.</div></div>
+<div class='quiz-card'><p><b>3.</b> 언론의 자유가 정치 참여에 중요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>권력 감시와 다양한 의견 표현, 시민의 정보 접근이 가능해야 민주적 판단이 가능하기 때문이다.</div></div>
+<div class='quiz-card'><p><b>4.</b> 가짜뉴스의 문제점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>시민에게 잘못된 정보를 주어 대표자 선택과 정책 판단을 왜곡하고 양극화를 심화한다.</div></div>
+<div class='quiz-card'><p><b>5.</b> 필터 버블의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>알고리즘이 개인 취향에 맞는 정보만 보여 주어 정보 접근 범위가 좁아지는 현상이다.</div></div>
+<div class='quiz-card'><p><b>6.</b> 확증 편향의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>자신의 기존 생각에 맞는 정보만 받아들이고 반대 정보는 무시하는 경향이다.</div></div>
+<div class='quiz-card'><p><b>7.</b> 정치적 양극화가 민주주의에 위험한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>상대 의견을 적으로 여기게 되어 대화와 타협이 어려워지기 때문이다.</div></div>
+<div class='quiz-card'><p><b>8.</b> 미디어 리터러시의 구성 요소를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정보 접근, 분석, 평가, 활용, 생산 능력이다.</div></div>
+<div class='quiz-card'><p><b>9.</b> 뉴스를 비판적으로 확인하는 방법 두 가지를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>출처 확인, 근거와 통계 확인, 다른 매체와 비교, 제목과 본문 비교 등.</div></div>
+<div class='quiz-card'><p><b>10.</b> 미디어를 무조건 불신하는 태도와 비판적 활용의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>비판적 활용은 근거를 확인하고 다양한 관점을 비교해 판단하는 태도이다.</div></div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
-
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
 </script>
 </body>
 </html>

@@ -5,44 +5,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>민주주의의 이념과 모델 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 민주주의의 이념과 모델 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
-<script src='https://cdn.tailwindcss.com'>
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -72,18 +36,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
-
-.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
-.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
-.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
-.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
-.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
-.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
-.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
-.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
-.mcq-result.show{display:block}
-.deep-summary-note b{color:#3730a3}
-
 </style>
 </head>
 <body>
@@ -101,150 +53,46 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">민주주의</span><span class="keyword">인간의 존엄성</span><span class="keyword">자유</span><span class="keyword">평등</span><span class="keyword">형식적 평등</span><span class="keyword">실질적 평등</span><span class="keyword">국민 주권</span><span class="keyword">국민 자치</span><span class="keyword">입헌주의</span><span class="keyword">권력 분립</span><span class="keyword">대의 민주주의</span><span class="keyword">참여 민주주의</span><span class="keyword">숙의 민주주의</span><span class="keyword">전자 민주주의</span></div>
 </section>
 
-<section class="card mt-8 p-6 md:p-8" id="summary">
-<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
-<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
-<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
-<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>민주주의는 국민의 뜻에 따라 국가 의사를 결정해야 한다는 생각에서 출발한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>그 이념은 인간의 존엄성을 중심으로 자유와 평등을 실현하는 방향으로 정리된다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>이념을 실제 제도로 만들기 위해 국민 주권, 국민 자치, 입헌주의, 권력 분립의 원리가 필요하다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>현대 사회에서는 대의 민주주의가 기본이지만 대표성의 위기를 보완하려고 참여·숙의·전자 민주주의가 발전했다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>여러 민주주의 모델은 서로 대체 관계라기보다 민주주의를 더 넓고 깊게 만들기 위한 보완 관계이다.</span></li></ol>
-</div>
-<div class="grid lg:grid-cols-2 gap-4 mb-6">
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">민주주의의 뜻과 이념</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>민주주의는 국민이 주권자이며 국가 의사는 국민의 뜻에 근거해야 한다는 이념이다.</li><li>인간의 존엄성은 모든 사람이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 출발점이다.</li><li>자유는 외부 간섭 없이 스스로 결정하고 행동할 수 있는 상태이며, 타인의 자유를 침해하지 않을 책임과 함께 이해해야 한다.</li><li>평등은 법 앞에서 동등하게 대우받는다는 뜻이며, 단순히 똑같이 대우하는 문제를 넘어 실제 불평등을 어떻게 줄일지도 포함한다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">자유와 평등의 세부 이해</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>소극적 자유는 국가 권력의 억압과 간섭으로부터 벗어나는 자유이며, 언론·출판·집회의 자유처럼 자유권과 연결된다.</li><li>적극적 자유는 스스로 원하는 삶과 공동체의 의사 결정에 참여할 수 있는 능력과 조건을 의미하며, 참정권과 사회권으로 구체화된다.</li><li>형식적 평등은 개인 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</li><li>실질적 평등은 출발선과 조건의 차이를 고려하여 약자에게 필요한 지원을 제공함으로써 결과의 불평등을 완화하려는 평등이다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">민주주의의 기본 원리</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>국민 주권은 국가의 최고 권력인 주권이 국민에게 있다는 원리이다.</li><li>국민 자치는 주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.</li><li>입헌주의는 권력자가 마음대로 통치하지 못하도록 헌법에 따라 권력을 행사하게 하는 원리이다.</li><li>권력 분립은 입법·행정·사법 권력을 나누어 서로 견제하게 함으로써 권력 남용을 막는 원리이다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">다양한 민주주의 모델</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>대의 민주주의는 국민이 선거로 대표자를 뽑아 의사 결정을 맡기는 제도이며, 현대 민주 국가의 기본 운영 방식이다.</li><li>참여 민주주의는 시민이 선거뿐 아니라 집회, 청원, 캠페인, 시민단체 활동 등 다양한 방식으로 정치과정에 참여하는 모델이다.</li><li>숙의 민주주의는 단순히 찬반 수를 세는 것을 넘어, 충분한 정보와 토론을 통해 시민의 선호가 바뀔 수 있음을 중시한다.</li><li>전자 민주주의는 정보 통신 기술을 활용해 시민이 시간과 공간의 제약을 넘어 정치적 의견을 표현하고 의사 결정에 참여하게 하는 모델이다.</li></ul>
-</article></div>
-<div class="overflow-x-auto mt-5">
-<h3 class="text-xl font-black text-slate-900 mb-3">민주주의 모델 비교</h3>
-<table class="w-full border-collapse text-sm md:text-base"><thead><tr><th class="border border-slate-200 bg-slate-100 p-3 text-left">모델</th><th class="border border-slate-200 bg-slate-100 p-3 text-left">핵심 방식</th><th class="border border-slate-200 bg-slate-100 p-3 text-left">장점</th><th class="border border-slate-200 bg-slate-100 p-3 text-left">주의할 점</th></tr></thead><tbody><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">대의 민주주의</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">대표자를 선출하여 의사 결정을 위임한다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">큰 규모의 사회에서 효율적인 정치 운영이 가능하다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">대표자가 국민 의사를 충분히 반영하지 못하면 대표성의 위기가 생긴다.</td></tr><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">참여 민주주의</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">시민이 정책 과정에 직접 목소리를 낸다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">시민의 주체성과 정책 정당성을 높인다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">참여 격차가 커지면 적극적 집단의 의견만 과대 대표될 수 있다.</td></tr><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">숙의 민주주의</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">정보 제공과 토론을 통해 합의에 접근한다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">갈등 사안에서 신중하고 수용 가능한 결정을 만들 수 있다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">충분한 시간과 절차 설계가 필요하다.</td></tr><tr><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">전자 민주주의</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">온라인 기술로 참여 기회를 넓힌다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">시공간 제약을 줄이고 빠른 의견 수렴이 가능하다.</td><td class="border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700">정보 격차, 여론 조작, 익명성 문제가 생길 수 있다.</td></tr></tbody></table>
-</div>
-<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>민주주의의 이념은 인간의 존엄성, 자유, 평등으로 묶어 쓴다.</li><li>소극적 자유와 적극적 자유, 형식적 평등과 실질적 평등은 비교형 문제로 자주 나온다.</li><li>국민 주권·국민 자치·입헌주의·권력 분립은 각각 무엇을 막거나 실현하는 원리인지 연결해야 한다.</li><li>참여·숙의·전자 민주주의는 대의 민주주의를 폐지하는 것이 아니라 보완하는 모델이다.</li></ul>
-</div>
-
-    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
-      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
-      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>1-2. 민주주의의 이념과 모델</b>의 핵심 질문인 “민주주의의 이념은 어떤 모델들로 구현될 수 있을까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
-      <div class='grid md:grid-cols-2 gap-3 mt-4'>
-    
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>민주주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.</p>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>민주주의는 국민의 뜻에 따라 국가 의사를 결정해야 한다는 생각에서 출발한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>그 이념은 인간의 존엄성을 중심으로 자유와 평등을 실현하는 방향으로 정리된다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>이념을 실제 제도로 만들기 위해 국민 주권, 국민 자치, 입헌주의, 권력 분립의 원리가 필요하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>현대 사회에서는 대의 민주주의가 기본이지만 대표성의 위기를 보완하려고 참여·숙의·전자 민주주의가 발전했다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>여러 민주주의 모델은 서로 대체 관계라기보다 민주주의를 더 넓고 깊게 만들기 위한 보완 관계이다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>민주주의의 뜻과 이념</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>민주주의는 국민이 주권자이며 국가 의사는 국민의 뜻에 근거해야 한다는 이념이다.</li><li>인간의 존엄성은 모든 사람이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 출발점이다.</li><li>자유는 외부 간섭 없이 스스로 결정하고 행동할 수 있는 상태이며, 타인의 자유를 침해하지 않을 책임과 함께 이해해야 한다.</li><li>평등은 법 앞에서 동등하게 대우받는다는 뜻이며, 단순히 똑같이 대우하는 문제를 넘어 실제 불평등을 어떻게 줄일지도 포함한다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>자유와 평등의 세부 이해</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>소극적 자유는 국가 권력의 억압과 간섭으로부터 벗어나는 자유이며, 언론·출판·집회의 자유처럼 자유권과 연결된다.</li><li>적극적 자유는 스스로 원하는 삶과 공동체의 의사 결정에 참여할 수 있는 능력과 조건을 의미하며, 참정권과 사회권으로 구체화된다.</li><li>형식적 평등은 개인 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</li><li>실질적 평등은 출발선과 조건의 차이를 고려하여 약자에게 필요한 지원을 제공함으로써 결과의 불평등을 완화하려는 평등이다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>민주주의의 기본 원리</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>국민 주권은 국가의 최고 권력인 주권이 국민에게 있다는 원리이다.</li><li>국민 자치는 주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.</li><li>입헌주의는 권력자가 마음대로 통치하지 못하도록 헌법에 따라 권력을 행사하게 하는 원리이다.</li><li>권력 분립은 입법·행정·사법 권력을 나누어 서로 견제하게 함으로써 권력 남용을 막는 원리이다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>다양한 민주주의 모델</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>대의 민주주의는 국민이 선거로 대표자를 뽑아 의사 결정을 맡기는 제도이며, 현대 민주 국가의 기본 운영 방식이다.</li><li>참여 민주주의는 시민이 선거뿐 아니라 집회, 청원, 캠페인, 시민단체 활동 등 다양한 방식으로 정치과정에 참여하는 모델이다.</li><li>숙의 민주주의는 단순히 찬반 수를 세는 것을 넘어, 충분한 정보와 토론을 통해 시민의 선호가 바뀔 수 있음을 중시한다.</li><li>전자 민주주의는 정보 통신 기술을 활용해 시민이 시간과 공간의 제약을 넘어 정치적 의견을 표현하고 의사 결정에 참여하게 하는 모델이다.</li></ul>
+        </article></div>
+  
+        <div class='overflow-x-auto mt-5'>
+          <h3 class='text-xl font-black text-slate-900 mb-3'>민주주의 모델 비교</h3>
+          <table class='w-full border-collapse text-sm md:text-base'><thead><tr><th class='border border-slate-200 bg-slate-100 p-3 text-left'>모델</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>핵심 방식</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>장점</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>주의할 점</th></tr></thead><tbody><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>대의 민주주의</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>대표자를 선출하여 의사 결정을 위임한다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>큰 규모의 사회에서 효율적인 정치 운영이 가능하다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>대표자가 국민 의사를 충분히 반영하지 못하면 대표성의 위기가 생긴다.</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>참여 민주주의</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>시민이 정책 과정에 직접 목소리를 낸다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>시민의 주체성과 정책 정당성을 높인다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>참여 격차가 커지면 적극적 집단의 의견만 과대 대표될 수 있다.</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>숙의 민주주의</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>정보 제공과 토론을 통해 합의에 접근한다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>갈등 사안에서 신중하고 수용 가능한 결정을 만들 수 있다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>충분한 시간과 절차 설계가 필요하다.</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>전자 민주주의</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>온라인 기술로 참여 기회를 넓힌다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>시공간 제약을 줄이고 빠른 의견 수렴이 가능하다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>정보 격차, 여론 조작, 익명성 문제가 생길 수 있다.</td></tr></tbody></table>
         </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>인간의 존엄성</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>모든 인간이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 핵심 가치이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>자유</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>평등</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>형식적 평등</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>실질적 평등</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국민 주권</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가의 최고 권력인 주권이 국민에게 있다는 원리이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국민 자치</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>입헌주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>권력 분립</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>대의 민주주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 12</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>참여 민주주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 13</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>숙의 민주주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 14</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>전자 민주주의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>정보 통신 기술을 활용해 시민의 정치 참여를 확대하는 민주주의 모델이다.</p>
-        </div>
-        </div></div>
-        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 민주주의는 국민의 뜻에 따라 국가 의사를 결정해야 한다는 생각에서 출발한다.</li><li><b>2단계</b> — 2 그 이념은 인간의 존엄성을 중심으로 자유와 평등을 실현하는 방향으로 정리된다.</li><li><b>3단계</b> — 3 이념을 실제 제도로 만들기 위해 국민 주권, 국민 자치, 입헌주의, 권력 분립의 원리가 필요하다.</li><li><b>4단계</b> — 4 현대 사회에서는 대의 민주주의가 기본이지만 대표성의 위기를 보완하려고 참여·숙의·전자 민주주의가 발전했다.</li><li><b>5단계</b> — 5 여러 민주주의 모델은 서로 대체 관계라기보다 민주주의를 더 넓고 깊게 만들기 위한 보완 관계이다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
-        </div>
-        
-        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>민주주의의 이념은 인간의 존엄성, 자유, 평등으로 묶어 쓴다.</li><li>소극적 자유와 적극적 자유, 형식적 평등과 실질적 평등은 비교형 문제로 자주 나온다.</li><li>국민 주권·국민 자치·입헌주의·권력 분립은 각각 무엇을 막거나 실현하는 원리인지 연결해야 한다.</li><li>참여·숙의·전자 민주주의는 대의 민주주의를 폐지하는 것이 아니라 보완하는 모델이다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
-        </div>
-        </section>
+  
+    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
+      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
+      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>민주주의의 이념은 인간의 존엄성, 자유, 평등으로 묶어 쓴다.</li><li>소극적 자유와 적극적 자유, 형식적 평등과 실질적 평등은 비교형 문제로 자주 나온다.</li><li>국민 주권·국민 자치·입헌주의·권력 분립은 각각 무엇을 막거나 실현하는 원리인지 연결해야 한다.</li><li>참여·숙의·전자 민주주의는 대의 민주주의를 폐지하는 것이 아니라 보완하는 모델이다.</li></ul>
+    </div>
+</section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    
-    <p>1-2. 민주주의의 이념과 모델 단원은 “민주주의의 이념은 어떤 모델들로 구현될 수 있을까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
-    <p>1번째 흐름은 1 민주주의는 국민의 뜻에 따라 국가 의사를 결정해야 한다는 생각에서 출발한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 그 이념은 인간의 존엄성을 중심으로 자유와 평등을 실현하는 방향으로 정리된다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 이념을 실제 제도로 만들기 위해 국민 주권, 국민 자치, 입헌주의, 권력 분립의 원리가 필요하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 현대 사회에서는 대의 민주주의가 기본이지만 대표성의 위기를 보완하려고 참여·숙의·전자 민주주의가 발전했다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 여러 민주주의 모델은 서로 대체 관계라기보다 민주주의를 더 넓고 깊게 만들기 위한 보완 관계이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="민주주의" onclick="reveal(this)">&nbsp;</span>은/는 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="인간의 존엄성" onclick="reveal(this)">&nbsp;</span>은/는 모든 인간이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 핵심 가치이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="자유" onclick="reveal(this)">&nbsp;</span>은/는 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="평등" onclick="reveal(this)">&nbsp;</span>은/는 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="형식적 평등" onclick="reveal(this)">&nbsp;</span>은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="실질적 평등" onclick="reveal(this)">&nbsp;</span>은/는 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="국민 주권" onclick="reveal(this)">&nbsp;</span>은/는 국가의 최고 권력인 주권이 국민에게 있다는 원리이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="국민 자치" onclick="reveal(this)">&nbsp;</span>은/는 주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="입헌주의" onclick="reveal(this)">&nbsp;</span>은/는 국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="권력 분립" onclick="reveal(this)">&nbsp;</span>은/는 국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="대의 민주주의" onclick="reveal(this)">&nbsp;</span>은/는 국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="참여 민주주의" onclick="reveal(this)">&nbsp;</span>은/는 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="숙의 민주주의" onclick="reveal(this)">&nbsp;</span>은/는 시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="전자 민주주의" onclick="reveal(this)">&nbsp;</span>은/는 정보 통신 기술을 활용해 시민의 정치 참여를 확대하는 민주주의 모델이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
-    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 1-2. 민주주의의 이념과 모델의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
-    
+    <p>민주주의를 단순히 선거 제도라고만 이해하면 부족하다. 국가의 결정이 국민의 뜻에 근거해야 한다는 생각이 <span class="hidden-box" data-text="민주주의" onclick="reveal(this)">&nbsp;</span>의 출발점이고, 그 바탕에는 모든 사람이 존중받아야 한다는 <span class="hidden-box" data-text="인간의 존엄성" onclick="reveal(this)">&nbsp;</span>이 놓여 있다.</p><p>존엄한 인간은 스스로 판단하고 행동할 <span class="hidden-box" data-text="자유" onclick="reveal(this)">&nbsp;</span>를 가져야 하며, 법과 제도 앞에서 부당한 차별을 받지 않는 <span class="hidden-box" data-text="평등" onclick="reveal(this)">&nbsp;</span>을 누려야 한다. 다만 모두에게 똑같은 기회를 주는 <span class="hidden-box" data-text="형식적 평등" onclick="reveal(this)">&nbsp;</span>만으로 실제 격차가 해결되지 않을 때에는 조건의 차이를 고려하는 <span class="hidden-box" data-text="실질적 평등" onclick="reveal(this)">&nbsp;</span>이 필요하다.</p><p>민주주의 이념을 현실에서 지키려면 제도적 원리가 필요하다. 주권이 국민에게 있다는 <span class="hidden-box" data-text="국민 주권" onclick="reveal(this)">&nbsp;</span>, 국민이 스스로 통치의 주체가 된다는 <span class="hidden-box" data-text="국민 자치" onclick="reveal(this)">&nbsp;</span>, 권력이 헌법 아래 놓여야 한다는 <span class="hidden-box" data-text="입헌주의" onclick="reveal(this)">&nbsp;</span>, 권력을 나누어 서로 견제하게 하는 <span class="hidden-box" data-text="권력 분립" onclick="reveal(this)">&nbsp;</span>이 그 핵심이다.</p><p>현대 국가는 규모가 크기 때문에 대부분 <span class="hidden-box" data-text="대의 민주주의" onclick="reveal(this)">&nbsp;</span>를 기본으로 운영된다. 그러나 대표자가 국민의 뜻을 제대로 반영하지 못할 수 있으므로 시민의 직접 참여를 넓히는 <span class="hidden-box" data-text="참여 민주주의" onclick="reveal(this)">&nbsp;</span>, 토론을 통해 더 신중한 결정을 만들려는 <span class="hidden-box" data-text="숙의 민주주의" onclick="reveal(this)">&nbsp;</span>, 온라인 기술로 참여 통로를 확장하는 <span class="hidden-box" data-text="전자 민주주의" onclick="reveal(this)">&nbsp;</span>가 함께 발전했다.</p>
   </div>
 </section>
 
@@ -254,153 +102,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
+  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
   
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>민주주의</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국민 주권</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>실질적 평등</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국민 자치</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>숙의 민주주의</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 민주주의' data-explanation='정답은 민주주의이다. 민주주의은/는 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “모든 인간이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 핵심 가치이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>대의 민주주의</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>평등</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>인간의 존엄성</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국민 자치</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>실질적 평등</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 인간의 존엄성' data-explanation='정답은 인간의 존엄성이다. 인간의 존엄성은/는 모든 인간이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 핵심 가치이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>민주주의</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>자유</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>인간의 존엄성</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>실질적 평등</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 자유' data-explanation='정답은 자유이다. 자유은/는 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>숙의 민주주의</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국민 주권</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>권력 분립</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민주주의</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 평등' data-explanation='정답은 평등이다. 평등은/는 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>형식적 평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>자유</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국민 주권</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>평등</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>인간의 존엄성</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 형식적 평등' data-explanation='정답은 형식적 평등이다. 형식적 평등은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국민 주권</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>인간의 존엄성</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>실질적 평등</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국민 자치</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>평등</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 실질적 평등' data-explanation='정답은 실질적 평등이다. 실질적 평등은/는 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국가의 최고 권력인 주권이 국민에게 있다는 원리이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>전자 민주주의</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>형식적 평등</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국민 자치</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>인간의 존엄성</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국민 주권</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 국민 주권' data-explanation='정답은 국민 주권이다. 국민 주권은/는 국가의 최고 권력인 주권이 국민에게 있다는 원리이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>자유</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>숙의 민주주의</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국민 자치</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>평등</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>권력 분립</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국민 자치' data-explanation='정답은 국민 자치이다. 국민 자치은/는 주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>전자 민주주의</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>숙의 민주주의</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>참여 민주주의</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>입헌주의</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민주주의</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 입헌주의' data-explanation='정답은 입헌주의이다. 입헌주의은/는 국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>실질적 평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>숙의 민주주의</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>평등</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>권력 분립</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민주주의</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 권력 분립' data-explanation='정답은 권력 분립이다. 권력 분립은/는 국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 1-2. 민주주의의 이념과 모델 단원의 핵심어 “민주주의”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>민주주의은/는 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>민주주의은/는 국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>민주주의은/는 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>민주주의은/는 시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민주주의은/는 국가의 최고 권력인 주권이 국민에게 있다는 원리이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 민주주의은/는 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.' data-explanation='민주주의의 정확한 뜻은 “국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.”이다. 오답은 다른 핵심어의 설명을 민주주의에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 1-2. 민주주의의 이념과 모델 단원의 핵심어 “자유”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>자유은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>자유은/는 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>자유은/는 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>자유은/는 시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>자유은/는 국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 자유은/는 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.' data-explanation='자유의 정확한 뜻은 “외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.”이다. 오답은 다른 핵심어의 설명을 자유에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 1-2. 민주주의의 이념과 모델 단원의 핵심어 “형식적 평등”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>형식적 평등은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>형식적 평등은/는 정보 통신 기술을 활용해 시민의 정치 참여를 확대하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>형식적 평등은/는 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>형식적 평등은/는 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>형식적 평등은/는 주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 형식적 평등은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.' data-explanation='형식적 평등의 정확한 뜻은 “개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.”이다. 오답은 다른 핵심어의 설명을 형식적 평등에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 1-2. 민주주의의 이념과 모델 단원의 핵심어 “국민 주권”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국민 주권은/는 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국민 주권은/는 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국민 주권은/는 국가의 최고 권력인 주권이 국민에게 있다는 원리이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국민 주권은/는 국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국민 주권은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국민 주권은/는 국가의 최고 권력인 주권이 국민에게 있다는 원리이다.' data-explanation='국민 주권의 정확한 뜻은 “국가의 최고 권력인 주권이 국민에게 있다는 원리이다.”이다. 오답은 다른 핵심어의 설명을 국민 주권에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 1-2. 민주주의의 이념과 모델 단원의 핵심어 “입헌주의”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>입헌주의은/는 국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>입헌주의은/는 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>입헌주의은/는 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>입헌주의은/는 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>입헌주의은/는 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 입헌주의은/는 국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.' data-explanation='입헌주의의 정확한 뜻은 “국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.”이다. 오답은 다른 핵심어의 설명을 입헌주의에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>숙의 민주주의 - 시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>실질적 평등 - 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>전자 민주주의 - 정보 통신 기술을 활용해 시민의 정치 참여를 확대하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>형식적 평등 - 국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>참여 민주주의 - 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 형식적 평등 - 국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다.' data-explanation='옳지 않은 연결은 형식적 평등이다. 형식적 평등은/는 “개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국민 주권 - 국가의 최고 권력인 주권이 국민에게 있다는 원리이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국민 자치 - 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대의 민주주의 - 국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>입헌주의 - 국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>민주주의 - 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 국민 자치 - 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.' data-explanation='옳지 않은 연결은 국민 자치이다. 국민 자치은/는 “주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>민주주의 - 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>권력 분립 - 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>숙의 민주주의 - 시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>입헌주의 - 국가 권력이 헌법에 근거하여 행사되어야 한다는 원리이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>형식적 평등 - 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 권력 분립 - 개인의 조건과 차이를 고려하여 필요한 지원을 제공하는 상대적·비례적 평등이다.' data-explanation='옳지 않은 연결은 권력 분립이다. 권력 분립은/는 “국가 권력을 여러 기관에 나누어 맡겨 견제와 균형을 이루게 하는 원리이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>인간의 존엄성 - 모든 인간이 인간이라는 이유만으로 존중받아야 한다는 민주주의의 핵심 가치이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>평등 - 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>민주주의 - 국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>참여 민주주의 - 시민이 선거 외에도 다양한 방식으로 정치과정에 직접 참여하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>자유 - 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 자유 - 성별, 신분, 종교, 재산 등과 관계없이 법 앞에서 동등하게 대우받는 원리이다.' data-explanation='옳지 않은 연결은 자유이다. 자유은/는 “외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국민 자치 - 주권자인 국민이 직접 또는 대표를 통해 스스로를 다스린다는 원리이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>형식적 평등 - 개인의 차이를 고려하지 않고 누구에게나 같은 기준을 적용하는 평등이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대의 민주주의 - 국민이 대표자를 선출하여 정치적 의사 결정을 위임하는 민주주의 모델이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>민주주의 - 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>숙의 민주주의 - 시민들이 토론과 숙고를 통해 선호를 조정하고 공동의 결론에 접근하는 민주주의 모델이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 민주주의 - 외부의 부당한 간섭 없이 스스로 결정하고 행동할 수 있는 상태이다.' data-explanation='옳지 않은 연결은 민주주의이다. 민주주의은/는 “국민이 주권자로서 국가 의사 결정의 근거가 되어야 한다는 이념이자 정치 체계이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
+<div class='quiz-card'><p><b>1.</b> 민주주의의 세 가지 핵심 이념을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>인간의 존엄성, 자유, 평등이다.</div></div>
+<div class='quiz-card'><p><b>2.</b> 소극적 자유와 적극적 자유의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>소극적 자유는 국가 권력의 간섭으로부터의 자유이고, 적극적 자유는 스스로 결정하고 참여하며 인간다운 삶을 실현할 자유이다.</div></div>
+<div class='quiz-card'><p><b>3.</b> 형식적 평등과 실질적 평등의 차이를 사례와 함께 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>형식적 평등은 모두에게 같은 기준을 적용하는 것이고, 실질적 평등은 조건 차이를 고려해 필요한 지원을 하는 것이다.</div></div>
+<div class='quiz-card'><p><b>4.</b> 국민 주권이 의미하는 바를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가의 최고 권력인 주권이 국민에게 있다는 뜻이다.</div></div>
+<div class='quiz-card'><p><b>5.</b> 입헌주의가 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>권력자의 자의적 통치를 막고 국민의 자유와 권리를 제도적으로 보장하기 위해서이다.</div></div>
+<div class='quiz-card'><p><b>6.</b> 권력 분립의 목적을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가 권력의 남용을 막기 위해 입법·행정·사법 권력이 서로 견제와 균형을 이루게 하는 것이다.</div></div>
+<div class='quiz-card'><p><b>7.</b> 대의 민주주의에서 대표성의 위기가 생기는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>대표 기관이 국민의 의사를 충분히 반영하지 못하거나 대표자에 대한 감시와 책임 추궁이 제한될 수 있기 때문이다.</div></div>
+<div class='quiz-card'><p><b>8.</b> 참여 민주주의의 정치 참여 방식 두 가지를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>예: 청원, 집회, 시위, 캠페인, 시민단체 활동, 기부, 조직 가입 등.</div></div>
+<div class='quiz-card'><p><b>9.</b> 숙의 민주주의가 여론 조사와 다른 점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>단순히 기존 선호를 모으는 것이 아니라 정보 제공과 토론을 통해 선호가 바뀌는 과정을 중시한다.</div></div>
+<div class='quiz-card'><p><b>10.</b> 전자 민주주의의 장점과 한계를 각각 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>장점은 참여 기회 확대이고, 한계는 정보 격차·여론 조작·허위 정보 문제 등이다.</div></div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
-
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
 </script>
 </body>
 </html>

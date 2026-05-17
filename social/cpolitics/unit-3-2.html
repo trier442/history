@@ -5,44 +5,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>민주 국가의 정부 형태 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 민주 국가의 정부 형태 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
-<script src='https://cdn.tailwindcss.com'>
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -72,18 +36,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
-
-.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
-.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
-.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
-.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
-.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
-.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
-.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
-.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
-.mcq-result.show{display:block}
-.deep-summary-note b{color:#3730a3}
-
 </style>
 </head>
 <body>
@@ -101,128 +53,42 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">정부 형태</span><span class="keyword">의원 내각제</span><span class="keyword">대통령제</span><span class="keyword">의회 해산권</span><span class="keyword">내각 불신임권</span><span class="keyword">국가 원수</span><span class="keyword">행정부 수반</span><span class="keyword">국무총리</span><span class="keyword">국무회의</span><span class="keyword">법률안 거부권</span><span class="keyword">여소야대</span></div>
 </section>
 
-<section class="card mt-8 p-6 md:p-8" id="summary">
-<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
-<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
-<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
-<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>정부 형태는 입법부와 행정부가 어떤 관계를 맺는가에 따라 구분된다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>의원 내각제는 의회 다수파가 내각을 구성하므로 권력 융합의 성격이 강하다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>대통령제는 국민이 대통령과 의회를 각각 선출하므로 권력 분립의 성격이 강하다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>우리나라는 대통령제를 기본으로 하면서 국무총리, 국무회의 등 의원 내각제적 요소를 일부 가진다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>정부 형태의 장단점은 안정성, 책임성, 견제와 균형, 갈등 해결 방식으로 비교해야 한다.</span></li></ol>
-</div>
-<div class="grid lg:grid-cols-2 gap-4 mb-6">
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">정부 형태의 구분 기준</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>정부 형태는 입법부와 행정부가 어떻게 구성되고 서로 어떤 관계를 맺는지에 따라 나뉜다.</li><li>현대 민주 국가의 대표적 형태는 의원 내각제와 대통령제이다.</li><li>사법부는 권력 분립의 중요한 축이지만 정부 형태 구분에서는 주로 입법부와 행정부 관계가 기준이 된다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">의원 내각제</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>의원 내각제에서는 국민이 의회를 구성하고, 의회 다수파가 수상과 내각을 구성한다.</li><li>행정부가 의회 신임에 의존하므로 의회와 내각의 협력이 쉽고 책임 정치가 비교적 분명하다.</li><li>다수파가 의회를 장악하면 견제가 약해질 수 있고, 정당이 난립하면 연립 정부로 인해 국정이 불안정해질 수 있다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">대통령제</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>대통령제에서는 국민이 대통령과 의회를 각각 선출한다.</li><li>대통령은 국가 원수와 행정부 수반의 지위를 함께 갖고 임기 동안 안정적으로 행정부를 운영한다.</li><li>입법부와 행정부가 서로 다른 정당에 의해 장악되면 분점 정부가 되어 갈등이 커질 수 있다.</li></ul>
-</article>
-<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-800 mb-3">우리나라 정부 형태</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>우리나라는 대통령을 국민이 직접 선출하고 대통령이 행정부 수반이므로 대통령제를 기본으로 한다.</li><li>국무총리 제도, 국무회의, 국회의 국무총리 임명 동의, 국회의원과 국무위원 겸직 가능성 등 의원 내각제적 요소도 존재한다.</li><li>대통령제의 안정성과 권력 집중 위험을 함께 이해해야 한다.</li></ul>
-</article></div>
-<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
-<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
-<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>의원 내각제는 권력 융합, 대통령제는 권력 분립으로 정리한다.</li><li>우리나라는 대통령제 기본 + 의원 내각제적 요소 일부가 핵심이다.</li><li>여소야대는 대통령제의 이원적 정통성 문제와 연결된다.</li></ul>
-</div>
-
-    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
-      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
-      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>3-2. 민주 국가의 정부 형태</b>의 핵심 질문인 “우리나라의 정부 형태는 어떤 특징을 가지고 있을까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
-      <div class='grid md:grid-cols-2 gap-3 mt-4'>
-    
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>정부 형태</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>의원 내각제</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>대통령제</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>의회 해산권</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>내각 불신임권</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국가 원수</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>행정부 수반</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>행정부를 이끌고 국정 운영을 책임지는 지위이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국무총리</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>대통령을 보좌하고 행정 각부를 통할하는 헌법상 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>국무회의</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>법률안 거부권</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.</p>
-        </div>
-        
-        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
-          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
-          <h4 class='mt-1 text-lg font-black text-slate-900'>여소야대</h4>
-          <p class='mt-2 leading-7 font-semibold text-slate-700'>대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.</p>
-        </div>
-        </div></div>
-        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 정부 형태는 입법부와 행정부가 어떤 관계를 맺는가에 따라 구분된다.</li><li><b>2단계</b> — 2 의원 내각제는 의회 다수파가 내각을 구성하므로 권력 융합의 성격이 강하다.</li><li><b>3단계</b> — 3 대통령제는 국민이 대통령과 의회를 각각 선출하므로 권력 분립의 성격이 강하다.</li><li><b>4단계</b> — 4 우리나라는 대통령제를 기본으로 하면서 국무총리, 국무회의 등 의원 내각제적 요소를 일부 가진다.</li><li><b>5단계</b> — 5 정부 형태의 장단점은 안정성, 책임성, 견제와 균형, 갈등 해결 방식으로 비교해야 한다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
-        </div>
-        
-        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
-          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>의원 내각제는 권력 융합, 대통령제는 권력 분립으로 정리한다.</li><li>우리나라는 대통령제 기본 + 의원 내각제적 요소 일부가 핵심이다.</li><li>여소야대는 대통령제의 이원적 정통성 문제와 연결된다.</li></ul>
-          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
-        </div>
-        </section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>정부 형태는 입법부와 행정부가 어떤 관계를 맺는가에 따라 구분된다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>의원 내각제는 의회 다수파가 내각을 구성하므로 권력 융합의 성격이 강하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>대통령제는 국민이 대통령과 의회를 각각 선출하므로 권력 분립의 성격이 강하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>우리나라는 대통령제를 기본으로 하면서 국무총리, 국무회의 등 의원 내각제적 요소를 일부 가진다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>정부 형태의 장단점은 안정성, 책임성, 견제와 균형, 갈등 해결 방식으로 비교해야 한다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>정부 형태의 구분 기준</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>정부 형태는 입법부와 행정부가 어떻게 구성되고 서로 어떤 관계를 맺는지에 따라 나뉜다.</li><li>현대 민주 국가의 대표적 형태는 의원 내각제와 대통령제이다.</li><li>사법부는 권력 분립의 중요한 축이지만 정부 형태 구분에서는 주로 입법부와 행정부 관계가 기준이 된다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>의원 내각제</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>의원 내각제에서는 국민이 의회를 구성하고, 의회 다수파가 수상과 내각을 구성한다.</li><li>행정부가 의회 신임에 의존하므로 의회와 내각의 협력이 쉽고 책임 정치가 비교적 분명하다.</li><li>다수파가 의회를 장악하면 견제가 약해질 수 있고, 정당이 난립하면 연립 정부로 인해 국정이 불안정해질 수 있다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>대통령제</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>대통령제에서는 국민이 대통령과 의회를 각각 선출한다.</li><li>대통령은 국가 원수와 행정부 수반의 지위를 함께 갖고 임기 동안 안정적으로 행정부를 운영한다.</li><li>입법부와 행정부가 서로 다른 정당에 의해 장악되면 분점 정부가 되어 갈등이 커질 수 있다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>우리나라 정부 형태</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>우리나라는 대통령을 국민이 직접 선출하고 대통령이 행정부 수반이므로 대통령제를 기본으로 한다.</li><li>국무총리 제도, 국무회의, 국회의 국무총리 임명 동의, 국회의원과 국무위원 겸직 가능성 등 의원 내각제적 요소도 존재한다.</li><li>대통령제의 안정성과 권력 집중 위험을 함께 이해해야 한다.</li></ul>
+        </article></div>
+  
+  
+    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
+      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
+      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>의원 내각제는 권력 융합, 대통령제는 권력 분립으로 정리한다.</li><li>우리나라는 대통령제 기본 + 의원 내각제적 요소 일부가 핵심이다.</li><li>여소야대는 대통령제의 이원적 정통성 문제와 연결된다.</li></ul>
+    </div>
+</section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    
-    <p>3-2. 민주 국가의 정부 형태 단원은 “우리나라의 정부 형태는 어떤 특징을 가지고 있을까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
-    <p>1번째 흐름은 1 정부 형태는 입법부와 행정부가 어떤 관계를 맺는가에 따라 구분된다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 의원 내각제는 의회 다수파가 내각을 구성하므로 권력 융합의 성격이 강하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 대통령제는 국민이 대통령과 의회를 각각 선출하므로 권력 분립의 성격이 강하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 우리나라는 대통령제를 기본으로 하면서 국무총리, 국무회의 등 의원 내각제적 요소를 일부 가진다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 정부 형태의 장단점은 안정성, 책임성, 견제와 균형, 갈등 해결 방식으로 비교해야 한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="정부 형태" onclick="reveal(this)">&nbsp;</span>은/는 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="의원 내각제" onclick="reveal(this)">&nbsp;</span>은/는 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="대통령제" onclick="reveal(this)">&nbsp;</span>은/는 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="의회 해산권" onclick="reveal(this)">&nbsp;</span>은/는 내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="내각 불신임권" onclick="reveal(this)">&nbsp;</span>은/는 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="국가 원수" onclick="reveal(this)">&nbsp;</span>은/는 대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="행정부 수반" onclick="reveal(this)">&nbsp;</span>은/는 행정부를 이끌고 국정 운영을 책임지는 지위이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="국무총리" onclick="reveal(this)">&nbsp;</span>은/는 대통령을 보좌하고 행정 각부를 통할하는 헌법상 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="국무회의" onclick="reveal(this)">&nbsp;</span>은/는 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="법률안 거부권" onclick="reveal(this)">&nbsp;</span>은/는 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="여소야대" onclick="reveal(this)">&nbsp;</span>은/는 대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
-    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 3-2. 민주 국가의 정부 형태의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
-    
+    <p>정부가 어떻게 구성되는지는 <span class="hidden-box" data-text="정부 형태" onclick="reveal(this)">&nbsp;</span>의 문제이다. 핵심은 입법부와 행정부가 융합되어 있는가, 아니면 분리되어 있는가이다.</p><p><span class="hidden-box" data-text="의원 내각제" onclick="reveal(this)">&nbsp;</span>에서는 의회 다수파가 내각을 만들고, 의회는 <span class="hidden-box" data-text="내각 불신임권" onclick="reveal(this)">&nbsp;</span>으로 내각을 책임지게 할 수 있다. 내각은 필요할 때 <span class="hidden-box" data-text="의회 해산권" onclick="reveal(this)">&nbsp;</span>으로 다시 국민의 판단을 물을 수 있다.</p><p><span class="hidden-box" data-text="대통령제" onclick="reveal(this)">&nbsp;</span>에서는 국민이 대통령과 의회를 따로 뽑는다. 대통령은 <span class="hidden-box" data-text="국가 원수" onclick="reveal(this)">&nbsp;</span>이면서 <span class="hidden-box" data-text="행정부 수반" onclick="reveal(this)">&nbsp;</span>이고, 국회에 대해 <span class="hidden-box" data-text="법률안 거부권" onclick="reveal(this)">&nbsp;</span>을 행사할 수 있다.</p><p>우리나라는 대통령제를 기본으로 하지만 <span class="hidden-box" data-text="국무총리" onclick="reveal(this)">&nbsp;</span>와 <span class="hidden-box" data-text="국무회의" onclick="reveal(this)">&nbsp;</span> 같은 장치를 두고 있다. 대통령의 정당이 국회 다수파가 아닐 때는 <span class="hidden-box" data-text="여소야대" onclick="reveal(this)">&nbsp;</span>가 되어 행정부와 입법부의 갈등이 커질 수 있다.</p>
   </div>
 </section>
 
@@ -232,153 +98,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
+  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
   
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정부 형태</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>법률안 거부권</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대통령제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>내각 불신임권</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>의원 내각제</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 정부 형태' data-explanation='정답은 정부 형태이다. 정부 형태은/는 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정부 형태</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국무총리</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>내각 불신임권</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여소야대</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>의원 내각제</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 의원 내각제' data-explanation='정답은 의원 내각제이다. 의원 내각제은/는 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>행정부 수반</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>의원 내각제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대통령제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여소야대</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국가 원수</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 대통령제' data-explanation='정답은 대통령제이다. 대통령제은/는 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>의회 해산권</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국가 원수</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여소야대</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>법률안 거부권</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대통령제</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 의회 해산권' data-explanation='정답은 의회 해산권이다. 의회 해산권은/는 내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국무총리</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>의원 내각제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>내각 불신임권</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여소야대</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국가 원수</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 내각 불신임권' data-explanation='정답은 내각 불신임권이다. 내각 불신임권은/는 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>대통령제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>내각 불신임권</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국가 원수</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>의회 해산권</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정부 수반</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국가 원수' data-explanation='정답은 국가 원수이다. 국가 원수은/는 대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “행정부를 이끌고 국정 운영을 책임지는 지위이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정부 형태</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>여소야대</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>행정부 수반</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>의회 해산권</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국가 원수</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 행정부 수반' data-explanation='정답은 행정부 수반이다. 행정부 수반은/는 행정부를 이끌고 국정 운영을 책임지는 지위이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “대통령을 보좌하고 행정 각부를 통할하는 헌법상 기관이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정부 형태</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국가 원수</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>내각 불신임권</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>대통령제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국무총리</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 국무총리' data-explanation='정답은 국무총리이다. 국무총리은/는 대통령을 보좌하고 행정 각부를 통할하는 헌법상 기관이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국무총리</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>의원 내각제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국가 원수</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국무회의</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>의회 해산권</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 국무회의' data-explanation='정답은 국무회의이다. 국무회의은/는 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.”</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>대통령제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>법률안 거부권</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여소야대</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국무회의</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정부 수반</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 법률안 거부권' data-explanation='정답은 법률안 거부권이다. 법률안 거부권은/는 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 3-2. 민주 국가의 정부 형태 단원의 핵심어 “정부 형태”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정부 형태은/는 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정부 형태은/는 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정부 형태은/는 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정부 형태은/는 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정부 형태은/는 대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 정부 형태은/는 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.' data-explanation='정부 형태의 정확한 뜻은 “입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.”이다. 오답은 다른 핵심어의 설명을 정부 형태에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 3-2. 민주 국가의 정부 형태 단원의 핵심어 “대통령제”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>대통령제은/는 대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령제은/는 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대통령제은/는 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>대통령제은/는 대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대통령제은/는 내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 대통령제은/는 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.' data-explanation='대통령제의 정확한 뜻은 “국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.”이다. 오답은 다른 핵심어의 설명을 대통령제에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 3-2. 민주 국가의 정부 형태 단원의 핵심어 “내각 불신임권”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>내각 불신임권은/는 행정부를 이끌고 국정 운영을 책임지는 지위이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>내각 불신임권은/는 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>내각 불신임권은/는 대통령을 보좌하고 행정 각부를 통할하는 헌법상 기관이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>내각 불신임권은/는 내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>내각 불신임권은/는 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 내각 불신임권은/는 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.' data-explanation='내각 불신임권의 정확한 뜻은 “의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.”이다. 오답은 다른 핵심어의 설명을 내각 불신임권에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 3-2. 민주 국가의 정부 형태 단원의 핵심어 “행정부 수반”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>행정부 수반은/는 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>행정부 수반은/는 내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>행정부 수반은/는 대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>행정부 수반은/는 행정부를 이끌고 국정 운영을 책임지는 지위이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>행정부 수반은/는 대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 행정부 수반은/는 행정부를 이끌고 국정 운영을 책임지는 지위이다.' data-explanation='행정부 수반의 정확한 뜻은 “행정부를 이끌고 국정 운영을 책임지는 지위이다.”이다. 오답은 다른 핵심어의 설명을 행정부 수반에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 3-2. 민주 국가의 정부 형태 단원의 핵심어 “국무회의”에 대한 설명으로 옳은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국무회의은/는 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국무회의은/는 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국무회의은/는 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국무회의은/는 행정부를 이끌고 국정 운영을 책임지는 지위이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국무회의은/는 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 국무회의은/는 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.' data-explanation='국무회의의 정확한 뜻은 “정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.”이다. 오답은 다른 핵심어의 설명을 국무회의에 잘못 붙인 것이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>의원 내각제 - 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>법률안 거부권 - 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>의회 해산권 - 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국가 원수 - 대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국무회의 - 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 의회 해산권 - 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.' data-explanation='옳지 않은 연결은 의회 해산권이다. 의회 해산권은/는 “내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>내각 불신임권 - 대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>의원 내각제 - 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국무회의 - 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>법률안 거부권 - 대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정부 형태 - 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 내각 불신임권 - 대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.' data-explanation='옳지 않은 연결은 내각 불신임권이다. 내각 불신임권은/는 “의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국무회의 - 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령제 - 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정부 형태 - 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>의원 내각제 - 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>의회 해산권 - 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 의회 해산권 - 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.' data-explanation='옳지 않은 연결은 의회 해산권이다. 의회 해산권은/는 “내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>내각 불신임권 - 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국무회의 - 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>의원 내각제 - 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>의회 해산권 - 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국가 원수 - 대외적으로 국가를 대표하고 국민 통합을 상징하는 지위이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 의회 해산권 - 의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존하는 정부 형태이다.' data-explanation='옳지 않은 연결은 의회 해산권이다. 의회 해산권은/는 “내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
-        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
-          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
-          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여소야대 - 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대통령제 - 국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조하는 정부 형태이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정부 형태 - 입법부와 행정부의 구성 방식과 관계에 따라 구분되는 국가 권력 구조이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>의회 해산권 - 내각이 정치적 갈등 해결을 위해 의회를 해산하고 총선을 요구할 수 있는 권한이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>내각 불신임권 - 의회가 내각에 대한 신임을 철회하여 사퇴를 요구할 수 있는 권한이다.</button></div>
-          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 여소야대 - 정부의 중요한 정책을 심의하는 최고 정책 심의 기관이다.' data-explanation='옳지 않은 연결은 여소야대이다. 여소야대은/는 “대통령 소속 정당이 의회에서 과반 의석을 확보하지 못한 상태이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
-        </div>
-        
+<div class='quiz-card'><p><b>1.</b> 정부 형태를 구분하는 기준을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>행정부의 구성 방식과 입법부·행정부의 관계이다.</div></div>
+<div class='quiz-card'><p><b>2.</b> 의원 내각제의 특징을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>의회 다수파가 내각을 구성하고 내각이 의회 신임에 의존한다.</div></div>
+<div class='quiz-card'><p><b>3.</b> 의원 내각제의 장점과 단점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>장점은 입법부와 행정부의 협력과 책임 정치, 단점은 다수당 횡포 또는 연립 정부 불안정이다.</div></div>
+<div class='quiz-card'><p><b>4.</b> 대통령제의 특징을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국민이 대통령과 의회를 각각 선출하고 권력 분립을 강조한다.</div></div>
+<div class='quiz-card'><p><b>5.</b> 대통령제의 장점과 단점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>장점은 임기 보장에 따른 안정성, 단점은 권력 집중과 분점 정부 갈등 가능성이다.</div></div>
+<div class='quiz-card'><p><b>6.</b> 의회 해산권과 내각 불신임권을 구분하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>의회 해산권은 내각이 의회를 해산하는 권한, 내각 불신임권은 의회가 내각 사퇴를 요구하는 권한이다.</div></div>
+<div class='quiz-card'><p><b>7.</b> 국가 원수와 행정부 수반의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가 원수는 국가 대표와 통합 상징, 행정부 수반은 행정부 운영 책임자이다.</div></div>
+<div class='quiz-card'><p><b>8.</b> 우리나라 정부 형태의 기본 성격을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>대통령제를 기본으로 하면서 의원 내각제적 요소를 일부 가진다.</div></div>
+<div class='quiz-card'><p><b>9.</b> 여소야대가 대통령제에서 갈등을 일으킬 수 있는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>대통령과 의회 다수파의 정당이 달라 법률과 예산 등에서 충돌할 수 있기 때문이다.</div></div>
+<div class='quiz-card'><p><b>10.</b> 법률안 거부권의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>대통령이 국회를 통과한 법률안에 이의가 있을 때 재의를 요구하는 권한이다.</div></div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
-
-function checkMCQ(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
-  const answer = Number(card.dataset.answer);
-  const selected = Number(btn.dataset.index);
-  const options = Array.from(card.querySelectorAll('.mcq-option'));
-  options.forEach((opt, idx) => {
-    if(idx === answer) opt.classList.add('correct');
-    if(idx === selected && idx !== answer) opt.classList.add('wrong');
-  });
-  const result = card.querySelector('.mcq-result');
-  const isCorrect = selected === answer;
-  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
-  result.classList.add('show');
-  card.classList.add('answered');
-}
-
 </script>
 </body>
 </html>
