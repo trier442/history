@@ -5,8 +5,44 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>국제 사회와 세계시민 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 국제 사회와 세계시민 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-<script src='https://cdn.tailwindcss.com'></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
+</script>
+<script src='https://cdn.tailwindcss.com'>
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
+</script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -36,6 +72,18 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
+
+.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
+.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
+.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
+.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
+.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
+.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
+.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
+.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
+.mcq-result.show{display:block}
+.deep-summary-note b{color:#3730a3}
+
 </style>
 </head>
 <body>
@@ -53,42 +101,134 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">영토 갈등</span><span class="keyword">역사 갈등</span><span class="keyword">기술 패권 경쟁</span><span class="keyword">기후변화</span><span class="keyword">난민 문제</span><span class="keyword">불평등</span><span class="keyword">세계시민</span><span class="keyword">세계시민 의식</span><span class="keyword">국제 비정부 기구</span><span class="keyword">공정 무역</span><span class="keyword">지속 가능한 발전</span><span class="keyword">인류 공동체</span></div>
 </section>
 
-<section id='summary' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
-    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
-    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>국제 사회에는 영토·역사 갈등, 기술 패권 경쟁, 기후변화, 난민과 불평등 문제가 동시에 존재한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>동아시아 갈등은 영토와 역사 인식, 민족주의, 자원과 안보가 결합되어 쉽게 해결되기 어렵다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>기술 패권 경쟁은 혁신을 촉진할 수 있지만 첨단 기술의 무기화와 공급망 갈등을 낳을 수 있다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>기후변화와 불평등은 책임과 부담 배분을 둘러싼 국제적 갈등을 만든다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>세계시민은 국제 문제를 인류 공동체의 관점에서 이해하고 실천하는 시민이다.</span></li></ol>
-  </div>
-  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>동아시아의 갈등</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>동아시아에는 독도, 센카쿠/댜오위다오, 남중국해 같은 영토 갈등이 존재한다.</li><li>역사 교과서, 전쟁 책임, 식민 지배 인식 문제는 역사 갈등으로 이어진다.</li><li>영토와 역사는 주권, 정체성, 자원, 안보와 연결되기 때문에 타협이 쉽지 않다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>기술 패권 경쟁과 기후변화</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>인공지능, 반도체, 통신망 같은 첨단 기술은 경제력과 안보를 좌우하는 전략 자원이 되었다.</li><li>기술 경쟁은 혁신을 촉진하지만, 기술 봉쇄와 공급망 분리로 국제 갈등을 심화할 수 있다.</li><li>기후변화는 전 세계가 함께 겪는 문제지만 선진국과 개발도상국 사이에 책임 배분 논쟁이 발생한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>난민과 불평등</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>전쟁, 내전, 기후 위기, 빈곤은 난민과 이주 문제를 확대한다.</li><li>국가 내부와 국가 간 불평등은 민주주의에 대한 신뢰를 약화하고 사회적 연대를 흔든다.</li><li>세계화의 이익과 부담이 불균등하게 배분될 때 국제 사회의 갈등이 커진다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>세계시민의 역할</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>세계시민은 자신이 한 국가의 국민인 동시에 인류 공동체의 구성원이라는 점을 인식한다.</li><li>세계시민 의식은 인권, 평화, 환경, 다양성, 지속 가능한 발전을 함께 고려한다.</li><li>공정 무역, 국제 구호, 환경 실천, 국제 비정부 기구 활동, 책임 있는 소비는 세계시민의 구체적 실천이 될 수 있다.</li></ul>
-        </article></div>
-  
-  
-    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
-      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
-      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>세계시민 단원은 갈등 유형과 시민 실천을 연결해야 한다.</li><li>기술·기후·난민·불평등은 모두 초국가적 문제이다.</li><li>세계시민은 인식에서 끝나지 않고 소비, 참여, 연대의 실천으로 이어진다.</li></ul>
-    </div>
-</section>
+<section class="card mt-8 p-6 md:p-8" id="summary">
+<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
+<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
+<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
+<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>국제 사회에는 영토·역사 갈등, 기술 패권 경쟁, 기후변화, 난민과 불평등 문제가 동시에 존재한다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>동아시아 갈등은 영토와 역사 인식, 민족주의, 자원과 안보가 결합되어 쉽게 해결되기 어렵다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>기술 패권 경쟁은 혁신을 촉진할 수 있지만 첨단 기술의 무기화와 공급망 갈등을 낳을 수 있다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>기후변화와 불평등은 책임과 부담 배분을 둘러싼 국제적 갈등을 만든다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>세계시민은 국제 문제를 인류 공동체의 관점에서 이해하고 실천하는 시민이다.</span></li></ol>
+</div>
+<div class="grid lg:grid-cols-2 gap-4 mb-6">
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">동아시아의 갈등</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>동아시아에는 독도, 센카쿠/댜오위다오, 남중국해 같은 영토 갈등이 존재한다.</li><li>역사 교과서, 전쟁 책임, 식민 지배 인식 문제는 역사 갈등으로 이어진다.</li><li>영토와 역사는 주권, 정체성, 자원, 안보와 연결되기 때문에 타협이 쉽지 않다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">기술 패권 경쟁과 기후변화</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>인공지능, 반도체, 통신망 같은 첨단 기술은 경제력과 안보를 좌우하는 전략 자원이 되었다.</li><li>기술 경쟁은 혁신을 촉진하지만, 기술 봉쇄와 공급망 분리로 국제 갈등을 심화할 수 있다.</li><li>기후변화는 전 세계가 함께 겪는 문제지만 선진국과 개발도상국 사이에 책임 배분 논쟁이 발생한다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">난민과 불평등</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>전쟁, 내전, 기후 위기, 빈곤은 난민과 이주 문제를 확대한다.</li><li>국가 내부와 국가 간 불평등은 민주주의에 대한 신뢰를 약화하고 사회적 연대를 흔든다.</li><li>세계화의 이익과 부담이 불균등하게 배분될 때 국제 사회의 갈등이 커진다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">세계시민의 역할</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>세계시민은 자신이 한 국가의 국민인 동시에 인류 공동체의 구성원이라는 점을 인식한다.</li><li>세계시민 의식은 인권, 평화, 환경, 다양성, 지속 가능한 발전을 함께 고려한다.</li><li>공정 무역, 국제 구호, 환경 실천, 국제 비정부 기구 활동, 책임 있는 소비는 세계시민의 구체적 실천이 될 수 있다.</li></ul>
+</article></div>
+<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>세계시민 단원은 갈등 유형과 시민 실천을 연결해야 한다.</li><li>기술·기후·난민·불평등은 모두 초국가적 문제이다.</li><li>세계시민은 인식에서 끝나지 않고 소비, 참여, 연대의 실천으로 이어진다.</li></ul>
+</div>
+
+    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
+      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
+      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>4-4. 국제 사회와 세계시민</b>의 핵심 질문인 “전 지구적 문제에 대처하려면 세계시민으로서 어떤 역할을 해야 할까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
+      <div class='grid md:grid-cols-2 gap-3 mt-4'>
+    
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>영토 갈등</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>역사 갈등</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>기술 패권 경쟁</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>기후변화</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>난민 문제</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>불평등</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>세계시민</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>세계시민 의식</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>국제 비정부 기구</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>공정 무역</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>지속 가능한 발전</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 12</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>인류 공동체</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>국경을 넘어 모든 인간이 서로 연결되어 있다는 공동체적 관점이다.</p>
+        </div>
+        </div></div>
+        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
+          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 국제 사회에는 영토·역사 갈등, 기술 패권 경쟁, 기후변화, 난민과 불평등 문제가 동시에 존재한다.</li><li><b>2단계</b> — 2 동아시아 갈등은 영토와 역사 인식, 민족주의, 자원과 안보가 결합되어 쉽게 해결되기 어렵다.</li><li><b>3단계</b> — 3 기술 패권 경쟁은 혁신을 촉진할 수 있지만 첨단 기술의 무기화와 공급망 갈등을 낳을 수 있다.</li><li><b>4단계</b> — 4 기후변화와 불평등은 책임과 부담 배분을 둘러싼 국제적 갈등을 만든다.</li><li><b>5단계</b> — 5 세계시민은 국제 문제를 인류 공동체의 관점에서 이해하고 실천하는 시민이다.</li></ul>
+          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
+        </div>
+        
+        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
+          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>세계시민 단원은 갈등 유형과 시민 실천을 연결해야 한다.</li><li>기술·기후·난민·불평등은 모두 초국가적 문제이다.</li><li>세계시민은 인식에서 끝나지 않고 소비, 참여, 연대의 실천으로 이어진다.</li></ul>
+          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
+        </div>
+        </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    <p>동아시아의 <span class="hidden-box" data-text="영토 갈등" onclick="reveal(this)">&nbsp;</span>과 <span class="hidden-box" data-text="역사 갈등" onclick="reveal(this)">&nbsp;</span>은 단순한 감정 싸움이 아니다. 주권, 자원, 안보, 정체성이 결합되어 있기 때문에 장기적이고 복잡하다.</p><p>오늘날에는 인공지능과 반도체를 둘러싼 <span class="hidden-box" data-text="기술 패권 경쟁" onclick="reveal(this)">&nbsp;</span>도 커지고 있다. 동시에 <span class="hidden-box" data-text="기후변화" onclick="reveal(this)">&nbsp;</span>는 어느 한 나라가 피할 수 없는 전 지구적 위험이 되었다.</p><p>전쟁과 빈곤, 기후 위기는 <span class="hidden-box" data-text="난민 문제" onclick="reveal(this)">&nbsp;</span>를 만들고, 국가 안팎의 <span class="hidden-box" data-text="불평등" onclick="reveal(this)">&nbsp;</span>은 사회적 연대와 민주주의 신뢰를 약화시킨다.</p><p>이런 문제를 자기 나라만의 이해관계로 보면 해결하기 어렵다. <span class="hidden-box" data-text="세계시민" onclick="reveal(this)">&nbsp;</span>은 <span class="hidden-box" data-text="세계시민 의식" onclick="reveal(this)">&nbsp;</span>을 바탕으로 <span class="hidden-box" data-text="인류 공동체" onclick="reveal(this)">&nbsp;</span>의 관점에서 문제를 본다.</p><p>구체적으로는 <span class="hidden-box" data-text="국제 비정부 기구" onclick="reveal(this)">&nbsp;</span> 활동, <span class="hidden-box" data-text="공정 무역" onclick="reveal(this)">&nbsp;</span> 소비, 환경 실천, 인권 연대, <span class="hidden-box" data-text="지속 가능한 발전" onclick="reveal(this)">&nbsp;</span>을 위한 참여가 세계시민의 역할이 될 수 있다.</p>
+    
+    <p>4-4. 국제 사회와 세계시민 단원은 “전 지구적 문제에 대처하려면 세계시민으로서 어떤 역할을 해야 할까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
+    <p>1번째 흐름은 1 국제 사회에는 영토·역사 갈등, 기술 패권 경쟁, 기후변화, 난민과 불평등 문제가 동시에 존재한다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 동아시아 갈등은 영토와 역사 인식, 민족주의, 자원과 안보가 결합되어 쉽게 해결되기 어렵다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 기술 패권 경쟁은 혁신을 촉진할 수 있지만 첨단 기술의 무기화와 공급망 갈등을 낳을 수 있다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 기후변화와 불평등은 책임과 부담 배분을 둘러싼 국제적 갈등을 만든다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 세계시민은 국제 문제를 인류 공동체의 관점에서 이해하고 실천하는 시민이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="영토 갈등" onclick="reveal(this)">&nbsp;</span>은/는 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="역사 갈등" onclick="reveal(this)">&nbsp;</span>은/는 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="기술 패권 경쟁" onclick="reveal(this)">&nbsp;</span>은/는 첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="기후변화" onclick="reveal(this)">&nbsp;</span>은/는 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="난민 문제" onclick="reveal(this)">&nbsp;</span>은/는 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="불평등" onclick="reveal(this)">&nbsp;</span>은/는 소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="세계시민" onclick="reveal(this)">&nbsp;</span>은/는 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="세계시민 의식" onclick="reveal(this)">&nbsp;</span>은/는 인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="국제 비정부 기구" onclick="reveal(this)">&nbsp;</span>은/는 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="공정 무역" onclick="reveal(this)">&nbsp;</span>은/는 생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="지속 가능한 발전" onclick="reveal(this)">&nbsp;</span>은/는 현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="인류 공동체" onclick="reveal(this)">&nbsp;</span>은/는 국경을 넘어 모든 인간이 서로 연결되어 있다는 공동체적 관점이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
+    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 4-4. 국제 사회와 세계시민의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
+    
   </div>
 </section>
 
@@ -98,24 +238,153 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
   
-<div class='quiz-card'><p><b>1.</b> 동아시아 영토 갈등이 쉽게 해결되지 않는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>주권, 자원, 안보, 민족 정체성이 결합되어 있기 때문이다.</div></div>
-<div class='quiz-card'><p><b>2.</b> 역사 갈등의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</div></div>
-<div class='quiz-card'><p><b>3.</b> 기술 패권 경쟁의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.</div></div>
-<div class='quiz-card'><p><b>4.</b> 기후변화 대응에서 선진국과 개발도상국이 대립하는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>기후변화 책임과 감축 부담을 어떻게 나눌 것인지에 대한 입장이 다르기 때문이다.</div></div>
-<div class='quiz-card'><p><b>5.</b> 난민 문제가 국제 문제인 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>난민 발생과 수용이 여러 국가의 책임, 인권, 안보, 재정 문제와 연결되기 때문이다.</div></div>
-<div class='quiz-card'><p><b>6.</b> 불평등이 민주주의에 미치는 영향을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>사회적 연대를 약화하고 민주주의에 대한 신뢰를 떨어뜨릴 수 있다.</div></div>
-<div class='quiz-card'><p><b>7.</b> 세계시민의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</div></div>
-<div class='quiz-card'><p><b>8.</b> 세계시민 의식의 핵심 가치를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>인권, 평화, 환경, 다양성, 연대, 지속 가능한 발전 등이다.</div></div>
-<div class='quiz-card'><p><b>9.</b> 공정 무역이 세계시민 실천인 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>생산자에게 정당한 대가를 보장하고 윤리적 소비를 통해 국제 불평등 완화에 기여하기 때문이다.</div></div>
-<div class='quiz-card'><p><b>10.</b> 지속 가능한 발전의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다.</div></div>
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>불평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>영토 갈등</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>난민 문제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>인류 공동체</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국제 비정부 기구</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 영토 갈등' data-explanation='정답은 영토 갈등이다. 영토 갈등은/는 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>지속 가능한 발전</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>불평등</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국제 비정부 기구</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>영토 갈등</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>역사 갈등</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 역사 갈등' data-explanation='정답은 역사 갈등이다. 역사 갈등은/는 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>불평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>세계시민 의식</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>기술 패권 경쟁</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>기후변화</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>역사 갈등</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 기술 패권 경쟁' data-explanation='정답은 기술 패권 경쟁이다. 기술 패권 경쟁은/는 첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>역사 갈등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>인류 공동체</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>기후변화</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>영토 갈등</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>세계시민 의식</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 기후변화' data-explanation='정답은 기후변화이다. 기후변화은/는 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>세계시민 의식</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>지속 가능한 발전</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>인류 공동체</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>불평등</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>난민 문제</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 난민 문제' data-explanation='정답은 난민 문제이다. 난민 문제은/는 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>불평등</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>지속 가능한 발전</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>인류 공동체</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>세계시민 의식</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>영토 갈등</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 불평등' data-explanation='정답은 불평등이다. 불평등은/는 소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국제 비정부 기구</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>세계시민</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>인류 공동체</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>난민 문제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>영토 갈등</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 세계시민' data-explanation='정답은 세계시민이다. 세계시민은/는 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>세계시민</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>난민 문제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>세계시민 의식</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>지속 가능한 발전</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>역사 갈등</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 세계시민 의식' data-explanation='정답은 세계시민 의식이다. 세계시민 의식은/는 인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>지속 가능한 발전</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>기술 패권 경쟁</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국제 비정부 기구</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>난민 문제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>인류 공동체</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 국제 비정부 기구' data-explanation='정답은 국제 비정부 기구이다. 국제 비정부 기구은/는 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>세계시민 의식</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>지속 가능한 발전</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>공정 무역</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>세계시민</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>불평등</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 공정 무역' data-explanation='정답은 공정 무역이다. 공정 무역은/는 생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 4-4. 국제 사회와 세계시민 단원의 핵심어 “영토 갈등”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>영토 갈등은/는 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>영토 갈등은/는 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>영토 갈등은/는 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>영토 갈등은/는 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>영토 갈등은/는 인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 영토 갈등은/는 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.' data-explanation='영토 갈등의 정확한 뜻은 “국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.”이다. 오답은 다른 핵심어의 설명을 영토 갈등에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 4-4. 국제 사회와 세계시민 단원의 핵심어 “기술 패권 경쟁”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>기술 패권 경쟁은/는 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>기술 패권 경쟁은/는 첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>기술 패권 경쟁은/는 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>기술 패권 경쟁은/는 현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>기술 패권 경쟁은/는 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 기술 패권 경쟁은/는 첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.' data-explanation='기술 패권 경쟁의 정확한 뜻은 “첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.”이다. 오답은 다른 핵심어의 설명을 기술 패권 경쟁에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 4-4. 국제 사회와 세계시민 단원의 핵심어 “난민 문제”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>난민 문제은/는 첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>난민 문제은/는 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>난민 문제은/는 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>난민 문제은/는 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>난민 문제은/는 생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 난민 문제은/는 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.' data-explanation='난민 문제의 정확한 뜻은 “전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.”이다. 오답은 다른 핵심어의 설명을 난민 문제에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 4-4. 국제 사회와 세계시민 단원의 핵심어 “세계시민”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>세계시민은/는 인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>세계시민은/는 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>세계시민은/는 현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>세계시민은/는 소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>세계시민은/는 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 세계시민은/는 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.' data-explanation='세계시민의 정확한 뜻은 “국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.”이다. 오답은 다른 핵심어의 설명을 세계시민에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 4-4. 국제 사회와 세계시민 단원의 핵심어 “국제 비정부 기구”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>국제 비정부 기구은/는 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>국제 비정부 기구은/는 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>국제 비정부 기구은/는 소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>국제 비정부 기구은/는 국경을 넘어 모든 인간이 서로 연결되어 있다는 공동체적 관점이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국제 비정부 기구은/는 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 국제 비정부 기구은/는 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.' data-explanation='국제 비정부 기구의 정확한 뜻은 “정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.”이다. 오답은 다른 핵심어의 설명을 국제 비정부 기구에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>세계시민 의식 - 인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>지속 가능한 발전 - 현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>난민 문제 - 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>기후변화 - 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>세계시민 - 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 기후변화 - 국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.' data-explanation='옳지 않은 연결은 기후변화이다. 기후변화은/는 “인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>기술 패권 경쟁 - 첨단 기술의 주도권을 확보하기 위해 국가들이 벌이는 경쟁이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공정 무역 - 생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>기후변화 - 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>지속 가능한 발전 - 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>영토 갈등 - 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 지속 가능한 발전 - 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.' data-explanation='옳지 않은 연결은 지속 가능한 발전이다. 지속 가능한 발전은/는 “현재 세대의 필요를 충족하면서 미래 세대의 가능성을 해치지 않는 발전이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>역사 갈등 - 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공정 무역 - 생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>불평등 - 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>기후변화 - 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국제 비정부 기구 - 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 불평등 - 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.' data-explanation='옳지 않은 연결은 불평등이다. 불평등은/는 “소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>공정 무역 - 생산자에게 정당한 대가를 보장하고 윤리적 소비를 추구하는 무역 방식이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>역사 갈등 - 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>세계시민 - 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>불평등 - 소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>세계시민 의식 - 인권, 평화, 환경, 다양성, 연대의 관점에서 세계 문제를 바라보는 태도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 세계시민 - 인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.' data-explanation='옳지 않은 연결은 세계시민이다. 세계시민은/는 “국가의 경계를 넘어 인류 공동체의 문제에 책임 의식을 갖고 행동하는 시민이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>기후변화 - 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>난민 문제 - 전쟁, 박해, 재난 등으로 삶의 터전을 떠난 사람들의 보호와 수용을 둘러싼 문제이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>역사 갈등 - 과거 사건의 책임과 해석을 둘러싸고 국가나 집단 사이에 발생하는 갈등이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>불평등 - 소득, 자원, 기회, 권리가 개인과 국가 사이에 고르게 배분되지 않은 상태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>국제 비정부 기구 - 정부가 아닌 시민과 민간 주체가 국제 문제 해결을 위해 만든 조직이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 기후변화 - 국가들이 특정 지역의 주권과 관할권을 둘러싸고 벌이는 갈등이다.' data-explanation='옳지 않은 연결은 기후변화이다. 기후변화은/는 “인간 활동 등으로 지구 평균 기온과 기후 체계가 변화하는 현상이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
+
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
 </script>
 </body>
 </html>

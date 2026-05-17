@@ -5,8 +5,44 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>선거와 정치 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 선거와 정치 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-<script src='https://cdn.tailwindcss.com'></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
+</script>
+<script src='https://cdn.tailwindcss.com'>
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
+</script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -36,6 +72,18 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
+
+.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
+.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
+.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
+.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
+.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
+.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
+.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
+.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
+.mcq-result.show{display:block}
+.deep-summary-note b{color:#3730a3}
+
 </style>
 </head>
 <body>
@@ -53,42 +101,140 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">선거</span><span class="keyword">정당성</span><span class="keyword">정치적 책임</span><span class="keyword">보통 선거</span><span class="keyword">평등 선거</span><span class="keyword">직접 선거</span><span class="keyword">비밀 선거</span><span class="keyword">소선거구제</span><span class="keyword">중대선거구제</span><span class="keyword">다수 대표제</span><span class="keyword">비례 대표제</span><span class="keyword">정당 명부식 비례 대표제</span><span class="keyword">혼합형 선거 제도</span></div>
 </section>
 
-<section id='summary' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
-    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
-    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>선거는 대표자를 뽑는 절차이자 권력에 정당성을 부여하는 제도이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>민주 선거의 원칙은 보통·평등·직접·비밀 선거이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>선거구제는 대표 선출 단위를 어떻게 나누는가의 문제이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>대표 결정 방식은 득표를 의석으로 어떻게 바꿀 것인가의 문제이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>우리나라 선거 제도는 소선거구제와 비례 대표제를 결합하지만 사표와 대표성 문제가 계속 쟁점이 된다.</span></li></ol>
-  </div>
-  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>선거의 기능</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>선거는 시민이 대표자에게 권력을 위임하는 절차이다.</li><li>자유롭고 공정한 선거를 거친 대표자는 정치적 정당성을 얻는다.</li><li>선거는 대표자의 활동을 평가하고 책임을 묻는 장치이기도 하다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>민주 선거의 4대 원칙</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>보통 선거는 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</li><li>평등 선거는 모든 유권자의 표가 같은 가치를 가져야 한다는 원칙이다.</li><li>직접 선거는 유권자가 대표자를 직접 선택해야 한다는 원칙이다.</li><li>비밀 선거는 누구에게 투표했는지 드러나지 않아야 한다는 원칙이다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>선거구제와 대표 결정 방식</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>소선거구제는 한 선거구에서 한 명을 뽑아 정국 안정에 유리하지만 사표가 많아질 수 있다.</li><li>중대선거구제는 한 선거구에서 여러 명을 뽑아 다양한 의견 반영에 유리하지만 후보자 난립 가능성이 있다.</li><li>다수 대표제는 가장 많은 표를 얻은 후보를 당선시키는 방식이고, 비례 대표제는 정당 득표율에 따라 의석을 배분하는 방식이다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>우리나라 선거 제도의 쟁점</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>국회의원 선거는 지역구 의원과 비례 대표 의원을 함께 선출한다.</li><li>소선거구제는 지역 대표성을 살리지만 거대 정당에 유리하고 사표 문제를 낳을 수 있다.</li><li>비례 대표제는 정당 득표율과 의석률의 불일치를 완화하고 소수 의견을 반영하는 데 필요하다.</li></ul>
-        </article></div>
-  
-  
-    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
-      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
-      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>민주 선거 원칙은 사례와 함께 구분한다.</li><li>소선거구제는 안정성, 비례 대표제는 대표성으로 연결한다.</li><li>선거 제도 문제는 사표, 지역주의, 소수 대표성 부족으로 정리한다.</li></ul>
-    </div>
-</section>
+<section class="card mt-8 p-6 md:p-8" id="summary">
+<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
+<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
+<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
+<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>선거는 대표자를 뽑는 절차이자 권력에 정당성을 부여하는 제도이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>민주 선거의 원칙은 보통·평등·직접·비밀 선거이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>선거구제는 대표 선출 단위를 어떻게 나누는가의 문제이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>대표 결정 방식은 득표를 의석으로 어떻게 바꿀 것인가의 문제이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>우리나라 선거 제도는 소선거구제와 비례 대표제를 결합하지만 사표와 대표성 문제가 계속 쟁점이 된다.</span></li></ol>
+</div>
+<div class="grid lg:grid-cols-2 gap-4 mb-6">
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">선거의 기능</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>선거는 시민이 대표자에게 권력을 위임하는 절차이다.</li><li>자유롭고 공정한 선거를 거친 대표자는 정치적 정당성을 얻는다.</li><li>선거는 대표자의 활동을 평가하고 책임을 묻는 장치이기도 하다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">민주 선거의 4대 원칙</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>보통 선거는 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</li><li>평등 선거는 모든 유권자의 표가 같은 가치를 가져야 한다는 원칙이다.</li><li>직접 선거는 유권자가 대표자를 직접 선택해야 한다는 원칙이다.</li><li>비밀 선거는 누구에게 투표했는지 드러나지 않아야 한다는 원칙이다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">선거구제와 대표 결정 방식</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>소선거구제는 한 선거구에서 한 명을 뽑아 정국 안정에 유리하지만 사표가 많아질 수 있다.</li><li>중대선거구제는 한 선거구에서 여러 명을 뽑아 다양한 의견 반영에 유리하지만 후보자 난립 가능성이 있다.</li><li>다수 대표제는 가장 많은 표를 얻은 후보를 당선시키는 방식이고, 비례 대표제는 정당 득표율에 따라 의석을 배분하는 방식이다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">우리나라 선거 제도의 쟁점</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>국회의원 선거는 지역구 의원과 비례 대표 의원을 함께 선출한다.</li><li>소선거구제는 지역 대표성을 살리지만 거대 정당에 유리하고 사표 문제를 낳을 수 있다.</li><li>비례 대표제는 정당 득표율과 의석률의 불일치를 완화하고 소수 의견을 반영하는 데 필요하다.</li></ul>
+</article></div>
+<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>민주 선거 원칙은 사례와 함께 구분한다.</li><li>소선거구제는 안정성, 비례 대표제는 대표성으로 연결한다.</li><li>선거 제도 문제는 사표, 지역주의, 소수 대표성 부족으로 정리한다.</li></ul>
+</div>
+
+    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
+      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
+      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>2-3. 선거와 정치</b>의 핵심 질문인 “다양한 선거 제도에 비추어 우리나라 선거 제도의 특징과 문제점은 무엇일까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
+      <div class='grid md:grid-cols-2 gap-3 mt-4'>
+    
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>선거</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>정당성</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>정치적 책임</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>보통 선거</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>평등 선거</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>직접 선거</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>유권자가 대표자를 직접 선택해야 한다는 원칙이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>비밀 선거</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>소선거구제</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>한 선거구에서 한 명의 대표를 선출하는 제도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>중대선거구제</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>다수 대표제</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 11</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>비례 대표제</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>정당 득표율에 비례하여 의석을 배분하는 방식이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 12</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>정당 명부식 비례 대표제</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 13</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>혼합형 선거 제도</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>지역구 대표 선출 방식과 비례 대표 방식을 결합한 선거 제도이다.</p>
+        </div>
+        </div></div>
+        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
+          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 선거는 대표자를 뽑는 절차이자 권력에 정당성을 부여하는 제도이다.</li><li><b>2단계</b> — 2 민주 선거의 원칙은 보통·평등·직접·비밀 선거이다.</li><li><b>3단계</b> — 3 선거구제는 대표 선출 단위를 어떻게 나누는가의 문제이다.</li><li><b>4단계</b> — 4 대표 결정 방식은 득표를 의석으로 어떻게 바꿀 것인가의 문제이다.</li><li><b>5단계</b> — 5 우리나라 선거 제도는 소선거구제와 비례 대표제를 결합하지만 사표와 대표성 문제가 계속 쟁점이 된다.</li></ul>
+          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
+        </div>
+        
+        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
+          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>민주 선거 원칙은 사례와 함께 구분한다.</li><li>소선거구제는 안정성, 비례 대표제는 대표성으로 연결한다.</li><li>선거 제도 문제는 사표, 지역주의, 소수 대표성 부족으로 정리한다.</li></ul>
+          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
+        </div>
+        </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    <p><span class="hidden-box" data-text="선거" onclick="reveal(this)">&nbsp;</span>는 단순히 사람을 뽑는 절차가 아니다. 대표자에게 권력을 맡기는 행위이고, 그 권력에 <span class="hidden-box" data-text="정당성" onclick="reveal(this)">&nbsp;</span>을 부여하며, 다음 선거에서 <span class="hidden-box" data-text="정치적 책임" onclick="reveal(this)">&nbsp;</span>을 묻는 장치이다.</p><p>민주 선거가 되려면 네 가지 원칙이 필요하다. 누구에게나 선거권을 보장하는 <span class="hidden-box" data-text="보통 선거" onclick="reveal(this)">&nbsp;</span>, 한 표의 가치를 같게 하는 <span class="hidden-box" data-text="평등 선거" onclick="reveal(this)">&nbsp;</span>, 유권자가 직접 선택하는 <span class="hidden-box" data-text="직접 선거" onclick="reveal(this)">&nbsp;</span>, 선택을 숨길 수 있는 <span class="hidden-box" data-text="비밀 선거" onclick="reveal(this)">&nbsp;</span>가 그것이다.</p><p>대표를 어떻게 뽑을지도 중요하다. <span class="hidden-box" data-text="소선거구제" onclick="reveal(this)">&nbsp;</span>는 한 지역에서 한 명을 뽑고, <span class="hidden-box" data-text="중대선거구제" onclick="reveal(this)">&nbsp;</span>는 여러 명을 뽑는다.</p><p>득표를 의석으로 바꾸는 방식도 다르다. <span class="hidden-box" data-text="다수 대표제" onclick="reveal(this)">&nbsp;</span>는 가장 많이 득표한 후보를 당선시키고, <span class="hidden-box" data-text="비례 대표제" onclick="reveal(this)">&nbsp;</span>는 정당 지지율을 의석에 반영한다. 정당에 투표하고 명부에 따라 당선자를 정하면 <span class="hidden-box" data-text="정당 명부식 비례 대표제" onclick="reveal(this)">&nbsp;</span>이며, 여러 방식을 섞으면 <span class="hidden-box" data-text="혼합형 선거 제도" onclick="reveal(this)">&nbsp;</span>가 된다.</p>
+    
+    <p>2-3. 선거와 정치 단원은 “다양한 선거 제도에 비추어 우리나라 선거 제도의 특징과 문제점은 무엇일까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
+    <p>1번째 흐름은 1 선거는 대표자를 뽑는 절차이자 권력에 정당성을 부여하는 제도이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 민주 선거의 원칙은 보통·평등·직접·비밀 선거이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 선거구제는 대표 선출 단위를 어떻게 나누는가의 문제이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 대표 결정 방식은 득표를 의석으로 어떻게 바꿀 것인가의 문제이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 우리나라 선거 제도는 소선거구제와 비례 대표제를 결합하지만 사표와 대표성 문제가 계속 쟁점이 된다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="선거" onclick="reveal(this)">&nbsp;</span>은/는 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="정당성" onclick="reveal(this)">&nbsp;</span>은/는 권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="정치적 책임" onclick="reveal(this)">&nbsp;</span>은/는 대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="보통 선거" onclick="reveal(this)">&nbsp;</span>은/는 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="평등 선거" onclick="reveal(this)">&nbsp;</span>은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="직접 선거" onclick="reveal(this)">&nbsp;</span>은/는 유권자가 대표자를 직접 선택해야 한다는 원칙이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="비밀 선거" onclick="reveal(this)">&nbsp;</span>은/는 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="소선거구제" onclick="reveal(this)">&nbsp;</span>은/는 한 선거구에서 한 명의 대표를 선출하는 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="중대선거구제" onclick="reveal(this)">&nbsp;</span>은/는 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="다수 대표제" onclick="reveal(this)">&nbsp;</span>은/는 가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="비례 대표제" onclick="reveal(this)">&nbsp;</span>은/는 정당 득표율에 비례하여 의석을 배분하는 방식이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="정당 명부식 비례 대표제" onclick="reveal(this)">&nbsp;</span>은/는 유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="혼합형 선거 제도" onclick="reveal(this)">&nbsp;</span>은/는 지역구 대표 선출 방식과 비례 대표 방식을 결합한 선거 제도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
+    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 2-3. 선거와 정치의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
+    
   </div>
 </section>
 
@@ -98,24 +244,153 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
   
-<div class='quiz-card'><p><b>1.</b> 선거의 세 가지 기능을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>대표자 선출, 권력의 정당성 부여, 정치적 책임 추궁이다.</div></div>
-<div class='quiz-card'><p><b>2.</b> 민주 선거의 4대 원칙을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>보통 선거, 평등 선거, 직접 선거, 비밀 선거이다.</div></div>
-<div class='quiz-card'><p><b>3.</b> 평등 선거 원칙이 선거구 인구 편차와 연결되는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>선거구 인구 차이가 크면 한 표의 가치가 달라질 수 있기 때문이다.</div></div>
-<div class='quiz-card'><p><b>4.</b> 소선거구제의 장점과 단점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>장점은 정국 안정과 후보 난립 방지, 단점은 사표 발생과 거대 정당 유리함이다.</div></div>
-<div class='quiz-card'><p><b>5.</b> 중대선거구제의 장점과 단점을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>장점은 다양한 의견 반영, 단점은 후보 난립과 선거 관리 복잡성이다.</div></div>
-<div class='quiz-card'><p><b>6.</b> 다수 대표제와 비례 대표제의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>다수 대표제는 가장 많은 표를 얻은 후보를 당선시키고, 비례 대표제는 정당 득표율에 따라 의석을 배분한다.</div></div>
-<div class='quiz-card'><p><b>7.</b> 사표의 의미를 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>당선에 기여하지 못하고 의석으로 반영되지 않은 표이다.</div></div>
-<div class='quiz-card'><p><b>8.</b> 비례 대표제가 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정당 득표율과 의석률의 불일치를 줄이고 소수 의견을 반영하기 위해서이다.</div></div>
-<div class='quiz-card'><p><b>9.</b> 정당 명부식 비례 대표제를 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>유권자가 정당에 투표하면 정당 득표율에 따라 명부 순서대로 당선자가 결정되는 제도이다.</div></div>
-<div class='quiz-card'><p><b>10.</b> 혼합형 선거 제도의 목적을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>지역 대표성과 비례성을 함께 반영하기 위해서이다.</div></div>
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비밀 선거</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수 대표제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>선거</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>소선거구제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>직접 선거</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 선거' data-explanation='정답은 선거이다. 선거은/는 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비례 대표제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정당성</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>중대선거구제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>직접 선거</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>소선거구제</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 정당성' data-explanation='정답은 정당성이다. 정당성은/는 권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>중대선거구제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정치적 책임</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>비밀 선거</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>소선거구제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>선거</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 정치적 책임' data-explanation='정답은 정치적 책임이다. 정치적 책임은/는 대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수 대표제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>보통 선거</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>중대선거구제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정치적 책임</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>선거</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 보통 선거' data-explanation='정답은 보통 선거이다. 보통 선거은/는 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>직접 선거</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>비례 대표제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소선거구제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>보통 선거</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>평등 선거</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 평등 선거' data-explanation='정답은 평등 선거이다. 평등 선거은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “유권자가 대표자를 직접 선택해야 한다는 원칙이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비밀 선거</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정치적 책임</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>직접 선거</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정당 명부식 비례 대표제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>보통 선거</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 직접 선거' data-explanation='정답은 직접 선거이다. 직접 선거은/는 유권자가 대표자를 직접 선택해야 한다는 원칙이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비밀 선거</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정당 명부식 비례 대표제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>직접 선거</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>중대선거구제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정당성</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 비밀 선거' data-explanation='정답은 비밀 선거이다. 비밀 선거은/는 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “한 선거구에서 한 명의 대표를 선출하는 제도이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비례 대표제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>선거</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소선거구제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>평등 선거</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수 대표제</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 소선거구제' data-explanation='정답은 소선거구제이다. 소선거구제은/는 한 선거구에서 한 명의 대표를 선출하는 제도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>중대선거구제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>비밀 선거</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>비례 대표제</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정당 명부식 비례 대표제</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수 대표제</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 중대선거구제' data-explanation='정답은 중대선거구제이다. 중대선거구제은/는 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>중대선거구제</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수 대표제</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>직접 선거</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>선거</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>소선거구제</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 다수 대표제' data-explanation='정답은 다수 대표제이다. 다수 대표제은/는 가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 2-3. 선거와 정치 단원의 핵심어 “선거”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>선거은/는 가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>선거은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>선거은/는 권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>선거은/는 유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>선거은/는 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 선거은/는 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.' data-explanation='선거의 정확한 뜻은 “국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.”이다. 오답은 다른 핵심어의 설명을 선거에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 2-3. 선거와 정치 단원의 핵심어 “정치적 책임”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>정치적 책임은/는 지역구 대표 선출 방식과 비례 대표 방식을 결합한 선거 제도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>정치적 책임은/는 유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>정치적 책임은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정치적 책임은/는 대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>정치적 책임은/는 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 정치적 책임은/는 대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.' data-explanation='정치적 책임의 정확한 뜻은 “대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.”이다. 오답은 다른 핵심어의 설명을 정치적 책임에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 2-3. 선거와 정치 단원의 핵심어 “평등 선거”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>평등 선거은/는 유권자가 대표자를 직접 선택해야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>평등 선거은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>평등 선거은/는 가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>평등 선거은/는 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>평등 선거은/는 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 평등 선거은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.' data-explanation='평등 선거의 정확한 뜻은 “유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.”이다. 오답은 다른 핵심어의 설명을 평등 선거에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 2-3. 선거와 정치 단원의 핵심어 “비밀 선거”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비밀 선거은/는 권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>비밀 선거은/는 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>비밀 선거은/는 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>비밀 선거은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>비밀 선거은/는 유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 비밀 선거은/는 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.' data-explanation='비밀 선거의 정확한 뜻은 “유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.”이다. 오답은 다른 핵심어의 설명을 비밀 선거에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 2-3. 선거와 정치 단원의 핵심어 “중대선거구제”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>중대선거구제은/는 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>중대선거구제은/는 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>중대선거구제은/는 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>중대선거구제은/는 권력 행사가 시민에게 옳고 적절한 것으로 인정되는 성질이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>중대선거구제은/는 유권자가 대표자를 직접 선택해야 한다는 원칙이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 중대선거구제은/는 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.' data-explanation='중대선거구제의 정확한 뜻은 “한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.”이다. 오답은 다른 핵심어의 설명을 중대선거구제에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>보통 선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수 대표제 - 가장 많은 표를 얻은 후보자를 당선자로 정하는 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>직접 선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>비밀 선거 - 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>선거 - 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 직접 선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.' data-explanation='옳지 않은 연결은 직접 선거이다. 직접 선거은/는 “유권자가 대표자를 직접 선택해야 한다는 원칙이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>선거 - 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>비밀 선거 - 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>비례 대표제 - 정당 득표율에 비례하여 의석을 배분하는 방식이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>보통 선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>중대선거구제 - 한 선거구에서 한 명의 대표를 선출하는 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 중대선거구제 - 한 선거구에서 한 명의 대표를 선출하는 제도이다.' data-explanation='옳지 않은 연결은 중대선거구제이다. 중대선거구제은/는 “한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비례 대표제 - 정당 득표율에 비례하여 의석을 배분하는 방식이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>중대선거구제 - 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>평등 선거 - 유권자의 한 표가 동등한 가치를 가져야 한다는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>비밀 선거 - 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.' data-explanation='옳지 않은 연결은 선거이다. 선거은/는 “국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>소선거구제 - 한 선거구에서 한 명의 대표를 선출하는 제도이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>비례 대표제 - 대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>보통 선거 - 일정 연령 이상의 국민에게 차별 없이 선거권을 부여하는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정당 명부식 비례 대표제 - 유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>비밀 선거 - 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 비례 대표제 - 대표자가 권력 행사 결과에 대해 유권자의 평가와 심판을 받는 것이다.' data-explanation='옳지 않은 연결은 비례 대표제이다. 비례 대표제은/는 “정당 득표율에 비례하여 의석을 배분하는 방식이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>비밀 선거 - 유권자가 누구에게 투표했는지 다른 사람이 알 수 없게 하는 원칙이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>선거 - 국민이 대표자를 선택하고 권력을 위임하며 정치적 책임을 묻는 민주주의 제도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>소선거구제 - 지역구 대표 선출 방식과 비례 대표 방식을 결합한 선거 제도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>정당 명부식 비례 대표제 - 유권자가 정당에 투표하고 정당 명부 순서에 따라 당선자를 정하는 제도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>중대선거구제 - 한 선거구에서 두 명 이상의 대표를 선출하는 제도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 소선거구제 - 지역구 대표 선출 방식과 비례 대표 방식을 결합한 선거 제도이다.' data-explanation='옳지 않은 연결은 소선거구제이다. 소선거구제은/는 “한 선거구에서 한 명의 대표를 선출하는 제도이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
+
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
 </script>
 </body>
 </html>

@@ -5,8 +5,44 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>민주주의의 실현 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 민주주의의 실현 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-<script src='https://cdn.tailwindcss.com'></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
+</script>
+<script src='https://cdn.tailwindcss.com'>
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
+</script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -36,6 +72,18 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 #summary h3{letter-spacing:-.02em}
 #summary table th,#summary table td{vertical-align:top}
 
+
+.mcq-card{transition:box-shadow .18s ease,border-color .18s ease}
+.mcq-card.answered{border-color:#c7d2fe;box-shadow:0 12px 28px rgba(79,70,229,.08)}
+.mcq-option{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.7;color:#1e293b;transition:all .15s ease}
+.mcq-option:hover{background:#f8fafc;border-color:#a5b4fc;transform:translateY(-1px)}
+.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#14532d}
+.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#7f1d1d}
+.mcq-card.answered .mcq-option:not(.correct):not(.wrong){opacity:.55}
+.mcq-result{display:none;line-height:1.8;font-weight:800;color:#0f172a}
+.mcq-result.show{display:block}
+.deep-summary-note b{color:#3730a3}
+
 </style>
 </head>
 <body>
@@ -53,42 +101,122 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
   <div class='mt-5'><span class="keyword">다수결의 원칙</span><span class="keyword">소수 의견 존중</span><span class="keyword">대화와 타협</span><span class="keyword">토론과 숙의</span><span class="keyword">숙의</span><span class="keyword">공론 조사</span><span class="keyword">여론 조사</span><span class="keyword">상호 존중</span><span class="keyword">시민성</span><span class="keyword">다수의 독재</span></div>
 </section>
 
-<section id='summary' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
-    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
-    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>민주주의는 다양한 의견을 인정하기 때문에 의사 결정 방식이 필요하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>만장일치가 이상적이지만 현실적으로 어렵기 때문에 다수결이 사용된다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>다수결은 유용하지만 다수의 횡포로 변질될 수 있어 소수 의견 존중이 필요하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>대화와 타협, 토론과 숙의는 단순한 수의 지배를 이성적 결정으로 바꾸는 과정이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>일상생활 속 민주주의는 학교와 지역사회에서 숙의의 전제를 실천할 때 가능하다.</span></li></ol>
-  </div>
-  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>다수결의 의미와 필요성</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>다수결은 여러 의견 중 더 많은 구성원이 지지한 의견을 공동체의 결정으로 삼는 원리이다.</li><li>현대 사회에서는 모든 구성원이 하나의 의견에 동의하기 어렵기 때문에 다수결은 현실적인 의사 결정 방식이 된다.</li><li>다수결은 적어도 더 많은 사람이 동의한 결정이라는 점에서 민주적 정당성을 얻는다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>다수결의 한계와 보완</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>다수 의견이 항상 옳은 것은 아니므로 다수결은 인권과 같은 근본 가치에는 함부로 적용될 수 없다.</li><li>소수 의견을 무시하면 다수결은 다수의 횡포나 다수의 독재가 된다.</li><li>다수와 소수의 교체 가능성, 평등한 참여 기회, 내용적 한계가 보장되어야 다수결이 민주적 원리로 기능한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>대화·타협·토론·숙의</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>대화는 서로의 입장을 드러내는 과정이고, 타협은 모두가 일부 양보하여 공동 결정을 찾는 과정이다.</li><li>토론은 근거를 제시하며 주장과 반론을 검토하는 과정이고, 숙의는 충분한 정보와 깊은 논의를 통해 더 나은 결론에 접근하는 과정이다.</li><li>공론 조사는 여론 조사와 달리 학습과 토론을 거쳐 시민의 판단이 변화할 수 있음을 전제한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>일상생활 속 민주주의</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>학교 규칙, 급식 순서, 축제 운영 같은 문제도 민주주의 원리를 적용할 수 있는 생활 정치의 장이다.</li><li>숙의가 제대로 이루어지려면 동등한 참여, 충분한 정보, 다양한 이해관계의 대표, 상호 존중과 개방적 태도가 필요하다.</li><li>민주주의는 제도만이 아니라 서로를 설득하고 설득될 수 있는 시민성의 습관이다.</li></ul>
-        </article></div>
-  
-  
-    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
-      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
-      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>다수결은 필요성과 한계를 함께 써야 한다.</li><li>소수 의견 존중은 단순 배려가 아니라 민주주의의 정당성 조건이다.</li><li>여론 조사는 기존 선호, 공론 조사는 숙의를 통한 선호 변화로 구분한다.</li></ul>
-    </div>
-</section>
+<section class="card mt-8 p-6 md:p-8" id="summary">
+<h2 class="text-3xl font-black mb-3">1. 핵심 내용 체계 정리</h2>
+<p class="text-slate-600 font-bold leading-8 mb-6">교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+<div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6">
+<h3 class="text-xl font-black text-slate-900 mb-4">단원 흐름 한눈에 보기</h3>
+<ol class="space-y-3 leading-8 font-bold text-slate-700"><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">1</span><span>민주주의는 다양한 의견을 인정하기 때문에 의사 결정 방식이 필요하다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">2</span><span>만장일치가 이상적이지만 현실적으로 어렵기 때문에 다수결이 사용된다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">3</span><span>다수결은 유용하지만 다수의 횡포로 변질될 수 있어 소수 의견 존중이 필요하다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">4</span><span>대화와 타협, 토론과 숙의는 단순한 수의 지배를 이성적 결정으로 바꾸는 과정이다.</span></li><li class="flex gap-3"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black">5</span><span>일상생활 속 민주주의는 학교와 지역사회에서 숙의의 전제를 실천할 때 가능하다.</span></li></ol>
+</div>
+<div class="grid lg:grid-cols-2 gap-4 mb-6">
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">다수결의 의미와 필요성</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>다수결은 여러 의견 중 더 많은 구성원이 지지한 의견을 공동체의 결정으로 삼는 원리이다.</li><li>현대 사회에서는 모든 구성원이 하나의 의견에 동의하기 어렵기 때문에 다수결은 현실적인 의사 결정 방식이 된다.</li><li>다수결은 적어도 더 많은 사람이 동의한 결정이라는 점에서 민주적 정당성을 얻는다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">다수결의 한계와 보완</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>다수 의견이 항상 옳은 것은 아니므로 다수결은 인권과 같은 근본 가치에는 함부로 적용될 수 없다.</li><li>소수 의견을 무시하면 다수결은 다수의 횡포나 다수의 독재가 된다.</li><li>다수와 소수의 교체 가능성, 평등한 참여 기회, 내용적 한계가 보장되어야 다수결이 민주적 원리로 기능한다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">대화·타협·토론·숙의</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>대화는 서로의 입장을 드러내는 과정이고, 타협은 모두가 일부 양보하여 공동 결정을 찾는 과정이다.</li><li>토론은 근거를 제시하며 주장과 반론을 검토하는 과정이고, 숙의는 충분한 정보와 깊은 논의를 통해 더 나은 결론에 접근하는 과정이다.</li><li>공론 조사는 여론 조사와 달리 학습과 토론을 거쳐 시민의 판단이 변화할 수 있음을 전제한다.</li></ul>
+</article>
+<article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-800 mb-3">일상생활 속 민주주의</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700"><li>학교 규칙, 급식 순서, 축제 운영 같은 문제도 민주주의 원리를 적용할 수 있는 생활 정치의 장이다.</li><li>숙의가 제대로 이루어지려면 동등한 참여, 충분한 정보, 다양한 이해관계의 대표, 상호 존중과 개방적 태도가 필요하다.</li><li>민주주의는 제도만이 아니라 서로를 설득하고 설득될 수 있는 시민성의 습관이다.</li></ul>
+</article></div>
+<div class="rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6">
+<h3 class="text-xl font-black text-indigo-900 mb-3">시험에 자주 연결되는 판단 포인트</h3>
+<ul class="list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700"><li>다수결은 필요성과 한계를 함께 써야 한다.</li><li>소수 의견 존중은 단순 배려가 아니라 민주주의의 정당성 조건이다.</li><li>여론 조사는 기존 선호, 공론 조사는 숙의를 통한 선호 변화로 구분한다.</li></ul>
+</div>
+
+    <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mt-6'>
+      <h3 class='text-xl font-black text-slate-900 mb-3'>상세 이해를 위한 개념 연결 지도</h3>
+      <p class='leading-8 font-semibold text-slate-700'>이 단원은 <b>1-4. 민주주의의 실현</b>의 핵심 질문인 “일상에서 민주주의를 실현하기 위해 지켜야 할 원리는 무엇일까?”에 답하기 위해 개념을 따로 외우는 것이 아니라, 개념들이 서로 어떤 순서로 연결되는지를 파악해야 합니다. 아래의 연결 지도는 시험에서 자주 나오는 정의형, 비교형, 사례 적용형 문항을 풀 때 바로 활용할 수 있도록 구성했습니다.</p>
+      <div class='grid md:grid-cols-2 gap-3 mt-4'>
+    
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 1</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>다수결의 원칙</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 2</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>소수 의견 존중</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 3</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>대화와 타협</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 4</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>토론과 숙의</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 5</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>숙의</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 6</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>공론 조사</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 7</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>여론 조사</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>특정 시점의 선호나 인식 분포를 조사하는 방식이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 8</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>상호 존중</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 9</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>시민성</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</p>
+        </div>
+        
+        <div class='rounded-2xl border border-slate-200 bg-slate-50 p-4'>
+          <p class='text-sm font-black text-indigo-700'>핵심어 10</p>
+          <h4 class='mt-1 text-lg font-black text-slate-900'>다수의 독재</h4>
+          <p class='mt-2 leading-7 font-semibold text-slate-700'>다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</p>
+        </div>
+        </div></div>
+        <div class='rounded-3xl border border-emerald-200 bg-emerald-50 p-5 md:p-6 mt-5'>
+          <h3 class='text-xl font-black text-emerald-900 mb-3'>흐름으로 다시 정리하기</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li><b>1단계</b> — 1 민주주의는 다양한 의견을 인정하기 때문에 의사 결정 방식이 필요하다.</li><li><b>2단계</b> — 2 만장일치가 이상적이지만 현실적으로 어렵기 때문에 다수결이 사용된다.</li><li><b>3단계</b> — 3 다수결은 유용하지만 다수의 횡포로 변질될 수 있어 소수 의견 존중이 필요하다.</li><li><b>4단계</b> — 4 대화와 타협, 토론과 숙의는 단순한 수의 지배를 이성적 결정으로 바꾸는 과정이다.</li><li><b>5단계</b> — 5 일상생활 속 민주주의는 학교와 지역사회에서 숙의의 전제를 실천할 때 가능하다.</li></ul>
+          <p class='mt-4 leading-8 font-semibold text-slate-700'>이 흐름을 따라 읽으면 단순 암기가 아니라 원인과 결과, 제도와 기능, 개념과 사례가 연결됩니다. 객관식 문제에서는 보통 한 개념의 정의만 묻지 않고, 비슷한 개념을 섞어 오답을 만들기 때문에 이 순서가 특히 중요합니다.</p>
+        </div>
+        
+        <div class='rounded-3xl border border-amber-200 bg-amber-50 p-5 md:p-6 mt-5'>
+          <h3 class='text-xl font-black text-amber-900 mb-3'>객관식에서 헷갈리기 쉬운 지점</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>다수결은 필요성과 한계를 함께 써야 한다.</li><li>소수 의견 존중은 단순 배려가 아니라 민주주의의 정당성 조건이다.</li><li>여론 조사는 기존 선호, 공론 조사는 숙의를 통한 선호 변화로 구분한다.</li></ul>
+          <p class='mt-4 leading-8 font-semibold text-slate-700'>선택지를 볼 때는 “절대적으로 항상”, “오직”, “반드시”처럼 의미를 지나치게 좁히는 표현을 조심해야 합니다. 또 비슷한 제도나 원리를 섞어 놓은 선택지는 정의의 주체, 적용 범위, 목적, 한계를 기준으로 끊어 읽어야 합니다.</p>
+        </div>
+        </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
   <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>핵심어를 따로 던진 뒤 설명하는 방식이 아니라, 단원 흐름 속에서 핵심어가 자연스럽게 설명되도록 길게 풀어 썼습니다. 빈칸을 누르면 핵심어가 바로 확인됩니다.</p>
   <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    <p>학급에서 급식 순서를 투표로 정하면 빠르게 결론이 난다. 이처럼 더 많은 사람이 지지한 의견을 따르는 방식이 <span class="hidden-box" data-text="다수결의 원칙" onclick="reveal(this)">&nbsp;</span>이다.</p><p>하지만 남학생이 적다는 이유로 늘 불리한 결정을 감수해야 한다면 문제는 달라진다. 민주주의에서 <span class="hidden-box" data-text="소수 의견 존중" onclick="reveal(this)">&nbsp;</span>이 필요한 이유는 다수의 선택이 항상 정의로운 것은 아니기 때문이다.</p><p>갈등을 줄이려면 먼저 <span class="hidden-box" data-text="대화와 타협" onclick="reveal(this)">&nbsp;</span>이 필요하다. 이어서 근거를 따지고 반론을 검토하는 <span class="hidden-box" data-text="토론과 숙의" onclick="reveal(this)">&nbsp;</span>를 거치면 결정은 단순한 수의 지배가 아니라 더 설득력 있는 판단이 된다.</p><p>특정 문제를 깊이 생각하고 충분히 논의하는 과정이 <span class="hidden-box" data-text="숙의" onclick="reveal(this)">&nbsp;</span>이며, 학습과 토론을 거쳐 의견 변화를 살피는 방식이 <span class="hidden-box" data-text="공론 조사" onclick="reveal(this)">&nbsp;</span>이다. 반면 특정 시점의 생각을 묻는 방식은 <span class="hidden-box" data-text="여론 조사" onclick="reveal(this)">&nbsp;</span>에 가깝다.</p><p>결국 일상 속 민주주의는 <span class="hidden-box" data-text="상호 존중" onclick="reveal(this)">&nbsp;</span>과 <span class="hidden-box" data-text="시민성" onclick="reveal(this)">&nbsp;</span>을 바탕으로 한다. 이를 잃으면 다수결은 쉽게 <span class="hidden-box" data-text="다수의 독재" onclick="reveal(this)">&nbsp;</span>로 변할 수 있다.</p>
+    
+    <p>1-4. 민주주의의 실현 단원은 “일상에서 민주주의를 실현하기 위해 지켜야 할 원리는 무엇일까?”라는 질문에서 출발합니다. 이 질문에 답하려면 사건이나 제도의 이름만 외우기보다, 어떤 문제가 생겼고 그 문제를 해결하기 위해 어떤 개념과 제도가 등장했는지를 한 흐름으로 따라가야 합니다.</p>
+    <p>1번째 흐름은 1 민주주의는 다양한 의견을 인정하기 때문에 의사 결정 방식이 필요하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>2번째 흐름은 2 만장일치가 이상적이지만 현실적으로 어렵기 때문에 다수결이 사용된다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>3번째 흐름은 3 다수결은 유용하지만 다수의 횡포로 변질될 수 있어 소수 의견 존중이 필요하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>4번째 흐름은 4 대화와 타협, 토론과 숙의는 단순한 수의 지배를 이성적 결정으로 바꾸는 과정이다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>5번째 흐름은 5 일상생활 속 민주주의는 학교와 지역사회에서 숙의의 전제를 실천할 때 가능하다. 이 문장은 단원의 뼈대가 되므로, 뒤에 나오는 핵심어들을 이 흐름 속에 끼워 넣어 이해하면 암기가 훨씬 쉬워집니다.</p><p>이제 개념을 실제 설명 문장 속에 넣어 보겠습니다. <span class="hidden-box" data-text="다수결의 원칙" onclick="reveal(this)">&nbsp;</span>은/는 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="소수 의견 존중" onclick="reveal(this)">&nbsp;</span>은/는 다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="대화와 타협" onclick="reveal(this)">&nbsp;</span>은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="토론과 숙의" onclick="reveal(this)">&nbsp;</span>은/는 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="숙의" onclick="reveal(this)">&nbsp;</span>은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="공론 조사" onclick="reveal(this)">&nbsp;</span>은/는 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="여론 조사" onclick="reveal(this)">&nbsp;</span>은/는 특정 시점의 선호나 인식 분포를 조사하는 방식이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>이와 연결해 생각하면, <span class="hidden-box" data-text="상호 존중" onclick="reveal(this)">&nbsp;</span>은/는 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>여기서 한 걸음 더 나아가면, <span class="hidden-box" data-text="시민성" onclick="reveal(this)">&nbsp;</span>은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p><p>앞의 흐름을 이어서 보면, <span class="hidden-box" data-text="다수의 독재" onclick="reveal(this)">&nbsp;</span>은/는 다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다. 이 개념은 단독으로 외우기보다 앞뒤 개념과 비교해야 객관식 선택지에서 혼동하지 않습니다.</p>
+    <p>따라서 이 단원은 핵심어를 하나씩 맞히는 암기 학습에서 끝나지 않습니다. 1-4. 민주주의의 실현의 핵심은 개념의 정의, 적용 사례, 비교 기준, 한계를 함께 묶어 설명할 수 있는가에 있습니다. 아래 객관식 문제를 풀 때도 정답만 확인하지 말고, 오답이 왜 틀렸는지까지 같이 확인해야 합니다.</p>
+    
   </div>
 </section>
 
@@ -98,24 +226,153 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제 20제</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>선택지를 클릭하면 바로 정답·오답 여부가 표시되고, 정답과 해설이 함께 노출됩니다. 오답 선택지도 왜 틀렸는지 비교할 수 있도록 개념 연결형 문항을 포함했습니다.</p>
   
-<div class='quiz-card'><p><b>1.</b> 다수결의 원칙이 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>현대 사회에서 만장일치가 어렵기 때문에 더 많은 구성원이 동의한 의견을 공동체 결정으로 삼기 위해 필요하다.</div></div>
-<div class='quiz-card'><p><b>2.</b> 다수결이 민주주의의 원리로 인정되기 위한 조건을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>소수 의견 존중, 평등한 참여, 다수와 소수의 교체 가능성, 인권 등 내용적 한계가 보장되어야 한다.</div></div>
-<div class='quiz-card'><p><b>3.</b> 다수의 독재가 무엇인지 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</div></div>
-<div class='quiz-card'><p><b>4.</b> 대화와 타협이 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>갈등 당사자들이 인식 차이를 좁히고 서로 양보하여 수용 가능한 결정을 만들기 위해서이다.</div></div>
-<div class='quiz-card'><p><b>5.</b> 숙의의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>특정 문제에 대해 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 과정이다.</div></div>
-<div class='quiz-card'><p><b>6.</b> 여론 조사와 공론 조사의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>여론 조사는 특정 시점의 선호를 조사하고, 공론 조사는 정보 제공과 토론을 거쳐 선호 변화를 포함한다.</div></div>
-<div class='quiz-card'><p><b>7.</b> 숙의를 위해 필요한 태도 두 가지를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>상호 존중, 개방적 태도, 보편적 기준 제시, 충분한 정보 공유 등.</div></div>
-<div class='quiz-card'><p><b>8.</b> 인권 문제에 다수결을 함부로 적용하면 안 되는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>인권은 다수의 선택으로 침해될 수 없는 근본 가치이기 때문이다.</div></div>
-<div class='quiz-card'><p><b>9.</b> 일상생활 속 민주주의 사례 하나를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>예: 학급 규칙 제정, 학생회 회의, 동아리 운영 방식 결정 등.</div></div>
-<div class='quiz-card'><p><b>10.</b> 다수결을 “수의 지배”가 아니라 “이성의 지배”로 만들기 위한 조건을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>토론, 숙의, 소수 의견 존중, 대화와 타협을 통해 더 합리적인 결론에 도달해야 한다.</div></div>
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>1.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수의 독재</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대화와 타협</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>다수결의 원칙</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>시민성</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>공론 조사</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 다수결의 원칙' data-explanation='정답은 다수결의 원칙이다. 다수결의 원칙은/는 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>2.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>공론 조사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수의 독재</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>숙의</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>소수 의견 존중</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>토론과 숙의</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 소수 의견 존중' data-explanation='정답은 소수 의견 존중이다. 소수 의견 존중은/는 다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='1'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>3.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>소수 의견 존중</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대화와 타협</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>시민성</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>토론과 숙의</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수의 독재</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='② 대화와 타협' data-explanation='정답은 대화와 타협이다. 대화와 타협은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>4.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수의 독재</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수결의 원칙</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>토론과 숙의</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 조사</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대화와 타협</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 토론과 숙의' data-explanation='정답은 토론과 숙의이다. 토론과 숙의은/는 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>5.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 조사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수결의 원칙</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대화와 타협</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>공론 조사</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>숙의</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 숙의' data-explanation='정답은 숙의이다. 숙의은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>6.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 조사</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수결의 원칙</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>숙의</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>상호 존중</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>공론 조사</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 공론 조사' data-explanation='정답은 공론 조사이다. 공론 조사은/는 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>7.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “특정 시점의 선호나 인식 분포를 조사하는 방식이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>토론과 숙의</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공론 조사</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여론 조사</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>다수의 독재</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수결의 원칙</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 여론 조사' data-explanation='정답은 여론 조사이다. 여론 조사은/는 특정 시점의 선호나 인식 분포를 조사하는 방식이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>8.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수의 독재</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공론 조사</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>상호 존중</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>다수결의 원칙</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대화와 타협</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 상호 존중' data-explanation='정답은 상호 존중이다. 상호 존중은/는 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>9.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>숙의</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>토론과 숙의</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대화와 타협</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>소수 의견 존중</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>시민성</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 시민성' data-explanation='정답은 시민성이다. 시민성은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>10.</span> 다음 설명에 해당하는 개념으로 가장 적절한 것은? “다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.”</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>소수 의견 존중</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공론 조사</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>다수의 독재</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>숙의</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대화와 타협</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 다수의 독재' data-explanation='정답은 다수의 독재이다. 다수의 독재은/는 다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다. 선택지의 다른 개념들은 의미 범위나 적용 대상이 다르다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>11.</span> 1-4. 민주주의의 실현 단원의 핵심어 “다수결의 원칙”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수결의 원칙은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>다수결의 원칙은/는 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>다수결의 원칙은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>다수결의 원칙은/는 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수결의 원칙은/는 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 다수결의 원칙은/는 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.' data-explanation='다수결의 원칙의 정확한 뜻은 “공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.”이다. 오답은 다른 핵심어의 설명을 다수결의 원칙에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='2'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>12.</span> 1-4. 민주주의의 실현 단원의 핵심어 “대화와 타협”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>대화와 타협은/는 다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>대화와 타협은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대화와 타협은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>대화와 타협은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대화와 타협은/는 다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='③ 대화와 타협은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.' data-explanation='대화와 타협의 정확한 뜻은 “갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.”이다. 오답은 다른 핵심어의 설명을 대화와 타협에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>13.</span> 1-4. 민주주의의 실현 단원의 핵심어 “숙의”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>숙의은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>숙의은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>숙의은/는 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>숙의은/는 다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>숙의은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 숙의은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.' data-explanation='숙의의 정확한 뜻은 “특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.”이다. 오답은 다른 핵심어의 설명을 숙의에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='3'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>14.</span> 1-4. 민주주의의 실현 단원의 핵심어 “여론 조사”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 조사은/는 다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>여론 조사은/는 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여론 조사은/는 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>여론 조사은/는 특정 시점의 선호나 인식 분포를 조사하는 방식이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>여론 조사은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='④ 여론 조사은/는 특정 시점의 선호나 인식 분포를 조사하는 방식이다.' data-explanation='여론 조사의 정확한 뜻은 “특정 시점의 선호나 인식 분포를 조사하는 방식이다.”이다. 오답은 다른 핵심어의 설명을 여론 조사에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>15.</span> 1-4. 민주주의의 실현 단원의 핵심어 “시민성”에 대한 설명으로 옳은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>시민성은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>시민성은/는 다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>시민성은/는 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>시민성은/는 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>시민성은/는 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 시민성은/는 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.' data-explanation='시민성의 정확한 뜻은 “공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.”이다. 오답은 다른 핵심어의 설명을 시민성에 잘못 붙인 것이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>16.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>대화와 타협 - 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공론 조사 - 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>상호 존중 - 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>토론과 숙의 - 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수결의 원칙 - 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 대화와 타협 - 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.' data-explanation='옳지 않은 연결은 대화와 타협이다. 대화와 타협은/는 “갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>17.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수결의 원칙 - 공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공론 조사 - 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>여론 조사 - 특정 시점의 선호나 인식 분포를 조사하는 방식이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>상호 존중 - 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수의 독재 - 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 다수의 독재 - 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.' data-explanation='옳지 않은 연결은 다수의 독재이다. 다수의 독재은/는 “다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>18.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>숙의 - 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>공론 조사 - 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>상호 존중 - 참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>토론과 숙의 - 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>대화와 타협 - 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 대화와 타협 - 공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.' data-explanation='옳지 않은 연결은 대화와 타협이다. 대화와 타협은/는 “갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='4'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>19.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>여론 조사 - 특정 시점의 선호나 인식 분포를 조사하는 방식이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>토론과 숙의 - 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대화와 타협 - 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>숙의 - 특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>다수의 독재 - 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='⑤ 다수의 독재 - 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.' data-explanation='옳지 않은 연결은 다수의 독재이다. 다수의 독재은/는 “다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
+        <div class='mcq-card rounded-2xl border border-slate-200 bg-white p-5 my-4' data-answer='0'>
+          <p class='text-lg font-black leading-8 text-slate-900'><span class='text-indigo-700'>20.</span> 다음 개념과 설명의 연결 중 옳지 않은 것은?</p>
+          <div class='mt-3 grid gap-2'><button type='button' class='mcq-option' data-index='0' onclick='checkMCQ(this)'><span class='font-black mr-2'>①</span>다수결의 원칙 - 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='1' onclick='checkMCQ(this)'><span class='font-black mr-2'>②</span>토론과 숙의 - 근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</button><button type='button' class='mcq-option' data-index='2' onclick='checkMCQ(this)'><span class='font-black mr-2'>③</span>대화와 타협 - 갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</button><button type='button' class='mcq-option' data-index='3' onclick='checkMCQ(this)'><span class='font-black mr-2'>④</span>공론 조사 - 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</button><button type='button' class='mcq-option' data-index='4' onclick='checkMCQ(this)'><span class='font-black mr-2'>⑤</span>여론 조사 - 특정 시점의 선호나 인식 분포를 조사하는 방식이다.</button></div>
+          <div class='mcq-result mt-4 rounded-2xl bg-slate-50 border border-slate-200 p-4' data-correct='① 다수결의 원칙 - 정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.' data-explanation='옳지 않은 연결은 다수결의 원칙이다. 다수결의 원칙은/는 “공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.”라는 뜻으로 이해해야 하며, 제시된 설명은 다른 개념의 뜻이다.'></div>
+        </div>
+        
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
+
+function checkMCQ(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.classList.contains('answered')) return;
+  const answer = Number(card.dataset.answer);
+  const selected = Number(btn.dataset.index);
+  const options = Array.from(card.querySelectorAll('.mcq-option'));
+  options.forEach((opt, idx) => {
+    if(idx === answer) opt.classList.add('correct');
+    if(idx === selected && idx !== answer) opt.classList.add('wrong');
+  });
+  const result = card.querySelector('.mcq-result');
+  const isCorrect = selected === answer;
+  result.innerHTML = `<p class="text-lg font-black ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${isCorrect ? '정답입니다.' : '오답입니다.'}</p><p class="mt-1"><b>정답:</b> ${result.dataset.correct}</p><p class="mt-1"><b>해설:</b> ${result.dataset.explanation}</p>`;
+  result.classList.add('show');
+  card.classList.add('answered');
+}
+
 </script>
 </body>
 </html>
