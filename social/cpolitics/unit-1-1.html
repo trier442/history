@@ -5,52 +5,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>정치와 생활 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 정치와 생활 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
-function checkMcq(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.dataset.answered === 'true') return;
-  card.dataset.answered = 'true';
-  const options = card.querySelectorAll('.mcq-option');
-  options.forEach(opt => {
-    opt.disabled = true;
-    if(opt.dataset.correct === 'true'){
-      opt.classList.add('correct');
-    }else{
-      opt.classList.add('muted');
-    }
-  });
-  if(btn.dataset.correct === 'true'){
-    card.querySelector('.correct-msg').classList.remove('hidden');
-  }else{
-    btn.classList.add('wrong');
-    card.querySelector('.wrong-msg').classList.remove('hidden');
-  }
-}
-
-</script>
-<script src='https://cdn.tailwindcss.com'>
-function checkMcq(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.dataset.answered === 'true') return;
-  card.dataset.answered = 'true';
-  const options = card.querySelectorAll('.mcq-option');
-  options.forEach(opt => {
-    opt.disabled = true;
-    if(opt.dataset.correct === 'true'){
-      opt.classList.add('correct');
-    }else{
-      opt.classList.add('muted');
-    }
-  });
-  if(btn.dataset.correct === 'true'){
-    card.querySelector('.correct-msg').classList.remove('hidden');
-  }else{
-    btn.classList.add('wrong');
-    card.querySelector('.wrong-msg').classList.remove('hidden');
-  }
-}
-
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -76,17 +32,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 .answer.show{display:block}
 .tab a{white-space:nowrap}
 
-.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}
-.mcq-question{line-height:1.8;font-weight:900;color:#0f172a;font-size:1.02rem}
-.mcq-options{display:grid;gap:8px;margin-top:12px}
-.mcq-option{width:100%;text-align:left;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;border-radius:14px;padding:10px 12px;font-weight:800;line-height:1.6;transition:.15s}
-.mcq-option:hover{background:#eef2ff;border-color:#818cf8}
-.mcq-option.correct{background:#dcfce7!important;border-color:#22c55e!important;color:#166534!important}
-.mcq-option.wrong{background:#fee2e2!important;border-color:#ef4444!important;color:#991b1b!important}
-.mcq-option.muted{opacity:.74}
-.mcq-result{margin-top:12px;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.8}
-.mcq-result.ok{background:#dcfce7;color:#166534}
-.mcq-result.no{background:#fee2e2;color:#991b1b}
+.flow-note{border-left:5px solid #6366f1;background:#eef2ff;border-radius:18px;padding:16px}
+#summary h3{letter-spacing:-.02em}
+#summary table th,#summary table td{vertical-align:top}
 
 </style>
 </head>
@@ -106,303 +54,72 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='summary' class='card mt-8 p-6 md:p-8'>
-<h2 class='text-3xl font-black mb-3'>1. 교과서 핵심 내용 상세 정리</h2>
-<p class='text-slate-600 font-bold leading-8 mb-5'>아래 정리는 교과서의 해당 단원 범위를 페이지 순서대로 다시 배열한 것입니다. 원문을 그대로 베끼는 방식이 아니라, 수업과 암기에 바로 활용할 수 있도록 개념·사례·비교 포인트 중심으로 재구성했습니다.</p>
-<article class='page-block'><h4>교과서 8쪽 핵심 정리</h4><ul><li>정치의 의미 인간은 사회 속에서 다른 인간과 관계를 맺으며 함께 살아가는 존재이다.</li><li>그러 나 두 명 이상의 사람이 모여 공동체를 이루는 경우 사람들은 서로 다른 생각과 계획을 가지며, 사회의 희소한 재화와 가치를 더 많이 가지기 위해 서로 대립하 고 갈등하는 경우가 발생할 수 있다.</li><li>정치는 공동체에서 발생하는 갈등과 대립을 해결하고 합의를 이끌어 사회의 통합과 질서를 유지하는 과정이다.</li><li>정치는 인간 사회가 원활하게 유지되기 위해 필요한 수단이면서 사회적 동물로서 살아갈 수밖에 없는 인간에게는 삶 그 자 체이다.</li><li>육교는 없어도 지하보도가 생기니 다행이네요.</li><li>육교 주변 사생활은 어떻게 보호할 거죠?</li><li>정치와 생활 1 사회적 희소가치 경제적 부, 정치적 권력, 사회적 위 신 등과 같이 모든 사람이 얻기를 원하지만, 그 양이 한정되어 상대적 으로 부족한 가치를 말한다.</li><li>위 사례 외에도 정치가 무엇일지 생각해 보고 떠오르는 생각을 말해 보자.</li></ul></article><article class='page-block'><h4>교과서 9쪽 핵심 정리</h4><ul><li>정치를 바라보는 관점 정치를 바라보는 관점은 좁은 의미의 정치(국가 현상설)와 넓은 의미의 정치 (집단 현상설)로 구분할 수 있다.</li><li>좁은 의미의 정치┃좁은 의미의 정치는 국가 수준에서 나타나는 정치권력의 획 득과 유지, 행사 과정과 관련한 활동을 의미한다.</li><li>정치는 입법, 행정, 사법 등 국 가의 통치 기관이 국가의 영토 내에서 발생하는 갈등을 축소하거나 해소하고, 질 서를 유지하며 공동체와 관련한 공동의 의사를 결정하는 활동으로 제한된다.</li><li>예를 들어 입법부의 법률 제정 및 국정 감사, 대통령의 통치 활동, 대통령 및 국 회 의원 선거 출마 또는 투표에 참여하는 것 등이 해당된다.</li><li>또한 국가는 필요한 경우 강제력 또는 권력을 활용하 여 대내적으로 영토 내에서 질서와 안정을 유지하고, 대외적으로 독립과 안전을 확보한다.</li><li>그러나 국가 현상설은 국가가 형성되기 이전의 정치 현상과 국가가 아 닌 사회 집단에서 나타나는 정치 현상을 설명하기 어려우며, 복잡하고 다원화된 현대 사회의 정치 현상을 설명하는 데 한계가 있다.</li><li>넓은 의미의 정치 좁은 의미의 정치 ▲ 국회의 국정 감사 국가의 통치 기 관인 국회가 행정부를 견제하는 활동 으로, 좁은 의미의 정치에 해당한다. ▲ 정치를 바라보는 관점 “정치는 야누스 신과 같다.”라는 말이 있다.</li><li>이러한 양면성을 모두 갖고 있다는 의미에서 정치를 “갈등의 근 원이며, 갈등을 해결하는 행위의 한 양태이다.”라고 규정하기도 한다.</li></ul></article><article class='page-block'><h4>교과서 10쪽 핵심 정리</h4><ul><li>넓은 의미의 정치┃넓은 의미의 정치는 정치 현상을 인간 생활의 전반적인 영역 에 걸쳐 나타나는 현상이며 과정으로 이해한다.</li><li>정치는 다양한 사회 집단에서 인간들이 서로 다른 이해관계를 가지고 상호 작용을 하는 과정에서 발생하는 대 립과 갈등을 조정하고 해결하는 모든 과정을 포함한다.</li><li>즉 학생회장 선거, 아파 트 주민 회의, 사용자와 노동자의 협상 등 다양한 사회 집단에서 발생하는 대립과 갈등을 조정하고 해결하는 모든 일상생활에서 정치가 나타나는 것으로 본다.</li><li>그러나 다른 사회 단체와 구별되는 국가만의 특수성 및 중요성을 무 시하며, 인간의 사회 활동이 국가와 밀접한 관련이 있다는 점을 간과한다. ▲ 사용자와 노동자의 협상 서로 다른 이해관계를 가진 사용자와 노동자가 대립과 갈등을 조정하는 과정은 넓은 의미의 정치에 해당한다. 다원주의(pluralism) 권력의 중심이 하나가 아니라 복 수라는 관점이다.</li><li>인터넷 그림 기사 넓은 의미의 정치는 모든 사회 집단에서 발생하는 이해 관계의 대립과 갈등을 조정하고 해결하는 활동을 의미한 다.</li><li>그렇다면 역사적으로 이러한 집단 간의 갈등을 해결하 는 방법은 무엇이었을까?</li><li>사람이 모여 사는 사회에서는 반드시 갈등이 존재하 고 갈등을 해결하는 양상도 역사적으로 다양하게 나타났 다.</li><li>더 많은 땅을 차지하려는 전쟁이나 누구에게 더 많은 세금을 부과할지를 결정하는 의회의 논쟁 모두 본질적으 로 대립과 갈등을 해결하는 방법이라는 점에서는 동일하다.</li></ul></article><article class='page-block'><h4>교과서 11쪽 핵심 정리</h4><ul><li>이번 축제 공연은 강당이 좁아 2개 학년만 관람이 가능합니다.</li><li>이번 축제 공연에 가장 많이 참가 하는 학년이 2학년입니다.</li><li>인간의 삶과 정치 인간은 사회적 존재로서 사회 속에서 타인과의 교류 속에서만 살아갈 수 있 다.</li><li>그런데 인간이 타인과 교류하는 경우 상호 이해와 조화뿐만 아니라 갈등과 대립이 빈번하게 발생하기 때문에 갈등을 해결하고 질서를 만들며 미래로 진보 하여 바람직한 인간 공동체를 형성하기 위해 정치라는 행위가 필요하다.</li><li>따라서 정치는 인간 사회에서 필요한 조건이라기보다는 삶 그 자체인 것이다.</li><li>예를 들어 대학 진학을 희망하는 수많은 지원자들 가운데 제한된 수만이 대학에 진학할 수 있기 때문에 수험생 간에 경쟁과 갈등이 발생할 수 있다.</li><li>따라서 대학 입시를 앞두고 교육부는 각 대학들이 입학 전형을 미리 마련하여 공정하게 신입생을 선 발하도록 함으로써 사회의 질서가 유지될 수 있도록 한다.</li><li>위 경우를 일상생활에서 나타나는 정치의 사례로 볼 수 있는 이유는 무엇인지 생각해 보자.</li></ul></article><article class='page-block'><h4>교과서 12쪽 핵심 정리</h4><ul><li>객실이 연기로 가득 차면 모든 사람은 이곳에서 나가야만 한다는 사실을 실감하게 된다.</li><li>진실은 거의 모든 경우 우리는 행성 A에 살고 있 다는 것이다. …… 인간 본성 자체가 이기적이고 공격적이며 공황 상태에 쉽게 빠진다는 신화가 지금까지 이어지고 있다.</li><li>문명이란 아주 가벼운 도발에도 갈라져 버리는 얄팍한 껍데기 표면에 지나지 않는다고 본다.</li><li>우리 인간은 위기가 닥칠 때, 즉 폭탄이 떨어지거나 홍수가 났을 때 최선의 모습을 보여 준다. - 뤼트허르 브레흐만, ≪휴먼카인드≫ 우리 사회는 행성 A와 행성 B 중에서 어느 쪽에 가까운지 예를 들어 자신의 생각을 말해 보자.</li><li>도 서 더 보 기 정치의 기능 정치는 사회에 존재하는 희소한 자원을 둘러싼 사회적 갈등과 분열에 대해 합 리적 규칙과 제도를 통해 질서를 유지하고 사회의 통합과 발전을 가능하도록 하 기 위해 필요하다.</li><li>첫째, 정치는 사회에서 질서를 유지하는 역할을 한다.</li><li>정치는 누가, 언제, 무엇을, 어떻게 가지는지의 문제를 결정하는 규칙과 제도를 만들어 한 사회에서 희소한 자원을 합리적으로 배분하고 강제력 있는 집 단적 결정을 확립한다.</li><li>도움이 필요한 사람들은 비행기에서 가장 먼저 빠져나갈 수 있게 도움을 받는다.</li></ul></article><article class='page-block'><h4>교과서 13쪽 핵심 정리</h4><ul><li>지금은 다양한 출신과 배경을 가진 지역 정당인 ‘모두를 위한 도시’가 공동체의 목표를 향해 연합해서 도시 공동체의 문제 를 정책적으로 해결하면서 시민들의 협력을 이끌어 내고 있다.</li><li>시민 주도로 에너지 자립 마을을 만드는 등 빛나는 시민 의식이 돋보이는 프라이부르크는 현재 독일 국민이 가장 살고 싶어 하는 도시 1위로 꼽힌다. - 《월드투데이》, 2021. .</li><li>수정 인용 정치의 힘으로 이룬 친환경 도시, 독일 프라이부르크 자 료 더 보 기 정치로 지역의 갈등을 해결하거나 개선한 사례가 있는지 우리 지역에서 직접 찾아보자. ▲ ‘모두를 위한 도시’ 소속 의원들 독일에서는 다양한 출신 과 배경을 가진 의원들이 지역 정당 소속으로 의정 활동에 참여한다. ▲ 교권 회복을 위한 국회 공청회 정치는 공동체 구성원이 직면한 문제 를 해결하고자 한다.</li><li>모든 인간이 합리적 인 것은 아니며, 어느 누구도 항상 합리적인 것은 아니기 때문에 반사회적 행위 가 발생할 수 있다.</li><li>그리고 이를 통해 구성원들이 현실에서 직면하는 공통의 문제를 해결하고 이상적인 사회를 향해 나아가게 한다.</li><li>정치는 사회의 갈등과 분열을 드러내고 이를 해결하기 위한 규칙과 제도를 만 들어 사회가 바람직한 방향으로 진보하도록 한다.</li><li>또한 정치는 인간 사회에 반드 시 필요하고 인간 사회에서만 가능한 현상이기 때문에 인간은 천성적으로 정치 적 동물이다.</li><li>반사회적 일탈 행위는 이러한 일탈 행위 중에서도 살인, 강도, 절 도 등의 범죄, 알코올 중독 등과 같 은 반사회적 행위를 말해요.</li></ul></article><article class='page-block'><h4>교과서 14쪽 핵심 정리</h4><ul><li>보수는 일반 적으로 변화보다는 유지를, 정부의 개입보다는 개인의 자유와 권리 등을 중시한다.</li><li>진보는 유지보다는 변화를, 사회적 정의와 평등의 문제를 해결하기 위해 정부가 적극적으로 나설 것을 주장한다.</li><li>보수와 진보는 정치 외에도 사회의 다양한 현안과 이슈에 대해 서로 다른 해석과 정책을 제안하며 논쟁의 대상이 된다.</li><li>학생들이 경제적 어려움 없이 공부할 수 있도록 가정 형편이 어려운 학생에게 주어야 합니다. ▲ 프랑스 혁명 이후에 우파와 좌파의 기원이 된 국민 의회의 자리 배치 의장석을 중심으로 급진적인 세력이 왼쪽에, 보수 적인 세력이 오른쪽에 앉았다. 보수와 진보의 구분은 일상생활에서 나타나는 쟁점에 대해서도 가능하다.</li><li>예를 들어 경제적 문제를 기준으로 구분하는 경 우 보수는 시장 경제 체제를 지킨다는 의미에서 우파, 진보는 시장 경제의 문제점을 해결하기 위해 변화에 적 극적이라는 점에서 좌파로 구분된다.</li><li>따라서 보수는 경제적 자유와 개인의 이익 추구, 시장 주도의 경제 정 책 등을 지향한다.</li><li>분배에 초점을 맞추고, 불평등을 해소하기 위해 더 많은 복지 예산 지출과 같은 시장에 대한 정부 개입을 주장한다.</li><li>따라서 보수 진영과 진보 진영의 스펙트럼에서 다양한 성향과 태도가 나타날 수 있다. [진보 진영] 변화 [보수 진영] 현상 유지 또는 역행 중도주의 급진주의 사회 질서에 대한 불만과 혁명적 변화 자유주의 사회 구조의 취약점과 모순의 개선 가능성 보수주의 기존 체제에 대한 방어와 유지 반동주의 과거의 제도나 사회 구조로의 회귀 좌 우 - 신정현 외, &lt;정치학: 과학과 사유의 전개&gt;</li></ul></article><article class='page-block'><h4>교과서 15쪽 핵심 정리</h4><ul><li>“일상생활에 정치가 필요한 이유는 무엇일까?”에 대한 답을 써 보자.</li><li>위 사례에서 파악할 수 있는 정치의 기능을 &lt;보기&gt;에서 골라 써 보자.</li><li>자원의 공평한 배분 &lt;보기&gt; 집단 간 대립과 갈등 해결 공동체의 규범 정립 2 위 사례에 나타난 정치의 기능을 1의 &lt;보기&gt;의 용어 중 한 가지 이상을 사용하여 서술해 보자.</li><li>단계 1 ( )은/는 공동체에서 발생하는 갈등과 대립을 해결하여 사회의 통합과 질서를 유지하는 과정이다.</li><li>좁은 의미의 정치는 ( )와 관련된 활동으로, 입법부의 법 률 제정, 대통령의 통치 활동 등을 뜻한다.</li><li>정치는 부, 권력, 명예와 같은 사회적 ( )을/를 분배하는 기능을 한다.</li><li>정치는 ( )의 근원이면서 ( )을/를 해결하는 양면적 속성을 가지고 있다.</li><li>보기 공약 갈등 국가 희소가치 일탈 행위 정치 1.</li></ul></article>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>사람들이 함께 살면 원하는 가치가 겹치고, 그 가치가 한정되어 있기 때문에 갈등이 생긴다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>정치는 그 갈등을 힘으로만 누르는 것이 아니라 규칙과 절차를 통해 조정하고 공동체 질서를 세우는 과정이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>정치를 국가 기관의 활동으로 좁게 볼 수도 있고, 학교·가정·회사·지역사회에서 나타나는 조정 과정까지 넓게 볼 수도 있다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>정치의 기능은 희소가치 배분, 일탈 행위 규제, 공동체가 나아갈 방향 제시로 정리된다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>보수와 진보는 사회 문제를 바라보는 정책 방향의 차이이며, 현실에서는 하나의 고정된 위치가 아니라 연속선 위의 다양한 성향으로 나타난다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>정치는 왜 생기는가</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>정치는 사람이 둘 이상 모여 사는 순간 발생한다. 서로 원하는 것, 우선순위, 손익 계산이 다르기 때문이다.</li><li>부, 권력, 명예, 안전, 교육 기회처럼 누구나 원하지만 충분하지 않은 사회적 희소가치가 갈등의 핵심 원인이 된다.</li><li>정치의 목적은 갈등을 없던 일로 만드는 것이 아니라, 충돌하는 요구를 공개적으로 드러내고 조정하여 공동체가 유지될 수 있는 질서를 만드는 것이다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>정치를 바라보는 두 관점</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>국가 현상설은 정치를 국회·정부·법원 같은 국가 기관의 권력 활동으로 본다. 법 제정, 행정 집행, 재판, 선거, 국정 감사가 대표 사례이다.</li><li>집단 현상설은 정치를 모든 사회 집단의 갈등 조정 과정으로 본다. 학교 회의, 아파트 주민 회의, 노사 협상도 정치 현상으로 이해한다.</li><li>국가 현상설은 국가 권력의 특수성을 설명하는 데 강하지만 일상생활의 정치 현상을 설명하기 어렵고, 집단 현상설은 일상의 조정을 설명하는 데 강하지만 국가 권력의 강제성과 중요성을 약하게 볼 수 있다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>정치의 세 가지 기능</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>첫째, 정치는 희소한 가치를 누구에게 어떻게 배분할지 정하는 규칙을 마련한다. 이 과정이 공정해야 사회 통합이 가능하다.</li><li>둘째, 정치는 범죄나 폭력처럼 공동체 질서를 무너뜨리는 반사회적 일탈 행위를 법과 제도로 통제한다.</li><li>셋째, 정치는 공동체가 지향해야 할 미래상을 제시한다. 친환경 도시 정책처럼 갈등을 정책으로 해결하고 시민의 협력을 이끌어 낸다.</li></ul>
+        </article>
+        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
+          <h3 class='text-xl font-black text-indigo-800 mb-3'>보수와 진보를 이해하는 기준</h3>
+          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>보수는 대체로 급격한 변화보다 안정과 기존 질서를 중시하고, 개인의 자유와 시장의 자율을 강조하는 경향이 있다.</li><li>진보는 불평등과 사회적 약자 문제를 해결하기 위해 변화와 정부의 적극적 역할을 중시하는 경향이 있다.</li><li>보수와 진보는 절대적 구분이 아니다. 경제, 복지, 교육, 안보, 인권 등 쟁점에 따라 개인의 입장은 달라질 수 있다.</li></ul>
+        </article></div>
+  
+        <div class='overflow-x-auto mt-5'>
+          <h3 class='text-xl font-black text-slate-900 mb-3'>좁은 의미의 정치와 넓은 의미의 정치 비교</h3>
+          <table class='w-full border-collapse text-sm md:text-base'><thead><tr><th class='border border-slate-200 bg-slate-100 p-3 text-left'>구분</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>좁은 의미의 정치</th><th class='border border-slate-200 bg-slate-100 p-3 text-left'>넓은 의미의 정치</th></tr></thead><tbody><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>핵심 관점</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>국가 현상설</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>집단 현상설</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>정치의 범위</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>국가 기관의 권력 획득·유지·행사</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>모든 사회 집단의 갈등 조정 과정</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>대표 사례</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>선거, 법률 제정, 국정 감사, 대통령의 통치 활동</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>학급 회의, 노사 협상, 주민 회의, 학생회장 선거</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>강점</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>국가 권력의 강제력과 특수성을 설명하기 쉽다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>복잡한 현대 사회의 다양한 정치 현상을 설명하기 쉽다.</td></tr><tr><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>한계</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>국가 밖의 정치 현상을 설명하기 어렵다.</td><td class='border border-slate-200 p-3 align-top leading-7 font-semibold text-slate-700'>국가 권력의 특수한 중요성을 약하게 볼 수 있다.</td></tr></tbody></table>
+        </div>
+  
+    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
+      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
+      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>정치의 의미를 “갈등 해결”만으로 쓰지 말고 “사회 통합과 질서 유지”까지 함께 써야 한다.</li><li>국가 현상설과 집단 현상설은 사례 판단 문제가 자주 나온다. 국가 기관이 주체이면 좁은 의미, 사회 집단의 조정이면 넓은 의미이다.</li><li>정치의 기능 세 가지는 배분·규제·미래상 제시로 묶어 암기하면 된다.</li><li>보수와 진보는 선악의 구분이 아니라 정책 방향의 차이로 설명해야 한다.</li></ul>
+    </div>
 </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
-<h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-<div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-<p>이 단원은 “일상생활에 정치가 필요한 이유는 무엇일까?”라는 질문에서 출발한다. 교과서의 핵심은 여러 개념을 따로 외우는 것이 아니라, 서로 다른 이해관계가 어떤 제도와 절차를 통해 조정되는지 흐름으로 이해하는 데 있다.</p><p>먼저 <span class="hidden-box" data-text="정치" onclick="reveal(this)">&nbsp;</span>은 공동체에서 발생하는 갈등과 대립을 조정하고 합의를 이끌어 사회의 통합과 질서를 유지하는 과정이다. <span class="hidden-box" data-text="사회적 희소가치" onclick="reveal(this)">&nbsp;</span>은 경제적 부, 정치적 권력, 사회적 위신처럼 모두가 원하지만 양이 한정된 가치이다. <span class="hidden-box" data-text="국가 현상설" onclick="reveal(this)">&nbsp;</span>은 정치를 국가의 통치 기관이 권력을 획득·유지·행사하는 활동으로 보는 관점이다. <span class="hidden-box" data-text="집단 현상설" onclick="reveal(this)">&nbsp;</span>은 정치를 국가뿐 아니라 다양한 사회 집단에서 갈등을 조정하는 과정으로 보는 관점이다.</p><p>이어서 <span class="hidden-box" data-text="좁은 의미의 정치" onclick="reveal(this)">&nbsp;</span>은 좁은 의미의 정치은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="넓은 의미의 정치" onclick="reveal(this)">&nbsp;</span>은 넓은 의미의 정치은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="다원주의" onclick="reveal(this)">&nbsp;</span>은 권력의 중심이 하나가 아니라 여러 곳에 분산되어 있다고 보는 관점이다. <span class="hidden-box" data-text="이해관계" onclick="reveal(this)">&nbsp;</span>은 이해관계은/는 이 단원에서 설명하는 핵심 개념이다.</p><p>또한 <span class="hidden-box" data-text="일탈 행위" onclick="reveal(this)">&nbsp;</span>은 일탈 행위은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="보수와 진보" onclick="reveal(this)">&nbsp;</span>은 보수와 진보은/는 이 단원에서 설명하는 핵심 개념이다.</p>
-</div>
+  <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+  <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
+    <p>학교 앞 통학로를 두고 학부모는 안전을, 상인은 영업 피해 방지를, 운전자는 이동의 편리를 요구한다. 이처럼 공동체 안에서 서로 다른 요구가 부딪힐 때 그것을 조정하는 과정이 <span class="hidden-box" data-text="정치" onclick="reveal(this)">&nbsp;</span>이다.</p><p>사람들이 다투는 까닭은 단순히 성격이 달라서가 아니다. 부, 권력, 명예, 안전, 교육 기회처럼 모두가 원하지만 충분하지 않은 <span class="hidden-box" data-text="사회적 희소가치" onclick="reveal(this)">&nbsp;</span>를 어떻게 나눌 것인지가 문제의 중심에 놓여 있다.</p><p>국회가 법을 만들고 정부가 정책을 집행하며 법원이 분쟁을 판단하는 활동을 정치로 보는 관점은 <span class="hidden-box" data-text="국가 현상설" onclick="reveal(this)">&nbsp;</span>이다. 반대로 학생회, 아파트 주민 회의, 노사 협상까지 정치로 이해하는 관점은 <span class="hidden-box" data-text="집단 현상설" onclick="reveal(this)">&nbsp;</span>이다.</p><p>그래서 선거와 국정 감사는 <span class="hidden-box" data-text="좁은 의미의 정치" onclick="reveal(this)">&nbsp;</span>에 가깝고, 축제 관람 순서를 정하는 학생 회의나 사용자와 노동자의 협상은 <span class="hidden-box" data-text="넓은 의미의 정치" onclick="reveal(this)">&nbsp;</span>에 가깝다. 현대 사회는 권력이 여러 집단에 나뉘어 있다고 보는 <span class="hidden-box" data-text="다원주의" onclick="reveal(this)">&nbsp;</span>와도 연결된다.</p><p>정치는 서로의 <span class="hidden-box" data-text="이해관계" onclick="reveal(this)">&nbsp;</span>를 조정할 뿐 아니라 범죄와 같은 <span class="hidden-box" data-text="일탈 행위" onclick="reveal(this)">&nbsp;</span>를 규제하고, 공동체가 어떤 미래로 갈지 방향을 세운다. 이때 <span class="hidden-box" data-text="보수와 진보" onclick="reveal(this)">&nbsp;</span>는 사회 문제를 어떤 속도와 방식으로 해결할지를 둘러싼 서로 다른 정책 감각이라고 이해하면 된다.</p>
+  </div>
 </section>
 
 <section id='concepts' class='card mt-8 p-6 md:p-8'>
-<h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
-<ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>정치</button><span class='concept-def'>공동체에서 발생하는 갈등과 대립을 조정하고 합의를 이끌어 사회의 통합과 질서를 유지하는 과정이다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>사회적 희소가치</button><span class='concept-def'>경제적 부, 정치적 권력, 사회적 위신처럼 모두가 원하지만 양이 한정된 가치이다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>국가 현상설</button><span class='concept-def'>정치를 국가의 통치 기관이 권력을 획득·유지·행사하는 활동으로 보는 관점이다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>집단 현상설</button><span class='concept-def'>정치를 국가뿐 아니라 다양한 사회 집단에서 갈등을 조정하는 과정으로 보는 관점이다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>좁은 의미의 정치</button><span class='concept-def'>좁은 의미의 정치의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>넓은 의미의 정치</button><span class='concept-def'>넓은 의미의 정치의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>다원주의</button><span class='concept-def'>권력의 중심이 하나가 아니라 여러 곳에 분산되어 있다고 보는 관점이다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>이해관계</button><span class='concept-def'>이해관계의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>일탈 행위</button><span class='concept-def'>일탈 행위의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
-<li><button class='concept-btn' onclick='toggleConcept(this)'>보수와 진보</button><span class='concept-def'>보수와 진보의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li></ul>
+  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+  <ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>정치</button><span class='concept-def'>공동체의 갈등과 대립을 조정하고 합의를 이끌어 사회의 통합과 질서를 유지하는 과정이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>사회적 희소가치</button><span class='concept-def'>경제적 부, 정치적 권력, 사회적 위신처럼 모두가 원하지만 양이 한정되어 갈등을 일으키는 가치이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>국가 현상설</button><span class='concept-def'>정치를 국가 기관의 통치 활동과 권력 행사로 한정하여 이해하는 관점이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>집단 현상설</button><span class='concept-def'>정치를 국가뿐 아니라 모든 사회 집단에서 발생하는 갈등 조정 과정으로 이해하는 관점이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>좁은 의미의 정치</button><span class='concept-def'>입법·행정·사법 등 국가 수준에서 나타나는 정치권력의 획득, 유지, 행사 활동이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>넓은 의미의 정치</button><span class='concept-def'>학교, 기업, 지역사회 등 다양한 집단에서 이해관계의 대립을 조정하고 해결하는 과정이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>다원주의</button><span class='concept-def'>사회 안의 권력 중심이 하나가 아니라 여러 개인과 집단에 분산되어 있다고 보는 관점이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>이해관계</button><span class='concept-def'>어떤 선택이나 정책이 개인 또는 집단의 이익과 손해에 영향을 미치는 관계이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>일탈 행위</button><span class='concept-def'>사회가 정한 규범의 허용 범위를 벗어나는 행위이며, 반사회적 일탈은 범죄처럼 공동체 질서를 해친다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>보수와 진보</button><span class='concept-def'>사회 변화의 속도, 국가 개입의 정도, 자유와 평등의 우선순위를 둘러싼 정치적 성향의 차이이다.</span></li></ul>
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-5'>각 문항의 선택지를 클릭하면 정답·오답 여부와 해설이 바로 표시됩니다.</p>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>1.</b> 정치가 발생하는 가장 기본적인 조건으로 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 개인이 타인과 무관하게 혼자 생활하는 상황</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 모든 구성원이 같은 가치관을 가지고 갈등이 전혀 없는 상황</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 경제적 문제가 사라지고 문화 활동만 남은 상황</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 여러 사람이 함께 살면서 희소한 가치의 배분을 둘러싼 갈등이 생기는 상황</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 국가 기관이 존재하지 않아 규칙이 완전히 사라진 상황</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치는 공동체 안에서 사회적 희소가치의 배분을 둘러싼 갈등을 조정하는 과정이다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 여러 사람이 함께 살면서 희소한 가치의 배분을 둘러싼 갈등이 생기는 상황</b>입니다.<br>해설: 정치는 공동체 안에서 사회적 희소가치의 배분을 둘러싼 갈등을 조정하는 과정이다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>2.</b> ‘사회적 희소가치’에 대한 설명으로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 언제나 무한히 공급되므로 정치적 조정이 필요 없는 가치</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 개인이 혼자 생산하고 혼자 소비하여 사회적 갈등과 무관한 가치</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 부, 권력, 명예, 안전처럼 사람들이 원하지만 충분하지 않아 배분 갈등을 낳는 가치</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 법으로 금지되어 어떤 경우에도 배분 대상이 될 수 없는 가치</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 경제 영역에만 속하고 정치와는 연결되지 않는 가치</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 사회적 희소가치는 누구나 원하지만 한정되어 있기 때문에 정치적 조정의 대상이 된다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 부, 권력, 명예, 안전처럼 사람들이 원하지만 충분하지 않아 배분 갈등을 낳는 가치</b>입니다.<br>해설: 사회적 희소가치는 누구나 원하지만 한정되어 있기 때문에 정치적 조정의 대상이 된다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>3.</b> 정치를 ‘국가 기관의 권력 활동’으로 이해하는 관점은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 전자 민주주의</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 국가 현상설</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 숙의 민주주의</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 집단 현상설</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 다원주의</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 국가 현상설은 정치를 국회, 정부, 법원 등 국가 기관의 활동으로 좁게 이해한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 국가 현상설</b>입니다.<br>해설: 국가 현상설은 정치를 국회, 정부, 법원 등 국가 기관의 활동으로 좁게 이해한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>4.</b> 아파트 주민 회의에서 주차 공간 배분 기준을 논의하는 사례를 정치로 볼 수 있게 하는 관점은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 집단 현상설</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 형식적 법치주의</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국가 현상설</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 소극적 자유론</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 세력 균형론</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 집단 현상설은 국가뿐 아니라 학교, 회사, 지역사회 같은 모든 집단의 갈등 조정까지 정치로 본다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 집단 현상설</b>입니다.<br>해설: 집단 현상설은 국가뿐 아니라 학교, 회사, 지역사회 같은 모든 집단의 갈등 조정까지 정치로 본다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>5.</b> 좁은 의미의 정치 사례로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 아파트 주민들이 재활용장 위치를 의논하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 국회가 법률안을 심의하고 의결하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 학급에서 청소 당번을 정하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 가족이 여행지를 정하기 위해 의견을 조율하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 동아리에서 회비 사용 기준을 토론하는 활동</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 좁은 의미의 정치는 국가 기관을 중심으로 한 권력 활동을 가리킨다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 국회가 법률안을 심의하고 의결하는 활동</b>입니다.<br>해설: 좁은 의미의 정치는 국가 기관을 중심으로 한 권력 활동을 가리킨다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>6.</b> 넓은 의미의 정치 사례로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 학생회가 축제 예산 배분을 두고 학급 대표들의 의견을 조정하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 헌법재판소가 위헌 여부를 심판하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 법원이 민사 분쟁을 판결하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국회가 예산안을 심의하는 활동</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 대통령이 국무회의를 주재하는 활동</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 넓은 의미의 정치는 국가 밖의 사회 집단에서 이루어지는 갈등 조정도 포함한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 학생회가 축제 예산 배분을 두고 학급 대표들의 의견을 조정하는 활동</b>입니다.<br>해설: 넓은 의미의 정치는 국가 밖의 사회 집단에서 이루어지는 갈등 조정도 포함한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>7.</b> 정치의 기능으로 보기 어려운 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 공동체가 나아갈 방향을 제시하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 사회적 희소가치를 배분하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 반사회적 일탈 행위를 규제하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 갈등을 제도와 절차를 통해 조정하는 것</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 구성원 사이의 모든 의견 차이를 강제로 없애는 것</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치는 갈등을 완전히 없애기보다 조정하고 관리하는 기능을 한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 구성원 사이의 모든 의견 차이를 강제로 없애는 것</b>입니다.<br>해설: 정치는 갈등을 완전히 없애기보다 조정하고 관리하는 기능을 한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>8.</b> 일탈 행위를 규제하는 정치의 기능이 필요한 이유로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 일탈 행위는 언제나 창의성을 의미하므로 보호해야 하기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국가가 모든 사적 생활을 통제해야 하기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 일탈 행위는 개인 문제이므로 공동체와 관련이 없기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 사회적 규범은 법과 전혀 무관하기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 공동체 질서를 해치는 행위를 통제해야 구성원의 안전과 신뢰가 유지되기 때문이다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 범죄나 폭력 등 반사회적 일탈 행위는 공동체 질서를 해치므로 법과 제도를 통해 규제된다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 공동체 질서를 해치는 행위를 통제해야 구성원의 안전과 신뢰가 유지되기 때문이다.</b>입니다.<br>해설: 범죄나 폭력 등 반사회적 일탈 행위는 공동체 질서를 해치므로 법과 제도를 통해 규제된다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>9.</b> 다원주의 사회에서 정치가 특히 중요해지는 이유는?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 오직 한 집단의 이익만 존재하므로 갈등이 생기지 않기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정치적 선택이 개인 생활에 아무 영향도 주지 않기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 모든 사람이 같은 의견을 가지므로 정치적 결정이 필요 없기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 다양한 가치와 이해관계가 공존하므로 합리적 조정 절차가 필요하기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 국가가 없는 사회일수록 정치가 사라지기 때문이다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 다원주의 사회에서는 서로 다른 이해관계가 많기 때문에 정치적 조정이 중요하다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 다양한 가치와 이해관계가 공존하므로 합리적 조정 절차가 필요하기 때문이다.</b>입니다.<br>해설: 다원주의 사회에서는 서로 다른 이해관계가 많기 때문에 정치적 조정이 중요하다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>10.</b> ‘보수’의 일반적 성향으로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정부의 역할을 언제나 무제한 확대하려는 경향</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 모든 전통을 예외 없이 폐기하려는 경향</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 급격한 변화보다 안정과 기존 질서를 중시하는 경향</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 사회 문제를 오직 혁명으로만 해결하려는 경향</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 어떤 정책에서도 시장의 역할을 부정하는 경향</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 보수는 대체로 안정, 질서, 점진적 변화를 중시한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 급격한 변화보다 안정과 기존 질서를 중시하는 경향</b>입니다.<br>해설: 보수는 대체로 안정, 질서, 점진적 변화를 중시한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>11.</b> ‘진보’의 일반적 성향으로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 사회적 약자 문제를 정치와 무관하다고 보는 경향</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 불평등 개선과 사회 변화, 약자 보호를 중시하는 경향</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국가가 공공 문제에 관여해서는 안 된다고만 보는 경향</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 기존 제도와 관습을 절대적으로 유지하려는 경향</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 모든 변화 가능성을 부정하는 경향</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 진보는 대체로 사회 개혁, 평등, 약자 보호를 중시한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 불평등 개선과 사회 변화, 약자 보호를 중시하는 경향</b>입니다.<br>해설: 진보는 대체로 사회 개혁, 평등, 약자 보호를 중시한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>12.</b> 보수와 진보를 이해할 때 주의할 점으로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 보수와 진보는 모든 정책에서 언제나 같은 결론을 낸다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 보수는 항상 민주주의에 반대하고 진보는 항상 민주주의를 완성한다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 보수와 진보는 사회 문제 분석에 아무런 기준을 제공하지 않는다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 쟁점에 따라 개인이나 집단의 입장이 달라질 수 있으므로 고정된 이분법으로만 보아서는 안 된다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 한 사람은 경제·복지·안보 모든 영역에서 반드시 같은 성향을 보여야 한다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치 성향은 연속선 위에 있으며 쟁점에 따라 달라질 수 있다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 쟁점에 따라 개인이나 집단의 입장이 달라질 수 있으므로 고정된 이분법으로만 보아서는 안 된다.</b>입니다.<br>해설: 정치 성향은 연속선 위에 있으며 쟁점에 따라 달라질 수 있다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>13.</b> 사회적 희소가치의 배분이 정치와 연결되는 사례로 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 이미 무한히 공급되는 공기를 누구에게 줄지 정하는 것</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 한정된 복지 예산을 노인, 아동, 청년 정책 중 어디에 우선 배정할지 결정하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 법적·사회적 영향이 없는 개인의 취미를 정하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 개인이 혼자 방 안에서 책을 읽는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 가족이 각자 원하는 음악을 이어폰으로 듣는 것</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 한정된 예산 배분은 이해관계가 충돌하므로 정치적 조정이 필요하다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 한정된 복지 예산을 노인, 아동, 청년 정책 중 어디에 우선 배정할지 결정하는 것</b>입니다.<br>해설: 한정된 예산 배분은 이해관계가 충돌하므로 정치적 조정이 필요하다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>14.</b> 국가 현상설의 한계로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 선거와 행정부의 활동을 정치에서 제외한다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국가 기관의 법률 제정 활동을 설명하지 못한다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 학교나 회사 등 국가 밖 집단에서 나타나는 갈등 조정 현상을 설명하기 어렵다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국가 권력의 특수성을 지나치게 약화시킨다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정치를 지나치게 넓게 보아 모든 국가 활동을 배제한다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 국가 현상설은 국가 기관 중심의 설명에는 강하지만 일상적 집단 정치 현상은 포착하기 어렵다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 학교나 회사 등 국가 밖 집단에서 나타나는 갈등 조정 현상을 설명하기 어렵다.</b>입니다.<br>해설: 국가 현상설은 국가 기관 중심의 설명에는 강하지만 일상적 집단 정치 현상은 포착하기 어렵다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>15.</b> 집단 현상설의 한계로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정치를 국회 활동으로만 한정한다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 사회 집단의 의사 결정을 정치 현상으로 볼 수 없게 한다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 아파트 회의와 학급 회의를 전혀 설명하지 못한다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 정치의 범위를 지나치게 넓혀 국가 권력의 특수성과 강제성을 약하게 볼 수 있다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 국가 밖의 갈등 조정을 무조건 배제한다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 집단 현상설은 일상적 갈등 조정을 잘 설명하지만 국가 권력의 특수성을 약화시킬 수 있다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 정치의 범위를 지나치게 넓혀 국가 권력의 특수성과 강제성을 약하게 볼 수 있다.</b>입니다.<br>해설: 집단 현상설은 일상적 갈등 조정을 잘 설명하지만 국가 권력의 특수성을 약화시킬 수 있다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>16.</b> 정치가 공동체의 미래상을 제시한다는 기능을 보여 주는 사례는?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정책 없이 우연에만 맡겨 문제를 해결하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 희소가치 배분 문제를 모두 사적 폭력으로 해결하는 것</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 탄소 배출 감축을 위해 친환경 교통 정책과 도시 계획을 수립하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 개인의 취향을 국가가 일일이 통제하는 것</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 공동체의 목표를 논의하지 않고 갈등을 방치하는 것</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치는 공동체가 지향할 방향을 정책으로 제시하고 실현하려 한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 탄소 배출 감축을 위해 친환경 교통 정책과 도시 계획을 수립하는 것</b>입니다.<br>해설: 정치는 공동체가 지향할 방향을 정책으로 제시하고 실현하려 한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>17.</b> 이해관계가 정치 과정에서 중요하게 다루어지는 이유는?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 이해관계는 정치적 갈등을 전혀 만들지 않기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 정책 결정이 개인과 집단의 손익에 영향을 주기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 이해관계는 법과 제도에 반영될 수 없기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 모든 이해관계는 항상 자동으로 일치하기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정책 결정은 누구에게도 영향을 주지 않기 때문이다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정책은 자원과 권리의 배분을 바꾸기 때문에 이해관계와 밀접하다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 정책 결정이 개인과 집단의 손익에 영향을 주기 때문이다.</b>입니다.<br>해설: 정책은 자원과 권리의 배분을 바꾸기 때문에 이해관계와 밀접하다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>18.</b> ‘정치는 갈등을 낳기도 하고 해결하기도 한다’는 말의 의미로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정치는 갈등과 무관한 순수한 개인 활동이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정치는 모든 갈등의 원인이므로 해결 기능은 없다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 희소가치 배분을 둘러싼 대립을 드러내지만 제도와 합의를 통해 조정하기 때문이다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정치는 경제적 가치와 전혀 관련이 없다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정치는 합의보다 폭력만을 정당화한다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치는 갈등을 공개적으로 다루고 공동의 결정을 통해 해결을 모색한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 희소가치 배분을 둘러싼 대립을 드러내지만 제도와 합의를 통해 조정하기 때문이다.</b>입니다.<br>해설: 정치는 갈등을 공개적으로 다루고 공동의 결정을 통해 해결을 모색한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>19.</b> 정치의 의미를 ‘생활 정치’로 확장하여 볼 때 적절한 태도는?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 갈등은 숨기고 논의하지 않아야 사회가 안정된다는 태도</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 공동체 문제는 힘이 센 사람이 일방적으로 정하면 된다는 태도</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 학교·지역사회 문제에도 참여와 토론을 통해 공동의 결정을 만들어 가려는 태도</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국가 기관이 아닌 곳의 문제는 절대로 정치가 아니라는 태도</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정치는 국회의원만 하는 일이므로 시민은 무관심해야 한다는 태도</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 넓은 의미의 정치는 일상생활의 공동 문제 해결까지 포함한다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 학교·지역사회 문제에도 참여와 토론을 통해 공동의 결정을 만들어 가려는 태도</b>입니다.<br>해설: 넓은 의미의 정치는 일상생활의 공동 문제 해결까지 포함한다.</div>
-</div>
-<div class='mcq-card' data-answered='false'>
-  <p class='mcq-question'><b>20.</b> 정치와 생활의 관계에 대한 설명으로 가장 적절한 것은?</p>
-  <div class='mcq-options'>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정치는 선거일 하루에만 생활과 관련된다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정치는 희소가치 배분과 전혀 관련이 없다.</button>
-    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 정치는 예산, 규칙, 안전, 복지처럼 일상생활의 조건을 결정하는 과정과 연결된다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정치는 개인 생활에 어떤 영향도 주지 않는다.</button>
-    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정치는 국가 권력과 무관한 순수한 오락이다.</button>
-  </div>
-  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치적 결정은 시민의 일상적 삶의 조건에 직접 영향을 미친다.</div>
-  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 정치는 예산, 규칙, 안전, 복지처럼 일상생활의 조건을 결정하는 과정과 연결된다.</b>입니다.<br>해설: 정치적 결정은 시민의 일상적 삶의 조건에 직접 영향을 미친다.</div>
-</div>
+  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
+  
+<div class='quiz-card'><p><b>1.</b> 정치를 단순한 싸움이나 권력 다툼이 아니라 공동체 유지 과정으로 보아야 하는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정치는 갈등과 대립을 조정하여 합의를 만들고 사회 통합과 질서를 유지하는 과정이기 때문이다.</div></div>
+<div class='quiz-card'><p><b>2.</b> 사회적 희소가치가 정치와 연결되는 이유를 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>희소가치는 모두가 원하지만 양이 한정되어 있어 배분 과정에서 갈등이 생기므로 정치적 조정이 필요하다.</div></div>
+<div class='quiz-card'><p><b>3.</b> 국회의 법률 제정은 어떤 관점의 정치 사례인가?</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가 현상설 또는 좁은 의미의 정치이다.</div></div>
+<div class='quiz-card'><p><b>4.</b> 아파트 주민 회의에서 주차 공간 배분을 논의하는 것은 어떤 관점의 정치 사례인가?</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>집단 현상설 또는 넓은 의미의 정치이다.</div></div>
+<div class='quiz-card'><p><b>5.</b> 정치의 세 가지 기능을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>사회적 희소가치의 배분, 반사회적 일탈 행위의 규제, 공동체의 바람직한 미래상 제시이다.</div></div>
+<div class='quiz-card'><p><b>6.</b> 국가 현상설의 장점과 한계를 각각 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가 수준의 전형적인 정치 현상을 설명하기 좋지만, 국가 밖의 사회 집단에서 나타나는 정치 현상을 설명하기 어렵다.</div></div>
+<div class='quiz-card'><p><b>7.</b> 집단 현상설의 장점과 한계를 각각 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>일상생활의 정치 현상을 설명하기 좋지만, 국가 권력의 특수성과 중요성을 약하게 볼 수 있다.</div></div>
+<div class='quiz-card'><p><b>8.</b> 보수와 진보를 절대적 대립으로 이해하면 안 되는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>쟁점과 상황에 따라 입장이 달라질 수 있고 현실의 정치 성향은 연속선 위에 다양하게 분포하기 때문이다.</div></div>
+<div class='quiz-card'><p><b>9.</b> 정치가 “갈등의 근원이며 갈등을 해결하는 행위”라는 말의 의미를 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정치는 희소가치 배분을 둘러싼 대립을 드러내지만 동시에 그 대립을 제도와 합의로 조정하기 때문이다.</div></div>
+<div class='quiz-card'><p><b>10.</b> 일상생활에서 넓은 의미의 정치 사례 하나를 들고 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>예: 학급 회의. 서로 다른 학생들의 요구를 조정해 공동의 결정을 내리기 때문이다.</div></div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
-
-function checkMcq(btn){
-  const card = btn.closest('.mcq-card');
-  if(card.dataset.answered === 'true') return;
-  card.dataset.answered = 'true';
-  const options = card.querySelectorAll('.mcq-option');
-  options.forEach(opt => {
-    opt.disabled = true;
-    if(opt.dataset.correct === 'true'){
-      opt.classList.add('correct');
-    }else{
-      opt.classList.add('muted');
-    }
-  });
-  if(btn.dataset.correct === 'true'){
-    card.querySelector('.correct-msg').classList.remove('hidden');
-  }else{
-    btn.classList.add('wrong');
-    card.querySelector('.wrong-msg').classList.remove('hidden');
-  }
-}
-
 </script>
 </body>
 </html>
