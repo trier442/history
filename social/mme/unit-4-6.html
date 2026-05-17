@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>4-6. 국가의 권위와 시민에 대한 의무 | 미래엔 현대사회와 윤리 | 모두의 사탐</title>
+<meta name='description' content='미래엔 현대사회와 윤리 국가의 권위와 시민에 대한 의무 웹 학습지'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
+<style>
+body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a} html{scroll-behavior:smooth}
+.hero{background:radial-gradient(circle at 8% 18%,rgba(251,146,60,.42),transparent 30%),linear-gradient(135deg,#0f172a,#7c2d12)}
+.card{background:white;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.keyword{display:inline-flex;margin:.18rem;padding:.35rem .7rem;border-radius:999px;background:#fff7ed;color:#9a3412;font-weight:900;font-size:.82rem}
+.hidden-box{cursor:pointer;border:2px dashed #94a3b8;background:#f1f5f9;padding:2px 10px;border-radius:8px;font-weight:900;color:transparent;display:inline-block;min-width:88px;text-align:center;user-select:none;vertical-align:baseline}
+.hidden-box::after{content:'클릭';color:#64748b;font-size:.78rem}.hidden-box.revealed{color:#c2410c;background:#ffedd5;border-color:#fb923c}.hidden-box.revealed::after{content:''}
+.concept-list li{display:grid;grid-template-columns:minmax(130px,210px) 1fr;gap:10px;align-items:start;border-bottom:1px solid #e2e8f0;padding:12px 0}.concept-btn{background:#0f172a;color:#fff;border-radius:999px;padding:7px 13px;font-weight:900;text-align:center}.concept-def{font-weight:700;line-height:1.8;color:#334155}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}.mcq-option{display:block;width:100%;text-align:left;margin-top:8px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;padding:10px 12px;font-weight:800;color:#1e293b}.mcq-option:hover{background:#eef2ff}.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#166534}.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}.mcq-option.muted{opacity:.72}.answer-box{margin-top:10px;border-radius:14px;padding:12px;font-weight:800;line-height:1.7}.correct-msg{background:#dcfce7;color:#166534}.wrong-msg{background:#fee2e2;color:#991b1b}.quote{display:block;margin-top:8px;background:#fff7ed;border-left:4px solid #fb923c;border-radius:12px;padding:10px;color:#7c2d12;font-weight:900}.tab a{white-space:nowrap}
+</style>
+<script>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true') opt.classList.add('correct');
+    else opt.classList.add('muted');
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+</script>
+</head>
+<body>
+<header class='sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200'>
+  <div class='max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3'>
+    <a href='index.html' class='inline-flex items-center gap-3'><span class='grid place-items-center w-11 h-11 rounded-2xl bg-orange-600 text-white font-black text-xl'>윤</span><span><span class='block text-2xl font-black'>모두의 사탐</span><span class='block text-sm font-bold text-slate-500'>미래엔 현대사회와 윤리 웹 학습지</span></span></a>
+    <nav class='tab flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#summary'>핵심 정리</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#story'>스토리텔링</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#concepts'>핵심어</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#quiz'>객관식 문제</a></nav>
+  </div>
+</header>
+<main class='max-w-6xl mx-auto px-4 py-8'>
+<section class='hero rounded-[2rem] p-8 md:p-10 text-white shadow-xl'>
+  <p class='inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-black ring-1 ring-white/15'>Ⅳ. 민주시민과 윤리</p>
+  <h1 class='mt-5 text-3xl md:text-5xl font-black tracking-tight'>4-6. 국가의 권위와 시민에 대한 의무</h1>
+  <p class='mt-4 text-lg md:text-xl font-bold text-orange-100'>핵심 질문: 국가 권위는 언제 정당하며 시민은 어떤 의무를 지는가?</p>
+  <div class='mt-5'><span class='keyword'>국가 권위</span><span class='keyword'>정당성</span><span class='keyword'>천명</span><span class='keyword'>민본주의</span><span class='keyword'>사회 계약론</span><span class='keyword'>정치적 본성</span><span class='keyword'>덕치</span><span class='keyword'>무위</span><span class='keyword'>겸애</span><span class='keyword'>교리</span><span class='keyword'>권리와 의무</span><span class='keyword'>법치</span></div>
+</section>
+<section class='mt-6 flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-1.html'>1-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-2.html'>1-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-3.html'>1-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-4.html'>1-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-5.html'>1-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-1.html'>2-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-2.html'>2-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-3.html'>2-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-4.html'>2-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-5.html'>2-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-6.html'>2-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-7.html'>2-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-1.html'>3-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-2.html'>3-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-3.html'>3-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-4.html'>3-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-5.html'>3-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-6.html'>3-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-1.html'>4-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-2.html'>4-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-3.html'>4-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-4.html'>4-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-5.html'>4-5</a><a class='px-3 py-2 rounded-full bg-indigo-600 text-white' href='unit-4-6.html'>4-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-7.html'>4-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-1.html'>5-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-2.html'>5-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-3.html'>5-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-4.html'>5-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-5.html'>5-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-6.html'>5-6</a></section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서의 원문을 그대로 옮기지 않고, 개념의 관계와 윤리적 판단 흐름을 중심으로 재구성했습니다. 먼저 전체 흐름을 읽고, 이어서 핵심어와 사례 판단 기준을 연결해 보세요.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>1</span><span>국가 권위는 강제력만으로 정당화되지 않으며 시민의 자유와 안전, 공동선을 보장해야 한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>2</span><span>동양 사상에서는 천명, 민본, 덕치, 무위, 겸애와 교리 등을 통해 통치의 정당성을 설명했다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>3</span><span>민본주의는 백성의 삶을 돌보지 않는 권력은 정당성을 잃을 수 있음을 보여 준다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>4</span><span>사회 계약론은 국가가 시민의 권리를 보호하기 위해 성립했다고 본다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>5</span><span>아리스토텔레스는 인간을 정치적 공동체 속에서 살아가는 존재로 이해했다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>6</span><span>시민은 권리를 누리는 동시에 법 준수, 납세, 참여, 공공질서 유지의 의무를 진다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>7</span><span>법치는 권력 남용을 막고 시민의 자유를 보호하기 위한 핵심 원칙이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>8</span><span>정당한 국가 권위는 시민의 복종만 요구하는 것이 아니라 시민의 권리와 참여를 보장해야 한다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4'><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 1</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>국가 권위는 강제력만으로 정당화되지 않으며 시민의 자유와 안전, 공동선을 보장해야 한다.</li><li>동양 사상에서는 천명, 민본, 덕치, 무위, 겸애와 교리 등을 통해 통치의 정당성을 설명했다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 2</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>민본주의는 백성의 삶을 돌보지 않는 권력은 정당성을 잃을 수 있음을 보여 준다.</li><li>사회 계약론은 국가가 시민의 권리를 보호하기 위해 성립했다고 본다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 3</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>아리스토텔레스는 인간을 정치적 공동체 속에서 살아가는 존재로 이해했다.</li><li>시민은 권리를 누리는 동시에 법 준수, 납세, 참여, 공공질서 유지의 의무를 진다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 4</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>법치는 권력 남용을 막고 시민의 자유를 보호하기 위한 핵심 원칙이다.</li><li>정당한 국가 권위는 시민의 복종만 요구하는 것이 아니라 시민의 권리와 참여를 보장해야 한다.</li></ul></article></div>
+</section>
+<section id='story' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>2. 스토리텔링 빈칸 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>핵심어가 문장 속에서 자연스럽게 설명되도록 구성했습니다. 빈칸을 클릭하면 단어가 보입니다.</p>
+  <div class='rounded-3xl bg-slate-50 border border-slate-200 p-5 md:p-6'><p class='leading-9 font-bold text-slate-700 mb-4'>국가의 권위와 시민에 대한 의무을 공부할 때에는 먼저 생활 속 장면을 떠올리면 이해가 쉬워진다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>국가 권위</span>은/는 국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>정당성</span>은/는 권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>천명</span>은/는 하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>이 흐름이 실제 쟁점으로 이어지면 서로 다른 가치가 한꺼번에 등장한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>민본주의</span>은/는 백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>사회 계약론</span>은/는 개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>정치적 본성</span>은/는 인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>그래서 단순 암기보다 개념 사이의 관계를 잡는 것이 중요하다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>덕치</span>은/는 통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>무위</span>은/는 통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>겸애</span>은/는 모든 사람을 차별 없이 사랑해야 한다는 묵자의 사상이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>마지막으로 시험에서는 사례 속에서 어떤 가치와 원리가 작동하는지 구분해야 한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>교리</span>은/는 서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>권리와 의무</span>은/는 시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>법치</span>은/는 국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>결국 이 단원은 ‘국가 권위는 언제 정당하며 시민은 어떤 의무를 지는가?’라는 물음에 답하기 위해 개념을 연결하는 과정이다. 핵심어를 클릭해 확인하면서 문장 전체의 흐름 속에서 뜻을 익혀 보자.</p></div>
+</section>
+<section id='concepts' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+  <ul class='concept-list'><li><span class='concept-btn'>국가 권위</span><span class='concept-def'>국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</span></li><li><span class='concept-btn'>정당성</span><span class='concept-def'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</span></li><li><span class='concept-btn'>천명</span><span class='concept-def'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</span></li><li><span class='concept-btn'>민본주의</span><span class='concept-def'>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</span></li><li><span class='concept-btn'>사회 계약론</span><span class='concept-def'>개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</span></li><li><span class='concept-btn'>정치적 본성</span><span class='concept-def'>인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</span></li><li><span class='concept-btn'>덕치</span><span class='concept-def'>통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</span></li><li><span class='concept-btn'>무위</span><span class='concept-def'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</span></li><li><span class='concept-btn'>겸애</span><span class='concept-def'>모든 사람을 차별 없이 사랑해야 한다는 묵자의 사상이다.</span></li><li><span class='concept-btn'>교리</span><span class='concept-def'>서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</span></li><li><span class='concept-btn'>권리와 의무</span><span class='concept-def'>시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</span></li><li><span class='concept-btn'>법치</span><span class='concept-def'>국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</span></li></ul>
+</section>
+<section id='quiz' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 문제 20문항</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>선택지를 클릭하면 즉시 정답과 오답을 확인하고 해설을 볼 수 있습니다.</p>
+  
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>1. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>법치</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>무위</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>교리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>국가 권위</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘국가 권위’이다. 국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>국가 권위</b>입니다. 정답은 ‘국가 권위’이다. 국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>2. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>사회 계약론</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>무위</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>천명</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘정당성’이다. 권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>정당성</b>입니다. 정답은 ‘정당성’이다. 권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>3. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>교리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권리와 의무</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정치적 본성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>무위</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>천명</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘천명’이다. 하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>천명</b>입니다. 정답은 ‘천명’이다. 하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>4. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>법치</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>천명</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>무위</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>민본주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘민본주의’이다. 백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>민본주의</b>입니다. 정답은 ‘민본주의’이다. 백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>5. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>천명</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권위</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>법치</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>사회 계약론</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘사회 계약론’이다. 개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>사회 계약론</b>입니다. 정답은 ‘사회 계약론’이다. 개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>6. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>정치적 본성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>천명</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>법치</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘정치적 본성’이다. 인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>정치적 본성</b>입니다. 정답은 ‘정치적 본성’이다. 인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>7. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권리와 의무</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>덕치</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>무위</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘덕치’이다. 통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>덕치</b>입니다. 정답은 ‘덕치’이다. 통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>8. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>덕치</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>무위</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권리와 의무</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>사회 계약론</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘무위’이다. 통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>무위</b>입니다. 정답은 ‘무위’이다. 통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>9. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>모든 사람을 차별 없이 사랑해야 한다는 묵자의 사상이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권위</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>겸애</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>무위</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>민본주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘겸애’이다. 모든 사람을 차별 없이 사랑해야 한다는 묵자의 사상이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>겸애</b>입니다. 정답은 ‘겸애’이다. 모든 사람을 차별 없이 사랑해야 한다는 묵자의 사상이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>10. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>민본주의</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>교리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권위</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>천명</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘교리’이다. 서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>교리</b>입니다. 정답은 ‘교리’이다. 서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>11. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>겸애</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>덕치</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>권리와 의무</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>천명</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘권리와 의무’이다. 시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>권리와 의무</b>입니다. 정답은 ‘권리와 의무’이다. 시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>12. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권위</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>법치</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권리와 의무</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>정당성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>사회 계약론</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘법치’이다. 국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>법치</b>입니다. 정답은 ‘법치’이다. 국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>13. 다음 중 ‘국가 권위’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘국가 권위’은/는 국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</b>입니다. ‘국가 권위’은/는 국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>14. 다음 중 ‘정당성’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘정당성’은/는 권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</b>입니다. ‘정당성’은/는 권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>15. 다음 중 ‘천명’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘천명’은/는 하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</b>입니다. ‘천명’은/는 하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>16. 다음 중 ‘민본주의’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘민본주의’은/는 백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</b>입니다. ‘민본주의’은/는 백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>17. 다음 중 ‘사회 계약론’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘사회 계약론’은/는 개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</b>입니다. ‘사회 계약론’은/는 개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>18. 다음 중 ‘정치적 본성’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민이 보장받는 자유와 함께 공동체 유지를 위해 지켜야 할 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가 권력이 자의적으로 행사되지 않고 법에 따라 제한되고 운영되어야 한다는 원칙이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘정치적 본성’은/는 인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</b>입니다. ‘정치적 본성’은/는 인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>19. 다음 중 ‘덕치’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 공동체 안에서 정치적 삶을 통해 자신을 실현한다는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>백성을 정치의 근본으로 삼고 백성의 삶을 돌보아야 한다는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>개인이 자유와 안전을 위해 계약을 맺어 국가를 형성했다고 보는 서양 정치 사상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>권위나 제도가 시민에게 받아들여질 만한 도덕적 근거를 갖추고 있는 상태이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘덕치’은/는 통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다.</b>입니다. ‘덕치’은/는 통치자가 덕을 바탕으로 백성을 이끌어야 한다는 유교적 정치관이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>20. 다음 중 ‘무위’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하늘의 뜻에 따라 통치 권력이 주어진다는 동양의 정치 관념이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>모든 사람을 차별 없이 사랑해야 한다는 묵자의 사상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국가가 법과 제도를 통해 시민에게 명령하고 규칙을 집행할 수 있는 힘이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>서로에게 이익이 되도록 행동해야 한다는 묵자의 사상이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘무위’은/는 통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다.</b>입니다. ‘무위’은/는 통치자가 인위적 간섭을 줄이고 자연스러운 질서를 따르는 도가적 정치관이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+</section>
+</main>
+<footer class='mt-10 py-10 text-center text-slate-500 font-bold'>미래엔 현대사회와 윤리 웹 학습지 · 모두의 사탐</footer>
+</body>
+</html>

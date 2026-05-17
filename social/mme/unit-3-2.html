@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>3-2. 과학 기술의 사회적 책임 | 미래엔 현대사회와 윤리 | 모두의 사탐</title>
+<meta name='description' content='미래엔 현대사회와 윤리 과학 기술의 사회적 책임 웹 학습지'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
+<style>
+body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a} html{scroll-behavior:smooth}
+.hero{background:radial-gradient(circle at 8% 18%,rgba(251,146,60,.42),transparent 30%),linear-gradient(135deg,#0f172a,#7c2d12)}
+.card{background:white;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.keyword{display:inline-flex;margin:.18rem;padding:.35rem .7rem;border-radius:999px;background:#fff7ed;color:#9a3412;font-weight:900;font-size:.82rem}
+.hidden-box{cursor:pointer;border:2px dashed #94a3b8;background:#f1f5f9;padding:2px 10px;border-radius:8px;font-weight:900;color:transparent;display:inline-block;min-width:88px;text-align:center;user-select:none;vertical-align:baseline}
+.hidden-box::after{content:'클릭';color:#64748b;font-size:.78rem}.hidden-box.revealed{color:#c2410c;background:#ffedd5;border-color:#fb923c}.hidden-box.revealed::after{content:''}
+.concept-list li{display:grid;grid-template-columns:minmax(130px,210px) 1fr;gap:10px;align-items:start;border-bottom:1px solid #e2e8f0;padding:12px 0}.concept-btn{background:#0f172a;color:#fff;border-radius:999px;padding:7px 13px;font-weight:900;text-align:center}.concept-def{font-weight:700;line-height:1.8;color:#334155}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}.mcq-option{display:block;width:100%;text-align:left;margin-top:8px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;padding:10px 12px;font-weight:800;color:#1e293b}.mcq-option:hover{background:#eef2ff}.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#166534}.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}.mcq-option.muted{opacity:.72}.answer-box{margin-top:10px;border-radius:14px;padding:12px;font-weight:800;line-height:1.7}.correct-msg{background:#dcfce7;color:#166534}.wrong-msg{background:#fee2e2;color:#991b1b}.quote{display:block;margin-top:8px;background:#fff7ed;border-left:4px solid #fb923c;border-radius:12px;padding:10px;color:#7c2d12;font-weight:900}.tab a{white-space:nowrap}
+</style>
+<script>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true') opt.classList.add('correct');
+    else opt.classList.add('muted');
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+</script>
+</head>
+<body>
+<header class='sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200'>
+  <div class='max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3'>
+    <a href='index.html' class='inline-flex items-center gap-3'><span class='grid place-items-center w-11 h-11 rounded-2xl bg-orange-600 text-white font-black text-xl'>윤</span><span><span class='block text-2xl font-black'>모두의 사탐</span><span class='block text-sm font-bold text-slate-500'>미래엔 현대사회와 윤리 웹 학습지</span></span></a>
+    <nav class='tab flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#summary'>핵심 정리</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#story'>스토리텔링</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#concepts'>핵심어</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#quiz'>객관식 문제</a></nav>
+  </div>
+</header>
+<main class='max-w-6xl mx-auto px-4 py-8'>
+<section class='hero rounded-[2rem] p-8 md:p-10 text-white shadow-xl'>
+  <p class='inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-black ring-1 ring-white/15'>Ⅲ. 과학과 디지털 학습 환경 윤리</p>
+  <h1 class='mt-5 text-3xl md:text-5xl font-black tracking-tight'>3-2. 과학 기술의 사회적 책임</h1>
+  <p class='mt-4 text-lg md:text-xl font-bold text-orange-100'>핵심 질문: 과학자는 연구 결과에 대해 어디까지 책임져야 할까?</p>
+  <div class='mt-5'><span class='keyword'>내적 책임</span><span class='keyword'>외적 책임</span><span class='keyword'>연구 윤리</span><span class='keyword'>과학자의 책임</span><span class='keyword'>요나스의 책임 윤리</span><span class='keyword'>예견 책임</span><span class='keyword'>미래 세대</span><span class='keyword'>예방</span><span class='keyword'>위험 사회</span><span class='keyword'>기술 평가</span><span class='keyword'>시민 참여</span><span class='keyword'>책임 있는 혁신</span></div>
+</section>
+<section class='mt-6 flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-1.html'>1-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-2.html'>1-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-3.html'>1-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-4.html'>1-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-5.html'>1-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-1.html'>2-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-2.html'>2-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-3.html'>2-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-4.html'>2-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-5.html'>2-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-6.html'>2-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-7.html'>2-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-1.html'>3-1</a><a class='px-3 py-2 rounded-full bg-indigo-600 text-white' href='unit-3-2.html'>3-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-3.html'>3-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-4.html'>3-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-5.html'>3-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-6.html'>3-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-1.html'>4-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-2.html'>4-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-3.html'>4-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-4.html'>4-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-5.html'>4-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-6.html'>4-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-7.html'>4-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-1.html'>5-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-2.html'>5-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-3.html'>5-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-4.html'>5-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-5.html'>5-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-6.html'>5-6</a></section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서의 원문을 그대로 옮기지 않고, 개념의 관계와 윤리적 판단 흐름을 중심으로 재구성했습니다. 먼저 전체 흐름을 읽고, 이어서 핵심어와 사례 판단 기준을 연결해 보세요.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>1</span><span>과학 기술의 사회적 영향이 커지면서 과학자의 책임도 연구실 안에 머물 수 없게 되었다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>2</span><span>내적 책임은 연구의 정직성과 정확성을 지키는 기본 조건이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>3</span><span>외적 책임은 기술이 사회, 환경, 미래 세대에 미칠 결과를 고려하라는 요구이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>4</span><span>요나스는 현대 기술의 힘이 커진 만큼 책임의 범위도 미래 세대와 지구 생명으로 확장되어야 한다고 보았다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>5</span><span>예방 원칙은 위험이 완전히 증명되기 전에도 심각한 피해 가능성이 있으면 조심해야 한다는 태도이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>6</span><span>기술 평가는 편리함과 이익뿐 아니라 위험, 불평등, 인간 존엄 침해 가능성을 검토한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>7</span><span>시민 참여는 과학 기술 정책이 민주적 정당성을 갖도록 돕는다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>8</span><span>책임 있는 혁신은 발전을 멈추자는 뜻이 아니라 더 안전하고 정의로운 방향으로 이끌자는 뜻이다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4'><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 1</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>과학 기술의 사회적 영향이 커지면서 과학자의 책임도 연구실 안에 머물 수 없게 되었다.</li><li>내적 책임은 연구의 정직성과 정확성을 지키는 기본 조건이다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 2</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>외적 책임은 기술이 사회, 환경, 미래 세대에 미칠 결과를 고려하라는 요구이다.</li><li>요나스는 현대 기술의 힘이 커진 만큼 책임의 범위도 미래 세대와 지구 생명으로 확장되어야 한다고 보았다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 3</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>예방 원칙은 위험이 완전히 증명되기 전에도 심각한 피해 가능성이 있으면 조심해야 한다는 태도이다.</li><li>기술 평가는 편리함과 이익뿐 아니라 위험, 불평등, 인간 존엄 침해 가능성을 검토한다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 4</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>시민 참여는 과학 기술 정책이 민주적 정당성을 갖도록 돕는다.</li><li>책임 있는 혁신은 발전을 멈추자는 뜻이 아니라 더 안전하고 정의로운 방향으로 이끌자는 뜻이다.</li></ul></article></div>
+</section>
+<section id='story' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>2. 스토리텔링 빈칸 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>핵심어가 문장 속에서 자연스럽게 설명되도록 구성했습니다. 빈칸을 클릭하면 단어가 보입니다.</p>
+  <div class='rounded-3xl bg-slate-50 border border-slate-200 p-5 md:p-6'><p class='leading-9 font-bold text-slate-700 mb-4'>과학 기술의 사회적 책임을 공부할 때에는 먼저 생활 속 장면을 떠올리면 이해가 쉬워진다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>내적 책임</span>은/는 연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>외적 책임</span>은/는 과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>연구 윤리</span>은/는 표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>이 흐름이 실제 쟁점으로 이어지면 서로 다른 가치가 한꺼번에 등장한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>과학자의 책임</span>은/는 지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>요나스의 책임 윤리</span>은/는 기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>예견 책임</span>은/는 기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>그래서 단순 암기보다 개념 사이의 관계를 잡는 것이 중요하다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>미래 세대</span>은/는 현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>예방</span>은/는 피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>위험 사회</span>은/는 기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>마지막으로 시험에서는 사례 속에서 어떤 가치와 원리가 작동하는지 구분해야 한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>기술 평가</span>은/는 새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>시민 참여</span>은/는 기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>책임 있는 혁신</span>은/는 기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>결국 이 단원은 ‘과학자는 연구 결과에 대해 어디까지 책임져야 할까?’라는 물음에 답하기 위해 개념을 연결하는 과정이다. 핵심어를 클릭해 확인하면서 문장 전체의 흐름 속에서 뜻을 익혀 보자.</p></div>
+</section>
+<section id='concepts' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+  <ul class='concept-list'><li><span class='concept-btn'>내적 책임</span><span class='concept-def'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</span></li><li><span class='concept-btn'>외적 책임</span><span class='concept-def'>과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</span></li><li><span class='concept-btn'>연구 윤리</span><span class='concept-def'>표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</span></li><li><span class='concept-btn'>과학자의 책임</span><span class='concept-def'>지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</span></li><li><span class='concept-btn'>요나스의 책임 윤리</span><span class='concept-def'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</span></li><li><span class='concept-btn'>예견 책임</span><span class='concept-def'>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</span></li><li><span class='concept-btn'>미래 세대</span><span class='concept-def'>현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</span></li><li><span class='concept-btn'>예방</span><span class='concept-def'>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</span></li><li><span class='concept-btn'>위험 사회</span><span class='concept-def'>기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다.</span></li><li><span class='concept-btn'>기술 평가</span><span class='concept-def'>새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</span></li><li><span class='concept-btn'>시민 참여</span><span class='concept-def'>기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다.</span></li><li><span class='concept-btn'>책임 있는 혁신</span><span class='concept-def'>기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</span></li></ul>
+</section>
+<section id='quiz' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 문제 20문항</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>선택지를 클릭하면 즉시 정답과 오답을 확인하고 해설을 볼 수 있습니다.</p>
+  
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>1. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민 참여</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>내적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 평가</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>외적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>위험 사회</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘내적 책임’이다. 연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>내적 책임</b>입니다. 정답은 ‘내적 책임’이다. 연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>2. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>외적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학자의 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>내적 책임</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘외적 책임’이다. 과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>외적 책임</b>입니다. 정답은 ‘외적 책임’이다. 과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>3. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>외적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>내적 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>연구 윤리</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘연구 윤리’이다. 표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>연구 윤리</b>입니다. 정답은 ‘연구 윤리’이다. 표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>4. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>책임 있는 혁신</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>외적 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학자의 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민 참여</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘과학자의 책임’이다. 지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학자의 책임</b>입니다. 정답은 ‘과학자의 책임’이다. 지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>5. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>요나스의 책임 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>외적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 윤리</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘요나스의 책임 윤리’이다. 기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>요나스의 책임 윤리</b>입니다. 정답은 ‘요나스의 책임 윤리’이다. 기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>6. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>책임 있는 혁신</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학자의 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>미래 세대</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 평가</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘예견 책임’이다. 기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>예견 책임</b>입니다. 정답은 ‘예견 책임’이다. 기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>7. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학자의 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민 참여</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>미래 세대</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘미래 세대’이다. 현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>미래 세대</b>입니다. 정답은 ‘미래 세대’이다. 현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>8. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>미래 세대</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>요나스의 책임 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>위험 사회</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>내적 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>예방</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘예방’이다. 피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>예방</b>입니다. 정답은 ‘예방’이다. 피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>9. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>위험 사회</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>요나스의 책임 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학자의 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 평가</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘위험 사회’이다. 기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>위험 사회</b>입니다. 정답은 ‘위험 사회’이다. 기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>10. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술 평가</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>책임 있는 혁신</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>미래 세대</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민 참여</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘기술 평가’이다. 새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술 평가</b>입니다. 정답은 ‘기술 평가’이다. 새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>11. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예견 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 평가</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>시민 참여</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>내적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 윤리</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘시민 참여’이다. 기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>시민 참여</b>입니다. 정답은 ‘시민 참여’이다. 기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>12. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>시민 참여</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>내적 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학자의 책임</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>책임 있는 혁신</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 평가</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘책임 있는 혁신’이다. 기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>책임 있는 혁신</b>입니다. 정답은 ‘책임 있는 혁신’이다. 기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>13. 다음 중 ‘내적 책임’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘내적 책임’은/는 연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</b>입니다. ‘내적 책임’은/는 연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>14. 다음 중 ‘외적 책임’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘외적 책임’은/는 과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</b>입니다. ‘외적 책임’은/는 과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>15. 다음 중 ‘연구 윤리’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘연구 윤리’은/는 표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</b>입니다. ‘연구 윤리’은/는 표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>16. 다음 중 ‘과학자의 책임’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술이 사회와 자연에 미칠 결과까지 고려해야 하는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘과학자의 책임’은/는 지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</b>입니다. ‘과학자의 책임’은/는 지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>17. 다음 중 ‘요나스의 책임 윤리’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 발전을 추구하되 인간과 사회, 자연에 대한 책임을 함께 고려하는 혁신 방식이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>지식 생산자이자 사회 구성원으로서 연구의 과정과 결과를 성찰해야 하는 의무이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘요나스의 책임 윤리’은/는 기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</b>입니다. ‘요나스의 책임 윤리’은/는 기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>18. 다음 중 ‘예견 책임’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 결정이 전문가에게만 맡겨지지 않고 시민의 의견과 가치 판단을 반영하는 과정이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘예견 책임’은/는 기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</b>입니다. ‘예견 책임’은/는 기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>19. 다음 중 ‘미래 세대’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>연구 과정에서 정직성, 정확성, 검증 가능성 등 학문 내부의 기준을 지켜야 하는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 발전이 새로운 위험을 만들어 사회 전체가 그 위험을 관리해야 하는 사회이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘미래 세대’은/는 현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다.</b>입니다. ‘미래 세대’은/는 현재 세대의 선택에 영향을 받지만 아직 의사 표시를 할 수 없는 다음 세대의 사람들이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>20. 다음 중 ‘예방’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 시대에는 미래 세대와 지구 생명 전체에 대한 책임을 고려해야 한다는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술이 낳을 수 있는 위험을 가능한 범위에서 미리 예상하고 대비해야 한다는 책임이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>새로운 기술의 효용, 위험, 윤리적 영향을 종합적으로 검토하는 과정이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>표절, 조작, 위조를 피하고 연구 대상과 사회에 책임 있게 행동하도록 하는 규범이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘예방’은/는 피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다.</b>입니다. ‘예방’은/는 피해가 발생한 뒤 대응하기보다 위험을 미리 줄이려는 태도이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+</section>
+</main>
+<footer class='mt-10 py-10 text-center text-slate-500 font-bold'>미래엔 현대사회와 윤리 웹 학습지 · 모두의 사탐</footer>
+</body>
+</html>

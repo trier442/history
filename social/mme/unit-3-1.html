@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>3-1. 과학 기술의 가치 중립성 논쟁 | 미래엔 현대사회와 윤리 | 모두의 사탐</title>
+<meta name='description' content='미래엔 현대사회와 윤리 과학 기술의 가치 중립성 논쟁 웹 학습지'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
+<style>
+body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a} html{scroll-behavior:smooth}
+.hero{background:radial-gradient(circle at 8% 18%,rgba(251,146,60,.42),transparent 30%),linear-gradient(135deg,#0f172a,#7c2d12)}
+.card{background:white;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.keyword{display:inline-flex;margin:.18rem;padding:.35rem .7rem;border-radius:999px;background:#fff7ed;color:#9a3412;font-weight:900;font-size:.82rem}
+.hidden-box{cursor:pointer;border:2px dashed #94a3b8;background:#f1f5f9;padding:2px 10px;border-radius:8px;font-weight:900;color:transparent;display:inline-block;min-width:88px;text-align:center;user-select:none;vertical-align:baseline}
+.hidden-box::after{content:'클릭';color:#64748b;font-size:.78rem}.hidden-box.revealed{color:#c2410c;background:#ffedd5;border-color:#fb923c}.hidden-box.revealed::after{content:''}
+.concept-list li{display:grid;grid-template-columns:minmax(130px,210px) 1fr;gap:10px;align-items:start;border-bottom:1px solid #e2e8f0;padding:12px 0}.concept-btn{background:#0f172a;color:#fff;border-radius:999px;padding:7px 13px;font-weight:900;text-align:center}.concept-def{font-weight:700;line-height:1.8;color:#334155}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}.mcq-option{display:block;width:100%;text-align:left;margin-top:8px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;padding:10px 12px;font-weight:800;color:#1e293b}.mcq-option:hover{background:#eef2ff}.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#166534}.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}.mcq-option.muted{opacity:.72}.answer-box{margin-top:10px;border-radius:14px;padding:12px;font-weight:800;line-height:1.7}.correct-msg{background:#dcfce7;color:#166534}.wrong-msg{background:#fee2e2;color:#991b1b}.quote{display:block;margin-top:8px;background:#fff7ed;border-left:4px solid #fb923c;border-radius:12px;padding:10px;color:#7c2d12;font-weight:900}.tab a{white-space:nowrap}
+</style>
+<script>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true') opt.classList.add('correct');
+    else opt.classList.add('muted');
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+</script>
+</head>
+<body>
+<header class='sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200'>
+  <div class='max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3'>
+    <a href='index.html' class='inline-flex items-center gap-3'><span class='grid place-items-center w-11 h-11 rounded-2xl bg-orange-600 text-white font-black text-xl'>윤</span><span><span class='block text-2xl font-black'>모두의 사탐</span><span class='block text-sm font-bold text-slate-500'>미래엔 현대사회와 윤리 웹 학습지</span></span></a>
+    <nav class='tab flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#summary'>핵심 정리</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#story'>스토리텔링</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#concepts'>핵심어</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#quiz'>객관식 문제</a></nav>
+  </div>
+</header>
+<main class='max-w-6xl mx-auto px-4 py-8'>
+<section class='hero rounded-[2rem] p-8 md:p-10 text-white shadow-xl'>
+  <p class='inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-black ring-1 ring-white/15'>Ⅲ. 과학과 디지털 학습 환경 윤리</p>
+  <h1 class='mt-5 text-3xl md:text-5xl font-black tracking-tight'>3-1. 과학 기술의 가치 중립성 논쟁</h1>
+  <p class='mt-4 text-lg md:text-xl font-bold text-orange-100'>핵심 질문: 과학 기술은 단순한 도구인가, 가치가 개입된 활동인가?</p>
+  <div class='mt-5'><span class='keyword'>과학 기술</span><span class='keyword'>과학 기술 지상주의</span><span class='keyword'>과학 기술 혐오주의</span><span class='keyword'>가치 중립성</span><span class='keyword'>양면성</span><span class='keyword'>야스퍼스</span><span class='keyword'>하이데거</span><span class='keyword'>탈은폐</span><span class='keyword'>닦아세움</span><span class='keyword'>윤리적 규제</span><span class='keyword'>기술 종속</span><span class='keyword'>인간 존엄</span></div>
+</section>
+<section class='mt-6 flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-1.html'>1-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-2.html'>1-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-3.html'>1-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-4.html'>1-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-5.html'>1-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-1.html'>2-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-2.html'>2-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-3.html'>2-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-4.html'>2-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-5.html'>2-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-6.html'>2-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-7.html'>2-7</a><a class='px-3 py-2 rounded-full bg-indigo-600 text-white' href='unit-3-1.html'>3-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-2.html'>3-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-3.html'>3-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-4.html'>3-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-5.html'>3-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-6.html'>3-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-1.html'>4-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-2.html'>4-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-3.html'>4-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-4.html'>4-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-5.html'>4-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-6.html'>4-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-7.html'>4-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-1.html'>5-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-2.html'>5-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-3.html'>5-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-4.html'>5-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-5.html'>5-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-6.html'>5-6</a></section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서의 원문을 그대로 옮기지 않고, 개념의 관계와 윤리적 판단 흐름을 중심으로 재구성했습니다. 먼저 전체 흐름을 읽고, 이어서 핵심어와 사례 판단 기준을 연결해 보세요.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>1</span><span>과학 기술은 의료, 통신, 생산, 이동을 발전시켜 인간 삶을 크게 개선했다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>2</span><span>동시에 환경 오염, 사생활 침해, 생명 존엄 훼손, 기술 종속 같은 문제도 낳았다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>3</span><span>과학 기술 지상주의는 효율성과 성과를 지나치게 강조해 윤리적 성찰을 약화시킨다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>4</span><span>과학 기술 혐오주의는 기술이 가져온 혜택을 부정하여 현실적 해결 방안을 놓칠 수 있다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>5</span><span>가치 중립성 논쟁은 기술 자체와 기술의 개발·활용 과정에 가치가 개입되는지를 묻는다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>6</span><span>가치 중립 입장은 책임을 사용자에게 돌리지만, 비중립 입장은 연구 목적과 제도까지 평가한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>7</span><span>하이데거는 기술을 중립적 도구로만 보면 기술의 본질을 보지 못한다고 비판했다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>8</span><span>과학 기술은 인간 존엄과 삶의 질 향상이라는 윤리적 목적 아래 방향을 잡아야 한다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4'><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 1</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>과학 기술은 의료, 통신, 생산, 이동을 발전시켜 인간 삶을 크게 개선했다.</li><li>동시에 환경 오염, 사생활 침해, 생명 존엄 훼손, 기술 종속 같은 문제도 낳았다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 2</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>과학 기술 지상주의는 효율성과 성과를 지나치게 강조해 윤리적 성찰을 약화시킨다.</li><li>과학 기술 혐오주의는 기술이 가져온 혜택을 부정하여 현실적 해결 방안을 놓칠 수 있다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 3</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>가치 중립성 논쟁은 기술 자체와 기술의 개발·활용 과정에 가치가 개입되는지를 묻는다.</li><li>가치 중립 입장은 책임을 사용자에게 돌리지만, 비중립 입장은 연구 목적과 제도까지 평가한다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 4</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>하이데거는 기술을 중립적 도구로만 보면 기술의 본질을 보지 못한다고 비판했다.</li><li>과학 기술은 인간 존엄과 삶의 질 향상이라는 윤리적 목적 아래 방향을 잡아야 한다.</li></ul></article></div>
+</section>
+<section id='story' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>2. 스토리텔링 빈칸 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>핵심어가 문장 속에서 자연스럽게 설명되도록 구성했습니다. 빈칸을 클릭하면 단어가 보입니다.</p>
+  <div class='rounded-3xl bg-slate-50 border border-slate-200 p-5 md:p-6'><p class='leading-9 font-bold text-slate-700 mb-4'>과학 기술의 가치 중립성 논쟁을 공부할 때에는 먼저 생활 속 장면을 떠올리면 이해가 쉬워진다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>과학 기술</span>은/는 자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>과학 기술 지상주의</span>은/는 과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>과학 기술 혐오주의</span>은/는 과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>이 흐름이 실제 쟁점으로 이어지면 서로 다른 가치가 한꺼번에 등장한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>가치 중립성</span>은/는 과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>양면성</span>은/는 과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>야스퍼스</span>은/는 기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>그래서 단순 암기보다 개념 사이의 관계를 잡는 것이 중요하다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>하이데거</span>은/는 기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>탈은폐</span>은/는 기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>닦아세움</span>은/는 현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>마지막으로 시험에서는 사례 속에서 어떤 가치와 원리가 작동하는지 구분해야 한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>윤리적 규제</span>은/는 과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>기술 종속</span>은/는 인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>인간 존엄</span>은/는 과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>결국 이 단원은 ‘과학 기술은 단순한 도구인가, 가치가 개입된 활동인가?’라는 물음에 답하기 위해 개념을 연결하는 과정이다. 핵심어를 클릭해 확인하면서 문장 전체의 흐름 속에서 뜻을 익혀 보자.</p></div>
+</section>
+<section id='concepts' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+  <ul class='concept-list'><li><span class='concept-btn'>과학 기술</span><span class='concept-def'>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</span></li><li><span class='concept-btn'>과학 기술 지상주의</span><span class='concept-def'>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</span></li><li><span class='concept-btn'>과학 기술 혐오주의</span><span class='concept-def'>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</span></li><li><span class='concept-btn'>가치 중립성</span><span class='concept-def'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</span></li><li><span class='concept-btn'>양면성</span><span class='concept-def'>과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</span></li><li><span class='concept-btn'>야스퍼스</span><span class='concept-def'>기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</span></li><li><span class='concept-btn'>하이데거</span><span class='concept-def'>기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</span></li><li><span class='concept-btn'>탈은폐</span><span class='concept-def'>기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</span></li><li><span class='concept-btn'>닦아세움</span><span class='concept-def'>현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</span></li><li><span class='concept-btn'>윤리적 규제</span><span class='concept-def'>과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</span></li><li><span class='concept-btn'>기술 종속</span><span class='concept-def'>인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</span></li><li><span class='concept-btn'>인간 존엄</span><span class='concept-def'>과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</span></li></ul>
+</section>
+<section id='quiz' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 문제 20문항</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>선택지를 클릭하면 즉시 정답과 오답을 확인하고 해설을 볼 수 있습니다.</p>
+  
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>1. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하이데거</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>양면성</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘과학 기술’이다. 자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술</b>입니다. 정답은 ‘과학 기술’이다. 자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>2. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>양면성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술 지상주의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하이데거</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘과학 기술 지상주의’이다. 과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술 지상주의</b>입니다. 정답은 ‘과학 기술 지상주의’이다. 과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>3. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술 혐오주의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 규제</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>가치 중립성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하이데거</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘과학 기술 혐오주의’이다. 과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술 혐오주의</b>입니다. 정답은 ‘과학 기술 혐오주의’이다. 과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>4. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 혐오주의</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>가치 중립성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 지상주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘가치 중립성’이다. 과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>가치 중립성</b>입니다. 정답은 ‘가치 중립성’이다. 과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>5. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탈은폐</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 지상주의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>양면성</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘양면성’이다. 과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>양면성</b>입니다. 정답은 ‘양면성’이다. 과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>6. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하이데거</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>가치 중립성</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>야스퍼스</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 규제</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘야스퍼스’이다. 기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>야스퍼스</b>입니다. 정답은 ‘야스퍼스’이다. 기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>7. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>하이데거</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 혐오주의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>닦아세움</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 지상주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘하이데거’이다. 기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>하이데거</b>입니다. 정답은 ‘하이데거’이다. 기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>8. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>하이데거</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>탈은폐</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 지상주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘탈은폐’이다. 기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>탈은폐</b>입니다. 정답은 ‘탈은폐’이다. 기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>9. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>가치 중립성</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>닦아세움</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 규제</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>양면성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 지상주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘닦아세움’이다. 현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>닦아세움</b>입니다. 정답은 ‘닦아세움’이다. 현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>10. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>야스퍼스</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>양면성</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>윤리적 규제</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘윤리적 규제’이다. 과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>윤리적 규제</b>입니다. 정답은 ‘윤리적 규제’이다. 과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>11. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술 종속</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>가치 중립성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탈은폐</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 혐오주의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘기술 종속’이다. 인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술 종속</b>입니다. 정답은 ‘기술 종속’이다. 인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>12. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 혐오주의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탈은폐</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 규제</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간 존엄</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술 종속</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘인간 존엄’이다. 과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간 존엄</b>입니다. 정답은 ‘인간 존엄’이다. 과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>13. 다음 중 ‘과학 기술’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘과학 기술’은/는 자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</b>입니다. ‘과학 기술’은/는 자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>14. 다음 중 ‘과학 기술 지상주의’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘과학 기술 지상주의’은/는 과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</b>입니다. ‘과학 기술 지상주의’은/는 과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>15. 다음 중 ‘과학 기술 혐오주의’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘과학 기술 혐오주의’은/는 과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</b>입니다. ‘과학 기술 혐오주의’은/는 과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>16. 다음 중 ‘가치 중립성’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘가치 중립성’은/는 과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</b>입니다. ‘가치 중립성’은/는 과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>17. 다음 중 ‘양면성’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 긍정적 영향만을 강조하여 모든 문제를 기술이 해결할 수 있다고 보는 입장이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘양면성’은/는 과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</b>입니다. ‘양면성’은/는 과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>18. 다음 중 ‘야스퍼스’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 기술을 주체적으로 사용하는 것이 아니라 기술의 논리에 끌려가는 현상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현대 기술이 자연에게 에너지를 내놓으라고 강요하듯 대상을 붙잡아 세우는 방식이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘야스퍼스’은/는 기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</b>입니다. ‘야스퍼스’은/는 기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>19. 다음 중 ‘하이데거’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술이 인간 존엄과 사회적 책임을 해치지 않도록 기준과 제도를 마련하는 일이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술이 풍요와 편리함을 주는 동시에 환경 문제와 인간 소외를 낳을 수 있다는 성격이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 목표와 한계를 판단할 때 지켜야 할 기본 가치이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술의 부정적 영향만을 강조하여 기술을 인류의 재앙으로 보는 입장이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘하이데거’은/는 기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</b>입니다. ‘하이데거’은/는 기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>20. 다음 중 ‘탈은폐’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자연 현상을 탐구한 지식을 실제 생활과 사회 문제 해결에 활용하는 인간 활동이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술은 수단일 뿐이며 인간의 목적 설정과 활용 방향에 대한 가치 판단이 중요하다고 본 철학자이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기술을 단순한 도구로 보면 인간이 기술에 종속될 수 있다고 비판한 철학자이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>과학 기술 자체는 선하거나 악하지 않고 사용하는 사람의 목적에 따라 달라진다고 보는 관점이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘탈은폐’은/는 기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다.</b>입니다. ‘탈은폐’은/는 기술이 감추어진 존재의 모습을 특정 방식으로 드러낸다는 하이데거의 개념이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+</section>
+</main>
+<footer class='mt-10 py-10 text-center text-slate-500 font-bold'>미래엔 현대사회와 윤리 웹 학습지 · 모두의 사탐</footer>
+</body>
+</html>

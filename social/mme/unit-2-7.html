@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>2-7. 환경 문제에 대한 윤리적 쟁점 | 미래엔 현대사회와 윤리 | 모두의 사탐</title>
+<meta name='description' content='미래엔 현대사회와 윤리 환경 문제에 대한 윤리적 쟁점 웹 학습지'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
+<style>
+body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a} html{scroll-behavior:smooth}
+.hero{background:radial-gradient(circle at 8% 18%,rgba(251,146,60,.42),transparent 30%),linear-gradient(135deg,#0f172a,#7c2d12)}
+.card{background:white;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.keyword{display:inline-flex;margin:.18rem;padding:.35rem .7rem;border-radius:999px;background:#fff7ed;color:#9a3412;font-weight:900;font-size:.82rem}
+.hidden-box{cursor:pointer;border:2px dashed #94a3b8;background:#f1f5f9;padding:2px 10px;border-radius:8px;font-weight:900;color:transparent;display:inline-block;min-width:88px;text-align:center;user-select:none;vertical-align:baseline}
+.hidden-box::after{content:'클릭';color:#64748b;font-size:.78rem}.hidden-box.revealed{color:#c2410c;background:#ffedd5;border-color:#fb923c}.hidden-box.revealed::after{content:''}
+.concept-list li{display:grid;grid-template-columns:minmax(130px,210px) 1fr;gap:10px;align-items:start;border-bottom:1px solid #e2e8f0;padding:12px 0}.concept-btn{background:#0f172a;color:#fff;border-radius:999px;padding:7px 13px;font-weight:900;text-align:center}.concept-def{font-weight:700;line-height:1.8;color:#334155}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}.mcq-option{display:block;width:100%;text-align:left;margin-top:8px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;padding:10px 12px;font-weight:800;color:#1e293b}.mcq-option:hover{background:#eef2ff}.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#166534}.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}.mcq-option.muted{opacity:.72}.answer-box{margin-top:10px;border-radius:14px;padding:12px;font-weight:800;line-height:1.7}.correct-msg{background:#dcfce7;color:#166534}.wrong-msg{background:#fee2e2;color:#991b1b}.quote{display:block;margin-top:8px;background:#fff7ed;border-left:4px solid #fb923c;border-radius:12px;padding:10px;color:#7c2d12;font-weight:900}.tab a{white-space:nowrap}
+</style>
+<script>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true') opt.classList.add('correct');
+    else opt.classList.add('muted');
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+</script>
+</head>
+<body>
+<header class='sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200'>
+  <div class='max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3'>
+    <a href='index.html' class='inline-flex items-center gap-3'><span class='grid place-items-center w-11 h-11 rounded-2xl bg-orange-600 text-white font-black text-xl'>윤</span><span><span class='block text-2xl font-black'>모두의 사탐</span><span class='block text-sm font-bold text-slate-500'>미래엔 현대사회와 윤리 웹 학습지</span></span></a>
+    <nav class='tab flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#summary'>핵심 정리</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#story'>스토리텔링</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#concepts'>핵심어</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#quiz'>객관식 문제</a></nav>
+  </div>
+</header>
+<main class='max-w-6xl mx-auto px-4 py-8'>
+<section class='hero rounded-[2rem] p-8 md:p-10 text-white shadow-xl'>
+  <p class='inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-black ring-1 ring-white/15'>Ⅱ. 생명윤리와 생태윤리</p>
+  <h1 class='mt-5 text-3xl md:text-5xl font-black tracking-tight'>2-7. 환경 문제에 대한 윤리적 쟁점</h1>
+  <p class='mt-4 text-lg md:text-xl font-bold text-orange-100'>핵심 질문: 기후 위기 시대에 정의로운 책임은 어떻게 나누어야 할까?</p>
+  <div class='mt-5'><span class='keyword'>환경 문제</span><span class='keyword'>기후 변화</span><span class='keyword'>기후 정의</span><span class='keyword'>생태적 지속가능성</span><span class='keyword'>세대 간 책임</span><span class='keyword'>환경 정의</span><span class='keyword'>소비 윤리</span><span class='keyword'>탄소 배출</span><span class='keyword'>생태 시민</span><span class='keyword'>국제 협력</span><span class='keyword'>예방 원칙</span><span class='keyword'>지속가능한 삶</span></div>
+</section>
+<section class='mt-6 flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-1.html'>1-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-2.html'>1-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-3.html'>1-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-4.html'>1-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-5.html'>1-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-1.html'>2-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-2.html'>2-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-3.html'>2-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-4.html'>2-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-5.html'>2-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-6.html'>2-6</a><a class='px-3 py-2 rounded-full bg-indigo-600 text-white' href='unit-2-7.html'>2-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-1.html'>3-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-2.html'>3-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-3.html'>3-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-4.html'>3-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-5.html'>3-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-6.html'>3-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-1.html'>4-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-2.html'>4-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-3.html'>4-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-4.html'>4-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-5.html'>4-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-6.html'>4-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-7.html'>4-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-1.html'>5-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-2.html'>5-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-3.html'>5-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-4.html'>5-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-5.html'>5-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-6.html'>5-6</a></section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서의 원문을 그대로 옮기지 않고, 개념의 관계와 윤리적 판단 흐름을 중심으로 재구성했습니다. 먼저 전체 흐름을 읽고, 이어서 핵심어와 사례 판단 기준을 연결해 보세요.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>1</span><span>환경 문제는 단순한 자연 훼손이 아니라 생명, 정의, 책임의 문제이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>2</span><span>기후 변화는 인간 활동의 결과이면서 취약한 지역과 세대에게 더 큰 피해를 준다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>3</span><span>기후 정의는 많이 배출한 주체와 더 큰 피해를 받는 주체가 일치하지 않는 현실을 비판한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>4</span><span>환경 정의는 오염 시설과 피해가 사회적 약자에게 집중되는 문제를 다룬다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>5</span><span>세대 간 책임은 미래 세대가 누려야 할 자연 조건을 현재 세대가 훼손해서는 안 된다는 요구이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>6</span><span>생태적 지속가능성은 경제 성장, 사회 정의, 환경 보전을 함께 고려한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>7</span><span>개인은 소비 습관을 바꾸고 기업과 국가는 제도적 전환을 추진해야 한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>8</span><span>환경 문제 해결은 예방 원칙, 국제 협력, 생태 시민의 실천이 함께 이루어질 때 가능하다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4'><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 1</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>환경 문제는 단순한 자연 훼손이 아니라 생명, 정의, 책임의 문제이다.</li><li>기후 변화는 인간 활동의 결과이면서 취약한 지역과 세대에게 더 큰 피해를 준다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 2</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>기후 정의는 많이 배출한 주체와 더 큰 피해를 받는 주체가 일치하지 않는 현실을 비판한다.</li><li>환경 정의는 오염 시설과 피해가 사회적 약자에게 집중되는 문제를 다룬다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 3</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>세대 간 책임은 미래 세대가 누려야 할 자연 조건을 현재 세대가 훼손해서는 안 된다는 요구이다.</li><li>생태적 지속가능성은 경제 성장, 사회 정의, 환경 보전을 함께 고려한다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 4</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>개인은 소비 습관을 바꾸고 기업과 국가는 제도적 전환을 추진해야 한다.</li><li>환경 문제 해결은 예방 원칙, 국제 협력, 생태 시민의 실천이 함께 이루어질 때 가능하다.</li></ul></article></div>
+</section>
+<section id='story' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>2. 스토리텔링 빈칸 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>핵심어가 문장 속에서 자연스럽게 설명되도록 구성했습니다. 빈칸을 클릭하면 단어가 보입니다.</p>
+  <div class='rounded-3xl bg-slate-50 border border-slate-200 p-5 md:p-6'><p class='leading-9 font-bold text-slate-700 mb-4'>환경 문제에 대한 윤리적 쟁점을 공부할 때에는 먼저 생활 속 장면을 떠올리면 이해가 쉬워진다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>환경 문제</span>은/는 인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>기후 변화</span>은/는 온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>기후 정의</span>은/는 기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>이 흐름이 실제 쟁점으로 이어지면 서로 다른 가치가 한꺼번에 등장한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>생태적 지속가능성</span>은/는 현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>세대 간 책임</span>은/는 현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>환경 정의</span>은/는 환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>그래서 단순 암기보다 개념 사이의 관계를 잡는 것이 중요하다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>소비 윤리</span>은/는 소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>탄소 배출</span>은/는 화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>생태 시민</span>은/는 일상생활 속에서 생태계 보전과 지속가능한 사회를 위해 책임 있게 행동하는 시민이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>마지막으로 시험에서는 사례 속에서 어떤 가치와 원리가 작동하는지 구분해야 한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>국제 협력</span>은/는 기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>예방 원칙</span>은/는 심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>지속가능한 삶</span>은/는 과도한 소비와 낭비를 줄이고 자연과 조화롭게 살아가는 생활 방식이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>결국 이 단원은 ‘기후 위기 시대에 정의로운 책임은 어떻게 나누어야 할까?’라는 물음에 답하기 위해 개념을 연결하는 과정이다. 핵심어를 클릭해 확인하면서 문장 전체의 흐름 속에서 뜻을 익혀 보자.</p></div>
+</section>
+<section id='concepts' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+  <ul class='concept-list'><li><span class='concept-btn'>환경 문제</span><span class='concept-def'>인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</span></li><li><span class='concept-btn'>기후 변화</span><span class='concept-def'>온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</span></li><li><span class='concept-btn'>기후 정의</span><span class='concept-def'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</span></li><li><span class='concept-btn'>생태적 지속가능성</span><span class='concept-def'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</span></li><li><span class='concept-btn'>세대 간 책임</span><span class='concept-def'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</span></li><li><span class='concept-btn'>환경 정의</span><span class='concept-def'>환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</span></li><li><span class='concept-btn'>소비 윤리</span><span class='concept-def'>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</span></li><li><span class='concept-btn'>탄소 배출</span><span class='concept-def'>화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</span></li><li><span class='concept-btn'>생태 시민</span><span class='concept-def'>일상생활 속에서 생태계 보전과 지속가능한 사회를 위해 책임 있게 행동하는 시민이다.</span></li><li><span class='concept-btn'>국제 협력</span><span class='concept-def'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</span></li><li><span class='concept-btn'>예방 원칙</span><span class='concept-def'>심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</span></li><li><span class='concept-btn'>지속가능한 삶</span><span class='concept-def'>과도한 소비와 낭비를 줄이고 자연과 조화롭게 살아가는 생활 방식이다.</span></li></ul>
+</section>
+<section id='quiz' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 문제 20문항</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>선택지를 클릭하면 즉시 정답과 오답을 확인하고 해설을 볼 수 있습니다.</p>
+  
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>1. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방 원칙</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태 시민</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>환경 문제</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탄소 배출</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘환경 문제’이다. 인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>환경 문제</b>입니다. 정답은 ‘환경 문제’이다. 인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>2. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 문제</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기후 변화</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국제 협력</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탄소 배출</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘기후 변화’이다. 온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기후 변화</b>입니다. 정답은 ‘기후 변화’이다. 온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>3. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탄소 배출</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국제 협력</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기후 정의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘기후 정의’이다. 기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기후 정의</b>입니다. 정답은 ‘기후 정의’이다. 기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>4. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 정의</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>생태적 지속가능성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>지속가능한 삶</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 문제</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국제 협력</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘생태적 지속가능성’이다. 현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>생태적 지속가능성</b>입니다. 정답은 ‘생태적 지속가능성’이다. 현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>5. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비 윤리</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>세대 간 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 문제</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 정의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탄소 배출</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘세대 간 책임’이다. 현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>세대 간 책임</b>입니다. 정답은 ‘세대 간 책임’이다. 현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>6. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태적 지속가능성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태 시민</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>세대 간 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>환경 정의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘환경 정의’이다. 환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>환경 정의</b>입니다. 정답은 ‘환경 정의’이다. 환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>7. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 정의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>소비 윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 문제</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태 시민</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘소비 윤리’이다. 소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>소비 윤리</b>입니다. 정답은 ‘소비 윤리’이다. 소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>8. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태적 지속가능성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태 시민</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국제 협력</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>탄소 배출</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방 원칙</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘탄소 배출’이다. 화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>탄소 배출</b>입니다. 정답은 ‘탄소 배출’이다. 화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>9. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>일상생활 속에서 생태계 보전과 지속가능한 사회를 위해 책임 있게 행동하는 시민이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 정의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비 윤리</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>생태 시민</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태적 지속가능성</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘생태 시민’이다. 일상생활 속에서 생태계 보전과 지속가능한 사회를 위해 책임 있게 행동하는 시민이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>생태 시민</b>입니다. 정답은 ‘생태 시민’이다. 일상생활 속에서 생태계 보전과 지속가능한 사회를 위해 책임 있게 행동하는 시민이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>10. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>탄소 배출</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>국제 협력</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태 시민</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 정의</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 문제</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘국제 협력’이다. 기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>국제 협력</b>입니다. 정답은 ‘국제 협력’이다. 기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>11. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>지속가능한 삶</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>예방 원칙</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>세대 간 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 정의</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘예방 원칙’이다. 심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>예방 원칙</b>입니다. 정답은 ‘예방 원칙’이다. 심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>12. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>과도한 소비와 낭비를 줄이고 자연과 조화롭게 살아가는 생활 방식이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>생태 시민</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>예방 원칙</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>지속가능한 삶</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>세대 간 책임</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>국제 협력</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘지속가능한 삶’이다. 과도한 소비와 낭비를 줄이고 자연과 조화롭게 살아가는 생활 방식이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>지속가능한 삶</b>입니다. 정답은 ‘지속가능한 삶’이다. 과도한 소비와 낭비를 줄이고 자연과 조화롭게 살아가는 생활 방식이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>13. 다음 중 ‘환경 문제’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘환경 문제’은/는 인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</b>입니다. ‘환경 문제’은/는 인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>14. 다음 중 ‘기후 변화’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘기후 변화’은/는 온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</b>입니다. ‘기후 변화’은/는 온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>15. 다음 중 ‘기후 정의’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘기후 정의’은/는 기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</b>입니다. ‘기후 정의’은/는 기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>16. 다음 중 ‘생태적 지속가능성’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간 활동이 자연 생태계의 균형을 깨뜨려 인간과 생명체의 삶을 위협하는 문제이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘생태적 지속가능성’은/는 현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</b>입니다. ‘생태적 지속가능성’은/는 현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>17. 다음 중 ‘세대 간 책임’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>일상생활 속에서 생태계 보전과 지속가능한 사회를 위해 책임 있게 행동하는 시민이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘세대 간 책임’은/는 현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</b>입니다. ‘세대 간 책임’은/는 현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>18. 다음 중 ‘환경 정의’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>온실가스 증가 등으로 지구의 기후 체계가 장기적으로 변화하는 현상이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘환경 정의’은/는 환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다.</b>입니다. ‘환경 정의’은/는 환경 혜택과 피해가 특정 계층이나 지역에 불공정하게 집중되지 않아야 한다는 원칙이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>19. 다음 중 ‘소비 윤리’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 위기의 책임과 피해가 불평등하게 분배되는 문제를 정의의 관점에서 다루는 개념이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대의 필요를 충족하면서도 미래 세대와 생태계의 존속 가능성을 해치지 않는 상태이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘소비 윤리’은/는 소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</b>입니다. ‘소비 윤리’은/는 소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>20. 다음 중 ‘탄소 배출’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>심각한 피해가 예상될 때 과학적 불확실성이 남아 있어도 미리 조치를 취해야 한다는 원칙이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>소비가 환경, 노동, 동물, 미래 세대에 미치는 영향을 고려하는 윤리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>현재 세대가 미래 세대의 삶의 조건을 파괴하지 않아야 한다는 의무이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>기후 변화처럼 국경을 넘는 문제를 해결하기 위해 국가와 시민사회가 함께 노력하는 과정이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘탄소 배출’은/는 화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다.</b>입니다. ‘탄소 배출’은/는 화석 연료 사용 등으로 온실가스가 대기 중으로 배출되는 현상이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+</section>
+</main>
+<footer class='mt-10 py-10 text-center text-slate-500 font-bold'>미래엔 현대사회와 윤리 웹 학습지 · 모두의 사탐</footer>
+</body>
+</html>

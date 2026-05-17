@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>1-1. 인간의 삶과 윤리의 관계 | 미래엔 현대사회와 윤리 | 모두의 사탐</title>
+<meta name='description' content='미래엔 현대사회와 윤리 인간의 삶과 윤리의 관계 웹 학습지'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
+<script src='https://cdn.tailwindcss.com'></script>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
+<style>
+body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a} html{scroll-behavior:smooth}
+.hero{background:radial-gradient(circle at 8% 18%,rgba(251,146,60,.42),transparent 30%),linear-gradient(135deg,#0f172a,#7c2d12)}
+.card{background:white;border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.keyword{display:inline-flex;margin:.18rem;padding:.35rem .7rem;border-radius:999px;background:#fff7ed;color:#9a3412;font-weight:900;font-size:.82rem}
+.hidden-box{cursor:pointer;border:2px dashed #94a3b8;background:#f1f5f9;padding:2px 10px;border-radius:8px;font-weight:900;color:transparent;display:inline-block;min-width:88px;text-align:center;user-select:none;vertical-align:baseline}
+.hidden-box::after{content:'클릭';color:#64748b;font-size:.78rem}.hidden-box.revealed{color:#c2410c;background:#ffedd5;border-color:#fb923c}.hidden-box.revealed::after{content:''}
+.concept-list li{display:grid;grid-template-columns:minmax(130px,210px) 1fr;gap:10px;align-items:start;border-bottom:1px solid #e2e8f0;padding:12px 0}.concept-btn{background:#0f172a;color:#fff;border-radius:999px;padding:7px 13px;font-weight:900;text-align:center}.concept-def{font-weight:700;line-height:1.8;color:#334155}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}.mcq-option{display:block;width:100%;text-align:left;margin-top:8px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc;padding:10px 12px;font-weight:800;color:#1e293b}.mcq-option:hover{background:#eef2ff}.mcq-option.correct{background:#dcfce7;border-color:#22c55e;color:#166534}.mcq-option.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}.mcq-option.muted{opacity:.72}.answer-box{margin-top:10px;border-radius:14px;padding:12px;font-weight:800;line-height:1.7}.correct-msg{background:#dcfce7;color:#166534}.wrong-msg{background:#fee2e2;color:#991b1b}.quote{display:block;margin-top:8px;background:#fff7ed;border-left:4px solid #fb923c;border-radius:12px;padding:10px;color:#7c2d12;font-weight:900}.tab a{white-space:nowrap}
+</style>
+<script>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true') opt.classList.add('correct');
+    else opt.classList.add('muted');
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+</script>
+</head>
+<body>
+<header class='sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200'>
+  <div class='max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3'>
+    <a href='index.html' class='inline-flex items-center gap-3'><span class='grid place-items-center w-11 h-11 rounded-2xl bg-orange-600 text-white font-black text-xl'>윤</span><span><span class='block text-2xl font-black'>모두의 사탐</span><span class='block text-sm font-bold text-slate-500'>미래엔 현대사회와 윤리 웹 학습지</span></span></a>
+    <nav class='tab flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#summary'>핵심 정리</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#story'>스토리텔링</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#concepts'>핵심어</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-orange-100' href='#quiz'>객관식 문제</a></nav>
+  </div>
+</header>
+<main class='max-w-6xl mx-auto px-4 py-8'>
+<section class='hero rounded-[2rem] p-8 md:p-10 text-white shadow-xl'>
+  <p class='inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-black ring-1 ring-white/15'>Ⅰ. 현대 생활과 윤리</p>
+  <h1 class='mt-5 text-3xl md:text-5xl font-black tracking-tight'>1-1. 인간의 삶과 윤리의 관계</h1>
+  <p class='mt-4 text-lg md:text-xl font-bold text-orange-100'>핵심 질문: 인간은 왜 윤리적 존재로 살아가야 할까?</p>
+  <div class='mt-5'><span class='keyword'>윤리</span><span class='keyword'>윤리학</span><span class='keyword'>윤리적 존재</span><span class='keyword'>성선설</span><span class='keyword'>성악설</span><span class='keyword'>성무선악설</span><span class='keyword'>수양</span><span class='keyword'>확충</span><span class='keyword'>도덕적 실천</span><span class='keyword'>인간다움</span></div>
+</section>
+<section class='mt-6 flex gap-2 overflow-x-auto text-sm font-black'><a class='px-3 py-2 rounded-full bg-indigo-600 text-white' href='unit-1-1.html'>1-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-2.html'>1-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-3.html'>1-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-4.html'>1-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-1-5.html'>1-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-1.html'>2-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-2.html'>2-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-3.html'>2-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-4.html'>2-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-5.html'>2-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-6.html'>2-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-2-7.html'>2-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-1.html'>3-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-2.html'>3-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-3.html'>3-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-4.html'>3-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-5.html'>3-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-3-6.html'>3-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-1.html'>4-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-2.html'>4-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-3.html'>4-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-4.html'>4-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-5.html'>4-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-6.html'>4-6</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-4-7.html'>4-7</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-1.html'>5-1</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-2.html'>5-2</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-3.html'>5-3</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-4.html'>5-4</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-5.html'>5-5</a><a class='px-3 py-2 rounded-full bg-slate-100 hover:bg-indigo-100' href='unit-5-6.html'>5-6</a></section>
+<section id='summary' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서의 원문을 그대로 옮기지 않고, 개념의 관계와 윤리적 판단 흐름을 중심으로 재구성했습니다. 먼저 전체 흐름을 읽고, 이어서 핵심어와 사례 판단 기준을 연결해 보세요.</p>
+  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
+    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
+    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>1</span><span>윤리는 단순한 규칙 암기가 아니라 인간답게 살기 위한 삶의 방향을 묻는 기준이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>2</span><span>윤리학은 선악을 판단하는 이론적 탐구와 실제 문제 해결을 위한 실천적 탐구를 함께 수행한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>3</span><span>인간은 공감 능력과 부끄러움을 아는 마음을 바탕으로 자신의 행동을 반성할 수 있다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>4</span><span>성선설, 성악설, 성무선악설은 인간 본성에 대한 설명은 다르지만 후천적 노력의 필요성을 공통적으로 인정한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>5</span><span>맹자, 순자, 고자와 홉스, 로크, 루소의 관점은 인간 이해가 윤리 교육과 제도 설계로 이어진다는 점을 보여 준다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>6</span><span>수양과 교육은 인간이 선한 가능성을 확장하고 충동을 조절하며 사회적 책임을 배워 가는 과정이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>7</span><span>현대사회 윤리 문제를 해결하려면 인간을 고정된 존재가 아니라 변화하고 성장할 수 있는 존재로 보아야 한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-orange-600 text-white font-black'>8</span><span>윤리적 삶은 개인의 양심만이 아니라 타인, 공동체, 인류, 생태계에 대한 책임까지 포함한다.</span></li></ol>
+  </div>
+  <div class='grid lg:grid-cols-2 gap-4'><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 1</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>윤리는 단순한 규칙 암기가 아니라 인간답게 살기 위한 삶의 방향을 묻는 기준이다.</li><li>윤리학은 선악을 판단하는 이론적 탐구와 실제 문제 해결을 위한 실천적 탐구를 함께 수행한다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 2</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>인간은 공감 능력과 부끄러움을 아는 마음을 바탕으로 자신의 행동을 반성할 수 있다.</li><li>성선설, 성악설, 성무선악설은 인간 본성에 대한 설명은 다르지만 후천적 노력의 필요성을 공통적으로 인정한다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 3</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>맹자, 순자, 고자와 홉스, 로크, 루소의 관점은 인간 이해가 윤리 교육과 제도 설계로 이어진다는 점을 보여 준다.</li><li>수양과 교육은 인간이 선한 가능성을 확장하고 충동을 조절하며 사회적 책임을 배워 가는 과정이다.</li></ul></article><article class='rounded-3xl border border-slate-200 bg-slate-50 p-5'><h3 class='text-lg font-black text-orange-800 mb-2'>핵심 흐름 4</h3><ul class='list-disc pl-5 leading-8 font-semibold text-slate-700'><li>현대사회 윤리 문제를 해결하려면 인간을 고정된 존재가 아니라 변화하고 성장할 수 있는 존재로 보아야 한다.</li><li>윤리적 삶은 개인의 양심만이 아니라 타인, 공동체, 인류, 생태계에 대한 책임까지 포함한다.</li></ul></article></div>
+</section>
+<section id='story' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>2. 스토리텔링 빈칸 정리</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>핵심어가 문장 속에서 자연스럽게 설명되도록 구성했습니다. 빈칸을 클릭하면 단어가 보입니다.</p>
+  <div class='rounded-3xl bg-slate-50 border border-slate-200 p-5 md:p-6'><p class='leading-9 font-bold text-slate-700 mb-4'>인간의 삶과 윤리의 관계을 공부할 때에는 먼저 생활 속 장면을 떠올리면 이해가 쉬워진다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>윤리</span>은/는 인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>윤리학</span>은/는 도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>윤리적 존재</span>은/는 자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>이 흐름이 실제 쟁점으로 이어지면 서로 다른 가치가 한꺼번에 등장한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>성선설</span>은/는 인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>성악설</span>은/는 인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>성무선악설</span>은/는 인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>그래서 단순 암기보다 개념 사이의 관계를 잡는 것이 중요하다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>수양</span>은/는 몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>확충</span>은/는 타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>도덕적 실천</span>은/는 옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>마지막으로 시험에서는 사례 속에서 어떤 가치와 원리가 작동하는지 구분해야 한다. <span class='hidden-box' onclick='this.classList.toggle("revealed")'>인간다움</span>은/는 이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다..</p><p class='leading-9 font-bold text-slate-700 mb-4'>결국 이 단원은 ‘인간은 왜 윤리적 존재로 살아가야 할까?’라는 물음에 답하기 위해 개념을 연결하는 과정이다. 핵심어를 클릭해 확인하면서 문장 전체의 흐름 속에서 뜻을 익혀 보자.</p></div>
+</section>
+<section id='concepts' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+  <ul class='concept-list'><li><span class='concept-btn'>윤리</span><span class='concept-def'>인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</span></li><li><span class='concept-btn'>윤리학</span><span class='concept-def'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</span></li><li><span class='concept-btn'>윤리적 존재</span><span class='concept-def'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</span></li><li><span class='concept-btn'>성선설</span><span class='concept-def'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</span></li><li><span class='concept-btn'>성악설</span><span class='concept-def'>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</span></li><li><span class='concept-btn'>성무선악설</span><span class='concept-def'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</span></li><li><span class='concept-btn'>수양</span><span class='concept-def'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</span></li><li><span class='concept-btn'>확충</span><span class='concept-def'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</span></li><li><span class='concept-btn'>도덕적 실천</span><span class='concept-def'>옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</span></li><li><span class='concept-btn'>인간다움</span><span class='concept-def'>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</span></li></ul>
+</section>
+<section id='quiz' class='card mt-8 p-6 md:p-8'>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 문제 20문항</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-6'>선택지를 클릭하면 즉시 정답과 오답을 확인하고 해설을 볼 수 있습니다.</p>
+  
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>1. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>확충</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리학</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘윤리’이다. 인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>윤리</b>입니다. 정답은 ‘윤리’이다. 인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>2. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 실천</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>윤리학</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>수양</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성악설</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘윤리학’이다. 도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>윤리학</b>입니다. 정답은 ‘윤리학’이다. 도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>3. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>수양</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성무선악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 실천</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘윤리적 존재’이다. 자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>윤리적 존재</b>입니다. 정답은 ‘윤리적 존재’이다. 자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>4. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>성선설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 실천</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>수양</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘성선설’이다. 인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>성선설</b>입니다. 정답은 ‘성선설’이다. 인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>5. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>성악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성선설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간다움</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘성악설’이다. 인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>성악설</b>입니다. 정답은 ‘성악설’이다. 인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>6. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 실천</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리학</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>확충</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>성무선악설</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘성무선악설’이다. 인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>성무선악설</b>입니다. 정답은 ‘성무선악설’이다. 인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>7. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간다움</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>수양</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리학</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘수양’이다. 몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>수양</b>입니다. 정답은 ‘수양’이다. 몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>8. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>확충</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성무선악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간다움</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성선설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>수양</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘확충’이다. 타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>확충</b>입니다. 정답은 ‘확충’이다. 타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>9. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>도덕적 실천</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성무선악설</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘도덕적 실천’이다. 옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>도덕적 실천</b>입니다. 정답은 ‘도덕적 실천’이다. 옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>10. 다음 설명에 해당하는 개념으로 가장 적절한 것은? <br><span class='quote'>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</span></p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성무선악설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>성선설</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>윤리적 존재</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간다움</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>수양</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. 정답은 ‘인간다움’이다. 이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간다움</b>입니다. 정답은 ‘인간다움’이다. 이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>11. 다음 중 ‘윤리’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘윤리’은/는 인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</b>입니다. ‘윤리’은/는 인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>12. 다음 중 ‘윤리학’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘윤리학’은/는 도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</b>입니다. ‘윤리학’은/는 도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>13. 다음 중 ‘윤리적 존재’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘윤리적 존재’은/는 자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</b>입니다. ‘윤리적 존재’은/는 자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>14. 다음 중 ‘성선설’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘성선설’은/는 인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</b>입니다. ‘성선설’은/는 인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>15. 다음 중 ‘성악설’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘성악설’은/는 인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</b>입니다. ‘성악설’은/는 인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>16. 다음 중 ‘성무선악설’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘성무선악설’은/는 인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</b>입니다. ‘성무선악설’은/는 인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>17. 다음 중 ‘수양’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘수양’은/는 몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</b>입니다. ‘수양’은/는 몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>18. 다음 중 ‘확충’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간의 본성이 선이나 악으로 미리 결정되어 있지 않다고 보는 입장이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>도덕적 행동의 기준과 규범을 탐구하고 가치 있는 삶의 방향을 제시하는 실천 학문이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘확충’은/는 타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</b>입니다. ‘확충’은/는 타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>19. 다음 중 ‘도덕적 실천’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간으로서 마땅히 행하거나 지켜야 할 도리이며, 함께 살아가는 사회에서 사람의 행위를 더 사람답게 만드는 원리이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 이기적이고 악한 본성을 지니고 태어난다고 보는 입장이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘도덕적 실천’은/는 옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다.</b>입니다. ‘도덕적 실천’은/는 옳다고 판단한 가치를 실제 삶에서 행동으로 옮기는 일이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+        <div class='mcq-card' data-answered='false'>
+          <p class='text-base md:text-lg font-black leading-8 text-slate-900'>20. 다음 중 ‘인간다움’에 대한 설명으로 가장 적절한 것은?</p>
+          <div class='mt-2'><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>타고난 선한 마음을 넓히고 키워 실제 행동으로 드러나게 하는 과정이다.</button><button class='mcq-option' data-correct='true' onclick='checkMcq(this)'>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>자신의 행위를 반성하고 타인의 고통에 공감하며 더 나은 삶을 선택할 수 있는 인간의 성격을 가리킨다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>몸과 마음을 갈고닦아 품성과 도덕성을 높여 가는 후천적 노력이다.</button><button class='mcq-option' data-correct='false' onclick='checkMcq(this)'>인간이 선천적으로 선한 성품을 가지고 태어난다고 보는 입장이다.</button></div>
+          <div class='answer-box correct-msg hidden'>정답입니다. ‘인간다움’은/는 이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+          <div class='answer-box wrong-msg hidden'>오답입니다. 정답은 <b>이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다.</b>입니다. ‘인간다움’은/는 이성, 공감, 자기 성찰, 책임 있는 선택을 통해 더 나은 삶을 지향하는 인간의 모습이다. 따라서 해당 설명을 고르는 것이 적절하다.</div>
+        </div>
+</section>
+</main>
+<footer class='mt-10 py-10 text-center text-slate-500 font-bold'>미래엔 현대사회와 윤리 웹 학습지 · 모두의 사탐</footer>
+</body>
+</html>
