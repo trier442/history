@@ -5,8 +5,52 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>정당과 민주 정치 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 정당과 민주 정치 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-<script src='https://cdn.tailwindcss.com'></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
+</script>
+<script src='https://cdn.tailwindcss.com'>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
+</script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -32,9 +76,17 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 .answer.show{display:block}
 .tab a{white-space:nowrap}
 
-.flow-note{border-left:5px solid #6366f1;background:#eef2ff;border-radius:18px;padding:16px}
-#summary h3{letter-spacing:-.02em}
-#summary table th,#summary table td{vertical-align:top}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}
+.mcq-question{line-height:1.8;font-weight:900;color:#0f172a;font-size:1.02rem}
+.mcq-options{display:grid;gap:8px;margin-top:12px}
+.mcq-option{width:100%;text-align:left;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;border-radius:14px;padding:10px 12px;font-weight:800;line-height:1.6;transition:.15s}
+.mcq-option:hover{background:#eef2ff;border-color:#818cf8}
+.mcq-option.correct{background:#dcfce7!important;border-color:#22c55e!important;color:#166534!important}
+.mcq-option.wrong{background:#fee2e2!important;border-color:#ef4444!important;color:#991b1b!important}
+.mcq-option.muted{opacity:.74}
+.mcq-result{margin-top:12px;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.8}
+.mcq-result.ok{background:#dcfce7;color:#166534}
+.mcq-result.no{background:#fee2e2;color:#991b1b}
 
 </style>
 </head>
@@ -54,68 +106,308 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='summary' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
-    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
-    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>정당은 같은 정치적 신념을 가진 사람들이 권력 획득을 목표로 만든 조직이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>정당은 시민 요구를 모아 정책으로 만들고 선거에서 대표자를 추천한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>여당은 정부를 구성하거나 정책을 추진하고, 야당은 비판과 대안을 통해 견제한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>정당 밖의 정치 참여 주체로 이익집단과 시민단체가 있으며 목적과 성격이 다르다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>현대 민주주의에서 시민이 정당과 다양한 참여 통로를 활용하지 않으면 정당 위기와 대표성 약화가 나타난다.</span></li></ol>
-  </div>
-  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>정당의 의미</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>정당은 공통의 정치적 가치와 신념을 가진 사람들이 정치권력 획득을 목표로 조직한 결사체이다.</li><li>사적 이익만이 아니라 국정 운영 방향과 공공 정책을 제시한다는 점에서 단순한 친목 조직과 다르다.</li><li>대의 민주주의에서 시민은 정당을 통해 후보자와 정책을 비교하고 간접적으로 주권을 행사한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>정당의 역할</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>정당은 사회의 다양한 요구를 집약해 정책과 공약으로 제시한다.</li><li>정당은 공천을 통해 정치 엘리트를 충원하고 선거 경쟁을 조직한다.</li><li>선거에서 승리한 여당은 정부 운영을 뒷받침하고, 야당은 정부 정책을 비판·감시하며 대안을 제시한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>정당의 위기와 과제</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>정당이 관료화되고 소수 정치 엘리트 중심으로 운영되면 일반 당원과 시민의 의사가 반영되기 어렵다.</li><li>시민단체와 이익집단이 성장하면서 정당만이 유일한 참여 통로는 아니게 되었지만, 정당은 여전히 정책과 권력을 연결하는 핵심 제도이다.</li><li>정당 위기를 극복하려면 시민 참여, 당내 민주주의, 투명한 공천과 정책 경쟁이 필요하다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>다양한 정치 참여 방법</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>이익집단은 특정 집단의 이익 실현을 목표로 정책에 압력을 행사한다.</li><li>시민단체는 공익 실현을 목표로 감시, 캠페인, 정책 제안 활동을 한다.</li><li>청원, 서명, 시위, 집회, 공청회, 정책 토론회는 시민이 정치과정에 직접 의견을 내는 방식이다.</li></ul>
-        </article></div>
-  
-  
-    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
-      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
-      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>정당은 권력 획득 조직이라는 점에서 시민단체와 구분된다.</li><li>여당/야당 기능은 정부 구성과 견제로 대비한다.</li><li>이익집단은 사익, 시민단체는 공익 중심으로 정리한다.</li></ul>
-    </div>
+<h2 class='text-3xl font-black mb-3'>1. 교과서 핵심 내용 상세 정리</h2>
+<p class='text-slate-600 font-bold leading-8 mb-5'>아래 정리는 교과서의 해당 단원 범위를 페이지 순서대로 다시 배열한 것입니다. 원문을 그대로 베끼는 방식이 아니라, 수업과 암기에 바로 활용할 수 있도록 개념·사례·비교 포인트 중심으로 재구성했습니다.</p>
+<article class='page-block'><h4>교과서 60쪽 핵심 정리</h4><ul><li>정당의 의미 정당은 공통의 정치적 신념과 가치를 가진 사람들이 정치권력의 획득을 목표로 자발적으로 조직한 결사체로, 사적 이익을 넘어서 국익과 같은 집단적 이익을 추 구한다.</li><li>현대 민주주의에서 정당은 국민이 정치에 참여하는 가장 핵심적인 제도로 꼽 힌다.</li><li>국민의 대표자인 대통령, 국회 의원 등은 대부분 정당에 속해 있으며, 이 들이 국민의 의사를 반영하여 정책을 수립·집행할 때 소속 정당은 향후 국정 운 영의 방향을 예측할 수 있는 중요한 기준이 된다.</li><li>이처럼 정당은 시민이 대표자 를 통해 주권을 행사하는 대의제 민주주의에서 중요한 역할을 한다.</li><li>정당은 사회 구성원이 자신의 의견을 정치과정에 반영하고, 다른 구성원과의 갈등을 조정해야 할 때도 중요한 역할을 한다.</li><li>정당은 개인이나 집단의 다양한 요구와 의견이 정치과정에 투입될 때 이를 집약·표출하고, 의회에서 토론을 거 쳐 구체적인 정책으로 만든다.</li><li>정당은 이러한 정치과정을 통해 사회 구성원 간의 갈등을 조정하고, 더 나아가 사회 통합에 기여한다.</li><li>정당이 없어도 선거에 나올 수 있다면 정당은 왜 필요한 걸까?</li></ul></article><article class='page-block'><h4>교과서 61쪽 핵심 정리</h4><ul><li>정당의 역할 현대 민주 정치에서 정당은 다음과 같은 역할을 수행한다.</li><li>정당이 선거를 통해 권력을 획득하려면 유권자의 지지가 필요하다.</li><li>이를 위해 정당은 시민의 의사와 요구를 반영한 정책과 공약을 제시하 고, 이것이 정부의 중요한 정책에 반영될 수 있도록 영향력을 행사한다.</li><li>정당은 정치권력의 획득을 목표 로 하는 만큼 선거에 후보자를 추천하고 추천한 후보자가 시민의 대표자로 선출 될 수 있도록 뒷받침한다.</li><li>이처럼 정당이 후보자를 추천하는 공천은 정치 엘리트의 충원에 있어 중요한 기능 중 하나이다.</li><li>정당의 또 다른 역할, 독재자 구분해 내기 도 서 더 보 기 민주주의를 지키는 건 국민이 아니다. …… 잠재적 대중 선동가는 모든 민주주의 사회에 존재한다.</li><li>첫째, 말과 행동에서 민주주의 규범을 거부, 둘째, 경쟁자 의 존재를 부인, 셋째, 폭력을 용인하거나 조장, 넷째, 언론 의 자유와 같은 반대자의 기본권을 억압하려는 정치인을 밑줄 친 부분에서 도출할 수 있는 정당의 기능이 무엇인지 이야기해 보자.</li><li>공천 선거에서 정치권력의 획득을 목표 로 정당에서 후보자를 추천하는 것 을 말한다.</li></ul></article><article class='page-block'><h4>교과서 62쪽 핵심 정리</h4><ul><li>셋째, 정당은 정부를 조직하거나 견제하는 역할을 한다.</li><li>정당은 선거에서 승리 하여 시민들로부터 부여받은 권력을 통해 정책을 실현하고, 다음</li><li>선거에서 이긴 집권 여당은 정부를 구성하고, 국가 조직을 통제 하면서 정책을 추진해 나간다.</li><li>반면, 선거에서 진 야당은 집권 여당과 정부의 정 책을 비판하거나, 다른 정책적 대안을 제시하는 등 견제 기능을 수행한다.</li><li>정당 은 사회적이고 정치적인 논쟁에 대해 문제를 제기하고, 새로운 정책을 제시함으로써 여론의 형성과 조직에 기여한다.</li><li>정당은 사회의 다양한 갈등을 표출하고, 여러 정당이 이러한 갈등을 의회에서 논의하고 경쟁함으로써 사회적 갈등의 통합과 조정 기능을 수행한다.</li><li>이 경우 다수당이 다른 정당과 함께 과반수의 지지를 얻어 집권하는 경우가 있는 데, 이를 연립 정부라고 한다.</li><li>정당 체제의 유형 지 식 더 하 기 일당제 복수 정당제 양당제 다당제 ▲ 선거 공보를 통해 유권자는 후보 의 사진, 성명, 기호, 소속 정당명뿐만 아니라 소속 정당의 정강과 정책 등 도 알 수 있다.</li></ul></article><article class='page-block'><h4>교과서 63쪽 핵심 정리</h4><ul><li>세계의 이색 정당들 자 료 더 보 기 정당의 위기 오늘날 정당이 관료화되고 소수 정치 엘리트에 의해 정당의 의사 결정이 이루어 져 일반 당원과 시민의 의사가 반영되기 어려워지면서 정당이 시민의 일상생활 과 멀어지는 현상이 나타나기도 한다.</li><li>민주주의 국가에서는 기존 정당에 대한 불신이 커지는 ‘정당 위기’가 발생하고 있다.</li><li>정당이 위기를 맞게 된 이유에는 유권자들의 정당 일체감이 낮고, 시민단체, 이익집단 등 정당과 유사한 조직들이 성장한 점도 있지만, 가장 근본적인 이유 는 시민이 정당을 통한 정치 참여를 하지 않는 데 있다.</li><li>그러나 현대 민주주의에 서 정당을 매개로 하여 시민이 자신의 이익을 표출하고 집약하는 것이 중요하다</li><li>는 점을 고려한다면 정당에 참여하는 것이 민주주의 발전에 필수적이라고 할 수 있다.</li><li>년 독일 베를린 지방 선거에서 신 생 인터넷 정당인 해적당은 8.9%의 득표율로 시의원 15명 을 배출하며 원내 진입에 성공했다.</li><li>자료 1 ▲ 베를린 지방 선거 결과에 환호하는 해적당 당원과 지지자 - 《시사인》, 2011. . .</li><li>년 창당한 네덜란드 동물당(PvdD)은 처음으로 ‘동물 권리’ 의제를 정치 영역에 들여놓은 정당이다.</li></ul></article><article class='page-block'><h4>교과서 64쪽 핵심 정리</h4><ul><li>다양한 정치 참여의 방법 현대 민주주의에서 시민은 다양한 방법으로 정치에 참여한다.</li><li>국회 의원 선거 등에 직접 출마함으 로써 시민들이 선출하는 공직에 진출할 수 있다.</li><li>하지만 대부분의 시민은 공직 자를 선출하기 위한 선거에 투표권을 행사함으로써 정치과정에 참여한다.</li><li>그 밖 에 시민은 정치과정에 직접 영향을 미치려는 행동으로 청원, 서명, 시위 등을 하 여 자신의 의견을 표출하기도 한다.</li><li>시민은 개인적인 차원에서 정치과정에 참여하기도 하지만, 정당, 이익집단, 시 민단체 등을 통해 집단적으로 자신들의 의견과 요구를 정치과정에 투입하는 정치 참여 방식을 선택하기도 한다.</li><li>정당이 주도하는 선거 활동을 하면서 국민의 관 심을 모아 정책 결정에 영향을 미칠 수 있다.</li><li>공통의 이해관계를 가진 이익집단 에 참여함으로써 같은 의견을 가진 사람들을 결집시키고 국가 기관에 압력을 행 사하기도 한다.</li><li>또한 공익을 추구하는 시민단체 활동을 하면서 공공선 증진을 위해 노력하기도 하고, 미디어에 정보를 제공하고 여론을 형성하는 방식으로 정 치에 참여할 수도 있다.</li></ul></article><article class='page-block'><h4>교과서 65쪽 핵심 정리</h4><ul><li>이익집단을 통한 정치 참여 이익집단은 공통의 목표와 가치를 공유하고 자신의 이익을 실현하기 위해 정치 과정에서 이익을 표출하고 압력을 행사하는 단체이다.</li><li>이익집단은 정치과정에서 여러 기능을 수행한다.</li><li>이익집단은 로비, 시 위, 공청회 등을 통해 구성원의 의견을 정치과정에 투입함으로써 구성원의 정치 참여의 기회를 확대시킨다.</li><li>사회 구성원의 다양한 이익을 대표하는 이익집단들이 서로 공정하게 경쟁하 면서 상충되는 이익을 조정한다면 민주주의의 발전에 긍정적으로 기여할 수 있다.</li><li>오남용과 부작용 문제 가 발생할 수 있기 때문에 약에 대해서는 일반인이 아니 라 전문가들의 판단이 필요하다.</li><li>편의점이 훨씬 가깝고 많아” 전국 편의점 가맹점 협회는 국민 안전 사각지대 해소를 위해 안전 상비 의약품 품목 확대가 필요하다고 주장한다. ◯◯경영주 협의회 대표는 “코로나19 상황에서 편의점은 해열제·마스크·자가진단 키트를 유통하며 공적 기능이 부각됐다.</li><li>지방 소도시에서는 편의점을 이용해 의약품 접근 성을 높일 수 있다.”라고 말했다. - 《아시아경제》, 2022.</li><li>이익집단이 의 사 결정권자에게 자신의 의견을 말 할 수 있는 장소를 의미하며, 이러 한 활동을 로비라고 한다.</li></ul></article><article class='page-block'><h4>교과서 66쪽 핵심 정리</h4><ul><li>시민단체를 통한 정치 참여 현대 사회에서 환경, 인권, 복지, 건강 등 다양한 사회적 문제에 대한 시민의 관심이 높아지면서, 기존의 정치 체계가 해결하지 못하는 한계를 극복하고자 시 민이 자발적으로 결성한 단체를 시민단체라고 한다.</li><li>시민단체는 구성원이 공통의 인식을 공유하고 정책 결정 과정에 참여한다는 점에서 이익집단과 유사하다.</li><li>그 밖 에 정기적인 모임과 직책을 맡은 사람 등 조직적으로 지속성을 가지고 있다는 점 에서 공식적이며, 정부로부터 제도적으로 독립되어 있고, 구성원이 자발적으로 단체를 조직했다는 점에서 자발적이라는 특징도 보인다.</li><li>또한 시민단체는 국가 기관에 대한 감시 기능을 수행한다.</li><li>시민단체는 국가 기 관이 공익을 위한 정책 실현에 미흡하거나, 시민의 다양한 의견을 공정하게 반영 하지 못할 때 이를 비판하고, 국가 권력이 남용되지 않도록 견제한다.</li><li>인터넷 그림 기사 편의점 의약품 판매 확대를 둘러싼 시민단체의 입장 자 료 더 보 기 안전 상비약 시민 네트워크 “법 테두리 안에서 품목 늘려야” 지난 2012년에 도입된 안전 상비약 판매 제도는 현행 약 사법 내에서 20개 품목 이내로 범위를 지정할 수 있게 되 어 있다.</li><li>관련 설문에서도 응답자의 96.8%가 “편의점에서 안전 상비 의약품을 구입하는 게 편리하다.”라고 답했고, 62.1% 가 “안전 상비 의약품 품목 수가 부족해 확대가 필요하다.” 라고 답했다. - 《데일리팜》, 2023. .</li><li>미래 소비자 행동 대표는 “소 비자들의 안전한 의약품 사용이 가능하도록 주무 부처 및 지방 자치 단체 등에서 지속적인 관리 체계를 갖춰야 할 것”이라고 말했다. - 《매경헬스》, 2023.</li></ul></article><article class='page-block'><h4>교과서 67쪽 핵심 정리</h4><ul><li>언론을 통한 정치 참여 언론은 사람들에게 정보를 제공함으로써 여론 형성을 주도하고, 집약된 대중의 의견을 정책 결정 기구에 전달한다.</li><li>언론은 신문이나 텔레비전과 같은 전통적인 매체는 물론 인터넷에 기반한 뉴 미디어를 통해 더 많은 사람이 정치에 참여할 수 있는 환경을 형성하고 있다.</li><li>시민이 언론을 통해 정치에 참여하는 방법은 다양하다.</li><li>소셜 미디어와 같은 뉴 미디어가 발달하면서 시민은 더 적극적으로 정치에 참 여할 수 있게 되었다.</li><li>전통적 미디어와 달리 정보의 교환이 쌍방향으로 이루어지 는 소셜 미디어에서 시민은 수동적인 정보 소비자에 머무르지 않고, 사회 관계망 에서 직접 정보를 생산하면서 여론을 형성하기도 한다.</li><li>언론은 여론 형성을 주도하고 시민에게 정치 참여를 위한 통로를 제공하지만, 항상 객관적이고 정확한 정보만 전달하는 것은 아니다.</li><li>인터넷 그림 기사 언론을 통한 시민 참여의 방법 자 료 더 보 기 자료 2 방송사 토론 프로그램에 참여 ▲ 방송사에서 주최하는 토론 프로그램 등에 직접 출연하여 자신의 정치적 견해와 지지를 밝힐 수 있다.</li><li>전통적 미디어와 뉴 미디어 전통적 미디어 뉴 미디어 •텔레비전(TV), 신문, 라디오 등 •일방향 통신 •심층적 정보 전달 •정보의 재가공 이 어려움. •누리 소통망, 동영상 재생 서 비스 등 •쌍방향 통신 •신속한 정보 전달 •정보의 재가공 이 쉬움. 소셜 미디어(social media) 생각이나 의견 따위를 표현하거나 공유하기 위하여 사용하는, 개방화 된 온라인상의 콘텐츠 2.</li></ul></article><article class='page-block'><h4>교과서 68쪽 핵심 정리</h4><ul><li>정당의 누리집을 방문해 보자. •해당 정당의 정강, 가입 방법 등을 비교해 본다. •각 정당의 분야별 정책을 살펴본다.</li><li>쟁점이 되는 정책을 둘러싼 각 정당의 입장을 정리해 보자. •쟁점이 되는 정책을 둘러싼 각 정당의 입장과 근거를 살펴보자. •자신이 동의하는 내용과 반대하는 내용을 정리하여 토론해 보자.</li><li>정당의 입장과 모둠의 의견을 밝히고, 자신이 실천할 수 있는 참여 방안을 모색해 &lt;정당 누리집 탐방 보고서&gt;를 작성해 보자.</li><li>탐방한 정당 ◯◯당 누리집(www.~~~.kr) 정강 요약 ① ② ③ 가입 방법 ① 온라인 입당 신청 방법은요? ② 권리 당원과 일반 당원의 차이는 무엇인가요? ③ 몇 살부터 가입할 수 있나요? ④ 탈당 방법은요?</li><li>분야별 정책 (대표 정책) 정치 경제·일자리·노동 외교·안보 기후·환경·에너지 교육 쟁점에 대한 입장 편의점 상비약 판매 품목 확대에 대해 우리 모둠의 의견 우리 모둠의 참여 방법 우리나라 주요</li><li>정당의 누리집 방문하기 탐 구 더 하 기 예시 정당 누리집 탐방 보고서 dtqr.kr/63X8nz7</li></ul></article><article class='page-block'><h4>교과서 69쪽 핵심 정리</h4><ul><li>중단원 마무리 “민주 정치의 참여 주체들 중에서 정당의 역할은 무엇일까?”에 대한 답을 써 보자.</li><li>점검하기 3 단계 49쪽 함께 보기 이 단원의 질문 확인하기 다음에서 시민의 정치 참여 방법을 찾아 빗금을 쳐 보자.</li><li>단계 ➊ 투표 ➋ 정당 가입 ➌ 이익집단 가입 ➍ 입법 청원 ➎ 공청회 참가 ➏ 시위, 집회 ➐ 시민단체 가입 ➑ 국회에서 표결 ➒ 서명 운동 ➓ 정책 토론회 참가  누리 소통망(SNS)에 의견 올리기  출판 혹은 언론 기고 서술하기 다음</li><li>사례의 정치과정 단계에서 이익집단과 시민단체는 어떤 역할을 했을지 서술해 보자.</li><li>의료 수가(진료에 대한 환자 본인 부담금+공단 부담금)를 둘러싼 문제가 뚜렷한 해결책을 찾지 못하고 있다.</li><li>의료 수가의 인상을 요구하는 측에서는 낮은 의료 수가 때문에 발생하는 의료진의 고 강도 노동, 의사들의 저수가 진료 분야 기피, 특정 진료과의 만성적인 적자 문제를 들고 있다.</li><li>의료 수가의 인상을 반대하는 측에서는 의료 서비스에 대한 국민의 접근성 보장, 저소득층 및 취약 계층 의료의 사회적 안전망 확보 등을 이유로 들고 있다.</li><li>이익집단의 역할: 2 시민단체의 역할: 2 단계 2.</li></ul></article>
 </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    <p>선거 때 유권자가 후보만 보는 것이 아니라 그가 속한 <span class="hidden-box" data-text="정당" onclick="reveal(this)">&nbsp;</span>을 함께 보는 이유는 정당이 앞으로의 국정 방향을 보여 주기 때문이다. 정당은 <span class="hidden-box" data-text="정치권력" onclick="reveal(this)">&nbsp;</span>을 얻어 자신들이 제시한 <span class="hidden-box" data-text="정책 대안" onclick="reveal(this)">&nbsp;</span>을 실현하려 한다.</p><p>선거에서 승리해 정부 운영을 담당하는 정당은 <span class="hidden-box" data-text="여당" onclick="reveal(this)">&nbsp;</span>이고, 정부를 비판하며 다른 선택지를 제시하는 정당은 <span class="hidden-box" data-text="야당" onclick="reveal(this)">&nbsp;</span>이다. 둘의 경쟁은 민주 정치에서 견제와 책임을 만드는 장치이다.</p><p>정당 밖에도 참여 주체가 있다. 특정 직업이나 산업의 이익을 대변하면 <span class="hidden-box" data-text="이익집단" onclick="reveal(this)">&nbsp;</span>, 공동체 전체의 <span class="hidden-box" data-text="공익" onclick="reveal(this)">&nbsp;</span>을 목표로 활동하면 <span class="hidden-box" data-text="시민단체" onclick="reveal(this)">&nbsp;</span>에 가깝다.</p><p>시민의 <span class="hidden-box" data-text="정치 참여" onclick="reveal(this)">&nbsp;</span>는 투표로 끝나지 않는다. <span class="hidden-box" data-text="청원" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="서명" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="시위" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="집회" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="공청회" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="정책 토론회" onclick="reveal(this)">&nbsp;</span>는 모두 시민이 정책 결정에 의견을 내는 통로이다.</p>
-  </div>
+<h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+<div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
+<p>이 단원은 “민주 정치의 참여 주체들 중에서 정당의 역할은 무엇일까?”라는 질문에서 출발한다. 교과서의 핵심은 여러 개념을 따로 외우는 것이 아니라, 서로 다른 이해관계가 어떤 제도와 절차를 통해 조정되는지 흐름으로 이해하는 데 있다.</p><p>먼저 <span class="hidden-box" data-text="정당" onclick="reveal(this)">&nbsp;</span>은 공통의 정치적 신념과 가치를 가진 사람들이 정치권력 획득을 위해 조직한 결사체이다. <span class="hidden-box" data-text="정치권력" onclick="reveal(this)">&nbsp;</span>은 국가나 공동체의 의사 결정을 통해 구성원에게 영향을 미치는 권력이다. <span class="hidden-box" data-text="정책 대안" onclick="reveal(this)">&nbsp;</span>은 정책 대안은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="여당" onclick="reveal(this)">&nbsp;</span>은 정권을 담당하거나 행정부 운영을 주도하는 정당이다.</p><p>이어서 <span class="hidden-box" data-text="야당" onclick="reveal(this)">&nbsp;</span>은 정부와 여당을 견제하고 대안 정책을 제시하는 정당이다. <span class="hidden-box" data-text="이익집단" onclick="reveal(this)">&nbsp;</span>은 특정한 공동 이익을 실현하기 위해 정치과정에 영향력을 행사하는 집단이다. <span class="hidden-box" data-text="시민단체" onclick="reveal(this)">&nbsp;</span>은 공익 실현을 위해 시민들이 자발적으로 구성한 단체이다. <span class="hidden-box" data-text="공익" onclick="reveal(this)">&nbsp;</span>은 공익은/는 이 단원에서 설명하는 핵심 개념이다.</p><p>또한 <span class="hidden-box" data-text="정치 참여" onclick="reveal(this)">&nbsp;</span>은 시민이 정치과정에 영향력을 행사하는 다양한 행위이다. <span class="hidden-box" data-text="청원" onclick="reveal(this)">&nbsp;</span>은 청원은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="서명" onclick="reveal(this)">&nbsp;</span>은 서명은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="시위" onclick="reveal(this)">&nbsp;</span>은 시위은/는 이 단원에서 설명하는 핵심 개념이다.</p><p>마지막으로 <span class="hidden-box" data-text="집회" onclick="reveal(this)">&nbsp;</span>은 집회은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="공청회" onclick="reveal(this)">&nbsp;</span>은 공청회은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="정책 토론회" onclick="reveal(this)">&nbsp;</span>은 정책 토론회은/는 이 단원에서 설명하는 핵심 개념이다.</p>
+</div>
 </section>
 
 <section id='concepts' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
-  <ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>정당</button><span class='concept-def'>정치권력 획득을 목표로 공통의 정치적 신념과 가치를 가진 사람들이 조직한 결사체이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>정치권력</button><span class='concept-def'>정책을 결정하고 국가 운영 방향에 영향력을 행사할 수 있는 힘이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>정책 대안</button><span class='concept-def'>사회 문제를 해결하기 위해 정당이나 정치 주체가 제시하는 구체적 방안이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>여당</button><span class='concept-def'>선거에서 승리하여 정부를 구성하거나 국정 운영을 뒷받침하는 정당이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>야당</button><span class='concept-def'>정부와 여당을 견제하고 비판하며 대안 정책을 제시하는 정당이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>이익집단</button><span class='concept-def'>특정 집단의 이익을 실현하기 위해 정치과정에 영향력을 행사하는 조직이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>시민단체</button><span class='concept-def'>공익 실현을 위해 시민이 자발적으로 구성한 단체이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>공익</button><span class='concept-def'>특정 개인이나 집단만이 아니라 공동체 전체에 도움이 되는 이익이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>정치 참여</button><span class='concept-def'>시민이 정책 결정과 정치과정에 영향력을 미치는 활동이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>청원</button><span class='concept-def'>국민이 국가 기관에 희망이나 요구를 공식적으로 제기하는 행위이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>서명</button><span class='concept-def'>특정 의견이나 요구에 동의한다는 뜻을 이름으로 표시하는 참여 방식이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>시위</button><span class='concept-def'>공개 장소에서 집단적으로 의사를 표현하는 정치 참여 방식이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>집회</button><span class='concept-def'>여러 사람이 모여 공동의 정치적 의견이나 요구를 표현하는 활동이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>공청회</button><span class='concept-def'>정책이나 법안에 대해 이해관계자와 전문가의 의견을 듣는 공개 절차이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>정책 토론회</button><span class='concept-def'>정책 쟁점을 두고 다양한 의견과 대안을 논의하는 참여 절차이다.</span></li></ul>
+<h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+<ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>정당</button><span class='concept-def'>공통의 정치적 신념과 가치를 가진 사람들이 정치권력 획득을 위해 조직한 결사체이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>정치권력</button><span class='concept-def'>국가나 공동체의 의사 결정을 통해 구성원에게 영향을 미치는 권력이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>정책 대안</button><span class='concept-def'>정책 대안의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>여당</button><span class='concept-def'>정권을 담당하거나 행정부 운영을 주도하는 정당이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>야당</button><span class='concept-def'>정부와 여당을 견제하고 대안 정책을 제시하는 정당이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>이익집단</button><span class='concept-def'>특정한 공동 이익을 실현하기 위해 정치과정에 영향력을 행사하는 집단이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>시민단체</button><span class='concept-def'>공익 실현을 위해 시민들이 자발적으로 구성한 단체이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>공익</button><span class='concept-def'>공익의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>정치 참여</button><span class='concept-def'>시민이 정치과정에 영향력을 행사하는 다양한 행위이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>청원</button><span class='concept-def'>청원의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>서명</button><span class='concept-def'>서명의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>시위</button><span class='concept-def'>시위의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>집회</button><span class='concept-def'>집회의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>공청회</button><span class='concept-def'>공청회의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>정책 토론회</button><span class='concept-def'>정책 토론회의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li></ul>
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
-  
-<div class='quiz-card'><p><b>1.</b> 정당의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>공통의 정치적 신념과 가치를 가진 사람들이 정치권력 획득을 목표로 만든 결사체이다.</div></div>
-<div class='quiz-card'><p><b>2.</b> 정당이 대의 민주주의에서 중요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>시민의 요구를 정책으로 묶고 대표자를 추천하여 주권 행사를 매개하기 때문이다.</div></div>
-<div class='quiz-card'><p><b>3.</b> 공천의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정당이 선거에 나설 후보자를 추천하는 것이다.</div></div>
-<div class='quiz-card'><p><b>4.</b> 여당과 야당의 역할 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>여당은 정부 구성과 정책 추진을 담당하고, 야당은 정부와 여당을 견제하며 대안을 제시한다.</div></div>
-<div class='quiz-card'><p><b>5.</b> 정당의 정책 기능을 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>사회 구성원의 요구를 집약하여 정책과 공약으로 제시하고 의회에서 구체화한다.</div></div>
-<div class='quiz-card'><p><b>6.</b> 이익집단과 시민단체의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>이익집단은 특정 집단의 이익, 시민단체는 공익 실현을 주된 목표로 한다.</div></div>
-<div class='quiz-card'><p><b>7.</b> 정당 위기의 원인을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정당의 관료화, 소수 엘리트 중심 운영, 시민의 정당 참여 약화, 정당 일체감 저하 등이다.</div></div>
-<div class='quiz-card'><p><b>8.</b> 시민이 정당에 참여해야 하는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>시민의 요구가 정책과 권력 구조에 반영되도록 하기 위해서이다.</div></div>
-<div class='quiz-card'><p><b>9.</b> 청원과 공청회의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>청원은 국민이 국가 기관에 요구를 제기하는 행위이고, 공청회는 정책 결정 전에 공개적으로 의견을 듣는 절차이다.</div></div>
-<div class='quiz-card'><p><b>10.</b> 정당이 사회 통합에 기여하는 방식을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>다양한 갈등과 요구를 제도권 안에서 표출·조정하고 정책 대안으로 경쟁하게 한다.</div></div>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>각 문항의 선택지를 클릭하면 정답·오답 여부와 해설이 바로 표시됩니다.</p>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>1.</b> 정당의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 공통의 정치적 신념을 가진 사람들이 정치권력 획득을 목표로 만든 조직</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 특정 직업 집단의 경제적 이익만을 추구하는 조직</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국가 권력을 전혀 목표로 하지 않는 친목 모임</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국제 분쟁을 재판하는 사법 기관</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 지방 행정 사무만 담당하는 관청</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당은 정치권력을 획득하여 정책을 실현하려는 정치 조직이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 공통의 정치적 신념을 가진 사람들이 정치권력 획득을 목표로 만든 조직</b>입니다.<br>해설: 정당은 정치권력을 획득하여 정책을 실현하려는 정치 조직이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>2.</b> 정당이 대의 민주주의에서 중요한 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 법원의 재판을 대신하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 시민의 요구를 정책 대안으로 묶고 대표자 선출을 조직하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국가 기관이 아니므로 정치와 무관하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정책 경쟁 없이 권력을 영구히 독점하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 시민의 정치 참여를 금지하기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당은 시민의 요구와 국가 권력을 연결하는 핵심 매개자이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 시민의 요구를 정책 대안으로 묶고 대표자 선출을 조직하기 때문이다.</b>입니다.<br>해설: 정당은 시민의 요구와 국가 권력을 연결하는 핵심 매개자이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>3.</b> 정당의 기능으로 보기 어려운 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 후보자 추천</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정책과 공약 제시</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정치 사회화</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 개별 시민의 모든 사생활을 통제하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정부 정책에 대한 비판과 대안 제시</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당은 정책 경쟁과 대표 선출, 정치 참여 조직화 역할을 하지만 사생활 통제 기관은 아니다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 개별 시민의 모든 사생활을 통제하는 것</b>입니다.<br>해설: 정당은 정책 경쟁과 대표 선출, 정치 참여 조직화 역할을 하지만 사생활 통제 기관은 아니다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>4.</b> 여당의 역할로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 선거 후보를 추천할 수 없는 조직</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국가 권력 획득을 원칙적으로 포기하는 것</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 선거에서 승리해 정부 운영을 뒷받침하고 정책을 추진하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정부 정책을 무조건 방해하는 것만 담당하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 시민단체와 동일하게 공익 캠페인만 하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 여당은 정부 구성 또는 정부 정책 추진을 담당하는 정당이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 선거에서 승리해 정부 운영을 뒷받침하고 정책을 추진하는 것</b>입니다.<br>해설: 여당은 정부 구성 또는 정부 정책 추진을 담당하는 정당이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>5.</b> 야당의 역할로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 정부 정책을 비판·감시하고 대안을 제시하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 시민 의견을 정책화할 수 없는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국회 활동과 무관한 사적 조직으로 남는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정부를 견제하지 않고 항상 찬성만 하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 선거에 참여하지 않는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 야당은 정부와 여당을 견제하고 대안 정책을 제시한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 정부 정책을 비판·감시하고 대안을 제시하는 것</b>입니다.<br>해설: 야당은 정부와 여당을 견제하고 대안 정책을 제시한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>6.</b> 정당과 이익집단의 가장 중요한 차이로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 이익집단은 정책에 영향을 주지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정당은 선거에 참여할 수 없고 이익집단만 후보를 낸다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 정당은 정치권력 획득을 목표로 하지만 이익집단은 특정 이익 실현을 목표로 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 두 조직은 목적과 활동 방식에서 전혀 차이가 없다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정당은 공익을 말할 수 없고 이익집단만 공익을 말한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당은 권력 획득을 통해 정책을 실현하려는 조직이고, 이익집단은 특정 이익을 정책에 반영하려 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 정당은 정치권력 획득을 목표로 하지만 이익집단은 특정 이익 실현을 목표로 한다.</b>입니다.<br>해설: 정당은 권력 획득을 통해 정책을 실현하려는 조직이고, 이익집단은 특정 이익을 정책에 반영하려 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>7.</b> 시민단체의 일반적 특징으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정치권력 획득만을 유일한 목표로 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국가기관으로서 법률을 제정한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 특정 직업 집단의 경제 이익만 추구한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 선거 후보 공천을 핵심 기능으로 한다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 공익 실현을 목표로 감시, 캠페인, 정책 제안 활동을 한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 시민단체는 공익적 의제를 제기하고 권력 감시와 시민 참여를 촉진한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 공익 실현을 목표로 감시, 캠페인, 정책 제안 활동을 한다.</b>입니다.<br>해설: 시민단체는 공익적 의제를 제기하고 권력 감시와 시민 참여를 촉진한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>8.</b> 이익집단의 활동 사례로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 지방 의회가 조례를 제정하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 법원이 형사 재판을 진행하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 헌법재판소가 위헌 법률 심판을 하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 대통령이 국무회의를 주재하는 것</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 의사 단체가 의료 정책에 대해 정부와 국회에 의견을 제출하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 이익집단은 특정 구성원의 이익을 정책에 반영하기 위해 압력과 의견 제시를 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 의사 단체가 의료 정책에 대해 정부와 국회에 의견을 제출하는 것</b>입니다.<br>해설: 이익집단은 특정 구성원의 이익을 정책에 반영하기 위해 압력과 의견 제시를 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>9.</b> 정당의 정책 대안 제시 기능에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 시민 요구를 정책과 연결하지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 사회 문제 해결 방향을 공약과 법안 등으로 구체화한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 공공 문제에 대한 입장을 내지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 후보자 개인의 인기만으로 정치를 운영한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 모든 정책을 비밀로 숨긴다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당은 사회 요구를 정책 프로그램으로 전환한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 사회 문제 해결 방향을 공약과 법안 등으로 구체화한다.</b>입니다.<br>해설: 정당은 사회 요구를 정책 프로그램으로 전환한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>10.</b> 공천의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 정당이 선거에 내세울 후보자를 추천하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 시민이 법원에 재판을 청구하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정부가 예산을 집행하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국민이 직접 법률을 폐지하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 언론이 뉴스를 보도하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 공천은 정당이 후보자를 추천하여 선거 경쟁을 조직하는 과정이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 정당이 선거에 내세울 후보자를 추천하는 것</b>입니다.<br>해설: 공천은 정당이 후보자를 추천하여 선거 경쟁을 조직하는 과정이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>11.</b> 정당의 위기로 볼 수 있는 현상은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정당이 정책을 비교 가능하게 제시하는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 당내 민주주의가 강화되는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 공천 과정이 투명하게 운영되는 현상</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 소수 정치 엘리트 중심 운영으로 시민과 당원의 의사가 충분히 반영되지 않는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 시민 참여가 활발해지는 현상</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당이 관료화·엘리트화되면 대표성과 시민 연결 기능이 약화된다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 소수 정치 엘리트 중심 운영으로 시민과 당원의 의사가 충분히 반영되지 않는 현상</b>입니다.<br>해설: 정당이 관료화·엘리트화되면 대표성과 시민 연결 기능이 약화된다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>12.</b> 정당 위기를 극복하기 위한 방안으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정당 운영 정보를 비공개로 하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 시민 참여를 법으로 금지하는 것</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 당내 민주주의 강화와 투명한 공천, 정책 경쟁 확대</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정책 경쟁을 없애고 인물 경쟁만 남기는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 일반 당원의 의견을 완전히 배제하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당은 민주적 운영과 정책 중심 경쟁을 통해 신뢰를 회복해야 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 당내 민주주의 강화와 투명한 공천, 정책 경쟁 확대</b>입니다.<br>해설: 정당은 민주적 운영과 정책 중심 경쟁을 통해 신뢰를 회복해야 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>13.</b> 청원의 의미로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 국가기관에 일정한 의견이나 요구를 공식적으로 제출하는 참여 방식</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 언론사가 광고를 판매하는 행위</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 법원이 판결을 선고하는 절차</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정당이 후보자를 추천하는 절차</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 외국과 조약을 체결하는 절차</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 청원은 시민이 국가기관에 요구를 전달하는 정치 참여 방식이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 국가기관에 일정한 의견이나 요구를 공식적으로 제출하는 참여 방식</b>입니다.<br>해설: 청원은 시민이 국가기관에 요구를 전달하는 정치 참여 방식이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>14.</b> 집회와 시위에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 오직 정당만 할 수 있는 활동이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 법과 질서의 한계를 전혀 고려하지 않아도 된다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 시민이 공개적으로 의견을 표현하고 정책 변화를 요구하는 참여 방식</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정치 참여와 무관한 사적 오락이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 민주 국가에서 언제나 금지되어야 한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 집회와 시위는 시민의 의사 표현 수단이지만 법적 한계와 타인의 권리도 존중해야 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 시민이 공개적으로 의견을 표현하고 정책 변화를 요구하는 참여 방식</b>입니다.<br>해설: 집회와 시위는 시민의 의사 표현 수단이지만 법적 한계와 타인의 권리도 존중해야 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>15.</b> 공청회의 기능으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 투표 결과를 조작하는 것</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 정책 결정 전 다양한 이해관계자와 전문가의 의견을 듣는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 법원의 판결을 대신하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정당의 공천을 자동으로 결정하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 시민 의견을 배제하고 비밀 회의를 하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 공청회는 정책 과정에서 의견 수렴과 정보 공유의 기능을 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 정책 결정 전 다양한 이해관계자와 전문가의 의견을 듣는 것</b>입니다.<br>해설: 공청회는 정책 과정에서 의견 수렴과 정보 공유의 기능을 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>16.</b> 정당과 시민단체의 관계를 적절히 설명한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정당과 시민단체는 모두 후보 공천을 핵심 목표로 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정당은 공공 정책과 무관하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 시민단체는 정책에 영향을 줄 수 없다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 정당은 권력과 정책을 연결하고 시민단체는 공익 의제와 감시 활동을 통해 정치과정에 영향을 준다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 시민단체가 성장하면 정당은 완전히 불필요해진다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당과 시민단체는 서로 다른 방식으로 정치과정에 참여하며 보완적 역할을 할 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 정당은 권력과 정책을 연결하고 시민단체는 공익 의제와 감시 활동을 통해 정치과정에 영향을 준다.</b>입니다.<br>해설: 정당과 시민단체는 서로 다른 방식으로 정치과정에 참여하며 보완적 역할을 할 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>17.</b> 민주 정치에서 정당 경쟁이 필요한 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정책 책임성을 없애기 위해서이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 선거 결과와 정책을 무관하게 만들기 위해서이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정부 비판을 금지하기 위해서이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 유권자가 다양한 정책 대안과 후보를 비교해 선택할 수 있기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 국민의 선택권을 줄이기 위해서이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당 경쟁은 유권자의 선택권과 책임 정치를 가능하게 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 유권자가 다양한 정책 대안과 후보를 비교해 선택할 수 있기 때문이다.</b>입니다.<br>해설: 정당 경쟁은 유권자의 선택권과 책임 정치를 가능하게 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>18.</b> 이익집단 활동의 긍정적 기능으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 항상 공익을 침해하므로 민주주의와 양립할 수 없다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 정책 결정자가 특정 분야의 전문적 요구와 현장 의견을 알 수 있게 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정부 감시 기능이 전혀 없다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 모든 집단의 이해를 자동으로 공평하게 대표한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정치 참여를 완전히 불가능하게 한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 이익집단은 전문성과 현장성을 제공하지만 사익 편중의 위험도 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 정책 결정자가 특정 분야의 전문적 요구와 현장 의견을 알 수 있게 한다.</b>입니다.<br>해설: 이익집단은 전문성과 현장성을 제공하지만 사익 편중의 위험도 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>19.</b> 이익집단 활동의 문제점으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 모든 시민의 의견을 항상 동등하게 대표한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정당과 달리 사적 이익을 전혀 추구하지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정부와 국회에 의견을 제출할 수 없다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 강한 조직력과 자원을 가진 집단의 요구가 과도하게 반영될 수 있다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정책 결정에 어떤 영향도 줄 수 없다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 이익집단은 특정 이익을 대변하기 때문에 불균형한 영향력 문제가 생길 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 강한 조직력과 자원을 가진 집단의 요구가 과도하게 반영될 수 있다.</b>입니다.<br>해설: 이익집단은 특정 이익을 대변하기 때문에 불균형한 영향력 문제가 생길 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>20.</b> 현대 민주주의에서 시민이 다양한 참여 통로를 활용해야 하는 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 시민 참여가 많을수록 민주주의가 반드시 약해지기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 여론 형성은 정치과정과 관련이 없기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정당과 선거를 완전히 폐지하기 위해서이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정책 결정은 시민과 무관해야 하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 정책 결정이 시민의 실제 요구를 반영하고 대표성 약화를 보완할 수 있기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당, 시민단체, 청원, 집회 등 다양한 통로는 민주주의의 참여와 대표성을 보완한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 정책 결정이 시민의 실제 요구를 반영하고 대표성 약화를 보완할 수 있기 때문이다.</b>입니다.<br>해설: 정당, 시민단체, 청원, 집회 등 다양한 통로는 민주주의의 참여와 대표성을 보완한다.</div>
+</div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
+
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
 </script>
 </body>
 </html>

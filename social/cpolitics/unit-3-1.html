@@ -5,8 +5,52 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>정치권력과 국가 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 정치권력과 국가 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-<script src='https://cdn.tailwindcss.com'></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
+</script>
+<script src='https://cdn.tailwindcss.com'>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
+</script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -32,9 +76,17 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 .answer.show{display:block}
 .tab a{white-space:nowrap}
 
-.flow-note{border-left:5px solid #6366f1;background:#eef2ff;border-radius:18px;padding:16px}
-#summary h3{letter-spacing:-.02em}
-#summary table th,#summary table td{vertical-align:top}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}
+.mcq-question{line-height:1.8;font-weight:900;color:#0f172a;font-size:1.02rem}
+.mcq-options{display:grid;gap:8px;margin-top:12px}
+.mcq-option{width:100%;text-align:left;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;border-radius:14px;padding:10px 12px;font-weight:800;line-height:1.6;transition:.15s}
+.mcq-option:hover{background:#eef2ff;border-color:#818cf8}
+.mcq-option.correct{background:#dcfce7!important;border-color:#22c55e!important;color:#166534!important}
+.mcq-option.wrong{background:#fee2e2!important;border-color:#ef4444!important;color:#991b1b!important}
+.mcq-option.muted{opacity:.74}
+.mcq-result{margin-top:12px;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.8}
+.mcq-result.ok{background:#dcfce7;color:#166534}
+.mcq-result.no{background:#fee2e2;color:#991b1b}
 
 </style>
 </head>
@@ -54,68 +106,306 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='summary' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
-    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
-    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>권력은 다른 사람의 행동에 영향을 미쳐 자신의 의지를 관철하는 능력이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>정치권력이 안정적으로 유지되려면 강제력만이 아니라 권위와 정당성이 필요하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>근대 국가는 주권, 국민, 영토를 기반으로 하며 관료제를 통해 통치 기능을 수행한다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>법치주의는 국가 권력을 법에 묶어 국민의 자유와 권리를 보호하려는 원리이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>형식적 법치주의는 절차만 중시하지만, 실질적 법치주의는 법의 내용도 정의로워야 한다고 본다.</span></li></ol>
-  </div>
-  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>권력과 정치권력</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>권력은 사회적 관계 속에서 한 사람이 다른 사람의 행동에 영향을 미치는 능력이다.</li><li>정치권력은 공동체 전체에 적용되는 결정을 만들고 집행할 수 있는 권력이다.</li><li>권력은 강제성을 가질 수 있지만, 안정적으로 유지되려면 구성원이 정당하다고 인정하는 권위가 필요하다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>권력의 정당성</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>전통적 지배는 오래된 관습과 전통에서 정당성을 얻는다.</li><li>카리스마적 지배는 지도자의 비범한 능력이나 매력에 대한 믿음에서 정당성을 얻는다.</li><li>합법적 지배는 법과 제도에 따라 권력이 행사되기 때문에 정당성을 얻는다. 현대 민주 국가는 주로 합법적 지배에 기반한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>국가의 의미와 구성 요소</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>근대 국가는 일정한 영토 안의 국민에게 주권을 행사하는 정치 공동체이다.</li><li>국민은 국가의 구성원, 영토는 국가 권력이 미치는 공간, 주권은 대내외적으로 최고의 독립적 권력이다.</li><li>국가는 관료제를 통해 복잡한 행정 업무를 지속적이고 전문적으로 처리한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>법치주의의 발전</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>법치주의는 권력자가 마음대로 통치하지 못하도록 국가 권력을 법에 따르게 하는 원리이다.</li><li>형식적 법치주의는 법이 정한 절차만 지키면 된다는 입장이라 악법도 통치 도구가 될 수 있다.</li><li>실질적 법치주의는 법의 내용이 국민의 기본권과 정의에 부합해야 한다고 본다.</li></ul>
-        </article></div>
-  
-  
-    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
-      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
-      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>권력은 강제력, 권위는 인정, 정당성은 옳다는 승인으로 구분한다.</li><li>국가 요소는 국민·영토·주권이다.</li><li>법치주의는 형식적/실질적 법치주의 비교가 중요하다.</li></ul>
-    </div>
+<h2 class='text-3xl font-black mb-3'>1. 교과서 핵심 내용 상세 정리</h2>
+<p class='text-slate-600 font-bold leading-8 mb-5'>아래 정리는 교과서의 해당 단원 범위를 페이지 순서대로 다시 배열한 것입니다. 원문을 그대로 베끼는 방식이 아니라, 수업과 암기에 바로 활용할 수 있도록 개념·사례·비교 포인트 중심으로 재구성했습니다.</p>
+<article class='page-block'><h4>교과서 96쪽 핵심 정리</h4><ul><li>권력의 정의 권력은 정치학의 가장 핵심적인 개념으로, 사회적 관계에서 한 사람이 다른 사람의 저항에도 불구하고 자신의 의지대로 하도록 만들 수 있는 능력을 의미한 다.</li><li>이러한 권력에 대한 정의는 권력의 특징을 잘 보여 준다.</li><li>둘째, 권력은 사회 구성원 사이에서 불평등하게 배분되어 있으며, 권력을 발휘 하려면 다른 사람보다</li><li>권력을 가진 사람은 자신이 의 도한 결과를 만들기 위해 다른 사람이 자유로운 상황에서 하지 않았을 일을 행 동하도록 강제할 수 있다.</li><li>따라서 권력을 가진 사람과 권력을 가지지 못한 사람 사이에는 갈등이 나타나게 된다.</li><li>정치권력과 국가 1 판타지(fantasy)나 에스에프(SF) 영화에는 절대 반지나 스톤을 가지면 엄청난 능력을 가지는 내용이 많구나.</li><li>권위 구성원들로부터 권력 사용의 정당성 에 대한 인정을 받는 것을 포함한다.</li><li>자신이 생각하는 권력의 의미에 대해서 이야기해 보자.</li></ul></article><article class='page-block'><h4>교과서 97쪽 핵심 정리</h4><ul><li>실체설은 권력을 실제로 존재하는 사물로 이해하며, 권력을 소유한 개인이나 집단이 행사할 수 있는 것으로 본다.</li><li>권력을 가진 지배자와 피지배자 사이에 지 배와 복종이라는 수직적 관계가 형성되며, 권력의 강제적 요소가 강조된다.</li><li>권력은 지배자와 피지배자 사이의 관계에서 나타나고 행사되지만, 수평 적인 관계에서 구성원들의 동의와 지지가 강조된다.</li><li>선거 과정에서 정당과 후보자가 공약을 통해 유권자의 지지를 호소한다.</li><li>나치의 권력 장악 일상생활에서 나치 완장을 찬 나치 돌격대의 폭력을 목격해 온 사람들 에게는 나치의 상징만으로도 위협 이었다.</li><li>예를 들면, 기원전 2세기 고대 로마 권력자들은 각기 다른 주기로 돌 아오는 장날과 민회가 겹치는 날을 피하기 위해 의도적으 로 달력을 수정했다.</li><li>평민들 이 몰리는 장날과 민회가 겹치면 예상치 못한 사건이 일어 날 수 있다는 로마 지배 권력층의 걱정에서 비롯된 것으로 억지 달력을 명문화한 법이었다.</li><li>왜냐하면 지배층은 달력을 통해 국민의 일정과 시간을 조정하는 것 만큼 확실하고 직접적인 통치는 없다고 믿었기 때문이다. - 외르크 뤼프케, 《시간과 권력의 역사》 수정 인용 달력이 권력이라고?</li></ul></article><article class='page-block'><h4>교과서 98쪽 핵심 정리</h4><ul><li>권력이 안정적으로 유지되려면 권력을 행사하는 사람의 권력 행사가 정당한 것으로 인정받아야 한다.</li><li>권력의 정당성은 전통적 지배, 카리스마적 지배, 합법적 지배에서 찾을 수 있다.</li><li>따라서 권력의 정당성을 지속적으로 인정받으려면 지도자의 카리스마적 요소를 전통적 지배 또는 합법적 지배로 전환해야 한다.</li><li>합법적 지배는 권력 행사가 법과 제도에 기반하여 이루어지기 때문에 정당한 것으로 인정된다.</li><li>근대 국가 이후 성립된 관료제는 법에 의해 확립된 질서에 의 해 운영되기 때문에 정당한 것으로 인정받는다.</li><li>권력과 감시 탐 구 더 하 기 푸코는 민주주의 사회에서 제재에 대한 위협이나 폭력의 사용 없이 권력이 행사되는 과정을 벤담의 원형 감옥을 통해 설명했다.</li><li>푸코는 벤담의 원형 감옥에 구 현된 감시의 원리가 사회 전반으로 침투하여 스스로 보이지 않는 권력 에 복종하고 있음을 주장했다.</li><li>카리스마적 지도자는 추종 자들에게 신비한 권력의 소유자로 간주되기 때문에 추종자들은 그의 권력에 정당성을 부여하게 됩니다.</li></ul></article><article class='page-block'><h4>교과서 99쪽 핵심 정리</h4><ul><li>그러나 우리가 일반적으로 부르는 국가는 중앙 집권적인 통치 기관으로 자리 잡은 근대 이후의 국가를 의미하며, 근대 이후 에 등장한 국가는 근대 이전에 존재했던 국가와는 형태와 기능적으로 차이가 있다.</li><li>근대 이후에 등장한 국가는 자유롭고 평등한 개인 상호 간의 동의에 의한 계 약에 의해 형성된다.</li><li>근대 이후 국가를 사람들 간의 동의와 계약에 의해 형성되는 것으로 이해하면서 인 간이 정치 사회에서 주도적인 역할을 하는 주체로 인식될 수 있었다.</li><li>근대 이전 국왕의 자의적인 지배 에 따라 행사되던 국가 권력과는 다르게, 근대 이후 국가는 권력의 행사가 의회 가 제정한 법률에 근거하며 국민의 자유와 권리를 안정적으로 보장하는 범위에 서 이루어진다.</li><li>법치주의 법치주의는 통치자에 의한 자의적, 폭력적 지배를 배제하고 국민의 의 사에 따라 제정된 법에 의한 지배 를 의미한다.</li><li>형식적 법치주의는 입 법 기관이 적법한 절차를 거쳐 제 정한 법에 근거해서 통치가 이루어 져야 하며, 실질적 법치주의는 입법 과정의 절차뿐만 아니라 그 내용과 목적에서도 정의와 헌법 이념에 부 합해야 한다는 것이다.</li><li>위 사례 외에 국가 권력이 나타나는 사례를 발표해 보자.</li><li>신정 정치(神政政治) 신의 대변자인 사제가 지배권을 가 지고 종교적 원리에 의하여 통치하 는 정치 형태를 말한다.</li></ul></article><article class='page-block'><h4>교과서 100쪽 핵심 정리</h4><ul><li>이를 통해 영토에서 발생하는 문제에 대한 국가의 독립 적인 주권 원칙이 수립되면서 대내 적으로 최고의 권위를 인정받게 되 었다.</li><li>국가의 특징 국가는 일정한 영토와 주민들에 대한 최고의 통치권을 가지며, 물리적 폭력의 사용을 독점하는 정치적 기구이다.</li><li>주권은 대내적으로는 해당 영토 내에 서 구성원을 지배하는 최고 결정권이며, 대외적으로는 다른 국가의 관계에서 독 립성을 확보할 수 있도록 한다.</li><li>최근 세계화로 인해 초국가적 국제기구에 주권을 양도하는 현상이 나타나기도 한다.</li><li>반면, 공해는 국제법 상 어느 나라의 영역에도 속하지 않 고 모든 국가에 개방되어 있는 바다</li><li>공해가 어느 나라의 주권하에 도 들어가지 않는 것을 ‘공해의 자 유(freedom of the seas)’라고 하고, 이것은 어떤 나라의 국민도 자유로이 이용할 수 있다는 것을 의미한다.</li><li>또한 남극 조약 (1961)은 남위 60도 이하 지역의 평화적 이용과 과학 연구의 완전한 보장을 위해 2048 년까지 개별 국가의 영유권 주장을 유예하도록 했다.</li><li>초국가적 국제기구 한 국가의 범위를 넘어서 활동하며 국제적 영향력을 발휘하는 국제기 구를 말한다( 국제연합(UN), 유 럽연합(EU))</li></ul></article><article class='page-block'><h4>교과서 101쪽 핵심 정리</h4><ul><li>외교관의 면책 특권 외교관은 신분상의 안전을 위해 주 재국에서 민형사상 책임에서 면제 된다[외교 관계에 관한 빈(Wien) 협 약, 1961]. ▲ 외교관의 여권 셋째, 국가는 폭력에 대한 합법적 통제권을 가진다.</li><li>국가 권력이 항상 직접적인 물리적 폭력에 의존하는 것은 아니지만, 국가는 해당 영토에서 유일하게 합법적 으로 무력을 독점하고 통제할 수 있다.</li><li>또한 국가 권력은 사회 구성원 일부가 아니라 해당 영토에 거주하는 모두에게 포괄적인 통제력을 행사한다.</li><li>법의 지배는 국가 권력이 지배자 의 자의적인 의지에 따라 행사되는 것이 아니라, 국가 권력의 내용 및 권력 행사 방식 등이 법으로 규정되어 있는 것을 의미한다.</li><li>국가 권력은 비인격적인 법의 지배라는 형태로 행사되어야 한다.</li><li>국가 는 국가 의지에 반하는 개인이나 집단을 통제할 수 있는 강압적인 권력체이다.</li><li>그 러나 국가의 권력 행사는 억압이나 폭력의 직접적인 행사를 통해서만 이루어지 는 것이 아니라, 시민의 동의와 인정에 기반할 때 정통성을 획득할 수 있다.</li><li>홉스는 이러한 인간의 상태를 극복하려면 공동의 권력을 만들어야 하는데, 이것이 바로 리바이어던, 즉 국가가 탄생하게 된 배경이라고 생각했다.</li></ul></article><article class='page-block'><h4>교과서 102쪽 핵심 정리</h4><ul><li>모둠을 구성하여 다양한 국가 권력에 대한 정보를 검색해 보자. •주권, 영토, 영해, 영공, 경찰, 군대, 관료제 등 다양한 국가 권력에 대한 정보를 검색한다. •국가 권력에 대한 추상적인 이론과 현실적이고 구체적인 국가 권력의 모습을 구분해 본다.</li><li>모둠이 선정한 주제와 관련한 드라마, 영화, 소설 등을 검색해 보자. •드라마, 웹툰, 영화, 소설, 다큐멘터리 등 다양한 이야기를 활용한다. •이야기 속 국가 권력과 관련한 쟁점을 중심으로 토의한다.</li><li>모둠이 선정한 이야기의 쟁점과 관련한 우리나라 및 해외 사례, 학자들의 논의를 조사하 여 정리해 보자. •우리나라 사례가 아니더라도 역사적 발전 과정이나 이에 대한 학자들의 논의나 주장을 탐구한다.</li><li>이야기 속 국가 권력과 관련한 탐구 과정을 핵심 내용을 중심으로 보고서를 작성해 보자.</li><li>탐 구 더 하 기 모둠명/모둠원 주제 영화 &lt;1급 기밀&gt; 속 군대 이야기 전체 줄거리 영화 속 국가 권력과 관련한 쟁점 찾기 쟁점과 관련한 학자들의 의견 쟁점과 관련한 다른 나라의 사례 쟁점과 관련한 모둠의 의견 ▲ 영화 &lt;1급 기밀&gt; 예시 이야기 속 국가 권력 프로젝트 보고서 dtqr.kr/8ZSNA8y</li></ul></article><article class='page-block'><h4>교과서 103쪽 핵심 정리</h4><ul><li>국가 권력이 법률의 형식에 맞게 행사되는 것, 즉 의회가 적합한 절차를 거쳐서 법을 제정하고, 그 법에 따라 통치가 이루어지면 정당성을 인정받는 것을 ( ㉠)(이)라고 한다.</li><li>이에 대한 반성으로 현대 민주 국가에서는 법률의 형식뿐만 아니라 그 목적과 내용까지 정당해야 한 다는 ( ㉡)을/를 추구한다.</li><li>㉡을 실현하려면 어떤 제도나 방안이 필요할지 구체적으로 서술해 보자.</li><li>단계 “국가의 정치권력은 어떻게 형성되고 발현될까?”에 대한 답을 써 보자.</li><li>단계 1 ( )은/는 사회적 관계에서 한 행위자가 다른 행위자의 저 항에도 불구하고 자신의 의지대로 하도록 만들 수 있는 능력을 의미한다.</li><li>( ) 지배는 권력이 법과 제도에 기초하여 행사되는 방식으 로, 근대 이후 권력이 정당성을 인정받는 근거가 된다.</li><li>( )은/는 기선으로부터 12해리 이내로 국가의 절대적인 권한이 미치는 공간이다.</li><li>( )은/는 어떤 나라의 주권에도 속하지 않으며 모든 나라 가 공통으로 사용할 수 있는 바다를 의미한다.</li></ul></article>
 </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    <p>사람을 움직이는 힘은 단순한 폭력만이 아니다. 다른 사람의 행동을 바꿀 수 있는 능력이 <span class="hidden-box" data-text="권력" onclick="reveal(this)">&nbsp;</span>이고, 공동체 전체의 결정에 작용하면 <span class="hidden-box" data-text="정치권력" onclick="reveal(this)">&nbsp;</span>이 된다.</p><p>그러나 힘만으로는 오래 지배할 수 없다. 사람들이 권력 행사를 받아들일 때 <span class="hidden-box" data-text="권위" onclick="reveal(this)">&nbsp;</span>가 생기고, 그 권력이 옳다고 인정받을 때 <span class="hidden-box" data-text="정당성" onclick="reveal(this)">&nbsp;</span>이 확보된다. 이것이 단순한 <span class="hidden-box" data-text="영향력" onclick="reveal(this)">&nbsp;</span>과 안정적 통치의 차이다.</p><p>근대 <span class="hidden-box" data-text="국가" onclick="reveal(this)">&nbsp;</span>는 <span class="hidden-box" data-text="국민" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="영토" onclick="reveal(this)">&nbsp;</span>, <span class="hidden-box" data-text="주권" onclick="reveal(this)">&nbsp;</span>을 기본 요소로 한다. 복잡한 사회를 운영하려면 전문 행정 조직인 <span class="hidden-box" data-text="관료제" onclick="reveal(this)">&nbsp;</span>도 필요하다.</p><p>민주 국가에서는 권력을 법으로 제한한다. 이것이 <span class="hidden-box" data-text="법치주의" onclick="reveal(this)">&nbsp;</span>이다. 다만 절차만 지키면 된다는 <span class="hidden-box" data-text="형식적 법치주의" onclick="reveal(this)">&nbsp;</span>에 머물면 악법도 가능하므로, 법의 내용까지 정의로워야 한다는 <span class="hidden-box" data-text="실질적 법치주의" onclick="reveal(this)">&nbsp;</span>가 중요하다.</p>
-  </div>
+<h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+<div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
+<p>이 단원은 “국가의 정치권력은 어떻게 형성되고 발현될까?”라는 질문에서 출발한다. 교과서의 핵심은 여러 개념을 따로 외우는 것이 아니라, 서로 다른 이해관계가 어떤 제도와 절차를 통해 조정되는지 흐름으로 이해하는 데 있다.</p><p>먼저 <span class="hidden-box" data-text="권력" onclick="reveal(this)">&nbsp;</span>은 사회적 관계에서 한 행위자가 다른 행위자의 저항에도 자신의 의지를 관철할 수 있는 능력이다. <span class="hidden-box" data-text="정치권력" onclick="reveal(this)">&nbsp;</span>은 국가나 공동체의 의사 결정을 통해 구성원에게 영향을 미치는 권력이다. <span class="hidden-box" data-text="권위" onclick="reveal(this)">&nbsp;</span>은 구성원이 정당하다고 인정해 자발적으로 따르는 힘이다. <span class="hidden-box" data-text="정당성" onclick="reveal(this)">&nbsp;</span>은 정치 권력이나 정책이 시민에게 옳고 적절한 것으로 인정받는 성질이다.</p><p>이어서 <span class="hidden-box" data-text="영향력" onclick="reveal(this)">&nbsp;</span>은 영향력은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="국가" onclick="reveal(this)">&nbsp;</span>은 주권, 국민, 영토를 바탕으로 공적 권력을 행사하는 정치 공동체이다. <span class="hidden-box" data-text="주권" onclick="reveal(this)">&nbsp;</span>은 국가의 의사를 최종적으로 결정할 수 있는 최고 권력이다. <span class="hidden-box" data-text="국민" onclick="reveal(this)">&nbsp;</span>은 국민은/는 이 단원에서 설명하는 핵심 개념이다.</p><p>또한 <span class="hidden-box" data-text="영토" onclick="reveal(this)">&nbsp;</span>은 영토은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="관료제" onclick="reveal(this)">&nbsp;</span>은 관료제은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="법치주의" onclick="reveal(this)">&nbsp;</span>은 국가 권력이 법에 따라 행사되어야 한다는 원리이다. <span class="hidden-box" data-text="형식적 법치주의" onclick="reveal(this)">&nbsp;</span>은 법률의 형식과 절차만 갖추면 권력 행사를 정당하다고 보는 관점이다.</p><p>마지막으로 <span class="hidden-box" data-text="실질적 법치주의" onclick="reveal(this)">&nbsp;</span>은 법률의 형식뿐 아니라 내용과 목적도 인간의 존엄과 기본권에 부합해야 한다는 원리이다.</p>
+</div>
 </section>
 
 <section id='concepts' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
-  <ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>권력</button><span class='concept-def'>다른 사람의 저항에도 자신의 뜻대로 행동하게 만들 수 있는 능력이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>정치권력</button><span class='concept-def'>공동체 전체에 영향을 미치는 결정을 만들고 집행할 수 있는 권력이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>권위</button><span class='concept-def'>구성원들이 권력 행사를 정당한 것으로 인정하는 상태이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>정당성</button><span class='concept-def'>권력이나 제도가 옳고 받아들일 만한 것으로 인정되는 성질이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>영향력</button><span class='concept-def'>상대의 생각이나 행동에 변화를 일으키는 힘이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>국가</button><span class='concept-def'>국민, 영토, 주권을 바탕으로 통치권을 행사하는 정치 공동체이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>주권</button><span class='concept-def'>대내적으로 최고이고 대외적으로 독립적인 국가 권력이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>국민</button><span class='concept-def'>국가를 구성하고 국가 권력의 적용을 받는 사람들이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>영토</button><span class='concept-def'>국가의 주권이 미치는 공간적 범위이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>관료제</button><span class='concept-def'>전문성과 계층적 조직을 바탕으로 행정 업무를 처리하는 국가 운영 방식이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>법치주의</button><span class='concept-def'>국가 권력이 법에 근거하여 행사되어야 한다는 원리이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>형식적 법치주의</button><span class='concept-def'>법의 내용보다 법적 절차와 형식의 준수를 중시하는 법치주의이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>실질적 법치주의</button><span class='concept-def'>법의 절차뿐 아니라 내용도 기본권과 정의에 부합해야 한다는 법치주의이다.</span></li></ul>
+<h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+<ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>권력</button><span class='concept-def'>사회적 관계에서 한 행위자가 다른 행위자의 저항에도 자신의 의지를 관철할 수 있는 능력이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>정치권력</button><span class='concept-def'>국가나 공동체의 의사 결정을 통해 구성원에게 영향을 미치는 권력이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>권위</button><span class='concept-def'>구성원이 정당하다고 인정해 자발적으로 따르는 힘이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>정당성</button><span class='concept-def'>정치 권력이나 정책이 시민에게 옳고 적절한 것으로 인정받는 성질이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>영향력</button><span class='concept-def'>영향력의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>국가</button><span class='concept-def'>주권, 국민, 영토를 바탕으로 공적 권력을 행사하는 정치 공동체이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>주권</button><span class='concept-def'>국가의 의사를 최종적으로 결정할 수 있는 최고 권력이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>국민</button><span class='concept-def'>국민의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>영토</button><span class='concept-def'>영토의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>관료제</button><span class='concept-def'>관료제의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>법치주의</button><span class='concept-def'>국가 권력이 법에 따라 행사되어야 한다는 원리이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>형식적 법치주의</button><span class='concept-def'>법률의 형식과 절차만 갖추면 권력 행사를 정당하다고 보는 관점이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>실질적 법치주의</button><span class='concept-def'>법률의 형식뿐 아니라 내용과 목적도 인간의 존엄과 기본권에 부합해야 한다는 원리이다.</span></li></ul>
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
-  
-<div class='quiz-card'><p><b>1.</b> 권력의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>다른 사람의 저항에도 자신의 뜻대로 행동하게 만들 수 있는 능력이다.</div></div>
-<div class='quiz-card'><p><b>2.</b> 정치권력과 일반 권력의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>정치권력은 공동체 전체에 영향을 미치는 결정을 만들고 집행하는 권력이다.</div></div>
-<div class='quiz-card'><p><b>3.</b> 권위와 정당성의 관계를 설명하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>구성원이 권력 행사를 정당하다고 인정할 때 권위가 형성된다.</div></div>
-<div class='quiz-card'><p><b>4.</b> 전통적 지배, 카리스마적 지배, 합법적 지배를 구분하시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>전통은 관습, 카리스마는 지도자 능력, 합법은 법과 제도에서 정당성을 얻는다.</div></div>
-<div class='quiz-card'><p><b>5.</b> 국가의 세 요소를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국민, 영토, 주권이다.</div></div>
-<div class='quiz-card'><p><b>6.</b> 주권의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>대내적으로 최고이고 대외적으로 독립적인 국가 권력이다.</div></div>
-<div class='quiz-card'><p><b>7.</b> 관료제가 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>전문적이고 지속적인 행정 업무를 처리하기 위해서이다.</div></div>
-<div class='quiz-card'><p><b>8.</b> 법치주의의 목적을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>국가 권력의 자의적 행사를 막고 국민의 자유와 권리를 보호하기 위해서이다.</div></div>
-<div class='quiz-card'><p><b>9.</b> 형식적 법치주의의 한계를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>절차만 지키면 부당한 법도 통치 수단이 될 수 있다.</div></div>
-<div class='quiz-card'><p><b>10.</b> 실질적 법치주의가 요구하는 바를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>법의 절차뿐 아니라 내용도 기본권과 정의에 부합해야 한다.</div></div>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>각 문항의 선택지를 클릭하면 정답·오답 여부와 해설이 바로 표시됩니다.</p>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>1.</b> 권력의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국가 영토의 지리적 넓이</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국제기구의 회의 절차</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정당 명부의 후보자 순서</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 다른 사람의 행동에 영향을 미쳐 자신의 의지를 관철하는 능력</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 법률 문서의 형식만을 뜻하는 말</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 권력은 사회적 관계 속에서 타인의 행동에 영향을 주는 능력이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 다른 사람의 행동에 영향을 미쳐 자신의 의지를 관철하는 능력</b>입니다.<br>해설: 권력은 사회적 관계 속에서 타인의 행동에 영향을 주는 능력이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>2.</b> 정치권력에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 가정 안에서만 작동하고 공동체 전체와 무관하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국제 사회의 무정부 상태만을 뜻한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 선거구 크기를 정하는 기술적 기준이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 공동체 전체에 적용되는 결정을 만들고 집행할 수 있는 권력</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 개인 취미를 선택하는 능력만을 뜻한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치권력은 공동체 전체의 질서와 자원 배분에 영향을 주는 공적 권력이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 공동체 전체에 적용되는 결정을 만들고 집행할 수 있는 권력</b>입니다.<br>해설: 정치권력은 공동체 전체의 질서와 자원 배분에 영향을 주는 공적 권력이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>3.</b> 권위의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국민이 정치에 무관심해지는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 법과 제도 없이 사적 폭력을 행사하는 힘</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 물리적 강제력만으로 억압하는 힘</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 권력 행사가 정당하다고 받아들여져 자발적 복종을 이끌어 내는 힘</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 국가가 없는 상태만을 의미하는 개념</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 권위는 구성원이 권력의 정당성을 인정할 때 형성된다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 권력 행사가 정당하다고 받아들여져 자발적 복종을 이끌어 내는 힘</b>입니다.<br>해설: 권위는 구성원이 권력의 정당성을 인정할 때 형성된다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>4.</b> 정치권력의 정당성이 중요한 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정당성이 없어야 민주주의가 가능하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 정당성이 있어야 강제력에만 의존하지 않고 안정적으로 유지될 수 있기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정당성은 오직 경제 성장률로만 판단되기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정당성이 있으면 법적 제한이 필요 없어지기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정당성은 권력과 전혀 관련이 없기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정당성은 정치권력이 시민에게 수용되고 안정적으로 유지되는 근거이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 정당성이 있어야 강제력에만 의존하지 않고 안정적으로 유지될 수 있기 때문이다.</b>입니다.<br>해설: 정당성은 정치권력이 시민에게 수용되고 안정적으로 유지되는 근거이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>5.</b> 영향력에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 헌법재판소의 심판 종류이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 주권 국가 사이의 조약만을 뜻한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국가의 영토를 의미한다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 공식 권력 없이도 타인의 생각이나 행동에 변화를 일으킬 수 있는 힘</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 반드시 법률 제정권을 가진 국가기관만 행사한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 영향력은 공식 권력과 달리 설득, 정보, 명성 등을 통해 작용할 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 공식 권력 없이도 타인의 생각이나 행동에 변화를 일으킬 수 있는 힘</b>입니다.<br>해설: 영향력은 공식 권력과 달리 설득, 정보, 명성 등을 통해 작용할 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>6.</b> 근대 국가의 구성 요소로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 조약, 관습법, 국제기구</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 법원, 헌법재판소, 공론 조사</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 여당, 야당, 이익집단</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 국민, 영토, 주권</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정당, 미디어, 시민단체</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 국가의 기본 요소는 국민, 영토, 주권이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 국민, 영토, 주권</b>입니다.<br>해설: 국가의 기본 요소는 국민, 영토, 주권이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>7.</b> 주권의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정당이 후보를 추천하는 권한</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 지방 자치 단체가 제정하는 규칙</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 대내외적으로 최고이며 독립적인 국가 권력</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 시민단체의 캠페인 능력</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 언론사가 기사를 편집하는 권한</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 주권은 국가가 대내적으로 최고 권력을 가지고 대외적으로 독립성을 갖는다는 뜻이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 대내외적으로 최고이며 독립적인 국가 권력</b>입니다.<br>해설: 주권은 국가가 대내적으로 최고 권력을 가지고 대외적으로 독립성을 갖는다는 뜻이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>8.</b> 국민에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국제기구의 사무국</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 관료가 작성한 행정 문서</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국가가 외국에 체결한 조약의 명칭</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국가 권력이 미치는 공간</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 국가를 구성하고 주권의 주체가 되는 사람들</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 국민은 국가의 인적 구성 요소이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 국가를 구성하고 주권의 주체가 되는 사람들</b>입니다.<br>해설: 국민은 국가의 인적 구성 요소이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>9.</b> 영토에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국가의 인적 구성원</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국가의 최고 독립 권력</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정당의 정책 강령</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 시민의 정치 참여 방식</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 국가의 주권이 미치는 공간적 범위</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 영토는 국가 권력이 작동하는 지리적 기반이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 국가의 주권이 미치는 공간적 범위</b>입니다.<br>해설: 영토는 국가 권력이 작동하는 지리적 기반이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>10.</b> 관료제의 특징으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국제 사회의 무정부 상태</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 전문성과 규칙에 따라 복잡한 행정 업무를 지속적으로 처리하는 조직 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 시민 참여를 뜻하는 정치 문화 유형</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 법과 규칙 없이 개인적 친분으로 행정을 운영하는 방식</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 모든 결정을 추첨으로만 처리하는 제도</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 관료제는 전문화, 분업, 위계, 규칙성을 바탕으로 행정 업무를 처리한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 전문성과 규칙에 따라 복잡한 행정 업무를 지속적으로 처리하는 조직 원리</b>입니다.<br>해설: 관료제는 전문화, 분업, 위계, 규칙성을 바탕으로 행정 업무를 처리한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>11.</b> 관료제의 장점으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 전문적이고 지속적인 행정 처리가 가능하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 법적 절차를 무시해 빠르게 처리한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 책임 소재가 언제나 사라진다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 시민의 권리를 보장하지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 항상 창의성을 극대화하고 경직성을 완전히 없앤다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 관료제는 안정성과 전문성의 장점이 있지만 경직성과 무사안일의 한계도 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 전문적이고 지속적인 행정 처리가 가능하다.</b>입니다.<br>해설: 관료제는 안정성과 전문성의 장점이 있지만 경직성과 무사안일의 한계도 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>12.</b> 관료제의 문제점으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 분업이 불가능하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 전문성이 항상 부족하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 위계가 전혀 존재하지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 업무의 지속성이 전혀 없다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 규칙과 절차가 지나치게 강조되어 경직성과 무사안일이 나타날 수 있다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 관료제는 효율적이지만 과도한 규칙 중심 운영이 문제를 낳을 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 규칙과 절차가 지나치게 강조되어 경직성과 무사안일이 나타날 수 있다.</b>입니다.<br>해설: 관료제는 효율적이지만 과도한 규칙 중심 운영이 문제를 낳을 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>13.</b> 법치주의의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국제 문제만을 다루는 외교 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 권력자가 법을 마음대로 무시해도 된다는 원리</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 국가 권력을 법에 따르게 하여 국민의 자유와 권리를 보호하려는 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 법보다 개인의 사적 폭력이 우선한다는 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 국가 권력에는 어떤 제한도 필요 없다는 원리</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 법치주의는 권력 남용을 막고 기본권을 보호하기 위해 국가 권력을 법으로 제한한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 국가 권력을 법에 따르게 하여 국민의 자유와 권리를 보호하려는 원리</b>입니다.<br>해설: 법치주의는 권력 남용을 막고 기본권을 보호하기 위해 국가 권력을 법으로 제한한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>14.</b> 형식적 법치주의의 한계로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 권력 남용을 실질적으로 막기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 국가 권력을 헌법으로 제한하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 법의 내용까지 정의로워야 한다고 보기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 국민의 기본권 보장을 지나치게 강조하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 법의 절차만 중시하면 내용이 부당한 법도 통치 수단이 될 수 있다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 형식적 법치주의는 절차만 보면 악법도 법이라는 문제가 발생할 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 법의 절차만 중시하면 내용이 부당한 법도 통치 수단이 될 수 있다.</b>입니다.<br>해설: 형식적 법치주의는 절차만 보면 악법도 법이라는 문제가 발생할 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>15.</b> 실질적 법치주의의 의미로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 통치자가 법 없이 명령해도 된다는 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 법은 권력자의 의지와 동일하다는 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 국민의 기본권은 법치주의와 무관하다는 원리</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 법의 형식뿐 아니라 내용도 기본권과 정의에 부합해야 한다는 원리</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 법률의 제정 절차만 지키면 어떤 내용도 정당하다는 원리</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 실질적 법치주의는 법의 내용적 정당성까지 요구한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 법의 형식뿐 아니라 내용도 기본권과 정의에 부합해야 한다는 원리</b>입니다.<br>해설: 실질적 법치주의는 법의 내용적 정당성까지 요구한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>16.</b> 합법적 지배의 특징으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 물리적 폭력만으로 정당성을 얻는다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 법과 제도에 근거하여 권력이 행사되기 때문에 정당성을 얻는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 지도자의 비범한 매력만으로 정당성을 얻는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 오래된 관습만으로 정당성을 얻는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 신분 특권만으로 정당성을 얻는다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 현대 민주 국가는 법과 제도에 따른 합법적 지배를 기본으로 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 법과 제도에 근거하여 권력이 행사되기 때문에 정당성을 얻는다.</b>입니다.<br>해설: 현대 민주 국가는 법과 제도에 따른 합법적 지배를 기본으로 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>17.</b> 전통적 지배의 정당성 근거는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 국제기구의 승인만</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 오래된 관습과 전통</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 민주적 선거와 법률</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 과학 기술의 발전</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 지도자의 비범한 매력</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 전통적 지배는 관습과 전통에 대한 믿음에서 정당성을 얻는다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 오래된 관습과 전통</b>입니다.<br>해설: 전통적 지배는 관습과 전통에 대한 믿음에서 정당성을 얻는다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>18.</b> 카리스마적 지배의 정당성 근거는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 정당 명부 순위</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 지도자의 비범한 능력이나 매력에 대한 믿음</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 지방 의회의 조례</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 법률과 절차에 대한 신뢰</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 오래된 관습의 지속</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 카리스마적 지배는 지도자 개인의 비범성에 대한 추종에서 정당성을 얻는다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 지도자의 비범한 능력이나 매력에 대한 믿음</b>입니다.<br>해설: 카리스마적 지배는 지도자 개인의 비범성에 대한 추종에서 정당성을 얻는다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>19.</b> 정치권력과 권위의 관계를 가장 잘 설명한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 권위는 오직 국제기구에서만 존재한다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 정치권력이 안정되려면 강제력뿐 아니라 구성원이 인정하는 권위가 필요하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 권위는 정치권력의 정당성과 무관하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 정치권력은 권위가 없어야만 안정된다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 강제력만 있으면 민주적 정당성은 전혀 필요 없다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 정치권력은 정당성과 권위를 갖출 때 장기적으로 안정될 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 정치권력이 안정되려면 강제력뿐 아니라 구성원이 인정하는 권위가 필요하다.</b>입니다.<br>해설: 정치권력은 정당성과 권위를 갖출 때 장기적으로 안정될 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>20.</b> 법치주의와 민주주의의 관계에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 다수결이면 어떤 법도 실질적으로 정당하다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 민주주의에서는 법이 필요 없다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 법치주의는 민주적 권력이 기본권을 침해하지 않도록 통제하는 원리이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 법치주의는 민주주의와 양립할 수 없다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 법치주의는 오직 행정 효율을 위한 기술이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 민주주의에서도 권력 남용을 막기 위해 법치주의가 필요하다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 법치주의는 민주적 권력이 기본권을 침해하지 않도록 통제하는 원리이다.</b>입니다.<br>해설: 민주주의에서도 권력 남용을 막기 위해 법치주의가 필요하다.</div>
+</div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
+
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
 </script>
 </body>
 </html>

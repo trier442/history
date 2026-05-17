@@ -5,8 +5,52 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>민주주의의 실현 | 천재교육 고등 정치 | 모두의 사탐</title>
 <meta name='description' content='천재교육 고등 정치 민주주의의 실현 웹 학습지'>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous"></script>
-<script src='https://cdn.tailwindcss.com'></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5341216668095254" crossorigin="anonymous">
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
+</script>
+<script src='https://cdn.tailwindcss.com'>
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
+</script>
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
@@ -32,9 +76,17 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 .answer.show{display:block}
 .tab a{white-space:nowrap}
 
-.flow-note{border-left:5px solid #6366f1;background:#eef2ff;border-radius:18px;padding:16px}
-#summary h3{letter-spacing:-.02em}
-#summary table th,#summary table td{vertical-align:top}
+.mcq-card{border:1px solid #e2e8f0;border-radius:20px;padding:18px;margin:14px 0;background:#fff}
+.mcq-question{line-height:1.8;font-weight:900;color:#0f172a;font-size:1.02rem}
+.mcq-options{display:grid;gap:8px;margin-top:12px}
+.mcq-option{width:100%;text-align:left;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;border-radius:14px;padding:10px 12px;font-weight:800;line-height:1.6;transition:.15s}
+.mcq-option:hover{background:#eef2ff;border-color:#818cf8}
+.mcq-option.correct{background:#dcfce7!important;border-color:#22c55e!important;color:#166534!important}
+.mcq-option.wrong{background:#fee2e2!important;border-color:#ef4444!important;color:#991b1b!important}
+.mcq-option.muted{opacity:.74}
+.mcq-result{margin-top:12px;border-radius:14px;padding:12px 14px;font-weight:800;line-height:1.8}
+.mcq-result.ok{background:#dcfce7;color:#166534}
+.mcq-result.no{background:#fee2e2;color:#991b1b}
 
 </style>
 </head>
@@ -54,68 +106,303 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#0f172a}html
 </section>
 
 <section id='summary' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>1. 핵심 내용 체계 정리</h2>
-  <p class='text-slate-600 font-bold leading-8 mb-6'>교과서 문장을 길게 옮기지 않고, 단원 전체의 개념 관계와 사례의 기능을 중심으로 다시 정리했습니다. 먼저 흐름을 잡고, 그다음 비교 기준과 적용 사례를 확인하면 암기와 서술형 답안 작성이 쉬워집니다.</p>
-  <div class='rounded-3xl border border-slate-200 bg-white p-5 md:p-6 mb-6'>
-    <h3 class='text-xl font-black text-slate-900 mb-4'>단원 흐름 한눈에 보기</h3>
-    <ol class='space-y-3 leading-8 font-bold text-slate-700'><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>1</span><span>민주주의는 다양한 의견을 인정하기 때문에 의사 결정 방식이 필요하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>2</span><span>만장일치가 이상적이지만 현실적으로 어렵기 때문에 다수결이 사용된다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>3</span><span>다수결은 유용하지만 다수의 횡포로 변질될 수 있어 소수 의견 존중이 필요하다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>4</span><span>대화와 타협, 토론과 숙의는 단순한 수의 지배를 이성적 결정으로 바꾸는 과정이다.</span></li><li class='flex gap-3'><span class='shrink-0 grid place-items-center w-8 h-8 rounded-full bg-indigo-600 text-white font-black'>5</span><span>일상생활 속 민주주의는 학교와 지역사회에서 숙의의 전제를 실천할 때 가능하다.</span></li></ol>
-  </div>
-  <div class='grid lg:grid-cols-2 gap-4 mb-6'>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>다수결의 의미와 필요성</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>다수결은 여러 의견 중 더 많은 구성원이 지지한 의견을 공동체의 결정으로 삼는 원리이다.</li><li>현대 사회에서는 모든 구성원이 하나의 의견에 동의하기 어렵기 때문에 다수결은 현실적인 의사 결정 방식이 된다.</li><li>다수결은 적어도 더 많은 사람이 동의한 결정이라는 점에서 민주적 정당성을 얻는다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>다수결의 한계와 보완</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>다수 의견이 항상 옳은 것은 아니므로 다수결은 인권과 같은 근본 가치에는 함부로 적용될 수 없다.</li><li>소수 의견을 무시하면 다수결은 다수의 횡포나 다수의 독재가 된다.</li><li>다수와 소수의 교체 가능성, 평등한 참여 기회, 내용적 한계가 보장되어야 다수결이 민주적 원리로 기능한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>대화·타협·토론·숙의</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>대화는 서로의 입장을 드러내는 과정이고, 타협은 모두가 일부 양보하여 공동 결정을 찾는 과정이다.</li><li>토론은 근거를 제시하며 주장과 반론을 검토하는 과정이고, 숙의는 충분한 정보와 깊은 논의를 통해 더 나은 결론에 접근하는 과정이다.</li><li>공론 조사는 여론 조사와 달리 학습과 토론을 거쳐 시민의 판단이 변화할 수 있음을 전제한다.</li></ul>
-        </article>
-        <article class='rounded-3xl border border-slate-200 bg-slate-50 p-5 md:p-6'>
-          <h3 class='text-xl font-black text-indigo-800 mb-3'>일상생활 속 민주주의</h3>
-          <ul class='list-disc pl-5 space-y-2 leading-8 font-semibold text-slate-700'><li>학교 규칙, 급식 순서, 축제 운영 같은 문제도 민주주의 원리를 적용할 수 있는 생활 정치의 장이다.</li><li>숙의가 제대로 이루어지려면 동등한 참여, 충분한 정보, 다양한 이해관계의 대표, 상호 존중과 개방적 태도가 필요하다.</li><li>민주주의는 제도만이 아니라 서로를 설득하고 설득될 수 있는 시민성의 습관이다.</li></ul>
-        </article></div>
-  
-  
-    <div class='rounded-3xl border border-indigo-200 bg-indigo-50 p-5 md:p-6'>
-      <h3 class='text-xl font-black text-indigo-900 mb-3'>시험에 자주 연결되는 판단 포인트</h3>
-      <ul class='list-disc pl-5 space-y-2 leading-8 font-bold text-slate-700'><li>다수결은 필요성과 한계를 함께 써야 한다.</li><li>소수 의견 존중은 단순 배려가 아니라 민주주의의 정당성 조건이다.</li><li>여론 조사는 기존 선호, 공론 조사는 숙의를 통한 선호 변화로 구분한다.</li></ul>
-    </div>
+<h2 class='text-3xl font-black mb-3'>1. 교과서 핵심 내용 상세 정리</h2>
+<p class='text-slate-600 font-bold leading-8 mb-5'>아래 정리는 교과서의 해당 단원 범위를 페이지 순서대로 다시 배열한 것입니다. 원문을 그대로 베끼는 방식이 아니라, 수업과 암기에 바로 활용할 수 있도록 개념·사례·비교 포인트 중심으로 재구성했습니다.</p>
+<article class='page-block'><h4>교과서 36쪽 핵심 정리</h4><ul><li>다수결의 원칙 민주주의는 구성원들의 다양한 가치관을 존중하며 이해관계가 서로 다를 수 있음을 인정한다.</li><li>따라서 민주주의 국가에서는 공동체의 의사 결정 방식으로 다수의 의견에 따라 결정하는 다수결의 원칙을 적용한다.</li><li>다수결의 원칙은 다수에 의한 지배를 추구하는 것이 민주주의의 이상에 부합 한다고 본다.</li><li>이러한 점에서 다수결의 원칙은 자유 민주주의에서 공동체의 의사 결정을 정당화하고, 이를 통해 공동체를 유지하고 발전시켜 나가는 제도적 장치이다.</li><li>수의 의견을 소수에게 강요하는 것을 방지하고, 다수에 의해 소수의 권리가 부당하게 침해당하지 않도록 하려면 소수 의 견에 대한 존중, 대화와 타협, 토론과 숙의가 요구된다.</li><li>다수결의 유형 •단순 다수: 가장 많은 수의 지지 를 얻은 것을 집단 의사로 결정 하는 방식 •절대 다수: 과반수의 지지를 받 은 결정에 따르는 방식 1. 위 안건에 대해 어떻게 결정하는 것이 좋을지 자신의 생각을 말해 보자.</li><li>다수결이 민주주의의 원리가 될 수 있을지 생각해 보자.</li><li>남학생의 불만이 엄청 많을 것 같아. ▼ 다수결은 정책에 대한 개인의 의사 를 표현하는, 민주주의를 실현하는 중요한 원리 중 하나이다.</li></ul></article><article class='page-block'><h4>교과서 37쪽 핵심 정리</h4><ul><li>민주주의의 실현을 위한 다른 원리 다수결의 원칙은 소수에게 다수의 의견을 따르도록 강제하기 때문에 소수의 권 리가 희생될 수 있다.</li><li>그러나 다수의 생각이 반드시 옳은 것은 아닐 수 있기 때문 에 소수 의견에 대한 존중이 필요하다.</li><li>누구나 평등하게 정치적 의사 결정에 참여 할 수 있어야 하며, 다수와 소수의 교체 가능성과 다수결의 원칙 적용에 내용적 한계가 인정되어야 한다.</li><li>따라서 갈등하는 이해관계 당사자가 대화를 통해 의견을 자유롭게 교환하 면서 인식의 차이를 좁히고, 서로 타협하면서 이해관계를 조정하는 과정이 필요하 다.</li><li>그리고 이해관계의 갈등이 발생한 경우 차이를 확인하고 토론과 숙의를 거쳐 차이를 좁혀 가면서, 더 많은 구성원이 동의하는 결정에 이르러야 한다.</li><li>그리고 이로써 다수결의 원칙은 단순히 ‘수의 지배’가 아니라 ‘이성의 지배’가 되어 민주적으로 사회의 집합적인 의 사를 만들어 낼 수 있다. ‘동조압력(同調壓力, Peer pressure)’이라는 말이 있다.</li><li>중간은 없고 양극단만 있는 사회는 다양성이 없는 건조한 사회라는 점에서 불행하다. …… 민주주의란 어쩌면 소수를 괴롭힘으로써 사회의 안녕 을 유지하는 일일지도 모른다.</li><li>최근 운 전 중 휴대 전화의 사용으로 교통 사고가 증가하자 정부에서는 운전 중에는 휴대 전화 사용을 금지하는 법률을 만들었습니다(&lt;도로 교통법&gt; 제49조).</li></ul></article><article class='page-block'><h4>교과서 38쪽 핵심 정리</h4><ul><li>우리가 속한 공동체에서는 민주주의 원리를 얼마나 실현하고 있을까?</li><li>우리 학교를 대상으로 민주주의 원리를 어느 정도 실현하는지 설문에 응답하고, 가장 점수가 높은 항목과 낮은 항목이 무엇인지 조사해 보자.</li><li>우리 학교는 성별, 성적, 신체적 특징에 따른 차별이 없다.</li><li>민주 시민 교육 우리 학교 교사들은 수업에서 학생들의 시민으로서 자질을 기르기 위한 다양한 교수·학습 방법을 적용한다.</li><li>우리 학교 학생들은 모둠 학습이나 토론 등 시민의 자질을 기르기 위한 수업에 적극적으로 참여한다.</li><li>우리 학교는 비교과 활동(동아리 활동, 봉사 활동, 체험 학 습, 교내 대회, 학교 행사 등)을 통해서 민주시민 교육을 실 시하고 있다.</li><li>우리 학교는 학생들이 지역사회의 교육 활동에 참여할 수 있는 기회를 제공하고 있다.</li><li>우리 학교는 지역사회의 다양한 자원들을 교과 활동(수업) 이나 비교과 활동(동아리 활동, 봉사 활동, 체험 학습, 교내 대회, 학교 행사 등)에 적극적으로 활용하고 있다. - 박윤경, 김명정, 유혜영, 이수정, &lt;학교 민주주의 지표 체계와 평가 도구 개발&gt;, 2019. * 학급별 설문 결과를 취합하여 우리 학교 민주주의를 평가해 보자.</li></ul></article><article class='page-block'><h4>교과서 39쪽 핵심 정리</h4><ul><li>민주주의 실현을 위한 원리로서 숙의 숙의는 자유로운 개인들이 특정 문제에 대해 깊이 생각하고 충분히 논의하는 집 단적 의사 결정의 원리이다.</li><li>숙의는 이성적인 개인들이 해당 사안에 대한 객관 적인 정보 및 의견을 교환하고 서로 설득하는 등 토론을 하며 균형 잡힌 견해를 형성함으로써 질적으로 향상된 정치적 관점을 가지고 집단적 의사를 합의해 가 는 과정을 강조한다.</li><li>정보와 주장의 교환 그리고 선호의 비판적 검토라는 숙의 과정을 통해 개인은 자신의 선호를 형성하고, 잘못된 선호를 교정해 나갈 수 있다.</li><li>그리고 열린 토론 과 의견 교환을 거치는 숙의는 의견의 일치에는 이르지 못하더라도 적어도 상호 수용 가능한 집합적 결론에 도달함으로써 결정에 대한 사회적 수용성과 정당성 을 확보할 수 있다.</li><li>지난번에 다수결로 정했더니 불만이 많아서 이번에는 다른 방법을 고민 중이야.</li><li>. 일상생활에서 민주주의의 원리에 위배되는 사례를 찾아보자.</li><li>일상생활에서도 민주주의의 원리가 중요한 이유를 말해 보자.</li><li>좋은 의견 발표해 주세요. ▲ 국민 헌법 숙의형 시민 토론회에 참석한 시민들이 기본권 확대, 직접 민주주의 등 개헌 의제에 대해 토론 하고 있다.</li></ul></article><article class='page-block'><h4>교과서 40쪽 핵심 정리</h4><ul><li>첫째, 모든 시민은 동등한 입장에서 참여할 자격을 가져야 한다.</li><li>숙의 과정에서 모든 참여자에게 동등한 기회가 부여되어야 하며, 참여자들은 서로를 동등한 주 체로서 대해야 한다.</li><li>셋째, 쟁점에 대한 주장을 정당화할 수 있는 보편적 기준을 제시하고 주장을 정당화해야 한다.</li><li>른 사람을 인정하고 상대방의 견해를 존중해야 하며, 나의 의견이 더 이상 타당 하지 않다고 판단되는 경우 상대방의 의견을 받아들일 수 있는 개방적 태도를 가 져야 한다.</li><li>탐 구 더 하 기 여론 조사가 특정 시점의 개인적인 선호를 조사하는 것인 데 반해, 공론 조사는 다양한 의견을 수렴해 공론을 형성해 가 는 과정이 포함된다.</li><li>특정 시점에서 고정되어 있는 선호를 수동적으로 응답하는 여론 조사와는 달리 공론 조사는 학습과 토론을 통해 선호까지도 변경되는 능동적인 참여가 이루어진다.</li><li>구분 여론 조사 공론 조사 개념 특정 시점의 선호(인식)의 분포 조사 설문 → 학습 및 토론(숙의) → 2차 설문 방법 전화, 누리집 등을 통한 수동적 참여 능동적 참여 결과 고정된 선호의 단순 취합 학습 및 토론을 통한 선호 변경 장점 다수의 시민 대상 의견 수렴 학습과 토론을 통한 신중한 의사 결정 문제점 여론 조사와 공론 조사의 문제점이 각각 무엇인지 생각해 보고, 빈칸을 채워 보자. ▲ 공론 조사는 숙의를 통한 집단적 의사 결정 방식이다.</li><li>쟁점에 대한 충 분한 정보를 바탕으로 시민의 의견을 수렴해 공론을 형성해 가는 과정을 강조한다.</li></ul></article><article class='page-block'><h4>교과서 41쪽 핵심 정리</h4><ul><li>공론화 위원회의 추가적 조사 결과를 함께 살펴보고, 이와 같은 결과를 다수결의 원칙과 비교하여 생각해 보자.</li><li>사례 1 신고리 , 6호기 공론화 위원회 관련 기사 국무 조정실장은 2017년 7월 공론화 위원회 위원장과 위원 8명의 명단을 발표했다.</li><li>공론화 위원은 인문 사회·과 학 기술·조사 통계·갈등 관리 등 4개 분야에서 각각 2명 씩 선정됐고, 원전 이해관계자나 에너지 전문가는 처음부 터 후보에서 제외됐다.</li><li>앞서 국무 조정실은 위원의 남녀 비 율을 균형 있게 배치하고, 미래 세대를 대표하는 〜30 대를 포함하겠다고 밝힌 바 있다.</li><li>공론화 위원회는 ·6호기 건설에 관한 공론화 작업의 설계·관리를 맡으며 공론화 위원회가 선정한 시민 배심원 단이 공사를 영구적으로 중단할지, 아니면 재개할지 10월 중순까지 결정하게 된다.</li><li>대통령은 대선 공약에서 신규 원 전 건설 전면 중단과 건설 계획 백지화, 신고리 ·6호기 공사 중단, 월성 1호기 폐쇄, 탈핵 에너지 전환 단계별 이행 안 수립 등을 약속한 바 있다.</li><li>그러나 정부는 지난달 27일 국무 회의에서 신고리 ·6호기 건설 공사를 일시적으로 중단하고, 10인 이내 공론화 위원회를 구성해 최대 3개월 동안 여론 수렴을 거쳐 시민 배심원단이 판단을 내리게 하 자고 결정했다. - 《연합뉴스》, 2017.</li><li>판단 유보 건설 중단 건설 재개 (국무조정실, 2017) 사례 2 신고리 , 6호기 공론화 위원회 절차 (대한민국 정책 브리핑, 2017) &lt;원자력 발전 정책에 대한 선호도 응답률&gt; - 국무조정실, 2017. &lt;추가 의견&gt; •원전 축소의 에너지 정책 권고 •원전 안전 기준을 보완할 것. •신재생 에너지 투자를 확대할 것. •사용 후 핵연료 해결 방안을 보완할 것.</li></ul></article><article class='page-block'><h4>교과서 42쪽 핵심 정리</h4><ul><li>글을 읽고 물음에 답해 보자. &lt;깨끗한 농업용수 사용 의무화&gt; 숙의 과정 •◯◯시 농부들이 채소를 경작할 때 깨끗한 농업용수를 사용하는 것이 바람직합니다.</li><li>물론 채소 생산량이 줄어들겠지만 시민들이 건강을 위해 더 안전한 먹거리를 찾게 될 것입니다. •◯◯시에서 깨끗한 농업용수를 사용하는 것이 시민들의 건강에 도움이 될 것이라는 점은 동의합 니다.</li><li>제시된 숙의 과정에 어떤 태도가 필요한지 써 보자.</li><li>위와 같은 태도가 필요한 이유를 서술해 보자.</li><li>단계 “일상에서 민주주의를 실현하기 위해 지켜야 할 원리는 무엇일까?”에 대한 답을 써 보자.</li><li>단계 1 다수결의 원칙을 적용할 때에는 다수의 독재가 되지 않도록 ( )에 대한 존중이 필요하다.</li><li>특정 문제에 대해 깊이 생각하고 충분히 논의하는 집단적 의사 결정 원리를 ( )(이)라고 한다.</li><li>다수결로 결정할 경우에도 대화와 타협을 통해 ( )을/를 조정하는 과정이 필요하다.</li></ul></article><article class='page-block'><h4>교과서 43쪽 핵심 정리</h4><ul><li>학 교에서 배운 역사 시간의 대부분이 동서양 왕조 국가 의 흥망성쇠이듯, 1인 지배 체제는 인간이 발명한 통 치 형태 중에서 가장 오랜 기간 활용되어 온 검증된 통치 방식이다.</li><li>종종 1인 지배를 넘어선 귀족정이나 과두정도 역사에서 등장하지만, 1인 지배 체제의 유 사품일 뿐 소수에게 권력이 집중된 독재 체제라는 점 에서는 큰 차이가 없다.</li><li>여기에 반하는 통치 방식은 정치 공동체의 모든 구성원 이 권력을 나눠 갖는 것이다.</li><li>이런 통치 체제는 나쁜 권력자가 혼자 권력을 마음대로 휘두르는 것을 막을 수 있는 위대한 발명품이다.</li><li>다수결 의 결정은 무조건 따라야 할까?</li><li>소수가 독재를 꾀하는 것은 다수의 힘으로 저항할 수 있 지만, 다수가 밀어붙이는 힘을 소수가 이겨 낼 방법은 없다.</li><li>어리석은 다수의 결정이 현명한 소수의 지혜를 힘으 로 눌러 버리는 것은 민주주의에서 늘 일어나는 위험한 현 상이다.</li><li>정치 만나는 와 역사 중국 왕조 시대의 절대 군주 국민 다수의 지지로 권력을 잡은 히틀러 역사와 만나는 정치 43</li></ul></article>
 </section>
 
 <section id='story' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
-  <div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
-    <p>학급에서 급식 순서를 투표로 정하면 빠르게 결론이 난다. 이처럼 더 많은 사람이 지지한 의견을 따르는 방식이 <span class="hidden-box" data-text="다수결의 원칙" onclick="reveal(this)">&nbsp;</span>이다.</p><p>하지만 남학생이 적다는 이유로 늘 불리한 결정을 감수해야 한다면 문제는 달라진다. 민주주의에서 <span class="hidden-box" data-text="소수 의견 존중" onclick="reveal(this)">&nbsp;</span>이 필요한 이유는 다수의 선택이 항상 정의로운 것은 아니기 때문이다.</p><p>갈등을 줄이려면 먼저 <span class="hidden-box" data-text="대화와 타협" onclick="reveal(this)">&nbsp;</span>이 필요하다. 이어서 근거를 따지고 반론을 검토하는 <span class="hidden-box" data-text="토론과 숙의" onclick="reveal(this)">&nbsp;</span>를 거치면 결정은 단순한 수의 지배가 아니라 더 설득력 있는 판단이 된다.</p><p>특정 문제를 깊이 생각하고 충분히 논의하는 과정이 <span class="hidden-box" data-text="숙의" onclick="reveal(this)">&nbsp;</span>이며, 학습과 토론을 거쳐 의견 변화를 살피는 방식이 <span class="hidden-box" data-text="공론 조사" onclick="reveal(this)">&nbsp;</span>이다. 반면 특정 시점의 생각을 묻는 방식은 <span class="hidden-box" data-text="여론 조사" onclick="reveal(this)">&nbsp;</span>에 가깝다.</p><p>결국 일상 속 민주주의는 <span class="hidden-box" data-text="상호 존중" onclick="reveal(this)">&nbsp;</span>과 <span class="hidden-box" data-text="시민성" onclick="reveal(this)">&nbsp;</span>을 바탕으로 한다. 이를 잃으면 다수결은 쉽게 <span class="hidden-box" data-text="다수의 독재" onclick="reveal(this)">&nbsp;</span>로 변할 수 있다.</p>
-  </div>
+<h2 class='text-3xl font-black mb-3'>2. 말하듯이 이해하는 스토리텔링 정리</h2>
+<div class='space-y-5 text-lg leading-10 text-slate-800 font-semibold'>
+<p>이 단원은 “일상에서 민주주의를 실현하기 위해 지켜야 할 원리는 무엇일까?”라는 질문에서 출발한다. 교과서의 핵심은 여러 개념을 따로 외우는 것이 아니라, 서로 다른 이해관계가 어떤 제도와 절차를 통해 조정되는지 흐름으로 이해하는 데 있다.</p><p>먼저 <span class="hidden-box" data-text="다수결의 원칙" onclick="reveal(this)">&nbsp;</span>은 공동체의 의사 결정을 다수의 의견에 따라 정하는 민주주의의 원리이다. <span class="hidden-box" data-text="소수 의견 존중" onclick="reveal(this)">&nbsp;</span>은 다수결이 다수의 횡포가 되지 않도록 소수의 권리와 견해를 보호하는 태도이다. <span class="hidden-box" data-text="대화와 타협" onclick="reveal(this)">&nbsp;</span>은 서로 다른 의견을 교환하고 양보하며 이해관계를 조정하는 과정이다. <span class="hidden-box" data-text="토론과 숙의" onclick="reveal(this)">&nbsp;</span>은 충분한 정보와 근거를 바탕으로 논의하여 더 나은 결론을 찾는 과정이다.</p><p>이어서 <span class="hidden-box" data-text="숙의" onclick="reveal(this)">&nbsp;</span>은 숙의은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="공론 조사" onclick="reveal(this)">&nbsp;</span>은 정보 제공과 토론을 거친 뒤 시민 의견의 변화를 확인하는 숙의형 조사 방식이다. <span class="hidden-box" data-text="여론 조사" onclick="reveal(this)">&nbsp;</span>은 특정 시점의 시민 선호나 인식의 분포를 파악하는 조사 방식이다. <span class="hidden-box" data-text="상호 존중" onclick="reveal(this)">&nbsp;</span>은 상호 존중은/는 이 단원에서 설명하는 핵심 개념이다.</p><p>또한 <span class="hidden-box" data-text="시민성" onclick="reveal(this)">&nbsp;</span>은 시민성은/는 이 단원에서 설명하는 핵심 개념이다. <span class="hidden-box" data-text="다수의 독재" onclick="reveal(this)">&nbsp;</span>은 다수의 독재은/는 이 단원에서 설명하는 핵심 개념이다.</p>
+</div>
 </section>
 
 <section id='concepts' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
-  <ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>다수결의 원칙</button><span class='concept-def'>공동체의 의사를 결정할 때 더 많은 구성원이 지지한 의견을 따르는 원칙이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>소수 의견 존중</button><span class='concept-def'>다수의 결정 과정에서도 소수자의 권리와 주장을 동등하게 고려해야 한다는 태도이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>대화와 타협</button><span class='concept-def'>갈등 당사자가 의견을 나누고 서로 양보하여 공동 결정을 찾아가는 과정이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>토론과 숙의</button><span class='concept-def'>근거 있는 주장과 반론, 충분한 정보 검토를 통해 더 나은 집단적 결론에 도달하려는 과정이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>숙의</button><span class='concept-def'>특정 문제를 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 원리이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>공론 조사</button><span class='concept-def'>정보 제공과 토론을 거쳐 시민의 의견 변화를 확인하는 숙의형 조사 방식이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>여론 조사</button><span class='concept-def'>특정 시점의 선호나 인식 분포를 조사하는 방식이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>상호 존중</button><span class='concept-def'>참여자들이 서로를 동등한 주체로 인정하고 다른 견해를 진지하게 듣는 태도이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>시민성</button><span class='concept-def'>공동체 문제에 책임 있게 참여하고 타인과 공존할 수 있는 시민의 자질이다.</span></li><li><button class='concept-btn' onclick='toggleConcept(this)'>다수의 독재</button><span class='concept-def'>다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</span></li></ul>
+<h2 class='text-3xl font-black mb-3'>3. 핵심어 뜻 정리</h2>
+<ul class='concept-list'><li><button class='concept-btn' onclick='toggleConcept(this)'>다수결의 원칙</button><span class='concept-def'>공동체의 의사 결정을 다수의 의견에 따라 정하는 민주주의의 원리이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>소수 의견 존중</button><span class='concept-def'>다수결이 다수의 횡포가 되지 않도록 소수의 권리와 견해를 보호하는 태도이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>대화와 타협</button><span class='concept-def'>서로 다른 의견을 교환하고 양보하며 이해관계를 조정하는 과정이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>토론과 숙의</button><span class='concept-def'>충분한 정보와 근거를 바탕으로 논의하여 더 나은 결론을 찾는 과정이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>숙의</button><span class='concept-def'>숙의의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>공론 조사</button><span class='concept-def'>정보 제공과 토론을 거친 뒤 시민 의견의 변화를 확인하는 숙의형 조사 방식이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>여론 조사</button><span class='concept-def'>특정 시점의 시민 선호나 인식의 분포를 파악하는 조사 방식이다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>상호 존중</button><span class='concept-def'>상호 존중의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>시민성</button><span class='concept-def'>시민성의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li>
+<li><button class='concept-btn' onclick='toggleConcept(this)'>다수의 독재</button><span class='concept-def'>다수의 독재의 의미와 역할을 교과서 흐름 속에서 이해한다.</span></li></ul>
 </section>
 
 <section id='quiz' class='card mt-8 p-6 md:p-8'>
-  <h2 class='text-3xl font-black mb-3'>4. 내용 확인 문제</h2>
-  
-<div class='quiz-card'><p><b>1.</b> 다수결의 원칙이 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>현대 사회에서 만장일치가 어렵기 때문에 더 많은 구성원이 동의한 의견을 공동체 결정으로 삼기 위해 필요하다.</div></div>
-<div class='quiz-card'><p><b>2.</b> 다수결이 민주주의의 원리로 인정되기 위한 조건을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>소수 의견 존중, 평등한 참여, 다수와 소수의 교체 가능성, 인권 등 내용적 한계가 보장되어야 한다.</div></div>
-<div class='quiz-card'><p><b>3.</b> 다수의 독재가 무엇인지 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>다수의 힘으로 소수의 권리와 의견을 부당하게 억압하는 상태이다.</div></div>
-<div class='quiz-card'><p><b>4.</b> 대화와 타협이 필요한 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>갈등 당사자들이 인식 차이를 좁히고 서로 양보하여 수용 가능한 결정을 만들기 위해서이다.</div></div>
-<div class='quiz-card'><p><b>5.</b> 숙의의 의미를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>특정 문제에 대해 깊이 생각하고 충분히 논의하여 집단적 의사를 형성하는 과정이다.</div></div>
-<div class='quiz-card'><p><b>6.</b> 여론 조사와 공론 조사의 차이를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>여론 조사는 특정 시점의 선호를 조사하고, 공론 조사는 정보 제공과 토론을 거쳐 선호 변화를 포함한다.</div></div>
-<div class='quiz-card'><p><b>7.</b> 숙의를 위해 필요한 태도 두 가지를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>상호 존중, 개방적 태도, 보편적 기준 제시, 충분한 정보 공유 등.</div></div>
-<div class='quiz-card'><p><b>8.</b> 인권 문제에 다수결을 함부로 적용하면 안 되는 이유를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>인권은 다수의 선택으로 침해될 수 없는 근본 가치이기 때문이다.</div></div>
-<div class='quiz-card'><p><b>9.</b> 일상생활 속 민주주의 사례 하나를 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>예: 학급 규칙 제정, 학생회 회의, 동아리 운영 방식 결정 등.</div></div>
-<div class='quiz-card'><p><b>10.</b> 다수결을 “수의 지배”가 아니라 “이성의 지배”로 만들기 위한 조건을 쓰시오.</p><button onclick='this.nextElementSibling.classList.toggle("show")'>정답 보기</button><div class='answer'>토론, 숙의, 소수 의견 존중, 대화와 타협을 통해 더 합리적인 결론에 도달해야 한다.</div></div>
+  <h2 class='text-3xl font-black mb-3'>4. 객관식 확인 문제</h2>
+  <p class='text-slate-600 font-bold leading-8 mb-5'>각 문항의 선택지를 클릭하면 정답·오답 여부와 해설이 바로 표시됩니다.</p>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>1.</b> 민주주의에서 다수결의 원칙이 필요한 이유로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 소수 의견을 완전히 제거하기 위한 원리이기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 인권 문제도 다수 의사로 마음대로 침해할 수 있기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 구성원 참여를 줄이기 위한 방식이기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 항상 다수 의견이 진리이기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 만장일치가 어려운 현실에서 공동체 결정을 내리기 위한 현실적 절차이기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 다수결은 현실적 의사 결정 방식이지만 소수 의견과 기본권 존중이 함께 필요하다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 만장일치가 어려운 현실에서 공동체 결정을 내리기 위한 현실적 절차이기 때문이다.</b>입니다.<br>해설: 다수결은 현실적 의사 결정 방식이지만 소수 의견과 기본권 존중이 함께 필요하다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>2.</b> 다수결의 민주적 정당성을 위해 필요한 조건이 아닌 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 기본권을 침해하지 않는 내용적 한계</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 자유로운 토론과 정보 제공</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 소수의 참여를 원천적으로 금지하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 평등한 참여 기회</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 다수와 소수의 교체 가능성</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 다수결이 민주적으로 기능하려면 소수도 참여하고 설득할 기회를 가져야 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 소수의 참여를 원천적으로 금지하는 것</b>입니다.<br>해설: 다수결이 민주적으로 기능하려면 소수도 참여하고 설득할 기회를 가져야 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>3.</b> 다수의 독재에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 만장일치로 공동체가 합의하는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정보와 토론을 거쳐 합리적 결정을 내리는 현상</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 다수 의견이 소수의 권리와 의견을 무시하며 일방적으로 지배하는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 권력 분립으로 권력을 견제하는 현상</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 소수가 다수의 의견을 존중하는 현상</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 다수의 독재는 다수결이 소수 권리 침해로 변질된 상태이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 다수 의견이 소수의 권리와 의견을 무시하며 일방적으로 지배하는 현상</b>입니다.<br>해설: 다수의 독재는 다수결이 소수 권리 침해로 변질된 상태이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>4.</b> 소수 의견 존중이 필요한 이유로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 공동체 결정에는 토론이 필요 없기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 소수 의견만으로 모든 결정을 내려야 하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 소수 의견은 언제나 다수 의견보다 옳기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 다수결을 완전히 폐지해야 하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 현재의 소수가 미래의 다수가 될 수 있고 소수 의견에도 합리적 근거가 있을 수 있기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 민주주의에서는 다수결과 함께 소수 의견 존중이 필수이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 현재의 소수가 미래의 다수가 될 수 있고 소수 의견에도 합리적 근거가 있을 수 있기 때문이다.</b>입니다.<br>해설: 민주주의에서는 다수결과 함께 소수 의견 존중이 필수이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>5.</b> 대화와 타협의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 상대방의 주장을 듣지 않고 자신의 의견만 강요하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 근거보다 감정적 공격으로 상대를 굴복시키는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 결정 책임을 회피하기 위해 아무 결론도 내리지 않는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 소수 의견을 회의 전에 제거하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 서로의 입장을 확인하고 일부 양보하여 공동의 결정을 찾아가는 과정</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 대화와 타협은 민주적 의사 결정에서 갈등을 조정하는 중요한 방법이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 서로의 입장을 확인하고 일부 양보하여 공동의 결정을 찾아가는 과정</b>입니다.<br>해설: 대화와 타협은 민주적 의사 결정에서 갈등을 조정하는 중요한 방법이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>6.</b> 토론에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 다양한 의견을 금지하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 근거를 제시하며 주장과 반론을 검토하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 투표 없이 감정만으로 결정하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 상대방의 발언 기회를 없애는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 정보 제공 없이 단순 선호만 확인하는 과정</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 토론은 주장, 근거, 반론을 통해 판단을 정교하게 만드는 과정이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 근거를 제시하며 주장과 반론을 검토하는 과정</b>입니다.<br>해설: 토론은 주장, 근거, 반론을 통해 판단을 정교하게 만드는 과정이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>7.</b> 숙의의 의미로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 충분한 정보 없이 즉흥적으로 선택하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 다수의 감정에 따라 즉시 결정하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 반대 의견을 원천적으로 배제하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>④ 충분한 정보와 깊은 논의를 바탕으로 더 나은 결론에 접근하는 과정</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 이미 정해진 결론을 따르도록 강요하는 과정</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 숙의는 정보와 토론, 성찰을 통해 시민 판단의 질을 높인다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>④ 충분한 정보와 깊은 논의를 바탕으로 더 나은 결론에 접근하는 과정</b>입니다.<br>해설: 숙의는 정보와 토론, 성찰을 통해 시민 판단의 질을 높인다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>8.</b> 공론 조사가 일반 여론 조사와 다른 점으로 가장 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 전문가 의견을 시민에게 절대 알려 주지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 단순 찬반 비율만 즉시 묻는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 조사 대상자에게 아무 정보도 주지 않는다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 토론을 금지하고 익명 감정 표현만 수집한다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 정보 제공과 토론 과정을 거친 뒤 시민 의견의 변화를 확인한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 공론 조사는 학습과 토론을 거친 뒤 형성된 숙의된 의견을 살핀다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 정보 제공과 토론 과정을 거친 뒤 시민 의견의 변화를 확인한다.</b>입니다.<br>해설: 공론 조사는 학습과 토론을 거친 뒤 형성된 숙의된 의견을 살핀다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>9.</b> 여론 조사의 한계로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 응답자의 의견 변화를 숙의 과정으로 보장한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 소수 의견을 더 깊이 분석하는 데 항상 충분하다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 정보가 부족한 상태의 순간적 선호만 반영할 수 있다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 항상 충분한 토론을 포함한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 모든 사회 갈등을 자동으로 해결한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 여론 조사는 신속하지만 숙의가 부족한 상태의 의견일 수 있다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 정보가 부족한 상태의 순간적 선호만 반영할 수 있다.</b>입니다.<br>해설: 여론 조사는 신속하지만 숙의가 부족한 상태의 의견일 수 있다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>10.</b> 민주적 의사 결정에서 인권 문제에 다수결을 함부로 적용하면 안 되는 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 헌법은 다수결 절차보다 항상 열등하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 기본권은 다수의 선호만으로 침해될 수 없는 헌법적 가치이기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 인권은 정치와 전혀 무관하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 다수결은 모든 가치보다 절대적으로 우선하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 소수 인권은 공동체에 아무 의미가 없기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 다수결에도 내용적 한계가 있으며 기본권 보장은 그 핵심이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 기본권은 다수의 선호만으로 침해될 수 없는 헌법적 가치이기 때문이다.</b>입니다.<br>해설: 다수결에도 내용적 한계가 있으며 기본권 보장은 그 핵심이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>11.</b> 학교 규칙을 정할 때 민주주의 원리를 적용한 사례로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 규칙과 관련된 정보를 숨긴 채 즉시 투표하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 찬성하는 학생만 회의에 참여시키는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 교사가 이유를 설명하지 않고 일방적으로 결정하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 투표 결과가 마음에 들지 않으면 소수 학생을 처벌하는 것</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 학생들에게 정보를 제공하고 토론한 뒤 투표로 결정하며 반대 의견도 기록하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 생활 속 민주주의는 정보, 토론, 참여, 소수 의견 존중을 포함한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 학생들에게 정보를 제공하고 토론한 뒤 투표로 결정하며 반대 의견도 기록하는 것</b>입니다.<br>해설: 생활 속 민주주의는 정보, 토론, 참여, 소수 의견 존중을 포함한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>12.</b> 상호 존중의 태도에 대한 설명으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 자신의 주장이 항상 옳다고 전제하는 태도</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 반대 의견을 가진 사람을 적으로 규정하는 태도</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>③ 의견이 달라도 상대를 동등한 시민으로 인정하고 근거를 통해 설득하려는 태도</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 토론에서 모욕과 조롱을 주요 수단으로 삼는 태도</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 소수 의견은 들을 필요가 없다고 보는 태도</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 상호 존중은 민주적 토론과 숙의의 기본 태도이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>③ 의견이 달라도 상대를 동등한 시민으로 인정하고 근거를 통해 설득하려는 태도</b>입니다.<br>해설: 상호 존중은 민주적 토론과 숙의의 기본 태도이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>13.</b> 시민성의 의미로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 자신의 이익만 절대화하고 타인의 권리를 부정하는 태도</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 공동체 문제에 관심을 가지고 책임 있게 참여하며 타인의 권리를 존중하는 태도와 능력</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정치 문제를 모두 전문가에게만 맡기는 태도</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 선거와 토론에 참여하지 않는 것을 미덕으로 보는 태도</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 공동체의 법과 절차를 무시하는 태도</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 시민성은 민주주의를 생활 속에서 작동하게 하는 습관과 역량이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 공동체 문제에 관심을 가지고 책임 있게 참여하며 타인의 권리를 존중하는 태도와 능력</b>입니다.<br>해설: 시민성은 민주주의를 생활 속에서 작동하게 하는 습관과 역량이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>14.</b> 다수결이 민주적 원리로 기능하기 위한 전제로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 결과가 정해져 있어야 한다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 자유로운 의사 표현과 공정한 절차가 보장되어야 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정보는 일부 사람에게만 제공되어야 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 소수 의견은 회의록에서 삭제되어야 한다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 참여 자격이 임의로 제한되어야 한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 다수결은 절차적 공정성과 표현의 자유가 있어야 정당성을 갖는다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 자유로운 의사 표현과 공정한 절차가 보장되어야 한다.</b>입니다.<br>해설: 다수결은 절차적 공정성과 표현의 자유가 있어야 정당성을 갖는다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>15.</b> ‘다수와 소수의 교체 가능성’이 중요한 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 소수가 미래에 다수가 될 수 있어야 정치적 경쟁과 책임성이 유지되기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 정치적 경쟁은 민주주의와 무관하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 한 번 다수가 된 집단이 영구히 권력을 독점해야 하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 소수는 어떤 경우에도 정책을 제안할 수 없어야 하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 투표가 반복되면 민주주의가 사라지기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 교체 가능성은 다수결이 독재로 변질되지 않게 하는 조건이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 소수가 미래에 다수가 될 수 있어야 정치적 경쟁과 책임성이 유지되기 때문이다.</b>입니다.<br>해설: 교체 가능성은 다수결이 독재로 변질되지 않게 하는 조건이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>16.</b> 타협에 대한 오해를 바로잡은 설명은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 타협은 소수의 권리를 무조건 희생시키는 행위이다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>② 타협은 원칙 없는 굴복이 아니라 공동 결정을 위해 서로 조정하는 과정일 수 있다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 타협은 언제나 비겁한 포기일 뿐이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 타협은 토론과 관련이 없다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 타협은 민주주의에서 금지되어야 한다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 민주주의에서 타협은 갈등을 평화적으로 조정하는 중요한 방식이다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>② 타협은 원칙 없는 굴복이 아니라 공동 결정을 위해 서로 조정하는 과정일 수 있다.</b>입니다.<br>해설: 민주주의에서 타협은 갈등을 평화적으로 조정하는 중요한 방식이다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>17.</b> 숙의가 제대로 이루어지기 위한 조건으로 적절하지 않은 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 특정 의견을 가진 사람만 참여시키는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 다양한 이해관계의 대표성</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 충분하고 균형 잡힌 정보 제공</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 토론 후 판단을 수정할 수 있는 가능성</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 상호 존중과 개방적 태도</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 숙의에는 다양한 의견과 이해관계가 공정하게 참여해야 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 특정 의견을 가진 사람만 참여시키는 것</b>입니다.<br>해설: 숙의에는 다양한 의견과 이해관계가 공정하게 참여해야 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>18.</b> 공동체 결정에서 단순한 수의 우위를 넘어 숙의가 필요한 이유는?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 결정의 질을 높이고 구성원들이 결과를 더 잘 수용하게 만들기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 숙의는 모든 의견 차이를 자동으로 없애기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 숙의는 참여를 줄이는 기능만 하기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 숙의는 다수결을 소수 독재로 바꾸기 때문이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 숙의는 정보를 차단해 빠른 결정을 하게 하기 때문이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 숙의는 합리적 판단과 수용성을 높이는 기능을 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 결정의 질을 높이고 구성원들이 결과를 더 잘 수용하게 만들기 때문이다.</b>입니다.<br>해설: 숙의는 합리적 판단과 수용성을 높이는 기능을 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>19.</b> 다수결의 원칙과 소수 의견 존중의 관계를 잘 설명한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>① 소수 의견 존중은 다수결과 양립할 수 없다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 소수 의견만 존중하면 의사 결정은 항상 더 빨라진다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 다수결은 민주주의와 무관하고 소수 의견만 민주주의이다.</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 다수결이 있으면 소수 의견은 무조건 사라져야 한다.</button>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>⑤ 다수결은 결정을 가능하게 하고 소수 의견 존중은 그 결정을 민주적으로 정당화하는 보완 조건이다.</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 민주주의에서는 다수결과 소수 의견 존중이 함께 작동해야 한다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>⑤ 다수결은 결정을 가능하게 하고 소수 의견 존중은 그 결정을 민주적으로 정당화하는 보완 조건이다.</b>입니다.<br>해설: 민주주의에서는 다수결과 소수 의견 존중이 함께 작동해야 한다.</div>
+</div>
+<div class='mcq-card' data-answered='false'>
+  <p class='mcq-question'><b>20.</b> 일상생활 속 민주주의 실현의 핵심으로 적절한 것은?</p>
+  <div class='mcq-options'>
+    <button type='button' class='mcq-option' data-correct='true' onclick='checkMcq(this)'>① 작은 공동체 문제에서도 참여, 토론, 타협, 책임을 실천하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>② 다른 의견을 가진 사람을 배제하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>③ 정치 문제를 회피하고 침묵하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>④ 규칙이 불편하면 공동 절차 없이 무시하는 것</button>
+    <button type='button' class='mcq-option' data-correct='false' onclick='checkMcq(this)'>⑤ 힘 있는 사람이 모든 결정을 내리게 하는 것</button>
+  </div>
+  <div class='mcq-result ok correct-msg hidden'>정답입니다.<br>해설: 민주주의는 국가 제도뿐 아니라 생활 속 의사 결정 방식에서도 실현된다.</div>
+  <div class='mcq-result no wrong-msg hidden'>오답입니다. 정답은 <b>① 작은 공동체 문제에서도 참여, 토론, 타협, 책임을 실천하는 것</b>입니다.<br>해설: 민주주의는 국가 제도뿐 아니라 생활 속 의사 결정 방식에서도 실현된다.</div>
+</div>
 </section>
 </main>
 <footer class='border-t border-slate-200 bg-white mt-10'><div class='max-w-6xl mx-auto px-4 py-6 text-sm font-bold text-slate-500'>모두의 사탐 · 천재교육 고등 정치 웹 학습지</div></footer>
 <script>
 function reveal(el){ el.classList.add('revealed'); el.textContent=el.dataset.text; }
 function toggleConcept(btn){ const def=btn.nextElementSibling; def.style.background= def.style.background ? '' : '#f1f5f9'; def.style.borderRadius='12px'; def.style.padding='8px 10px'; }
+
+function checkMcq(btn){
+  const card = btn.closest('.mcq-card');
+  if(card.dataset.answered === 'true') return;
+  card.dataset.answered = 'true';
+  const options = card.querySelectorAll('.mcq-option');
+  options.forEach(opt => {
+    opt.disabled = true;
+    if(opt.dataset.correct === 'true'){
+      opt.classList.add('correct');
+    }else{
+      opt.classList.add('muted');
+    }
+  });
+  if(btn.dataset.correct === 'true'){
+    card.querySelector('.correct-msg').classList.remove('hidden');
+  }else{
+    btn.classList.add('wrong');
+    card.querySelector('.wrong-msg').classList.remove('hidden');
+  }
+}
+
 </script>
 </body>
 </html>
